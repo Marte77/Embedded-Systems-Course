@@ -19,4 +19,6 @@
 //#define READY_VAL_SIG_TYPE
 #define READY_VAL_SIG_TYPE bool
 
+#define CHANNEL_SIG_TYPE sc_int<CHANNEL_BITS>
+
 #endif //A1_CONF_H

@@ -15,12 +15,11 @@ SC_MODULE(ModuleSlave) { // data sink
     sc_in<READY_VAL_SIG_TYPE> valid;
     sc_in<DATA_SIG_TYPE> data;
     sc_in<ERROR_SIG_TYPE> error;
+    sc_out<CHANNEL_SIG_TYPE> channel;
     FILE* data_file;
-    //sc_port<<sc_int<CHANNEL_BITS>>, MAX_CHANNEL> channel;\
-    // todo channels
 
     SC_CTOR(ModuleSlave) {
-        data_file = fopen("slave_received_data","w");
+        data_file = fopen("34_slave_received_data.slv","w");
         SC_THREAD(work_a_serio);
         sensitive << clock << valid << data << error;
         dont_initialize();
