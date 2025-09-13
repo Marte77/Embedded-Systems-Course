@@ -15,7 +15,7 @@ SC_MODULE(ModuleSlave) { // data sink
     sc_in<READY_VAL_SIG_TYPE> valid;
     sc_in<DATA_SIG_TYPE> data;
     sc_in<ERROR_SIG_TYPE> error;
-    sc_out<CHANNEL_SIG_TYPE> channel;
+    sc_in<CHANNEL_SIG_TYPE> channel;
     FILE* data_file;
 
     SC_CTOR(ModuleSlave) {

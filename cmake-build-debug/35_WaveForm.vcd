@@ -1,5 +1,5 @@
 $date
-     Sep 13, 2025       19:26:05
+     Sep 13, 2025       21:27:17
 $end
 
 $version
@@ -11,12 +11,13 @@ $timescale
 $end
 
 $scope module SystemC $end
-$var wire   32  aaaaa  data [31:0]  $end
+$var wire   16  aaaaa  data [15:0]  $end
 $var wire    1  aaaab  ready       $end
 $var wire    1  aaaac  valid       $end
 $var wire    2  aaaad  error [1:0]  $end
 $var wire    1  aaaae  clock       $end
 $var wire    4  aaaaf  channel [3:0]  $end
+$var wire    1  aaaag  reset       $end
 $upscope $end
 $enddefinitions  $end
 
@@ -26,281 +27,218 @@ $end
 
 $dumpvars
 b0 aaaaa
-0aaaab
+1aaaab
 0aaaac
 b0 aaaad
 1aaaae
 b0 aaaaf
+0aaaag
 $end
 
 #10
-b100011000 aaaaa
-1aaaab
-1aaaac
 0aaaae
 
 #20
-0aaaab
-0aaaac
+b10100101 aaaaa
+1aaaac
 1aaaae
 
 #30
-b110100 aaaaa
-1aaaab
-1aaaac
 0aaaae
 
 #40
-0aaaab
 0aaaac
 1aaaae
 
 #50
-b100101000 aaaaa
-1aaaab
-1aaaac
+0aaaab
 0aaaae
 
 #60
-0aaaab
-0aaaac
+b1101000 aaaaa
+1aaaab
+1aaaac
 1aaaae
 
 #70
-b100110001 aaaaa
-1aaaab
-1aaaac
 0aaaae
 
 #80
-0aaaab
 0aaaac
 1aaaae
 
 #90
-b1011111 aaaaa
-1aaaab
-1aaaac
+0aaaab
 0aaaae
 
 #100
-0aaaab
-0aaaac
+b100101000 aaaaa
+1aaaab
+1aaaac
 1aaaae
 
 #110
-b11001011 aaaaa
-1aaaab
-1aaaac
 0aaaae
 
 #120
-0aaaab
 0aaaac
 1aaaae
 
 #130
-b100010000 aaaaa
-1aaaab
-1aaaac
+0aaaab
 0aaaae
 
 #140
-0aaaab
-0aaaac
+b10111111 aaaaa
+1aaaab
+1aaaac
 1aaaae
 
 #150
-b10110100 aaaaa
-1aaaab
-1aaaac
 0aaaae
 
 #160
-0aaaab
 0aaaac
 1aaaae
 
 #170
-b10001111 aaaaa
-1aaaab
-1aaaac
+0aaaab
 0aaaae
 
 #180
-0aaaab
-0aaaac
+b100011111 aaaaa
+1aaaab
+1aaaac
 1aaaae
 
 #190
-b11101010 aaaaa
-1aaaab
-1aaaac
 0aaaae
 
 #200
-0aaaab
 0aaaac
 1aaaae
 
 #210
-b10100010 aaaaa
-1aaaab
-1aaaac
+0aaaab
 0aaaae
 
 #220
-0aaaab
-0aaaac
+b10010110 aaaaa
+1aaaab
+1aaaac
 1aaaae
 
 #230
-b11111 aaaaa
-1aaaab
-1aaaac
 0aaaae
 
 #240
-0aaaab
 0aaaac
 1aaaae
 
 #250
-b10000 aaaaa
-1aaaab
-1aaaac
+0aaaab
 0aaaae
 
 #260
-0aaaab
-0aaaac
+b10000111 aaaaa
+1aaaab
+1aaaac
 1aaaae
 
 #270
-b11010111 aaaaa
-1aaaab
-1aaaac
 0aaaae
 
 #280
-0aaaab
 0aaaac
 1aaaae
 
 #290
-b11100101 aaaaa
-1aaaab
-1aaaac
+0aaaab
 0aaaae
 
 #300
-0aaaab
-0aaaac
+b1011 aaaaa
+1aaaab
+1aaaac
 1aaaae
 
 #310
-b100100100 aaaaa
-1aaaab
-1aaaac
 0aaaae
 
 #320
-0aaaab
 0aaaac
 1aaaae
 
 #330
-b100111 aaaaa
-1aaaab
-1aaaac
+0aaaab
 0aaaae
 
 #340
-0aaaab
-0aaaac
+b10010000 aaaaa
+1aaaab
+1aaaac
 1aaaae
 
 #350
-b100011101 aaaaa
-1aaaab
-1aaaac
 0aaaae
 
 #360
-0aaaab
 0aaaac
 1aaaae
 
 #370
-b111 aaaaa
-1aaaab
-1aaaac
+0aaaab
 0aaaae
 
 #380
-0aaaab
-0aaaac
+b11101001 aaaaa
+1aaaab
+1aaaac
 1aaaae
 
 #390
-b10001 aaaaa
-1aaaab
-1aaaac
 0aaaae
 
 #400
-0aaaab
 0aaaac
 1aaaae
 
 #410
-b10010100 aaaaa
-1aaaab
-1aaaac
+0aaaab
 0aaaae
 
 #420
-0aaaab
-0aaaac
+b11010101 aaaaa
+1aaaab
+1aaaac
 1aaaae
 
 #430
-b1110 aaaaa
-1aaaab
-1aaaac
 0aaaae
 
 #440
-0aaaab
 0aaaac
 1aaaae
 
 #450
-b100100000 aaaaa
-1aaaab
-1aaaac
+0aaaab
 0aaaae
 
 #460
-0aaaab
-0aaaac
+b10111010 aaaaa
+1aaaab
+1aaaac
 1aaaae
 
 #470
-b11000100 aaaaa
-1aaaab
-1aaaac
 0aaaae
 
 #480
-0aaaab
 0aaaac
 1aaaae
 
 #490
-b11001000 aaaaa
-1aaaab
-1aaaac
+0aaaab
 0aaaae
 
 #500

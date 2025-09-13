@@ -28,5 +28,9 @@ add_executable(a1 main.cpp
         assignmentcode/34/conf.h
         assignmentcode/34/ModuleSlave.h
         assignmentcode/35/InAdapter.h
+        assignmentcode/35/Top35.h
+        assignmentcode/35/ModuleMaster_35.h
+        assignmentcode/35/ModuleSlave_35.h
+        assignmentcode/35/conf_35.h
 )
 target_link_libraries(a1 systemc)

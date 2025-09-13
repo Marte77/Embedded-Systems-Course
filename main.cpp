@@ -8,6 +8,7 @@ using namespace sc_core; // use namespace
 #include "assignmentcode/33/ModuleTCP.h"
 #include "assignmentcode/33/TopTCP.h"
 #include "assignmentcode/34/AvalonSTTop.h"
+#include "assignmentcode/35/Top35.h"
 
 /*void hello1() { // a normal c++ function
     std::cout << "Hello world using approach 1" << std::endl;
@@ -34,7 +35,7 @@ int sc_main(int, char*[]) {
     //sc_start();
     //Top top("top");
     //sc_start();
-    int exercise = 34;
+    int exercise = 35;
     switch (exercise) {
         case 31: {
             ModuleSingle m = ModuleSingle("Module_Single");
@@ -57,9 +58,9 @@ int sc_main(int, char*[]) {
             break;
         }
         case 35: {
-            //teste top = teste("STTop");
-            //sc_start(500, SC_NS);
-            //break;
+            Top35 top = Top35("Top35");
+            sc_start(500, SC_NS);
+            break;
         }
         default: {
             std::cout << "No exercise available for " << exercise << std::endl;

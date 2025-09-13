@@ -15,7 +15,7 @@ SC_MODULE(ModuleMaster) { // data source
     sc_out<READY_VAL_SIG_TYPE> valid;
     sc_out<DATA_SIG_TYPE> data;
     sc_out<ERROR_SIG_TYPE> error;
-    sc_in<CHANNEL_SIG_TYPE> channel;
+    sc_out<CHANNEL_SIG_TYPE> channel;
     SC_CTOR(ModuleMaster) {
         SC_THREAD(work_a_serio);
         sensitive << clock << ready;
