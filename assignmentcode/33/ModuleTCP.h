@@ -92,14 +92,14 @@ SC_MODULE(TCPProducer) {
 
 
 SC_MODULE(TCPConsumer) {
-    sc_fifo_in<TCPHeader> fifo;
+    sc_port<sc_fifo_in_if<TCPHeader>> fifo;
     SC_CTOR(TCPConsumer) {
         SC_THREAD(tcp_recv);
     }
 
     void tcp_recv() {
         while (true) {
-            auto tcpHeader = fifo.read();
+            auto tcpHeader = fifo->read();
             std::cout << name() <<"::Sequence number received: " << tcpHeader.SequenceNumber << ". Simulation time: " << sc_time_stamp() << std::endl;
         }
     }
