@@ -53,8 +53,6 @@ SC_MODULE(Top35) {
         sc_trace(tf, clock, "clock");
         sc_trace(tf, channel, "channel");
         sc_trace(tf, reset, "reset");
-        // sc_trace of fifo gives error TODO see why
-        // sc_trace(tf, fifo, "fifo");
 
 
 
