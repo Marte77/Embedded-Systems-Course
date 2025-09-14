@@ -42,7 +42,7 @@ In order to have cicle accurate we must make use of the `wait()`, with no parame
 To replicate the 5.8 image mentioned, the `ModuleSlave` must send a ready signal, for which, the `ModuleMaster` is constantly reading and waiting for it to turn to 1. After that, to make it such that the `valid` and `data` signals send their corresponding values in the next clock positive, we must call the `wait()` function to create the delay.
 After the `valid` signal turning to 1, the `ModuleSlave` can now read the value and turn the `ready` signal to 0 to complete the transaction.
 
-**!attach images of gtkwave or console. use the .vcd and .slv files**
+**!attach images of gtkwave or console. use the .vcd and .slv files. Use the files in commit with revision cbed67c3e40f9a3e15c4aee6fa4a2a0a6cd83bff**
 
 # Ex 3.5
 `35/conf_35.h` `35/Top35.h` `35/ModuleSlave_35.h` `35/ModuleMaster_35.h` `35/InAdapter.h`
