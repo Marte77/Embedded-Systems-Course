@@ -30,6 +30,7 @@ SC_MODULE(ModuleMaster) { // data source
         while (true) {
             do { wait(); } while(!ready); // wait() works until the next clock - waiting until ready is sent by slave
             data.write(value_rng(gen)); // write value so slave can read it
+            wait();
             valid.write(true); // write valid so slave knows he can read it
             do { wait(); } while(ready); // wait until slave sends false to end the request
             valid.write(false); // set valid to false and wait again for ready == true

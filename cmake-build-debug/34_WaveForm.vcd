@@ -1,5 +1,5 @@
 $date
-     Sep 14, 2025       16:34:06
+     Sep 14, 2025       16:38:05
 $end
 
 $version
@@ -34,30 +34,25 @@ b0 aaaaf
 $end
 
 #10
-b10000000 aaaaa
+b100011000 aaaaa
 1aaaab
-1aaaac
 0aaaae
 
 #20
-0aaaab
-0aaaac
+1aaaac
 1aaaae
 
 #30
-b1111011 aaaaa
-1aaaab
-1aaaac
+0aaaab
+0aaaac
 0aaaae
 
 #40
-0aaaab
-0aaaac
+b1011101 aaaaa
+1aaaab
 1aaaae
 
 #50
-b10111111 aaaaa
-1aaaab
 1aaaac
 0aaaae
 
@@ -67,30 +62,25 @@ b10111111 aaaaa
 1aaaae
 
 #70
-b100010 aaaaa
+b11001100 aaaaa
 1aaaab
-1aaaac
 0aaaae
 
 #80
-0aaaab
-0aaaac
+1aaaac
 1aaaae
 
 #90
-b1111000 aaaaa
-1aaaab
-1aaaac
+0aaaab
+0aaaac
 0aaaae
 
 #100
-0aaaab
-0aaaac
+b1101111 aaaaa
+1aaaab
 1aaaae
 
 #110
-b11 aaaaa
-1aaaab
 1aaaac
 0aaaae
 
@@ -100,30 +90,25 @@ b11 aaaaa
 1aaaae
 
 #130
-b11001000 aaaaa
+b11011110 aaaaa
 1aaaab
-1aaaac
 0aaaae
 
 #140
-0aaaab
-0aaaac
+1aaaac
 1aaaae
 
 #150
-b10000001 aaaaa
-1aaaab
-1aaaac
+0aaaab
+0aaaac
 0aaaae
 
 #160
-0aaaab
-0aaaac
+b1010001 aaaaa
+1aaaab
 1aaaae
 
 #170
-b10100100 aaaaa
-1aaaab
 1aaaac
 0aaaae
 
@@ -133,30 +118,25 @@ b10100100 aaaaa
 1aaaae
 
 #190
-b100011010 aaaaa
+b10011000 aaaaa
 1aaaab
-1aaaac
 0aaaae
 
 #200
-0aaaab
-0aaaac
+1aaaac
 1aaaae
 
 #210
-b100010111 aaaaa
-1aaaab
-1aaaac
+0aaaab
+0aaaac
 0aaaae
 
 #220
-0aaaab
-0aaaac
+b100111 aaaaa
+1aaaab
 1aaaae
 
 #230
-b1110110 aaaaa
-1aaaab
 1aaaac
 0aaaae
 
@@ -166,30 +146,25 @@ b1110110 aaaaa
 1aaaae
 
 #250
-b100011100 aaaaa
+b1000 aaaaa
 1aaaab
-1aaaac
 0aaaae
 
 #260
-0aaaab
-0aaaac
+1aaaac
 1aaaae
 
 #270
-b100111101 aaaaa
-1aaaab
-1aaaac
+0aaaab
+0aaaac
 0aaaae
 
 #280
-0aaaab
-0aaaac
+b10110000 aaaaa
+1aaaab
 1aaaae
 
 #290
-b100111001 aaaaa
-1aaaab
 1aaaac
 0aaaae
 
@@ -199,30 +174,25 @@ b100111001 aaaaa
 1aaaae
 
 #310
-b10010001 aaaaa
+b111 aaaaa
 1aaaab
-1aaaac
 0aaaae
 
 #320
-0aaaab
-0aaaac
+1aaaac
 1aaaae
 
 #330
-b100111110 aaaaa
-1aaaab
-1aaaac
+0aaaab
+0aaaac
 0aaaae
 
 #340
-0aaaab
-0aaaac
+b111100 aaaaa
+1aaaab
 1aaaae
 
 #350
-b10000111 aaaaa
-1aaaab
 1aaaac
 0aaaae
 
@@ -232,30 +202,25 @@ b10000111 aaaaa
 1aaaae
 
 #370
-b10100 aaaaa
+b11101 aaaaa
 1aaaab
-1aaaac
 0aaaae
 
 #380
-0aaaab
-0aaaac
+1aaaac
 1aaaae
 
 #390
-b1100 aaaaa
-1aaaab
-1aaaac
+0aaaab
+0aaaac
 0aaaae
 
 #400
-0aaaab
-0aaaac
+b10011000 aaaaa
+1aaaab
 1aaaae
 
 #410
-b11111111 aaaaa
-1aaaab
 1aaaac
 0aaaae
 
@@ -265,30 +230,25 @@ b11111111 aaaaa
 1aaaae
 
 #430
-b110001 aaaaa
+b100001001 aaaaa
 1aaaab
-1aaaac
 0aaaae
 
 #440
-0aaaab
-0aaaac
+1aaaac
 1aaaae
 
 #450
-b10010 aaaaa
-1aaaab
-1aaaac
+0aaaab
+0aaaac
 0aaaae
 
 #460
-0aaaab
-0aaaac
+b10001110 aaaaa
+1aaaab
 1aaaae
 
 #470
-b11101001 aaaaa
-1aaaab
 1aaaac
 0aaaae
 
@@ -298,9 +258,8 @@ b11101001 aaaaa
 1aaaae
 
 #490
-b1110110 aaaaa
+b1111111 aaaaa
 1aaaab
-1aaaac
 0aaaae
 
 #500
