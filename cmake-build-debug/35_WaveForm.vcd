@@ -1,0 +1,244 @@
+$date
+     Sep 14, 2025       16:34:13
+$end
+
+$version
+ SystemC 3.0.1-Accellera --- Oct 15 2024 13:47:45
+$end
+
+$timescale
+     1 ns
+$end
+
+$scope module SystemC $end
+$var wire   16  aaaaa  data [15:0]  $end
+$var wire    1  aaaab  ready       $end
+$var wire    1  aaaac  valid       $end
+$var wire    2  aaaad  error [1:0]  $end
+$var wire    1  aaaae  clock       $end
+$var wire    4  aaaaf  channel [3:0]  $end
+$var wire    1  aaaag  reset       $end
+$upscope $end
+$enddefinitions  $end
+
+$comment
+All initial values are dumped below at time 0 sec = 0 timescale units.
+$end
+
+$dumpvars
+b0 aaaaa
+1aaaab
+0aaaac
+b0 aaaad
+1aaaae
+b0 aaaaf
+0aaaag
+$end
+
+#10
+0aaaae
+
+#20
+b10101111 aaaaa
+1aaaac
+1aaaae
+
+#30
+0aaaae
+
+#40
+0aaaac
+1aaaae
+
+#50
+0aaaab
+0aaaae
+
+#60
+b100101111 aaaaa
+1aaaab
+1aaaac
+1aaaae
+
+#70
+0aaaae
+
+#80
+0aaaac
+1aaaae
+
+#90
+0aaaab
+0aaaae
+
+#100
+b1110110 aaaaa
+1aaaab
+1aaaac
+1aaaae
+
+#110
+0aaaae
+
+#120
+0aaaac
+1aaaae
+
+#130
+0aaaab
+0aaaae
+
+#140
+b100111000 aaaaa
+1aaaab
+1aaaac
+1aaaae
+
+#150
+0aaaae
+
+#160
+0aaaac
+1aaaae
+
+#170
+0aaaab
+0aaaae
+
+#180
+b11000111 aaaaa
+1aaaab
+1aaaac
+1aaaae
+
+#190
+0aaaae
+
+#200
+0aaaac
+1aaaae
+
+#210
+0aaaab
+0aaaae
+
+#220
+b10001111 aaaaa
+1aaaab
+1aaaac
+1aaaae
+
+#230
+0aaaae
+
+#240
+0aaaac
+1aaaae
+
+#250
+0aaaab
+0aaaae
+
+#260
+b10010100 aaaaa
+1aaaab
+1aaaac
+1aaaae
+
+#270
+0aaaae
+
+#280
+0aaaac
+1aaaae
+
+#290
+0aaaab
+0aaaae
+
+#300
+b10111 aaaaa
+1aaaab
+1aaaac
+1aaaae
+
+#310
+0aaaae
+
+#320
+0aaaac
+1aaaae
+
+#330
+0aaaab
+0aaaae
+
+#340
+b11000111 aaaaa
+1aaaab
+1aaaac
+1aaaae
+
+#350
+0aaaae
+
+#360
+0aaaac
+1aaaae
+
+#370
+0aaaab
+0aaaae
+
+#380
+b1011100 aaaaa
+1aaaab
+1aaaac
+1aaaae
+
+#390
+0aaaae
+
+#400
+0aaaac
+1aaaae
+
+#410
+0aaaab
+0aaaae
+
+#420
+b100100101 aaaaa
+1aaaab
+1aaaac
+1aaaae
+
+#430
+0aaaae
+
+#440
+0aaaac
+1aaaae
+
+#450
+0aaaab
+0aaaae
+
+#460
+b100000011 aaaaa
+1aaaab
+1aaaac
+1aaaae
+
+#470
+0aaaae
+
+#480
+0aaaac
+1aaaae
+
+#490
+0aaaab
+0aaaae
+
+#500

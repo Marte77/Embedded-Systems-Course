@@ -1,0 +1,264 @@
+$date
+     Sep 14, 2025       16:48:18
+$end
+
+$version
+ SystemC 3.0.1-Accellera --- Oct 15 2024 13:47:45
+$end
+
+$timescale
+     1 ns
+$end
+
+$scope module SystemC $end
+$var wire   32  aaaaa  data [31:0]  $end
+$var wire    1  aaaab  ready       $end
+$var wire    1  aaaac  valid       $end
+$var wire    2  aaaad  error [1:0]  $end
+$var wire    1  aaaae  clock       $end
+$var wire    4  aaaaf  channel [3:0]  $end
+$upscope $end
+$enddefinitions  $end
+
+$comment
+All initial values are dumped below at time 0 sec = 0 timescale units.
+$end
+
+$dumpvars
+b0 aaaaa
+0aaaab
+0aaaac
+b0 aaaad
+1aaaae
+b0 aaaaf
+$end
+
+#10
+1aaaab
+0aaaae
+
+#20
+b1011011 aaaaa
+1aaaac
+1aaaae
+
+#30
+0aaaab
+0aaaac
+0aaaae
+
+#40
+1aaaab
+1aaaae
+
+#50
+b1101001 aaaaa
+1aaaac
+0aaaae
+
+#60
+0aaaab
+0aaaac
+1aaaae
+
+#70
+1aaaab
+0aaaae
+
+#80
+b11001011 aaaaa
+1aaaac
+1aaaae
+
+#90
+0aaaab
+0aaaac
+0aaaae
+
+#100
+1aaaab
+1aaaae
+
+#110
+b100111100 aaaaa
+1aaaac
+0aaaae
+
+#120
+0aaaab
+0aaaac
+1aaaae
+
+#130
+1aaaab
+0aaaae
+
+#140
+b10110100 aaaaa
+1aaaac
+1aaaae
+
+#150
+0aaaab
+0aaaac
+0aaaae
+
+#160
+1aaaab
+1aaaae
+
+#170
+b100010111 aaaaa
+1aaaac
+0aaaae
+
+#180
+0aaaab
+0aaaac
+1aaaae
+
+#190
+1aaaab
+0aaaae
+
+#200
+b111 aaaaa
+1aaaac
+1aaaae
+
+#210
+0aaaab
+0aaaac
+0aaaae
+
+#220
+1aaaab
+1aaaae
+
+#230
+b10001000 aaaaa
+1aaaac
+0aaaae
+
+#240
+0aaaab
+0aaaac
+1aaaae
+
+#250
+1aaaab
+0aaaae
+
+#260
+b11000111 aaaaa
+1aaaac
+1aaaae
+
+#270
+0aaaab
+0aaaac
+0aaaae
+
+#280
+1aaaab
+1aaaae
+
+#290
+b101010 aaaaa
+1aaaac
+0aaaae
+
+#300
+0aaaab
+0aaaac
+1aaaae
+
+#310
+1aaaab
+0aaaae
+
+#320
+b1001011 aaaaa
+1aaaac
+1aaaae
+
+#330
+0aaaab
+0aaaac
+0aaaae
+
+#340
+1aaaab
+1aaaae
+
+#350
+b10110101 aaaaa
+1aaaac
+0aaaae
+
+#360
+0aaaab
+0aaaac
+1aaaae
+
+#370
+1aaaab
+0aaaae
+
+#380
+b10101001 aaaaa
+1aaaac
+1aaaae
+
+#390
+0aaaab
+0aaaac
+0aaaae
+
+#400
+1aaaab
+1aaaae
+
+#410
+b11000001 aaaaa
+1aaaac
+0aaaae
+
+#420
+0aaaab
+0aaaac
+1aaaae
+
+#430
+1aaaab
+0aaaae
+
+#440
+b100111001 aaaaa
+1aaaac
+1aaaae
+
+#450
+0aaaab
+0aaaac
+0aaaae
+
+#460
+1aaaab
+1aaaae
+
+#470
+b110101 aaaaa
+1aaaac
+0aaaae
+
+#480
+0aaaab
+0aaaac
+1aaaae
+
+#490
+1aaaab
+0aaaae
+
+#500

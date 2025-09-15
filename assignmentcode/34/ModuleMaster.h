@@ -15,7 +15,7 @@ SC_MODULE(ModuleMaster) { // data source
     sc_out<READY_VAL_SIG_TYPE> valid;
     sc_out<DATA_SIG_TYPE> data;
     sc_out<ERROR_SIG_TYPE> error;
-    //sc_port<sc_int<CHANNEL_BITS>, MAX_CHANNEL> channel;
+    sc_out<CHANNEL_SIG_TYPE> channel;
     SC_CTOR(ModuleMaster) {
         SC_THREAD(work_a_serio);
         sensitive << clock << ready;
@@ -29,6 +29,7 @@ SC_MODULE(ModuleMaster) { // data source
         std::uniform_int_distribution<> value_rng(1, 320);
         while (true) {
             do { wait(); } while(!ready); // wait() works until the next clock - waiting until ready is sent by slave
+            wait();
             data.write(value_rng(gen)); // write value so slave can read it
             valid.write(true); // write valid so slave knows he can read it
             do { wait(); } while(ready); // wait until slave sends false to end the request
