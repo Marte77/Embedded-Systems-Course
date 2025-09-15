@@ -47,3 +47,9 @@ After the `valid` signal turning to 1, the `ModuleSlave` can now read the value 
 # Ex 3.5
 `35/conf_35.h` `35/Top35.h` `35/ModuleSlave_35.h` `35/ModuleMaster_35.h` `35/InAdapter.h`
 
+In order for the model to represent both TLM and BCAM levels of transmitting data, we can adapt the previous exercise's model such that the `Master` represents the TLM and the `Slave` the BCAM level, respectively. 
+
+To do this, we must add a new module, `InAdapter`, in between the 2 other modules. The `Master` will now first communicate with `InAdapter`, via a `FIFO`, which gives us the TLM level, where only the communication is modelled.
+The communication between the `InAdapater` and the `Slave` will behave in the same way as the exercise 3.4, which models the BCAM, since there are multiple channels being used to establish the transaction, as well as the usage of clock and reset signals.
+
+**!attach images of gtkwave or console. use the .vcd and .slv files. Use the files in commit with revision cbed67c3e40f9a3e15c4aee6fa4a2a0a6cd83bff**
