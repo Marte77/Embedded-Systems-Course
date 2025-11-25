@@ -7,7 +7,7 @@
 #include "systemc.h"
 
 SC_MODULE(ModuleSingle) {
-    sc_int<4> counter;
+    sc_uint<4> counter;
     sc_event event;
     SC_CTOR(ModuleSingle) {
         SC_THREAD(thread_function);

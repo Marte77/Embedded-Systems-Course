@@ -32,5 +32,6 @@ add_executable(a1 main.cpp
         assignmentcode/35/ModuleMaster_35.h
         assignmentcode/35/ModuleSlave_35.h
         assignmentcode/35/conf_35.h
+        assignment3/EmbeddedSystemX.h
 )
 target_link_libraries(a1 systemc)

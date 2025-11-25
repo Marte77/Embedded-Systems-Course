@@ -12,6 +12,7 @@ Since most computers represent signed numbers with the Two's Compliment, the bin
 
 # Ex 3.2
 `32/ModuleDouble.h`
+
 By setting the static sensitivity in the constructor, using the syntax `sensitive << eventX << eventY`,  we can set which events will trigger the last process defined without having to write it in the process function code.
 Dynamic sensitivity works the same but it's called on the process function using either of the following functions: `wait(<time or event>)` or `next_trigger(<event>)`.
 The exercise essentially requires to use both sensitivities. 

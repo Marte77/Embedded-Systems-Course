@@ -9,6 +9,7 @@ using namespace sc_core; // use namespace
 #include "assignmentcode/33/TopTCP.h"
 #include "assignmentcode/34/AvalonSTTop.h"
 #include "assignmentcode/35/Top35.h"
+#include "assignment3/EmbeddedSystemX.h"
 
 /*void hello1() { // a normal c++ function
     std::cout << "Hello world using approach 1" << std::endl;
@@ -35,36 +36,43 @@ int sc_main(int, char*[]) {
     //sc_start();
     //Top top("top");
     //sc_start();
-    int exercise = 35;
-    switch (exercise) {
-        case 31: {
-            ModuleSingle m = ModuleSingle("Module_Single");
-            sc_start(200, SC_MS);
-            break;
-        }
-        case 32: {
-            ModuleDouble m = ModuleDouble("Module_Double");
-            sc_start(200, SC_MS);
-            break;
-        }
-        case 33: {
-            TopTCP top = TopTCP("Top");
-            sc_start(200, SC_MS);
-            break;
-        }
-        case 34: {
-            AvalonSTTop top = AvalonSTTop("STTop");
-            sc_start(500, SC_NS);
-            break;
-        }
-        case 35: {
-            Top35 top = Top35("Top35");
-            sc_start(500, SC_NS);
-            break;
-        }
-        default: {
-            std::cout << "No exercise available for " << exercise << std::endl;
-        }
+    if (true) {
+        EmbeddedSystemX s;
+        s.run();
+        return 0;
     }
-    return 0;
+    else {
+        int exercise = 31;
+        switch (exercise) {
+            case 31: {
+                ModuleSingle m = ModuleSingle("Module_Single");
+                sc_start(200, SC_MS);
+                break;
+            }
+            case 32: {
+                ModuleDouble m = ModuleDouble("Module_Double");
+                sc_start(200, SC_MS);
+                break;
+            }
+            case 33: {
+                TopTCP top = TopTCP("Top");
+                sc_start(200, SC_MS);
+                break;
+            }
+            case 34: {
+                AvalonSTTop top = AvalonSTTop("STTop");
+                sc_start(500, SC_NS);
+                break;
+            }
+            case 35: {
+                Top35 top = Top35("Top35");
+                sc_start(500, SC_NS);
+                break;
+            }
+            default: {
+                std::cout << "No exercise available for " << exercise << std::endl;
+            }
+        }
+        return 0;
+    }
 }
