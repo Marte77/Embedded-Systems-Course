@@ -83,7 +83,7 @@ public:
         std::cout << "Resuming" << std::endl;
         run(false);
     }
-    void run(bool firstRun);
+    void run(bool firstRun = true);
     void configure();
     void stop();
 };
@@ -141,7 +141,7 @@ public:
 
     void SelfTestFailed(int errorNumber) {
         setOuterState(Failure);
-        if (errorNumber > 10) { Exit(); }
+        if (errorNumber > 5) { Exit(); }
         Restart();
     }
     void ConfigX() {
@@ -181,8 +181,9 @@ void OperationalObject::configure() {
     setOperationalState(Configuration);
     std::cout << "read configuration and operate on it" << std::endl;
     embeddedSystemX->ConfigX();
+    configurationEnded();
 }
-void OperationalObject::run(bool firstRun = true) {
+void OperationalObject::run(bool firstRun) {
     setOperationalState(RealTimeLoop);
     if (firstRun) {
         std::this_thread::sleep_for(std::chrono::seconds{2});
@@ -191,8 +192,8 @@ void OperationalObject::run(bool firstRun = true) {
     } else {
         //std::this_thread::sleep_for(std::chrono::seconds{5});
         int i = 0;
-        while (i < 6) {
-            i++
+        while (i < 2) {
+            i++;
             std::cout << "Run Iteration = " << i << std::endl;
             embeddedSystemX->chMode(1);
             setLoopState(Mode1);

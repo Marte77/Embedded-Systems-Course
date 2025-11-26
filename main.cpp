@@ -38,7 +38,10 @@ int sc_main(int, char*[]) {
     //sc_start();
     if (true) {
         EmbeddedSystemX s;
-        s.run();
+        try {
+            s.run();
+        } catch (std::logic_error error) {
+        }
         return 0;
     }
     else {
