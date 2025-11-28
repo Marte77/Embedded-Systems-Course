@@ -9,7 +9,7 @@ using namespace sc_core; // use namespace
 #include "assignmentcode/33/TopTCP.h"
 #include "assignmentcode/34/AvalonSTTop.h"
 #include "assignmentcode/35/Top35.h"
-#include "assignment3/EmbeddedSystemX.h"
+#include "assignment3/StatesAsSingletons.h"
 
 /*void hello1() { // a normal c++ function
     std::cout << "Hello world using approach 1" << std::endl;
@@ -38,10 +38,7 @@ int sc_main(int, char*[]) {
     //sc_start();
     if (true) {
         EmbeddedSystemX s;
-        try {
-            s.run();
-        } catch (std::logic_error error) {
-        }
+        s.selfTestOk();
         return 0;
     }
     else {
