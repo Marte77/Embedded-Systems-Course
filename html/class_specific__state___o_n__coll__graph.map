@@ -1,0 +1,5 @@
+<map id="Specific_state_ON" name="Specific_state_ON">
+<area shape="rect" id="Node000001" title=" " alt="" coords="5,200,182,322"/>
+<area shape="rect" id="Node000002" href="$class_state__of__machine.html" title=" " alt="" coords="10,5,177,152"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="95,164,96,201,91,200,93,169"/>
+</map>

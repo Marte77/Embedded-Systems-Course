@@ -11,6 +11,7 @@ var class_ready_state =
     [ "selfTestFailed", "class_ready_state.html#ada1648588197196473a3cef4104633a6", null ],
     [ "selfTestOk", "class_ready_state.html#ac0edeca2ab8f5ab14ac729e7476a6407", null ],
     [ "start", "class_ready_state.html#afca7afc96e449d8a719f3f22e61bc924", null ],
+    [ "stop", "class_ready_state.html#a38b6968e4106fe587c443d46e64fdb51", null ],
     [ "suspend", "class_ready_state.html#add9ad4412cf6beb08f953f4b0ee40521", null ],
     [ "instance", "class_ready_state.html#ad9b81807720099562fb7e0c6b77a94a6", null ]
 ];

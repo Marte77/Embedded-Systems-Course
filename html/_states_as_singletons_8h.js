@@ -8,6 +8,7 @@ var _states_as_singletons_8h =
     [ "ConfigurationState", "class_configuration_state.html", "class_configuration_state" ],
     [ "ReadyState", "class_ready_state.html", "class_ready_state" ],
     [ "SuspendedState", "class_suspended_state.html", "class_suspended_state" ],
+    [ "RealTimeLoopOuterState", "class_real_time_loop_outer_state.html", "class_real_time_loop_outer_state" ],
     [ "RealTimeLoopState", "class_real_time_loop_state.html", "class_real_time_loop_state" ],
     [ "Mode1State", "class_mode1_state.html", "class_mode1_state" ],
     [ "Mode2State", "class_mode2_state.html", "class_mode2_state" ],

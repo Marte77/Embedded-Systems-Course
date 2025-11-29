@@ -11,6 +11,7 @@ var class_operational_state =
     [ "selfTestFailed", "class_operational_state.html#a246be8c0e3044d4084677da7de85d530", null ],
     [ "selfTestOk", "class_operational_state.html#ab6a41f161d8c3e478d29ce41c09331d8", null ],
     [ "start", "class_operational_state.html#a0e02f08841631a89bcc8e8713facc869", null ],
+    [ "stop", "class_operational_state.html#a3eb0214082f79a4b41fbd5b3db059fb1", null ],
     [ "suspend", "class_operational_state.html#ac442e55c4f713d7c7cbe036cdc490102", null ],
     [ "instance", "class_operational_state.html#acef346890b79b8d14941f17985a6fb38", null ]
 ];

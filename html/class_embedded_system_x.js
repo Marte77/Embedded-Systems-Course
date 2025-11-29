@@ -14,6 +14,7 @@ var class_embedded_system_x =
     [ "selfTestFailed", "class_embedded_system_x.html#a77a35bde3aa1584a956805cf049d06e8", null ],
     [ "selfTestOk", "class_embedded_system_x.html#ab043ef3b463385ffb3587aca15db128f", null ],
     [ "start", "class_embedded_system_x.html#aa1e38d16fd891e7caaf8ff93e29e5112", null ],
+    [ "stop", "class_embedded_system_x.html#af76cbf591323da258c5964ce18079d9b", null ],
     [ "suspend", "class_embedded_system_x.html#a433f5de4dce4090e609637f00c1735fd", null ],
     [ "currentState", "class_embedded_system_x.html#ad12e2505d440e2255c6c867e71c4f150", null ],
     [ "realTimeLoop", "class_embedded_system_x.html#a7beb63a9d769365185b3a55cc177cc79", null ]

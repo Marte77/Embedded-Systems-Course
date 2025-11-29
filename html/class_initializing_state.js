@@ -11,6 +11,7 @@ var class_initializing_state =
     [ "selfTestFailed", "class_initializing_state.html#a831b4f2f341637c6a875ac917afcdf19", null ],
     [ "selfTestOk", "class_initializing_state.html#a98a7dfa124f06eadd6031ea00c657c11", null ],
     [ "start", "class_initializing_state.html#a98eec916df223be68ed5a1fc91166863", null ],
+    [ "stop", "class_initializing_state.html#a6665e155e8b0f721ecc4a19f4947c706", null ],
     [ "suspend", "class_initializing_state.html#a32d3057692ffb85f5be2c72bc1efdf8c", null ],
     [ "instance", "class_initializing_state.html#a749faad06d367b1d0fb9cef804b6c99e", null ]
 ];

@@ -11,6 +11,7 @@ var class_failure_state =
     [ "selfTestFailed", "class_failure_state.html#ab74dac1ba5df645cdbc4d1a618f61295", null ],
     [ "selfTestOk", "class_failure_state.html#aeb681af08c397a83a73edd8257a2453c", null ],
     [ "start", "class_failure_state.html#a456227060b4c69ad6004a498b20d3833", null ],
+    [ "stop", "class_failure_state.html#abef4579954e3fe36d750044e732884eb", null ],
     [ "suspend", "class_failure_state.html#a87f8f1cc19d8575d0a354e2e27f33a55", null ],
     [ "instance", "class_failure_state.html#a888554181c307d6eef104b801170542e", null ]
 ];

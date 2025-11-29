@@ -36,499 +36,564 @@
 \DoxyCodeLine{00032\ \ \ \ \ \textcolor{keyword}{virtual}\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_embedded_system_x_state_a90ffae4744207d0c079fd3446bb619b9}{suspend}}()\ =\ 0;}
 \DoxyCodeLine{00033\ \ \ \ \ \textcolor{keyword}{virtual}\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_embedded_system_x_state_a3e0d667712646877ad48c83048dd3a48}{resume}}()\ =\ 0;}
 \DoxyCodeLine{00034\ \ \ \ \ \textcolor{keyword}{virtual}\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_embedded_system_x_state_a01a8a1a4b0de180366d3bcf91b9fa07b}{exit}}()\ =\ 0;}
-\DoxyCodeLine{00035\ \};}
-\DoxyCodeLine{00036\ }
-\DoxyCodeLine{00037\ \textcolor{keyword}{class\ }\mbox{\hyperlink{class_power_on_self_test_state_a1020e4af5a2b23ac1c6236d9ca2a71b0}{PowerOnSelfTestState}}\ :\ \textcolor{keyword}{public}\ \mbox{\hyperlink{class_embedded_system_x_state_a5630d67a88100d0e67c1578a7ee43e91}{EmbeddedSystemXState}}\ \{}
-\DoxyCodeLine{00038\ \textcolor{keyword}{private}:}
-\DoxyCodeLine{00039\ \ \ \ \ \textcolor{keyword}{static}\ \mbox{\hyperlink{class_power_on_self_test_state_a1020e4af5a2b23ac1c6236d9ca2a71b0}{PowerOnSelfTestState}}*\ \mbox{\hyperlink{class_power_on_self_test_state_a11c228bfba1c3e8ee11fa2f90b2cbd10}{instance}};}
-\DoxyCodeLine{00040\ \ \ \ \ \mbox{\hyperlink{class_power_on_self_test_state_a1020e4af5a2b23ac1c6236d9ca2a71b0}{PowerOnSelfTestState}}(\mbox{\hyperlink{class_embedded_system_x}{EmbeddedSystemX}}*\ ctx)\ :\ \mbox{\hyperlink{class_embedded_system_x_state_a5630d67a88100d0e67c1578a7ee43e91}{EmbeddedSystemXState}}(ctx)\ \{\}}
-\DoxyCodeLine{00041\ }
-\DoxyCodeLine{00042\ \textcolor{keyword}{public}:}
-\DoxyCodeLine{00043\ \ \ \ \ \textcolor{keyword}{static}\ \mbox{\hyperlink{class_power_on_self_test_state_a1020e4af5a2b23ac1c6236d9ca2a71b0}{PowerOnSelfTestState}}*\ \mbox{\hyperlink{class_power_on_self_test_state_ae152baf800ee583b4c4c0c5ca16aa904}{getInstance}}(\mbox{\hyperlink{class_embedded_system_x}{EmbeddedSystemX}}*\ ctx)\ \{}
-\DoxyCodeLine{00044\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (!\mbox{\hyperlink{class_power_on_self_test_state_a11c228bfba1c3e8ee11fa2f90b2cbd10}{instance}})\ \{}
-\DoxyCodeLine{00045\ \ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_power_on_self_test_state_a11c228bfba1c3e8ee11fa2f90b2cbd10}{instance}}\ =\ \textcolor{keyword}{new}\ \mbox{\hyperlink{class_power_on_self_test_state_a1020e4af5a2b23ac1c6236d9ca2a71b0}{PowerOnSelfTestState}}(ctx);}
-\DoxyCodeLine{00046\ \ \ \ \ \ \ \ \ \}}
-\DoxyCodeLine{00047\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_power_on_self_test_state_a11c228bfba1c3e8ee11fa2f90b2cbd10}{instance}}-\/>context\ =\ ctx;}
-\DoxyCodeLine{00048\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ \mbox{\hyperlink{class_power_on_self_test_state_a11c228bfba1c3e8ee11fa2f90b2cbd10}{instance}};}
-\DoxyCodeLine{00049\ \ \ \ \ \}}
-\DoxyCodeLine{00050\ }
-\DoxyCodeLine{00051\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_power_on_self_test_state_a27ae316e06235041d8f13039a7bc2afe}{selfTestOk}}()\ \textcolor{keyword}{override};}
-\DoxyCodeLine{00052\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_power_on_self_test_state_a6fa3b40482562e8d289fb624b198b3f0}{initialized}}()\textcolor{keyword}{\ override\ }\{\ std::cout\ <<\ \textcolor{stringliteral}{"{}\ \ [PowerOnSelfTest]\ initialized()\ -\/\ Invalid\ event\(\backslash\)n"{}};\ \}}
-\DoxyCodeLine{00053\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_power_on_self_test_state_ac76686c6a614576d3872e4a647ea6aa3}{restart}}()\ \textcolor{keyword}{override};}
-\DoxyCodeLine{00054\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_power_on_self_test_state_a68e3bab150a0b81941bab395f2ce9635}{selfTestFailed}}(\textcolor{keywordtype}{int}\ errorNo)\ \textcolor{keyword}{override};}
-\DoxyCodeLine{00055\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_power_on_self_test_state_a7f3cced4a7c2e21ff1a79cb71d5cf2ab}{configure}}()\textcolor{keyword}{\ override\ }\{\ std::cout\ <<\ \textcolor{stringliteral}{"{}\ \ [PowerOnSelfTest]\ configure()\ -\/\ Invalid\ event\(\backslash\)n"{}};\ \}}
-\DoxyCodeLine{00056\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_power_on_self_test_state_acd357fff575bbabd9922d54c49b30af6}{configurationEnded}}()\textcolor{keyword}{\ override\ }\{\ std::cout\ <<\ \textcolor{stringliteral}{"{}\ \ [PowerOnSelfTest]\ configurationEnded()\ -\/\ Invalid\ event\(\backslash\)n"{}};\ \}}
-\DoxyCodeLine{00057\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_power_on_self_test_state_ad5c5599e20a9fe2bc19d94bf492a4bf7}{start}}()\textcolor{keyword}{\ override\ }\{\ std::cout\ <<\ \textcolor{stringliteral}{"{}\ \ [PowerOnSelfTest]\ start()\ -\/\ Invalid\ event\(\backslash\)n"{}};\ \}}
-\DoxyCodeLine{00058\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_power_on_self_test_state_a925116a76ea9e73f0744398d00853db3}{suspend}}()\textcolor{keyword}{\ override\ }\{\ std::cout\ <<\ \textcolor{stringliteral}{"{}\ \ [PowerOnSelfTest]\ suspend()\ -\/\ Invalid\ event\(\backslash\)n"{}};\ \}}
-\DoxyCodeLine{00059\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_power_on_self_test_state_a6875101c992e0f5c001351068a17a313}{resume}}()\textcolor{keyword}{\ override\ }\{\ std::cout\ <<\ \textcolor{stringliteral}{"{}\ \ [PowerOnSelfTest]\ resume()\ -\/\ Invalid\ event\(\backslash\)n"{}};\ \}}
-\DoxyCodeLine{00060\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_power_on_self_test_state_a13bde64a2aa0b61f14b83d62ab23b766}{exit}}()\textcolor{keyword}{\ override\ }\{\ std::cout\ <<\ \textcolor{stringliteral}{"{}\ \ [PowerOnSelfTest]\ exit()\ -\/\ Invalid\ event\(\backslash\)n"{}};\ \}}
-\DoxyCodeLine{00061\ \};}
-\DoxyCodeLine{00062\ }
-\DoxyCodeLine{00063\ \textcolor{keyword}{class\ }\mbox{\hyperlink{class_initializing_state_a0171b550bdf18be89167d4a478009c69}{InitializingState}}\ :\ \textcolor{keyword}{public}\ \mbox{\hyperlink{class_embedded_system_x_state_a5630d67a88100d0e67c1578a7ee43e91}{EmbeddedSystemXState}}\ \{}
-\DoxyCodeLine{00064\ \textcolor{keyword}{private}:}
-\DoxyCodeLine{00065\ \ \ \ \ \textcolor{keyword}{static}\ \mbox{\hyperlink{class_initializing_state_a0171b550bdf18be89167d4a478009c69}{InitializingState}}*\ \mbox{\hyperlink{class_initializing_state_a749faad06d367b1d0fb9cef804b6c99e}{instance}};}
-\DoxyCodeLine{00066\ \ \ \ \ \mbox{\hyperlink{class_initializing_state_a0171b550bdf18be89167d4a478009c69}{InitializingState}}(\mbox{\hyperlink{class_embedded_system_x}{EmbeddedSystemX}}*\ ctx)\ :\ \mbox{\hyperlink{class_embedded_system_x_state_a5630d67a88100d0e67c1578a7ee43e91}{EmbeddedSystemXState}}(ctx)\ \{\}}
-\DoxyCodeLine{00067\ }
-\DoxyCodeLine{00068\ \textcolor{keyword}{public}:}
-\DoxyCodeLine{00069\ \ \ \ \ \textcolor{keyword}{static}\ \mbox{\hyperlink{class_initializing_state_a0171b550bdf18be89167d4a478009c69}{InitializingState}}*\ \mbox{\hyperlink{class_initializing_state_a5f2b35fd0799f7c5e3f1c5fe50ef5f0f}{getInstance}}(\mbox{\hyperlink{class_embedded_system_x}{EmbeddedSystemX}}*\ ctx)\ \{}
-\DoxyCodeLine{00070\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (!\mbox{\hyperlink{class_initializing_state_a749faad06d367b1d0fb9cef804b6c99e}{instance}})\ \{}
-\DoxyCodeLine{00071\ \ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_initializing_state_a749faad06d367b1d0fb9cef804b6c99e}{instance}}\ =\ \textcolor{keyword}{new}\ \mbox{\hyperlink{class_initializing_state_a0171b550bdf18be89167d4a478009c69}{InitializingState}}(ctx);}
-\DoxyCodeLine{00072\ \ \ \ \ \ \ \ \ \}}
-\DoxyCodeLine{00073\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_initializing_state_a749faad06d367b1d0fb9cef804b6c99e}{instance}}-\/>context\ =\ ctx;}
-\DoxyCodeLine{00074\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ \mbox{\hyperlink{class_initializing_state_a749faad06d367b1d0fb9cef804b6c99e}{instance}};}
-\DoxyCodeLine{00075\ \ \ \ \ \}}
-\DoxyCodeLine{00076\ }
-\DoxyCodeLine{00077\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_initializing_state_a98a7dfa124f06eadd6031ea00c657c11}{selfTestOk}}()\textcolor{keyword}{\ override\ }\{\ std::cout\ <<\ \textcolor{stringliteral}{"{}\ \ [Initializing]\ selfTestOk()\ -\/\ Invalid\ event\(\backslash\)n"{}};\ \}}
-\DoxyCodeLine{00078\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_initializing_state_a2582cc2e25714a49ede134c3fc606cbb}{initialized}}()\ \textcolor{keyword}{override};}
-\DoxyCodeLine{00079\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_initializing_state_a67d16e73603bd66acfbc7e2568a631a1}{restart}}()\ \textcolor{keyword}{override};}
-\DoxyCodeLine{00080\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_initializing_state_a831b4f2f341637c6a875ac917afcdf19}{selfTestFailed}}(\textcolor{keywordtype}{int}\ errorNo)\textcolor{keyword}{\ override\ }\{\ std::cout\ <<\ \textcolor{stringliteral}{"{}\ \ [Initializing]\ selfTestFailed()\ -\/\ Invalid\ event\(\backslash\)n"{}};\ \}}
-\DoxyCodeLine{00081\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_initializing_state_a9f9d6c29177f416e0348d61d17096d39}{configure}}()\textcolor{keyword}{\ override\ }\{\ std::cout\ <<\ \textcolor{stringliteral}{"{}\ \ [Initializing]\ configure()\ -\/\ Invalid\ event\(\backslash\)n"{}};\ \}}
-\DoxyCodeLine{00082\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_initializing_state_a7aaad3343c61243163862453b943caed}{configurationEnded}}()\textcolor{keyword}{\ override\ }\{\ std::cout\ <<\ \textcolor{stringliteral}{"{}\ \ [Initializing]\ configurationEnded()\ -\/\ Invalid\ event\(\backslash\)n"{}};\ \}}
-\DoxyCodeLine{00083\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_initializing_state_a98eec916df223be68ed5a1fc91166863}{start}}()\textcolor{keyword}{\ override\ }\{\ std::cout\ <<\ \textcolor{stringliteral}{"{}\ \ [Initializing]\ start()\ -\/\ Invalid\ event\(\backslash\)n"{}};\ \}}
-\DoxyCodeLine{00084\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_initializing_state_a32d3057692ffb85f5be2c72bc1efdf8c}{suspend}}()\textcolor{keyword}{\ override\ }\{\ std::cout\ <<\ \textcolor{stringliteral}{"{}\ \ [Initializing]\ suspend()\ -\/\ Invalid\ event\(\backslash\)n"{}};\ \}}
-\DoxyCodeLine{00085\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_initializing_state_a7949ee213776c2658af4303e65341ba9}{resume}}()\textcolor{keyword}{\ override\ }\{\ std::cout\ <<\ \textcolor{stringliteral}{"{}\ \ [Initializing]\ resume()\ -\/\ Invalid\ event\(\backslash\)n"{}};\ \}}
-\DoxyCodeLine{00086\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_initializing_state_ab0ea480671c8a75627aedccb34745b02}{exit}}()\textcolor{keyword}{\ override\ }\{\ std::cout\ <<\ \textcolor{stringliteral}{"{}\ \ [Initializing]\ exit()\ -\/\ Invalid\ event\(\backslash\)n"{}};\ \}}
-\DoxyCodeLine{00087\ \};}
-\DoxyCodeLine{00088\ }
-\DoxyCodeLine{00089\ \textcolor{keyword}{class\ }\mbox{\hyperlink{class_failure_state_a2ec44ef17dc39f0093d29ef996958325}{FailureState}}\ :\ \textcolor{keyword}{public}\ \mbox{\hyperlink{class_embedded_system_x_state_a5630d67a88100d0e67c1578a7ee43e91}{EmbeddedSystemXState}}\ \{}
-\DoxyCodeLine{00090\ \textcolor{keyword}{private}:}
-\DoxyCodeLine{00091\ \ \ \ \ \textcolor{keyword}{static}\ \mbox{\hyperlink{class_failure_state_a2ec44ef17dc39f0093d29ef996958325}{FailureState}}*\ \mbox{\hyperlink{class_failure_state_a888554181c307d6eef104b801170542e}{instance}};}
-\DoxyCodeLine{00092\ \ \ \ \ \mbox{\hyperlink{class_failure_state_a2ec44ef17dc39f0093d29ef996958325}{FailureState}}(\mbox{\hyperlink{class_embedded_system_x}{EmbeddedSystemX}}*\ ctx)\ :\ \mbox{\hyperlink{class_embedded_system_x_state_a5630d67a88100d0e67c1578a7ee43e91}{EmbeddedSystemXState}}(ctx)\ \{\}}
-\DoxyCodeLine{00093\ }
-\DoxyCodeLine{00094\ \textcolor{keyword}{public}:}
-\DoxyCodeLine{00095\ \ \ \ \ \textcolor{keyword}{static}\ \mbox{\hyperlink{class_failure_state_a2ec44ef17dc39f0093d29ef996958325}{FailureState}}*\ \mbox{\hyperlink{class_failure_state_af8df67121215589d804b1f1872eec2ab}{getInstance}}(\mbox{\hyperlink{class_embedded_system_x}{EmbeddedSystemX}}*\ ctx)\ \{}
-\DoxyCodeLine{00096\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (!\mbox{\hyperlink{class_failure_state_a888554181c307d6eef104b801170542e}{instance}})\ \{}
-\DoxyCodeLine{00097\ \ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_failure_state_a888554181c307d6eef104b801170542e}{instance}}\ =\ \textcolor{keyword}{new}\ \mbox{\hyperlink{class_failure_state_a2ec44ef17dc39f0093d29ef996958325}{FailureState}}(ctx);}
-\DoxyCodeLine{00098\ \ \ \ \ \ \ \ \ \}}
-\DoxyCodeLine{00099\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_failure_state_a888554181c307d6eef104b801170542e}{instance}}-\/>context\ =\ ctx;}
-\DoxyCodeLine{00100\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ \mbox{\hyperlink{class_failure_state_a888554181c307d6eef104b801170542e}{instance}};}
-\DoxyCodeLine{00101\ \ \ \ \ \}}
-\DoxyCodeLine{00102\ }
-\DoxyCodeLine{00103\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_failure_state_aeb681af08c397a83a73edd8257a2453c}{selfTestOk}}()\textcolor{keyword}{\ override\ }\{\ std::cout\ <<\ \textcolor{stringliteral}{"{}\ \ [Failure]\ selfTestOk()\ -\/\ Invalid\ event\(\backslash\)n"{}};\ \}}
-\DoxyCodeLine{00104\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_failure_state_a045f7a18bf55f188bfc78e138b181cf7}{initialized}}()\textcolor{keyword}{\ override\ }\{\ std::cout\ <<\ \textcolor{stringliteral}{"{}\ \ [Failure]\ initialized()\ -\/\ Invalid\ event\(\backslash\)n"{}};\ \}}
-\DoxyCodeLine{00105\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_failure_state_a92512453ab6c2bc05c7913955cdf3228}{restart}}()\ \textcolor{keyword}{override};}
-\DoxyCodeLine{00106\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_failure_state_ab74dac1ba5df645cdbc4d1a618f61295}{selfTestFailed}}(\textcolor{keywordtype}{int}\ errorNo)\textcolor{keyword}{\ override\ }\{\ std::cout\ <<\ \textcolor{stringliteral}{"{}\ \ [Failure]\ Displaying\ error:\ "{}}\ <<\ errorNo\ <<\ \textcolor{stringliteral}{"{}\(\backslash\)n"{}};\ \}}
-\DoxyCodeLine{00107\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_failure_state_ab6d9cc796000e07e5100bd4116656855}{configure}}()\textcolor{keyword}{\ override\ }\{\ std::cout\ <<\ \textcolor{stringliteral}{"{}\ \ [Failure]\ configure()\ -\/\ Invalid\ event\(\backslash\)n"{}};\ \}}
-\DoxyCodeLine{00108\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_failure_state_ac33fdbe4a13ce6695ddc9fa24956fd85}{configurationEnded}}()\textcolor{keyword}{\ override\ }\{\ std::cout\ <<\ \textcolor{stringliteral}{"{}\ \ [Failure]\ configurationEnded()\ -\/\ Invalid\ event\(\backslash\)n"{}};\ \}}
-\DoxyCodeLine{00109\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_failure_state_a456227060b4c69ad6004a498b20d3833}{start}}()\textcolor{keyword}{\ override\ }\{\ std::cout\ <<\ \textcolor{stringliteral}{"{}\ \ [Failure]\ start()\ -\/\ Invalid\ event\(\backslash\)n"{}};\ \}}
-\DoxyCodeLine{00110\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_failure_state_a87f8f1cc19d8575d0a354e2e27f33a55}{suspend}}()\textcolor{keyword}{\ override\ }\{\ std::cout\ <<\ \textcolor{stringliteral}{"{}\ \ [Failure]\ suspend()\ -\/\ Invalid\ event\(\backslash\)n"{}};\ \}}
-\DoxyCodeLine{00111\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_failure_state_aaca1853187a12a0bd6a52f044be44609}{resume}}()\textcolor{keyword}{\ override\ }\{\ std::cout\ <<\ \textcolor{stringliteral}{"{}\ \ [Failure]\ resume()\ -\/\ Invalid\ event\(\backslash\)n"{}};\ \}}
-\DoxyCodeLine{00112\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_failure_state_a6e3007625ea8d215cdad10a79c952ac1}{exit}}()\textcolor{keyword}{\ override\ }\{\ std::cout\ <<\ \textcolor{stringliteral}{"{}\ \ [Failure]\ exit()\ -\/\ Invalid\ event\(\backslash\)n"{}};\ \}}
-\DoxyCodeLine{00113\ \};}
-\DoxyCodeLine{00114\ }
-\DoxyCodeLine{00115\ \textcolor{keyword}{class\ }\mbox{\hyperlink{class_operational_state_ae3abfc6d0545ae4e82369b73e745f224}{OperationalState}}\ :\ \textcolor{keyword}{public}\ \mbox{\hyperlink{class_embedded_system_x_state_a5630d67a88100d0e67c1578a7ee43e91}{EmbeddedSystemXState}}\ \{}
-\DoxyCodeLine{00116\ \textcolor{keyword}{private}:}
-\DoxyCodeLine{00117\ \ \ \ \ \textcolor{keyword}{static}\ \mbox{\hyperlink{class_operational_state_ae3abfc6d0545ae4e82369b73e745f224}{OperationalState}}*\ \mbox{\hyperlink{class_operational_state_acef346890b79b8d14941f17985a6fb38}{instance}};}
-\DoxyCodeLine{00118\ \ \ \ \ \mbox{\hyperlink{class_operational_state_ae3abfc6d0545ae4e82369b73e745f224}{OperationalState}}(\mbox{\hyperlink{class_embedded_system_x}{EmbeddedSystemX}}*\ ctx)\ :\ \mbox{\hyperlink{class_embedded_system_x_state_a5630d67a88100d0e67c1578a7ee43e91}{EmbeddedSystemXState}}(ctx)\ \{\}}
+\DoxyCodeLine{00035\ \ \ \ \ \textcolor{keyword}{virtual}\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_embedded_system_x_state_a4153ad7703d70e9736aab5f085616301}{stop}}()\ =\ 0;}
+\DoxyCodeLine{00036\ \};}
+\DoxyCodeLine{00037\ }
+\DoxyCodeLine{00038\ \textcolor{keyword}{class\ }\mbox{\hyperlink{class_power_on_self_test_state_a1020e4af5a2b23ac1c6236d9ca2a71b0}{PowerOnSelfTestState}}\ :\ \textcolor{keyword}{public}\ \mbox{\hyperlink{class_embedded_system_x_state_a5630d67a88100d0e67c1578a7ee43e91}{EmbeddedSystemXState}}\ \{}
+\DoxyCodeLine{00039\ \textcolor{keyword}{private}:}
+\DoxyCodeLine{00040\ \ \ \ \ \textcolor{keyword}{static}\ \mbox{\hyperlink{class_power_on_self_test_state_a1020e4af5a2b23ac1c6236d9ca2a71b0}{PowerOnSelfTestState}}*\ \mbox{\hyperlink{class_power_on_self_test_state_a11c228bfba1c3e8ee11fa2f90b2cbd10}{instance}};}
+\DoxyCodeLine{00041\ \ \ \ \ \mbox{\hyperlink{class_power_on_self_test_state_a1020e4af5a2b23ac1c6236d9ca2a71b0}{PowerOnSelfTestState}}(\mbox{\hyperlink{class_embedded_system_x}{EmbeddedSystemX}}*\ ctx)\ :\ \mbox{\hyperlink{class_embedded_system_x_state_a5630d67a88100d0e67c1578a7ee43e91}{EmbeddedSystemXState}}(ctx)\ \{\}}
+\DoxyCodeLine{00042\ }
+\DoxyCodeLine{00043\ \textcolor{keyword}{public}:}
+\DoxyCodeLine{00044\ \ \ \ \ \textcolor{keyword}{static}\ \mbox{\hyperlink{class_power_on_self_test_state_a1020e4af5a2b23ac1c6236d9ca2a71b0}{PowerOnSelfTestState}}*\ \mbox{\hyperlink{class_power_on_self_test_state_ae152baf800ee583b4c4c0c5ca16aa904}{getInstance}}(\mbox{\hyperlink{class_embedded_system_x}{EmbeddedSystemX}}*\ ctx)\ \{}
+\DoxyCodeLine{00045\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (!\mbox{\hyperlink{class_power_on_self_test_state_a11c228bfba1c3e8ee11fa2f90b2cbd10}{instance}})\ \{}
+\DoxyCodeLine{00046\ \ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_power_on_self_test_state_a11c228bfba1c3e8ee11fa2f90b2cbd10}{instance}}\ =\ \textcolor{keyword}{new}\ \mbox{\hyperlink{class_power_on_self_test_state_a1020e4af5a2b23ac1c6236d9ca2a71b0}{PowerOnSelfTestState}}(ctx);}
+\DoxyCodeLine{00047\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00048\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_power_on_self_test_state_a11c228bfba1c3e8ee11fa2f90b2cbd10}{instance}}-\/>context\ =\ ctx;}
+\DoxyCodeLine{00049\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ \mbox{\hyperlink{class_power_on_self_test_state_a11c228bfba1c3e8ee11fa2f90b2cbd10}{instance}};}
+\DoxyCodeLine{00050\ \ \ \ \ \}}
+\DoxyCodeLine{00051\ }
+\DoxyCodeLine{00052\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_power_on_self_test_state_a27ae316e06235041d8f13039a7bc2afe}{selfTestOk}}()\ \textcolor{keyword}{override};}
+\DoxyCodeLine{00053\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_power_on_self_test_state_a6fa3b40482562e8d289fb624b198b3f0}{initialized}}()\textcolor{keyword}{\ override\ }\{\ std::cout\ <<\ \textcolor{stringliteral}{"{}\ \ [PowerOnSelfTest]\ initialized()\ -\/\ Invalid\ event\(\backslash\)n"{}};\ \}}
+\DoxyCodeLine{00054\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_power_on_self_test_state_ac76686c6a614576d3872e4a647ea6aa3}{restart}}()\ \textcolor{keyword}{override};}
+\DoxyCodeLine{00055\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_power_on_self_test_state_a68e3bab150a0b81941bab395f2ce9635}{selfTestFailed}}(\textcolor{keywordtype}{int}\ errorNo)\ \textcolor{keyword}{override};}
+\DoxyCodeLine{00056\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_power_on_self_test_state_a7f3cced4a7c2e21ff1a79cb71d5cf2ab}{configure}}()\textcolor{keyword}{\ override\ }\{\ std::cout\ <<\ \textcolor{stringliteral}{"{}\ \ [PowerOnSelfTest]\ configure()\ -\/\ Invalid\ event\(\backslash\)n"{}};\ \}}
+\DoxyCodeLine{00057\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_power_on_self_test_state_acd357fff575bbabd9922d54c49b30af6}{configurationEnded}}()\textcolor{keyword}{\ override\ }\{\ std::cout\ <<\ \textcolor{stringliteral}{"{}\ \ [PowerOnSelfTest]\ configurationEnded()\ -\/\ Invalid\ event\(\backslash\)n"{}};\ \}}
+\DoxyCodeLine{00058\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_power_on_self_test_state_ad5c5599e20a9fe2bc19d94bf492a4bf7}{start}}()\textcolor{keyword}{\ override\ }\{\ std::cout\ <<\ \textcolor{stringliteral}{"{}\ \ [PowerOnSelfTest]\ start()\ -\/\ Invalid\ event\(\backslash\)n"{}};\ \}}
+\DoxyCodeLine{00059\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_power_on_self_test_state_a925116a76ea9e73f0744398d00853db3}{suspend}}()\textcolor{keyword}{\ override\ }\{\ std::cout\ <<\ \textcolor{stringliteral}{"{}\ \ [PowerOnSelfTest]\ suspend()\ -\/\ Invalid\ event\(\backslash\)n"{}};\ \}}
+\DoxyCodeLine{00060\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_power_on_self_test_state_a6875101c992e0f5c001351068a17a313}{resume}}()\textcolor{keyword}{\ override\ }\{\ std::cout\ <<\ \textcolor{stringliteral}{"{}\ \ [PowerOnSelfTest]\ resume()\ -\/\ Invalid\ event\(\backslash\)n"{}};\ \}}
+\DoxyCodeLine{00061\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_power_on_self_test_state_a13bde64a2aa0b61f14b83d62ab23b766}{exit}}()\textcolor{keyword}{\ override\ }\{\ std::cout\ <<\ \textcolor{stringliteral}{"{}\ \ [PowerOnSelfTest]\ exit()\ -\/\ Invalid\ event\(\backslash\)n"{}};\ \}}
+\DoxyCodeLine{00062\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_power_on_self_test_state_abb634d78497fddafded9b0262b3ea68a}{stop}}()\textcolor{keyword}{\ override\ }\{\ std::cout\ <<\ \textcolor{stringliteral}{"{}\ \ [PowerOnSelfTest]\ exit()\ -\/\ Invalid\ event\(\backslash\)n"{}};\ \}}
+\DoxyCodeLine{00063\ \};}
+\DoxyCodeLine{00064\ }
+\DoxyCodeLine{00065\ \textcolor{keyword}{class\ }\mbox{\hyperlink{class_initializing_state_a0171b550bdf18be89167d4a478009c69}{InitializingState}}\ :\ \textcolor{keyword}{public}\ \mbox{\hyperlink{class_embedded_system_x_state_a5630d67a88100d0e67c1578a7ee43e91}{EmbeddedSystemXState}}\ \{}
+\DoxyCodeLine{00066\ \textcolor{keyword}{private}:}
+\DoxyCodeLine{00067\ \ \ \ \ \textcolor{keyword}{static}\ \mbox{\hyperlink{class_initializing_state_a0171b550bdf18be89167d4a478009c69}{InitializingState}}*\ \mbox{\hyperlink{class_initializing_state_a749faad06d367b1d0fb9cef804b6c99e}{instance}};}
+\DoxyCodeLine{00068\ \ \ \ \ \mbox{\hyperlink{class_initializing_state_a0171b550bdf18be89167d4a478009c69}{InitializingState}}(\mbox{\hyperlink{class_embedded_system_x}{EmbeddedSystemX}}*\ ctx)\ :\ \mbox{\hyperlink{class_embedded_system_x_state_a5630d67a88100d0e67c1578a7ee43e91}{EmbeddedSystemXState}}(ctx)\ \{\}}
+\DoxyCodeLine{00069\ }
+\DoxyCodeLine{00070\ \textcolor{keyword}{public}:}
+\DoxyCodeLine{00071\ \ \ \ \ \textcolor{keyword}{static}\ \mbox{\hyperlink{class_initializing_state_a0171b550bdf18be89167d4a478009c69}{InitializingState}}*\ \mbox{\hyperlink{class_initializing_state_a5f2b35fd0799f7c5e3f1c5fe50ef5f0f}{getInstance}}(\mbox{\hyperlink{class_embedded_system_x}{EmbeddedSystemX}}*\ ctx)\ \{}
+\DoxyCodeLine{00072\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (!\mbox{\hyperlink{class_initializing_state_a749faad06d367b1d0fb9cef804b6c99e}{instance}})\ \{}
+\DoxyCodeLine{00073\ \ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_initializing_state_a749faad06d367b1d0fb9cef804b6c99e}{instance}}\ =\ \textcolor{keyword}{new}\ \mbox{\hyperlink{class_initializing_state_a0171b550bdf18be89167d4a478009c69}{InitializingState}}(ctx);}
+\DoxyCodeLine{00074\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00075\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_initializing_state_a749faad06d367b1d0fb9cef804b6c99e}{instance}}-\/>context\ =\ ctx;}
+\DoxyCodeLine{00076\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ \mbox{\hyperlink{class_initializing_state_a749faad06d367b1d0fb9cef804b6c99e}{instance}};}
+\DoxyCodeLine{00077\ \ \ \ \ \}}
+\DoxyCodeLine{00078\ }
+\DoxyCodeLine{00079\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_initializing_state_a98a7dfa124f06eadd6031ea00c657c11}{selfTestOk}}()\textcolor{keyword}{\ override\ }\{\ std::cout\ <<\ \textcolor{stringliteral}{"{}\ \ [Initializing]\ selfTestOk()\ -\/\ Invalid\ event\(\backslash\)n"{}};\ \}}
+\DoxyCodeLine{00080\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_initializing_state_a2582cc2e25714a49ede134c3fc606cbb}{initialized}}()\ \textcolor{keyword}{override};}
+\DoxyCodeLine{00081\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_initializing_state_a67d16e73603bd66acfbc7e2568a631a1}{restart}}()\ \textcolor{keyword}{override};}
+\DoxyCodeLine{00082\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_initializing_state_a831b4f2f341637c6a875ac917afcdf19}{selfTestFailed}}(\textcolor{keywordtype}{int}\ errorNo)\textcolor{keyword}{\ override\ }\{\ std::cout\ <<\ \textcolor{stringliteral}{"{}\ \ [Initializing]\ selfTestFailed()\ -\/\ Invalid\ event\(\backslash\)n"{}};\ \}}
+\DoxyCodeLine{00083\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_initializing_state_a9f9d6c29177f416e0348d61d17096d39}{configure}}()\textcolor{keyword}{\ override\ }\{\ std::cout\ <<\ \textcolor{stringliteral}{"{}\ \ [Initializing]\ configure()\ -\/\ Invalid\ event\(\backslash\)n"{}};\ \}}
+\DoxyCodeLine{00084\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_initializing_state_a7aaad3343c61243163862453b943caed}{configurationEnded}}()\textcolor{keyword}{\ override\ }\{\ std::cout\ <<\ \textcolor{stringliteral}{"{}\ \ [Initializing]\ configurationEnded()\ -\/\ Invalid\ event\(\backslash\)n"{}};\ \}}
+\DoxyCodeLine{00085\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_initializing_state_a98eec916df223be68ed5a1fc91166863}{start}}()\textcolor{keyword}{\ override\ }\{\ std::cout\ <<\ \textcolor{stringliteral}{"{}\ \ [Initializing]\ start()\ -\/\ Invalid\ event\(\backslash\)n"{}};\ \}}
+\DoxyCodeLine{00086\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_initializing_state_a32d3057692ffb85f5be2c72bc1efdf8c}{suspend}}()\textcolor{keyword}{\ override\ }\{\ std::cout\ <<\ \textcolor{stringliteral}{"{}\ \ [Initializing]\ suspend()\ -\/\ Invalid\ event\(\backslash\)n"{}};\ \}}
+\DoxyCodeLine{00087\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_initializing_state_a7949ee213776c2658af4303e65341ba9}{resume}}()\textcolor{keyword}{\ override\ }\{\ std::cout\ <<\ \textcolor{stringliteral}{"{}\ \ [Initializing]\ resume()\ -\/\ Invalid\ event\(\backslash\)n"{}};\ \}}
+\DoxyCodeLine{00088\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_initializing_state_ab0ea480671c8a75627aedccb34745b02}{exit}}()\textcolor{keyword}{\ override\ }\{\ std::cout\ <<\ \textcolor{stringliteral}{"{}\ \ [Initializing]\ exit()\ -\/\ Invalid\ event\(\backslash\)n"{}};\ \}}
+\DoxyCodeLine{00089\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_initializing_state_a6665e155e8b0f721ecc4a19f4947c706}{stop}}()\textcolor{keyword}{\ override\ }\{\ std::cout\ <<\ \textcolor{stringliteral}{"{}\ \ [Initializing]\ stop()\ -\/\ Invalid\ event\(\backslash\)n"{}};\ \}}
+\DoxyCodeLine{00090\ \};}
+\DoxyCodeLine{00091\ }
+\DoxyCodeLine{00092\ }
+\DoxyCodeLine{00093\ \textcolor{keyword}{class\ }\mbox{\hyperlink{class_failure_state_a2ec44ef17dc39f0093d29ef996958325}{FailureState}}\ :\ \textcolor{keyword}{public}\ \mbox{\hyperlink{class_embedded_system_x_state_a5630d67a88100d0e67c1578a7ee43e91}{EmbeddedSystemXState}}\ \{}
+\DoxyCodeLine{00094\ \textcolor{keyword}{private}:}
+\DoxyCodeLine{00095\ \ \ \ \ \textcolor{keyword}{static}\ \mbox{\hyperlink{class_failure_state_a2ec44ef17dc39f0093d29ef996958325}{FailureState}}*\ \mbox{\hyperlink{class_failure_state_a888554181c307d6eef104b801170542e}{instance}};}
+\DoxyCodeLine{00096\ \ \ \ \ \mbox{\hyperlink{class_failure_state_a2ec44ef17dc39f0093d29ef996958325}{FailureState}}(\mbox{\hyperlink{class_embedded_system_x}{EmbeddedSystemX}}*\ ctx)\ :\ \mbox{\hyperlink{class_embedded_system_x_state_a5630d67a88100d0e67c1578a7ee43e91}{EmbeddedSystemXState}}(ctx)\ \{\}}
+\DoxyCodeLine{00097\ }
+\DoxyCodeLine{00098\ \textcolor{keyword}{public}:}
+\DoxyCodeLine{00099\ \ \ \ \ \textcolor{keyword}{static}\ \mbox{\hyperlink{class_failure_state_a2ec44ef17dc39f0093d29ef996958325}{FailureState}}*\ \mbox{\hyperlink{class_failure_state_af8df67121215589d804b1f1872eec2ab}{getInstance}}(\mbox{\hyperlink{class_embedded_system_x}{EmbeddedSystemX}}*\ ctx)\ \{}
+\DoxyCodeLine{00100\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (!\mbox{\hyperlink{class_failure_state_a888554181c307d6eef104b801170542e}{instance}})\ \{}
+\DoxyCodeLine{00101\ \ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_failure_state_a888554181c307d6eef104b801170542e}{instance}}\ =\ \textcolor{keyword}{new}\ \mbox{\hyperlink{class_failure_state_a2ec44ef17dc39f0093d29ef996958325}{FailureState}}(ctx);}
+\DoxyCodeLine{00102\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00103\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_failure_state_a888554181c307d6eef104b801170542e}{instance}}-\/>context\ =\ ctx;}
+\DoxyCodeLine{00104\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ \mbox{\hyperlink{class_failure_state_a888554181c307d6eef104b801170542e}{instance}};}
+\DoxyCodeLine{00105\ \ \ \ \ \}}
+\DoxyCodeLine{00106\ }
+\DoxyCodeLine{00107\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_failure_state_aeb681af08c397a83a73edd8257a2453c}{selfTestOk}}()\textcolor{keyword}{\ override\ }\{\ std::cout\ <<\ \textcolor{stringliteral}{"{}\ \ [Failure]\ selfTestOk()\ -\/\ Invalid\ event\(\backslash\)n"{}};\ \}}
+\DoxyCodeLine{00108\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_failure_state_a045f7a18bf55f188bfc78e138b181cf7}{initialized}}()\textcolor{keyword}{\ override\ }\{\ std::cout\ <<\ \textcolor{stringliteral}{"{}\ \ [Failure]\ initialized()\ -\/\ Invalid\ event\(\backslash\)n"{}};\ \}}
+\DoxyCodeLine{00109\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_failure_state_a92512453ab6c2bc05c7913955cdf3228}{restart}}()\ \textcolor{keyword}{override};}
+\DoxyCodeLine{00110\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_failure_state_ab74dac1ba5df645cdbc4d1a618f61295}{selfTestFailed}}(\textcolor{keywordtype}{int}\ errorNo)\textcolor{keyword}{\ override\ }\{\ std::cout\ <<\ \textcolor{stringliteral}{"{}\ \ [Failure]\ Displaying\ error:\ "{}}\ <<\ errorNo\ <<\ \textcolor{stringliteral}{"{}\(\backslash\)n"{}};\ \}}
+\DoxyCodeLine{00111\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_failure_state_ab6d9cc796000e07e5100bd4116656855}{configure}}()\textcolor{keyword}{\ override\ }\{\ std::cout\ <<\ \textcolor{stringliteral}{"{}\ \ [Failure]\ configure()\ -\/\ Invalid\ event\(\backslash\)n"{}};\ \}}
+\DoxyCodeLine{00112\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_failure_state_ac33fdbe4a13ce6695ddc9fa24956fd85}{configurationEnded}}()\textcolor{keyword}{\ override\ }\{\ std::cout\ <<\ \textcolor{stringliteral}{"{}\ \ [Failure]\ configurationEnded()\ -\/\ Invalid\ event\(\backslash\)n"{}};\ \}}
+\DoxyCodeLine{00113\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_failure_state_a456227060b4c69ad6004a498b20d3833}{start}}()\textcolor{keyword}{\ override\ }\{\ std::cout\ <<\ \textcolor{stringliteral}{"{}\ \ [Failure]\ start()\ -\/\ Invalid\ event\(\backslash\)n"{}};\ \}}
+\DoxyCodeLine{00114\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_failure_state_a87f8f1cc19d8575d0a354e2e27f33a55}{suspend}}()\textcolor{keyword}{\ override\ }\{\ std::cout\ <<\ \textcolor{stringliteral}{"{}\ \ [Failure]\ suspend()\ -\/\ Invalid\ event\(\backslash\)n"{}};\ \}}
+\DoxyCodeLine{00115\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_failure_state_aaca1853187a12a0bd6a52f044be44609}{resume}}()\textcolor{keyword}{\ override\ }\{\ std::cout\ <<\ \textcolor{stringliteral}{"{}\ \ [Failure]\ resume()\ -\/\ Invalid\ event\(\backslash\)n"{}};\ \}}
+\DoxyCodeLine{00116\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_failure_state_a6e3007625ea8d215cdad10a79c952ac1}{exit}}()\textcolor{keyword}{\ override\ }\{\ std::cout\ <<\ \textcolor{stringliteral}{"{}\ \ [Failure]\ exit()\ -\/\ Invalid\ event\(\backslash\)n"{}};\ \}}
+\DoxyCodeLine{00117\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_failure_state_abef4579954e3fe36d750044e732884eb}{stop}}()\textcolor{keyword}{\ override\ }\{\ std::cout\ <<\ \textcolor{stringliteral}{"{}\ \ [Failure]\ stop()\ -\/\ Invalid\ event\(\backslash\)n"{}};\ \}}
+\DoxyCodeLine{00118\ \};}
 \DoxyCodeLine{00119\ }
-\DoxyCodeLine{00120\ \textcolor{keyword}{public}:}
-\DoxyCodeLine{00121\ \ \ \ \ \textcolor{keyword}{static}\ \mbox{\hyperlink{class_operational_state_ae3abfc6d0545ae4e82369b73e745f224}{OperationalState}}*\ \mbox{\hyperlink{class_operational_state_a6ff26e3449b8162a35c0a7e8223c799d}{getInstance}}(\mbox{\hyperlink{class_embedded_system_x}{EmbeddedSystemX}}*\ ctx)\ \{}
-\DoxyCodeLine{00122\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (!\mbox{\hyperlink{class_operational_state_acef346890b79b8d14941f17985a6fb38}{instance}})\ \{}
-\DoxyCodeLine{00123\ \ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_operational_state_acef346890b79b8d14941f17985a6fb38}{instance}}\ =\ \textcolor{keyword}{new}\ \mbox{\hyperlink{class_operational_state_ae3abfc6d0545ae4e82369b73e745f224}{OperationalState}}(ctx);}
-\DoxyCodeLine{00124\ \ \ \ \ \ \ \ \ \}}
-\DoxyCodeLine{00125\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_operational_state_acef346890b79b8d14941f17985a6fb38}{instance}}-\/>context\ =\ ctx;}
-\DoxyCodeLine{00126\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ \mbox{\hyperlink{class_operational_state_acef346890b79b8d14941f17985a6fb38}{instance}};}
-\DoxyCodeLine{00127\ \ \ \ \ \}}
-\DoxyCodeLine{00128\ }
-\DoxyCodeLine{00129\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_operational_state_ab6a41f161d8c3e478d29ce41c09331d8}{selfTestOk}}()\textcolor{keyword}{\ override\ }\{\ std::cout\ <<\ \textcolor{stringliteral}{"{}\ \ [Operational]\ selfTestOk()\ -\/\ Invalid\ event\(\backslash\)n"{}};\ \}}
-\DoxyCodeLine{00130\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_operational_state_a5de1af4420a7cfc70ae2752586e22298}{initialized}}()\textcolor{keyword}{\ override\ }\{\ std::cout\ <<\ \textcolor{stringliteral}{"{}\ \ [Operational]\ initialized()\ -\/\ Invalid\ event\(\backslash\)n"{}};\ \}}
-\DoxyCodeLine{00131\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_operational_state_ab4fb1ab9af563a2566b1c6c48062ce0d}{restart}}()\ \textcolor{keyword}{override};}
-\DoxyCodeLine{00132\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_operational_state_a246be8c0e3044d4084677da7de85d530}{selfTestFailed}}(\textcolor{keywordtype}{int}\ errorNo)\textcolor{keyword}{\ override\ }\{\ std::cout\ <<\ \textcolor{stringliteral}{"{}\ \ [Operational]\ selfTestFailed()\ -\/\ Invalid\ event\(\backslash\)n"{}};\ \}}
-\DoxyCodeLine{00133\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_operational_state_a8efc9f71ab6dcd775e998d4ad2a96c2b}{configure}}()\ \textcolor{keyword}{override};}
-\DoxyCodeLine{00134\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_operational_state_a691ce8bdef79d84343982e01a9f59c84}{configurationEnded}}()\textcolor{keyword}{\ override\ }\{\ std::cout\ <<\ \textcolor{stringliteral}{"{}\ \ [Operational]\ configurationEnded()\ -\/\ Invalid\ event\(\backslash\)n"{}};\ \}}
-\DoxyCodeLine{00135\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_operational_state_a0e02f08841631a89bcc8e8713facc869}{start}}()\textcolor{keyword}{\ override\ }\{\ std::cout\ <<\ \textcolor{stringliteral}{"{}\ \ [Operational]\ Start/run\ RealTimeLoop\(\backslash\)n"{}};\ \}}
-\DoxyCodeLine{00136\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_operational_state_ac442e55c4f713d7c7cbe036cdc490102}{suspend}}()\ \textcolor{keyword}{override};}
-\DoxyCodeLine{00137\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_operational_state_a3f501341460c38f4c9d552f907c72094}{resume}}()\textcolor{keyword}{\ override\ }\{\ std::cout\ <<\ \textcolor{stringliteral}{"{}\ \ [Operational]\ resume()\ -\/\ Invalid\ event\(\backslash\)n"{}};\ \}}
-\DoxyCodeLine{00138\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_operational_state_ad8b142e600532fea93388e560eb86c75}{exit}}()\ \textcolor{keyword}{override};}
-\DoxyCodeLine{00139\ \};}
-\DoxyCodeLine{00140\ }
-\DoxyCodeLine{00141\ \textcolor{keyword}{class\ }\mbox{\hyperlink{class_configuration_state_ad64970b29021309679964cf9c3bce36a}{ConfigurationState}}\ :\ \textcolor{keyword}{public}\ \mbox{\hyperlink{class_embedded_system_x_state_a5630d67a88100d0e67c1578a7ee43e91}{EmbeddedSystemXState}}\ \{}
-\DoxyCodeLine{00142\ \textcolor{keyword}{private}:}
-\DoxyCodeLine{00143\ \ \ \ \ \textcolor{keyword}{static}\ \mbox{\hyperlink{class_configuration_state_ad64970b29021309679964cf9c3bce36a}{ConfigurationState}}*\ \mbox{\hyperlink{class_configuration_state_a35588153201be2fca68d8fc18a9b8cbd}{instance}};}
-\DoxyCodeLine{00144\ \ \ \ \ \mbox{\hyperlink{class_configuration_state_ad64970b29021309679964cf9c3bce36a}{ConfigurationState}}(\mbox{\hyperlink{class_embedded_system_x}{EmbeddedSystemX}}*\ ctx)\ :\ \mbox{\hyperlink{class_embedded_system_x_state_a5630d67a88100d0e67c1578a7ee43e91}{EmbeddedSystemXState}}(ctx)\ \{\}}
-\DoxyCodeLine{00145\ }
-\DoxyCodeLine{00146\ \textcolor{keyword}{public}:}
-\DoxyCodeLine{00147\ \ \ \ \ \textcolor{keyword}{static}\ \mbox{\hyperlink{class_configuration_state_ad64970b29021309679964cf9c3bce36a}{ConfigurationState}}*\ \mbox{\hyperlink{class_configuration_state_ae8c10885d597cc4cacf9cde057cc4723}{getInstance}}(\mbox{\hyperlink{class_embedded_system_x}{EmbeddedSystemX}}*\ ctx)\ \{}
-\DoxyCodeLine{00148\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (!\mbox{\hyperlink{class_configuration_state_a35588153201be2fca68d8fc18a9b8cbd}{instance}})\ \{}
-\DoxyCodeLine{00149\ \ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_configuration_state_a35588153201be2fca68d8fc18a9b8cbd}{instance}}\ =\ \textcolor{keyword}{new}\ \mbox{\hyperlink{class_configuration_state_ad64970b29021309679964cf9c3bce36a}{ConfigurationState}}(ctx);}
-\DoxyCodeLine{00150\ \ \ \ \ \ \ \ \ \}}
-\DoxyCodeLine{00151\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_configuration_state_a35588153201be2fca68d8fc18a9b8cbd}{instance}}-\/>context\ =\ ctx;}
-\DoxyCodeLine{00152\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ \mbox{\hyperlink{class_configuration_state_a35588153201be2fca68d8fc18a9b8cbd}{instance}};}
-\DoxyCodeLine{00153\ \ \ \ \ \}}
-\DoxyCodeLine{00154\ }
-\DoxyCodeLine{00155\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_configuration_state_af60aad39cf4ae439e2ae73a4626b7dd4}{selfTestOk}}()\textcolor{keyword}{\ override\ }\{\ std::cout\ <<\ \textcolor{stringliteral}{"{}\ \ [Configuration]\ selfTestOk()\ -\/\ Invalid\ event\(\backslash\)n"{}};\ \}}
-\DoxyCodeLine{00156\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_configuration_state_a357e2c4c1805690303aa74813110edea}{initialized}}()\textcolor{keyword}{\ override\ }\{\ std::cout\ <<\ \textcolor{stringliteral}{"{}\ \ [Configuration]\ initialized()\ -\/\ Invalid\ event\(\backslash\)n"{}};\ \}}
-\DoxyCodeLine{00157\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_configuration_state_ab667ff4fd7114cce9a39042235b7ed90}{restart}}()\ \textcolor{keyword}{override};}
-\DoxyCodeLine{00158\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_configuration_state_ac8e9a65e68f27da713be1df4a52e568a}{selfTestFailed}}(\textcolor{keywordtype}{int}\ errorNo)\textcolor{keyword}{\ override\ }\{\ std::cout\ <<\ \textcolor{stringliteral}{"{}\ \ [Configuration]\ selfTestFailed()\ -\/\ Invalid\ event\(\backslash\)n"{}};\ \}}
-\DoxyCodeLine{00159\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_configuration_state_a29eadbed9ebfb5fc9f856a222a974e0b}{configure}}()\textcolor{keyword}{\ override\ }\{\ std::cout\ <<\ \textcolor{stringliteral}{"{}\ \ [Configuration]\ Reading\ configuration\ info...\(\backslash\)n"{}};\ \}}
-\DoxyCodeLine{00160\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_configuration_state_a3823e276d58c7ae43411fda154df3eda}{configurationEnded}}()\ \textcolor{keyword}{override};}
-\DoxyCodeLine{00161\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_configuration_state_afbafcce711741eb058860c1fc91c3c21}{start}}()\textcolor{keyword}{\ override\ }\{\ std::cout\ <<\ \textcolor{stringliteral}{"{}\ \ [Configuration]\ start()\ -\/\ Invalid\ event\(\backslash\)n"{}};\ \}}
-\DoxyCodeLine{00162\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_configuration_state_a37a0339b1ca9b802de148275aa2695b7}{suspend}}()\textcolor{keyword}{\ override\ }\{\ std::cout\ <<\ \textcolor{stringliteral}{"{}\ \ [Configuration]\ suspend()\ -\/\ Invalid\ event\(\backslash\)n"{}};\ \}}
-\DoxyCodeLine{00163\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_configuration_state_a07a565f60f9796081a1888ba63bbbda3}{resume}}()\textcolor{keyword}{\ override\ }\{\ std::cout\ <<\ \textcolor{stringliteral}{"{}\ \ [Configuration]\ resume()\ -\/\ Invalid\ event\(\backslash\)n"{}};\ \}}
-\DoxyCodeLine{00164\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_configuration_state_a4871637d8d459ea33082477f4f2250c6}{exit}}()\textcolor{keyword}{\ override\ }\{\ std::cout\ <<\ \textcolor{stringliteral}{"{}\ \ [Configuration]\ exit()\ -\/\ Invalid\ event\(\backslash\)n"{}};\ \}}
-\DoxyCodeLine{00165\ \};}
-\DoxyCodeLine{00166\ }
-\DoxyCodeLine{00167\ \textcolor{keyword}{class\ }\mbox{\hyperlink{class_ready_state_a497319f3099ba7ab061bfae0658da9bd}{ReadyState}}\ :\ \textcolor{keyword}{public}\ \mbox{\hyperlink{class_embedded_system_x_state_a5630d67a88100d0e67c1578a7ee43e91}{EmbeddedSystemXState}}\ \{}
-\DoxyCodeLine{00168\ \textcolor{keyword}{private}:}
-\DoxyCodeLine{00169\ \ \ \ \ \textcolor{keyword}{static}\ \mbox{\hyperlink{class_ready_state_a497319f3099ba7ab061bfae0658da9bd}{ReadyState}}*\ \mbox{\hyperlink{class_ready_state_ad9b81807720099562fb7e0c6b77a94a6}{instance}};}
-\DoxyCodeLine{00170\ \ \ \ \ \mbox{\hyperlink{class_ready_state_a497319f3099ba7ab061bfae0658da9bd}{ReadyState}}(\mbox{\hyperlink{class_embedded_system_x}{EmbeddedSystemX}}*\ ctx)\ :\ \mbox{\hyperlink{class_embedded_system_x_state_a5630d67a88100d0e67c1578a7ee43e91}{EmbeddedSystemXState}}(ctx)\ \{\}}
-\DoxyCodeLine{00171\ }
-\DoxyCodeLine{00172\ \textcolor{keyword}{public}:}
-\DoxyCodeLine{00173\ \ \ \ \ \textcolor{keyword}{static}\ \mbox{\hyperlink{class_ready_state_a497319f3099ba7ab061bfae0658da9bd}{ReadyState}}*\ \mbox{\hyperlink{class_ready_state_a078711a8e92dab314ef4fd17e67a2a95}{getInstance}}(\mbox{\hyperlink{class_embedded_system_x}{EmbeddedSystemX}}*\ ctx)\ \{}
-\DoxyCodeLine{00174\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (!\mbox{\hyperlink{class_ready_state_ad9b81807720099562fb7e0c6b77a94a6}{instance}})\ \{}
-\DoxyCodeLine{00175\ \ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_ready_state_ad9b81807720099562fb7e0c6b77a94a6}{instance}}\ =\ \textcolor{keyword}{new}\ \mbox{\hyperlink{class_ready_state_a497319f3099ba7ab061bfae0658da9bd}{ReadyState}}(ctx);}
-\DoxyCodeLine{00176\ \ \ \ \ \ \ \ \ \}}
-\DoxyCodeLine{00177\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_ready_state_ad9b81807720099562fb7e0c6b77a94a6}{instance}}-\/>context\ =\ ctx;}
-\DoxyCodeLine{00178\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ \mbox{\hyperlink{class_ready_state_ad9b81807720099562fb7e0c6b77a94a6}{instance}};}
-\DoxyCodeLine{00179\ \ \ \ \ \}}
-\DoxyCodeLine{00180\ }
-\DoxyCodeLine{00181\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_ready_state_ac0edeca2ab8f5ab14ac729e7476a6407}{selfTestOk}}()\textcolor{keyword}{\ override\ }\{\ std::cout\ <<\ \textcolor{stringliteral}{"{}\ \ [Ready]\ selfTestOk()\ -\/\ Invalid\ event\(\backslash\)n"{}};\ \}}
-\DoxyCodeLine{00182\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_ready_state_a7dd632f321ebd39488f78d1844ba13f4}{initialized}}()\textcolor{keyword}{\ override\ }\{\ std::cout\ <<\ \textcolor{stringliteral}{"{}\ \ [Ready]\ initialized()\ -\/\ Invalid\ event\(\backslash\)n"{}};\ \}}
-\DoxyCodeLine{00183\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_ready_state_abbd0ed06994f93d3c2a2e4ee7aa1f7e5}{restart}}()\ \textcolor{keyword}{override};}
-\DoxyCodeLine{00184\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_ready_state_ada1648588197196473a3cef4104633a6}{selfTestFailed}}(\textcolor{keywordtype}{int}\ errorNo)\textcolor{keyword}{\ override\ }\{\ std::cout\ <<\ \textcolor{stringliteral}{"{}\ \ [Ready]\ selfTestFailed()\ -\/\ Invalid\ event\(\backslash\)n"{}};\ \}}
-\DoxyCodeLine{00185\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_ready_state_a9cabd1bcb8ee050b4fa621e4c593468e}{configure}}()\textcolor{keyword}{\ override\ }\{\ std::cout\ <<\ \textcolor{stringliteral}{"{}\ \ [Ready]\ configure()\ -\/\ Invalid\ event\(\backslash\)n"{}};\ \}}
-\DoxyCodeLine{00186\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_ready_state_a5dbebdfdf0b2539d6da82c7d5f638dc4}{configurationEnded}}()\textcolor{keyword}{\ override\ }\{\ std::cout\ <<\ \textcolor{stringliteral}{"{}\ \ [Ready]\ configurationEnded()\ -\/\ Invalid\ event\(\backslash\)n"{}};\ \}}
-\DoxyCodeLine{00187\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_ready_state_afca7afc96e449d8a719f3f22e61bc924}{start}}()\ \textcolor{keyword}{override};}
-\DoxyCodeLine{00188\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_ready_state_add9ad4412cf6beb08f953f4b0ee40521}{suspend}}()\textcolor{keyword}{\ override\ }\{\ std::cout\ <<\ \textcolor{stringliteral}{"{}\ \ [Ready]\ suspend()\ -\/\ Invalid\ event\(\backslash\)n"{}};\ \}}
-\DoxyCodeLine{00189\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_ready_state_aef07ad6ab7bde38014ae521e1d72db86}{resume}}()\textcolor{keyword}{\ override\ }\{\ std::cout\ <<\ \textcolor{stringliteral}{"{}\ \ [Ready]\ resume()\ -\/\ Invalid\ event\(\backslash\)n"{}};\ \}}
-\DoxyCodeLine{00190\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_ready_state_a7c0f1f0c7e72a26a6c62949ce36818f2}{exit}}()\ \textcolor{keyword}{override};}
-\DoxyCodeLine{00191\ \};}
-\DoxyCodeLine{00192\ }
-\DoxyCodeLine{00193\ \textcolor{keyword}{class\ }\mbox{\hyperlink{class_suspended_state_afcec59fe5067ed66b3d544224ea3d7e6}{SuspendedState}}\ :\ \textcolor{keyword}{public}\ \mbox{\hyperlink{class_embedded_system_x_state_a5630d67a88100d0e67c1578a7ee43e91}{EmbeddedSystemXState}}\ \{}
-\DoxyCodeLine{00194\ \textcolor{keyword}{private}:}
-\DoxyCodeLine{00195\ \ \ \ \ \textcolor{keyword}{static}\ \mbox{\hyperlink{class_suspended_state_afcec59fe5067ed66b3d544224ea3d7e6}{SuspendedState}}*\ \mbox{\hyperlink{class_suspended_state_a4535d9647d1fbc8ce487afaa58a9cae4}{instance}};}
-\DoxyCodeLine{00196\ \ \ \ \ \mbox{\hyperlink{class_suspended_state_afcec59fe5067ed66b3d544224ea3d7e6}{SuspendedState}}(\mbox{\hyperlink{class_embedded_system_x}{EmbeddedSystemX}}*\ ctx)\ :\ \mbox{\hyperlink{class_embedded_system_x_state_a5630d67a88100d0e67c1578a7ee43e91}{EmbeddedSystemXState}}(ctx)\ \{\}}
-\DoxyCodeLine{00197\ }
-\DoxyCodeLine{00198\ \textcolor{keyword}{public}:}
-\DoxyCodeLine{00199\ \ \ \ \ \textcolor{keyword}{static}\ \mbox{\hyperlink{class_suspended_state_afcec59fe5067ed66b3d544224ea3d7e6}{SuspendedState}}*\ \mbox{\hyperlink{class_suspended_state_a7c5ac4f52a44311e301be89e4c8b8bf0}{getInstance}}(\mbox{\hyperlink{class_embedded_system_x}{EmbeddedSystemX}}*\ ctx)\ \{}
-\DoxyCodeLine{00200\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (!\mbox{\hyperlink{class_suspended_state_a4535d9647d1fbc8ce487afaa58a9cae4}{instance}})\ \{}
-\DoxyCodeLine{00201\ \ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_suspended_state_a4535d9647d1fbc8ce487afaa58a9cae4}{instance}}\ =\ \textcolor{keyword}{new}\ \mbox{\hyperlink{class_suspended_state_afcec59fe5067ed66b3d544224ea3d7e6}{SuspendedState}}(ctx);}
-\DoxyCodeLine{00202\ \ \ \ \ \ \ \ \ \}}
-\DoxyCodeLine{00203\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_suspended_state_a4535d9647d1fbc8ce487afaa58a9cae4}{instance}}-\/>context\ =\ ctx;}
-\DoxyCodeLine{00204\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ \mbox{\hyperlink{class_suspended_state_a4535d9647d1fbc8ce487afaa58a9cae4}{instance}};}
-\DoxyCodeLine{00205\ \ \ \ \ \}}
-\DoxyCodeLine{00206\ }
-\DoxyCodeLine{00207\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_suspended_state_a739ef8d11375694310c3785ecc7b28f2}{selfTestOk}}()\textcolor{keyword}{\ override\ }\{\ std::cout\ <<\ \textcolor{stringliteral}{"{}\ \ [Suspended]\ selfTestOk()\ -\/\ Invalid\ event\(\backslash\)n"{}};\ \}}
-\DoxyCodeLine{00208\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_suspended_state_a0cb04e868e285c5a1cbe09a625fd942f}{initialized}}()\textcolor{keyword}{\ override\ }\{\ std::cout\ <<\ \textcolor{stringliteral}{"{}\ \ [Suspended]\ initialized()\ -\/\ Invalid\ event\(\backslash\)n"{}};\ \}}
-\DoxyCodeLine{00209\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_suspended_state_a935123391a7a11cecedda11cdef3c231}{restart}}()\ \textcolor{keyword}{override};}
-\DoxyCodeLine{00210\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_suspended_state_af8d529e74e9bea3a52c62f96146583a6}{selfTestFailed}}(\textcolor{keywordtype}{int}\ errorNo)\textcolor{keyword}{\ override\ }\{\ std::cout\ <<\ \textcolor{stringliteral}{"{}\ \ [Suspended]\ selfTestFailed()\ -\/\ Invalid\ event\(\backslash\)n"{}};\ \}}
-\DoxyCodeLine{00211\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_suspended_state_aa62cd0cc1f6977a6dacba9d56439838e}{configure}}()\textcolor{keyword}{\ override\ }\{\ std::cout\ <<\ \textcolor{stringliteral}{"{}\ \ [Suspended]\ configure()\ -\/\ Invalid\ event\(\backslash\)n"{}};\ \}}
-\DoxyCodeLine{00212\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_suspended_state_abdb96bea9e1ba156c4dd0ef10ea4f00b}{configurationEnded}}()\textcolor{keyword}{\ override\ }\{\ std::cout\ <<\ \textcolor{stringliteral}{"{}\ \ [Suspended]\ configurationEnded()\ -\/\ Invalid\ event\(\backslash\)n"{}};\ \}}
-\DoxyCodeLine{00213\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_suspended_state_aae7d88eb331faaba997c98a55adcc21c}{start}}()\textcolor{keyword}{\ override\ }\{\ std::cout\ <<\ \textcolor{stringliteral}{"{}\ \ [Suspended]\ start()\ -\/\ Invalid\ event\(\backslash\)n"{}};\ \}}
-\DoxyCodeLine{00214\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_suspended_state_af19733fedaa450fe4119054b82dfee42}{suspend}}()\textcolor{keyword}{\ override\ }\{\ std::cout\ <<\ \textcolor{stringliteral}{"{}\ \ [Suspended]\ suspend()\ -\/\ Invalid\ event\(\backslash\)n"{}};\ \}}
-\DoxyCodeLine{00215\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_suspended_state_a98d4671ae0657e7113be352bf3cffc8e}{resume}}()\ \textcolor{keyword}{override};}
-\DoxyCodeLine{00216\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_suspended_state_a2871b3b0b56972ce83872473eb3b8cd9}{exit}}()\ \textcolor{keyword}{override};}
-\DoxyCodeLine{00217\ \};}
-\DoxyCodeLine{00218\ }
-\DoxyCodeLine{00219\ \textcolor{comment}{//\ ====================\ REALTIME\ LOOP\ STATE\ CLASSES\ ====================}}
-\DoxyCodeLine{00220\ }
-\DoxyCodeLine{00221\ \textcolor{keyword}{class\ }\mbox{\hyperlink{class_real_time_loop_state_ab5424a183c7d0bc0f850bc08d6583b3a}{RealTimeLoopState}}\ \{}
-\DoxyCodeLine{00222\ \textcolor{keyword}{protected}:}
-\DoxyCodeLine{00223\ \ \ \ \ \mbox{\hyperlink{class_real_time_loop}{RealTimeLoop}}*\ \mbox{\hyperlink{class_real_time_loop_state_a1536912b6a7a9672c9b5d6c17690c66c}{context}};}
-\DoxyCodeLine{00224\ }
-\DoxyCodeLine{00225\ \textcolor{keyword}{public}:}
-\DoxyCodeLine{00226\ \ \ \ \ \mbox{\hyperlink{class_real_time_loop_state_ab5424a183c7d0bc0f850bc08d6583b3a}{RealTimeLoopState}}(\mbox{\hyperlink{class_real_time_loop}{RealTimeLoop}}*\ ctx)\ :\ \mbox{\hyperlink{class_real_time_loop_state_a1536912b6a7a9672c9b5d6c17690c66c}{context}}(ctx)\ \{\}}
-\DoxyCodeLine{00227\ \ \ \ \ \textcolor{keyword}{virtual}\ \mbox{\hyperlink{class_real_time_loop_state_a2bf10f5c535a2fa4f9280376e5bf83cd}{\string~RealTimeLoopState}}()\ =\ \textcolor{keywordflow}{default};}
-\DoxyCodeLine{00228\ }
-\DoxyCodeLine{00229\ \ \ \ \ \textcolor{keyword}{virtual}\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_real_time_loop_state_a8408eb96c20ac0b329ba63f5633b9757}{eventX}}()\ =\ 0;}
-\DoxyCodeLine{00230\ \};}
-\DoxyCodeLine{00231\ }
-\DoxyCodeLine{00232\ \textcolor{keyword}{class\ }\mbox{\hyperlink{class_mode1_state_aef0717445295b2fe1e876a7ed72442b9}{Mode1State}}\ :\ \textcolor{keyword}{public}\ \mbox{\hyperlink{class_real_time_loop_state_ab5424a183c7d0bc0f850bc08d6583b3a}{RealTimeLoopState}}\ \{}
-\DoxyCodeLine{00233\ \textcolor{keyword}{private}:}
-\DoxyCodeLine{00234\ \ \ \ \ \textcolor{keyword}{static}\ \mbox{\hyperlink{class_mode1_state_aef0717445295b2fe1e876a7ed72442b9}{Mode1State}}*\ \mbox{\hyperlink{class_mode1_state_a5d4ee889e07f7bfcf57eae243692e8f4}{instance}};}
-\DoxyCodeLine{00235\ \ \ \ \ \mbox{\hyperlink{class_mode1_state_aef0717445295b2fe1e876a7ed72442b9}{Mode1State}}(\mbox{\hyperlink{class_real_time_loop}{RealTimeLoop}}*\ ctx)\ :\ \mbox{\hyperlink{class_real_time_loop_state_ab5424a183c7d0bc0f850bc08d6583b3a}{RealTimeLoopState}}(ctx)\ \{\}}
-\DoxyCodeLine{00236\ }
-\DoxyCodeLine{00237\ \textcolor{keyword}{public}:}
-\DoxyCodeLine{00238\ \ \ \ \ \textcolor{keyword}{static}\ \mbox{\hyperlink{class_mode1_state_aef0717445295b2fe1e876a7ed72442b9}{Mode1State}}*\ \mbox{\hyperlink{class_mode1_state_a80247eeeae6ef230cc5baa630d7d3aaa}{getInstance}}(\mbox{\hyperlink{class_real_time_loop}{RealTimeLoop}}*\ ctx)\ \{}
-\DoxyCodeLine{00239\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (!\mbox{\hyperlink{class_mode1_state_a5d4ee889e07f7bfcf57eae243692e8f4}{instance}})\ \{}
-\DoxyCodeLine{00240\ \ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_mode1_state_a5d4ee889e07f7bfcf57eae243692e8f4}{instance}}\ =\ \textcolor{keyword}{new}\ \mbox{\hyperlink{class_mode1_state_aef0717445295b2fe1e876a7ed72442b9}{Mode1State}}(ctx);}
-\DoxyCodeLine{00241\ \ \ \ \ \ \ \ \ \}}
-\DoxyCodeLine{00242\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_mode1_state_a5d4ee889e07f7bfcf57eae243692e8f4}{instance}}-\/>context\ =\ ctx;}
-\DoxyCodeLine{00243\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ \mbox{\hyperlink{class_mode1_state_a5d4ee889e07f7bfcf57eae243692e8f4}{instance}};}
-\DoxyCodeLine{00244\ \ \ \ \ \}}
-\DoxyCodeLine{00245\ }
-\DoxyCodeLine{00246\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_mode1_state_a5913fca01e1b86f5497c0331749cb67f}{eventX}}()\ \textcolor{keyword}{override};}
-\DoxyCodeLine{00247\ \};}
-\DoxyCodeLine{00248\ }
-\DoxyCodeLine{00249\ \textcolor{keyword}{class\ }\mbox{\hyperlink{class_mode2_state_a1c93961d41188f65efc613526d0f6a23}{Mode2State}}\ :\ \textcolor{keyword}{public}\ \mbox{\hyperlink{class_real_time_loop_state_ab5424a183c7d0bc0f850bc08d6583b3a}{RealTimeLoopState}}\ \{}
-\DoxyCodeLine{00250\ \textcolor{keyword}{private}:}
-\DoxyCodeLine{00251\ \ \ \ \ \textcolor{keyword}{static}\ \mbox{\hyperlink{class_mode2_state_a1c93961d41188f65efc613526d0f6a23}{Mode2State}}*\ \mbox{\hyperlink{class_mode2_state_acb5abbb67cf9ba1a239ec1c5669c7238}{instance}};}
-\DoxyCodeLine{00252\ \ \ \ \ \mbox{\hyperlink{class_mode2_state_a1c93961d41188f65efc613526d0f6a23}{Mode2State}}(\mbox{\hyperlink{class_real_time_loop}{RealTimeLoop}}*\ ctx)\ :\ \mbox{\hyperlink{class_real_time_loop_state_ab5424a183c7d0bc0f850bc08d6583b3a}{RealTimeLoopState}}(ctx)\ \{\}}
-\DoxyCodeLine{00253\ }
-\DoxyCodeLine{00254\ \textcolor{keyword}{public}:}
-\DoxyCodeLine{00255\ \ \ \ \ \textcolor{keyword}{static}\ \mbox{\hyperlink{class_mode2_state_a1c93961d41188f65efc613526d0f6a23}{Mode2State}}*\ \mbox{\hyperlink{class_mode2_state_a3e155cf381133854a95dbae089f73b68}{getInstance}}(\mbox{\hyperlink{class_real_time_loop}{RealTimeLoop}}*\ ctx)\ \{}
-\DoxyCodeLine{00256\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (!\mbox{\hyperlink{class_mode2_state_acb5abbb67cf9ba1a239ec1c5669c7238}{instance}})\ \{}
-\DoxyCodeLine{00257\ \ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_mode2_state_acb5abbb67cf9ba1a239ec1c5669c7238}{instance}}\ =\ \textcolor{keyword}{new}\ \mbox{\hyperlink{class_mode2_state_a1c93961d41188f65efc613526d0f6a23}{Mode2State}}(ctx);}
-\DoxyCodeLine{00258\ \ \ \ \ \ \ \ \ \}}
-\DoxyCodeLine{00259\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_mode2_state_acb5abbb67cf9ba1a239ec1c5669c7238}{instance}}-\/>context\ =\ ctx;}
-\DoxyCodeLine{00260\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ \mbox{\hyperlink{class_mode2_state_acb5abbb67cf9ba1a239ec1c5669c7238}{instance}};}
-\DoxyCodeLine{00261\ \ \ \ \ \}}
-\DoxyCodeLine{00262\ }
-\DoxyCodeLine{00263\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_mode2_state_add95d83304f5d7461d87a577b3bc3337}{eventX}}()\ \textcolor{keyword}{override};}
-\DoxyCodeLine{00264\ \};}
-\DoxyCodeLine{00265\ }
-\DoxyCodeLine{00266\ \textcolor{keyword}{class\ }\mbox{\hyperlink{class_mode3_state_a7b64f389a91cc6c73d87bc1a8c3efbdf}{Mode3State}}\ :\ \textcolor{keyword}{public}\ \mbox{\hyperlink{class_real_time_loop_state_ab5424a183c7d0bc0f850bc08d6583b3a}{RealTimeLoopState}}\ \{}
-\DoxyCodeLine{00267\ \textcolor{keyword}{private}:}
-\DoxyCodeLine{00268\ \ \ \ \ \textcolor{keyword}{static}\ \mbox{\hyperlink{class_mode3_state_a7b64f389a91cc6c73d87bc1a8c3efbdf}{Mode3State}}*\ \mbox{\hyperlink{class_mode3_state_a5f02ee2da693da70c3f0bbd902e79449}{instance}};}
-\DoxyCodeLine{00269\ \ \ \ \ \mbox{\hyperlink{class_mode3_state_a7b64f389a91cc6c73d87bc1a8c3efbdf}{Mode3State}}(\mbox{\hyperlink{class_real_time_loop}{RealTimeLoop}}*\ ctx)\ :\ \mbox{\hyperlink{class_real_time_loop_state_ab5424a183c7d0bc0f850bc08d6583b3a}{RealTimeLoopState}}(ctx)\ \{\}}
-\DoxyCodeLine{00270\ }
-\DoxyCodeLine{00271\ \textcolor{keyword}{public}:}
-\DoxyCodeLine{00272\ \ \ \ \ \textcolor{keyword}{static}\ \mbox{\hyperlink{class_mode3_state_a7b64f389a91cc6c73d87bc1a8c3efbdf}{Mode3State}}*\ \mbox{\hyperlink{class_mode3_state_a597b98e563c80d2ec1b2d1fe367221d1}{getInstance}}(\mbox{\hyperlink{class_real_time_loop}{RealTimeLoop}}*\ ctx)\ \{}
-\DoxyCodeLine{00273\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (!\mbox{\hyperlink{class_mode3_state_a5f02ee2da693da70c3f0bbd902e79449}{instance}})\ \{}
-\DoxyCodeLine{00274\ \ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_mode3_state_a5f02ee2da693da70c3f0bbd902e79449}{instance}}\ =\ \textcolor{keyword}{new}\ \mbox{\hyperlink{class_mode3_state_a7b64f389a91cc6c73d87bc1a8c3efbdf}{Mode3State}}(ctx);}
-\DoxyCodeLine{00275\ \ \ \ \ \ \ \ \ \}}
-\DoxyCodeLine{00276\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_mode3_state_a5f02ee2da693da70c3f0bbd902e79449}{instance}}-\/>context\ =\ ctx;}
-\DoxyCodeLine{00277\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ \mbox{\hyperlink{class_mode3_state_a5f02ee2da693da70c3f0bbd902e79449}{instance}};}
-\DoxyCodeLine{00278\ \ \ \ \ \}}
-\DoxyCodeLine{00279\ }
-\DoxyCodeLine{00280\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_mode3_state_ad5c78a63a9a111ccb04ecb502f85bd3d}{eventX}}()\ \textcolor{keyword}{override};}
-\DoxyCodeLine{00281\ \};}
-\DoxyCodeLine{00282\ }
-\DoxyCodeLine{00283\ \textcolor{comment}{//\ ====================\ REALTIME\ LOOP\ CONTEXT\ ====================}}
+\DoxyCodeLine{00120\ \textcolor{keyword}{class\ }\mbox{\hyperlink{class_operational_state_ae3abfc6d0545ae4e82369b73e745f224}{OperationalState}}\ :\ \textcolor{keyword}{public}\ \mbox{\hyperlink{class_embedded_system_x_state_a5630d67a88100d0e67c1578a7ee43e91}{EmbeddedSystemXState}}\ \{}
+\DoxyCodeLine{00121\ \textcolor{keyword}{private}:}
+\DoxyCodeLine{00122\ \ \ \ \ \textcolor{keyword}{static}\ \mbox{\hyperlink{class_operational_state_ae3abfc6d0545ae4e82369b73e745f224}{OperationalState}}*\ \mbox{\hyperlink{class_operational_state_acef346890b79b8d14941f17985a6fb38}{instance}};}
+\DoxyCodeLine{00123\ \ \ \ \ \mbox{\hyperlink{class_operational_state_ae3abfc6d0545ae4e82369b73e745f224}{OperationalState}}(\mbox{\hyperlink{class_embedded_system_x}{EmbeddedSystemX}}*\ ctx)\ :\ \mbox{\hyperlink{class_embedded_system_x_state_a5630d67a88100d0e67c1578a7ee43e91}{EmbeddedSystemXState}}(ctx)\ \{\}}
+\DoxyCodeLine{00124\ }
+\DoxyCodeLine{00125\ \textcolor{keyword}{public}:}
+\DoxyCodeLine{00126\ \ \ \ \ \textcolor{keyword}{static}\ \mbox{\hyperlink{class_operational_state_ae3abfc6d0545ae4e82369b73e745f224}{OperationalState}}*\ \mbox{\hyperlink{class_operational_state_a6ff26e3449b8162a35c0a7e8223c799d}{getInstance}}(\mbox{\hyperlink{class_embedded_system_x}{EmbeddedSystemX}}*\ ctx)\ \{}
+\DoxyCodeLine{00127\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (!\mbox{\hyperlink{class_operational_state_acef346890b79b8d14941f17985a6fb38}{instance}})\ \{}
+\DoxyCodeLine{00128\ \ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_operational_state_acef346890b79b8d14941f17985a6fb38}{instance}}\ =\ \textcolor{keyword}{new}\ \mbox{\hyperlink{class_operational_state_ae3abfc6d0545ae4e82369b73e745f224}{OperationalState}}(ctx);}
+\DoxyCodeLine{00129\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00130\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_operational_state_acef346890b79b8d14941f17985a6fb38}{instance}}-\/>context\ =\ ctx;}
+\DoxyCodeLine{00131\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ \mbox{\hyperlink{class_operational_state_acef346890b79b8d14941f17985a6fb38}{instance}};}
+\DoxyCodeLine{00132\ \ \ \ \ \}}
+\DoxyCodeLine{00133\ }
+\DoxyCodeLine{00134\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_operational_state_ab6a41f161d8c3e478d29ce41c09331d8}{selfTestOk}}()\textcolor{keyword}{\ override\ }\{\ std::cout\ <<\ \textcolor{stringliteral}{"{}\ \ [Operational]\ selfTestOk()\ -\/\ Invalid\ event\(\backslash\)n"{}};\ \}}
+\DoxyCodeLine{00135\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_operational_state_a5de1af4420a7cfc70ae2752586e22298}{initialized}}()\textcolor{keyword}{\ override\ }\{\ std::cout\ <<\ \textcolor{stringliteral}{"{}\ \ [Operational]\ initialized()\ -\/\ Invalid\ event\(\backslash\)n"{}};\ \}}
+\DoxyCodeLine{00136\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_operational_state_ab4fb1ab9af563a2566b1c6c48062ce0d}{restart}}()\ \textcolor{keyword}{override};}
+\DoxyCodeLine{00137\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_operational_state_a246be8c0e3044d4084677da7de85d530}{selfTestFailed}}(\textcolor{keywordtype}{int}\ errorNo)\textcolor{keyword}{\ override\ }\{\ std::cout\ <<\ \textcolor{stringliteral}{"{}\ \ [Operational]\ selfTestFailed()\ -\/\ Invalid\ event\(\backslash\)n"{}};\ \}}
+\DoxyCodeLine{00138\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_operational_state_a8efc9f71ab6dcd775e998d4ad2a96c2b}{configure}}()\ \textcolor{keyword}{override};}
+\DoxyCodeLine{00139\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_operational_state_a691ce8bdef79d84343982e01a9f59c84}{configurationEnded}}()\textcolor{keyword}{\ override\ }\{\ std::cout\ <<\ \textcolor{stringliteral}{"{}\ \ [Operational]\ configurationEnded()\ -\/\ Invalid\ event\(\backslash\)n"{}};\ \}}
+\DoxyCodeLine{00140\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_operational_state_a0e02f08841631a89bcc8e8713facc869}{start}}()\textcolor{keyword}{\ override\ }\{\ std::cout\ <<\ \textcolor{stringliteral}{"{}\ \ [Operational]\ Start/run\ RealTimeLoop\(\backslash\)n"{}};\ \}}
+\DoxyCodeLine{00141\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_operational_state_ac442e55c4f713d7c7cbe036cdc490102}{suspend}}()\ \textcolor{keyword}{override};}
+\DoxyCodeLine{00142\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_operational_state_a3f501341460c38f4c9d552f907c72094}{resume}}()\textcolor{keyword}{\ override\ }\{\ std::cout\ <<\ \textcolor{stringliteral}{"{}\ \ [Operational]\ resume()\ -\/\ Invalid\ event\(\backslash\)n"{}};\ \}}
+\DoxyCodeLine{00143\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_operational_state_ad8b142e600532fea93388e560eb86c75}{exit}}()\ \textcolor{keyword}{override};}
+\DoxyCodeLine{00144\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_operational_state_a3eb0214082f79a4b41fbd5b3db059fb1}{stop}}()\textcolor{keyword}{\ override\ }\{\ std::cout\ <<\ \textcolor{stringliteral}{"{}\ \ [Operational]\ stop()\ -\/\ Invalid\ event\(\backslash\)n"{}};\ \}}
+\DoxyCodeLine{00145\ \};}
+\DoxyCodeLine{00146\ }
+\DoxyCodeLine{00147\ \textcolor{keyword}{class\ }\mbox{\hyperlink{class_configuration_state_ad64970b29021309679964cf9c3bce36a}{ConfigurationState}}\ :\ \textcolor{keyword}{public}\ \mbox{\hyperlink{class_embedded_system_x_state_a5630d67a88100d0e67c1578a7ee43e91}{EmbeddedSystemXState}}\ \{}
+\DoxyCodeLine{00148\ \textcolor{keyword}{private}:}
+\DoxyCodeLine{00149\ \ \ \ \ \textcolor{keyword}{static}\ \mbox{\hyperlink{class_configuration_state_ad64970b29021309679964cf9c3bce36a}{ConfigurationState}}*\ \mbox{\hyperlink{class_configuration_state_a35588153201be2fca68d8fc18a9b8cbd}{instance}};}
+\DoxyCodeLine{00150\ \ \ \ \ \mbox{\hyperlink{class_configuration_state_ad64970b29021309679964cf9c3bce36a}{ConfigurationState}}(\mbox{\hyperlink{class_embedded_system_x}{EmbeddedSystemX}}*\ ctx)\ :\ \mbox{\hyperlink{class_embedded_system_x_state_a5630d67a88100d0e67c1578a7ee43e91}{EmbeddedSystemXState}}(ctx)\ \{\}}
+\DoxyCodeLine{00151\ }
+\DoxyCodeLine{00152\ \textcolor{keyword}{public}:}
+\DoxyCodeLine{00153\ \ \ \ \ \textcolor{keyword}{static}\ \mbox{\hyperlink{class_configuration_state_ad64970b29021309679964cf9c3bce36a}{ConfigurationState}}*\ \mbox{\hyperlink{class_configuration_state_ae8c10885d597cc4cacf9cde057cc4723}{getInstance}}(\mbox{\hyperlink{class_embedded_system_x}{EmbeddedSystemX}}*\ ctx)\ \{}
+\DoxyCodeLine{00154\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (!\mbox{\hyperlink{class_configuration_state_a35588153201be2fca68d8fc18a9b8cbd}{instance}})\ \{}
+\DoxyCodeLine{00155\ \ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_configuration_state_a35588153201be2fca68d8fc18a9b8cbd}{instance}}\ =\ \textcolor{keyword}{new}\ \mbox{\hyperlink{class_configuration_state_ad64970b29021309679964cf9c3bce36a}{ConfigurationState}}(ctx);}
+\DoxyCodeLine{00156\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00157\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_configuration_state_a35588153201be2fca68d8fc18a9b8cbd}{instance}}-\/>context\ =\ ctx;}
+\DoxyCodeLine{00158\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ \mbox{\hyperlink{class_configuration_state_a35588153201be2fca68d8fc18a9b8cbd}{instance}};}
+\DoxyCodeLine{00159\ \ \ \ \ \}}
+\DoxyCodeLine{00160\ }
+\DoxyCodeLine{00161\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_configuration_state_af60aad39cf4ae439e2ae73a4626b7dd4}{selfTestOk}}()\textcolor{keyword}{\ override\ }\{\ std::cout\ <<\ \textcolor{stringliteral}{"{}\ \ [Configuration]\ selfTestOk()\ -\/\ Invalid\ event\(\backslash\)n"{}};\ \}}
+\DoxyCodeLine{00162\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_configuration_state_a357e2c4c1805690303aa74813110edea}{initialized}}()\textcolor{keyword}{\ override\ }\{\ std::cout\ <<\ \textcolor{stringliteral}{"{}\ \ [Configuration]\ initialized()\ -\/\ Invalid\ event\(\backslash\)n"{}};\ \}}
+\DoxyCodeLine{00163\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_configuration_state_ab667ff4fd7114cce9a39042235b7ed90}{restart}}()\ \textcolor{keyword}{override};}
+\DoxyCodeLine{00164\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_configuration_state_ac8e9a65e68f27da713be1df4a52e568a}{selfTestFailed}}(\textcolor{keywordtype}{int}\ errorNo)\textcolor{keyword}{\ override\ }\{\ std::cout\ <<\ \textcolor{stringliteral}{"{}\ \ [Configuration]\ selfTestFailed()\ -\/\ Invalid\ event\(\backslash\)n"{}};\ \}}
+\DoxyCodeLine{00165\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_configuration_state_a29eadbed9ebfb5fc9f856a222a974e0b}{configure}}()\textcolor{keyword}{\ override\ }\{\ std::cout\ <<\ \textcolor{stringliteral}{"{}\ \ [Configuration]\ Reading\ configuration\ info...\(\backslash\)n"{}};\ \}}
+\DoxyCodeLine{00166\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_configuration_state_a3823e276d58c7ae43411fda154df3eda}{configurationEnded}}()\ \textcolor{keyword}{override};}
+\DoxyCodeLine{00167\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_configuration_state_afbafcce711741eb058860c1fc91c3c21}{start}}()\textcolor{keyword}{\ override\ }\{\ std::cout\ <<\ \textcolor{stringliteral}{"{}\ \ [Configuration]\ start()\ -\/\ Invalid\ event\(\backslash\)n"{}};\ \}}
+\DoxyCodeLine{00168\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_configuration_state_a37a0339b1ca9b802de148275aa2695b7}{suspend}}()\textcolor{keyword}{\ override\ }\{\ std::cout\ <<\ \textcolor{stringliteral}{"{}\ \ [Configuration]\ suspend()\ -\/\ Invalid\ event\(\backslash\)n"{}};\ \}}
+\DoxyCodeLine{00169\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_configuration_state_a07a565f60f9796081a1888ba63bbbda3}{resume}}()\textcolor{keyword}{\ override\ }\{\ std::cout\ <<\ \textcolor{stringliteral}{"{}\ \ [Configuration]\ resume()\ -\/\ Invalid\ event\(\backslash\)n"{}};\ \}}
+\DoxyCodeLine{00170\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_configuration_state_a4871637d8d459ea33082477f4f2250c6}{exit}}()\textcolor{keyword}{\ override\ }\{\ std::cout\ <<\ \textcolor{stringliteral}{"{}\ \ [Configuration]\ exit()\ -\/\ Invalid\ event\(\backslash\)n"{}};\ \}}
+\DoxyCodeLine{00171\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_configuration_state_a95ef1214921c1ee3b0f3b7c7cbd92b4e}{stop}}()\textcolor{keyword}{\ override\ }\{\ std::cout\ <<\ \textcolor{stringliteral}{"{}\ \ [Configuration]\ stop()\ -\/\ Invalid\ event\(\backslash\)n"{}};\ \}}
+\DoxyCodeLine{00172\ \};}
+\DoxyCodeLine{00173\ }
+\DoxyCodeLine{00174\ \textcolor{keyword}{class\ }\mbox{\hyperlink{class_ready_state_a497319f3099ba7ab061bfae0658da9bd}{ReadyState}}\ :\ \textcolor{keyword}{public}\ \mbox{\hyperlink{class_embedded_system_x_state_a5630d67a88100d0e67c1578a7ee43e91}{EmbeddedSystemXState}}\ \{}
+\DoxyCodeLine{00175\ \textcolor{keyword}{private}:}
+\DoxyCodeLine{00176\ \ \ \ \ \textcolor{keyword}{static}\ \mbox{\hyperlink{class_ready_state_a497319f3099ba7ab061bfae0658da9bd}{ReadyState}}*\ \mbox{\hyperlink{class_ready_state_ad9b81807720099562fb7e0c6b77a94a6}{instance}};}
+\DoxyCodeLine{00177\ \ \ \ \ \mbox{\hyperlink{class_ready_state_a497319f3099ba7ab061bfae0658da9bd}{ReadyState}}(\mbox{\hyperlink{class_embedded_system_x}{EmbeddedSystemX}}*\ ctx)\ :\ \mbox{\hyperlink{class_embedded_system_x_state_a5630d67a88100d0e67c1578a7ee43e91}{EmbeddedSystemXState}}(ctx)\ \{\}}
+\DoxyCodeLine{00178\ }
+\DoxyCodeLine{00179\ \textcolor{keyword}{public}:}
+\DoxyCodeLine{00180\ \ \ \ \ \textcolor{keyword}{static}\ \mbox{\hyperlink{class_ready_state_a497319f3099ba7ab061bfae0658da9bd}{ReadyState}}*\ \mbox{\hyperlink{class_ready_state_a078711a8e92dab314ef4fd17e67a2a95}{getInstance}}(\mbox{\hyperlink{class_embedded_system_x}{EmbeddedSystemX}}*\ ctx)\ \{}
+\DoxyCodeLine{00181\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (!\mbox{\hyperlink{class_ready_state_ad9b81807720099562fb7e0c6b77a94a6}{instance}})\ \{}
+\DoxyCodeLine{00182\ \ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_ready_state_ad9b81807720099562fb7e0c6b77a94a6}{instance}}\ =\ \textcolor{keyword}{new}\ \mbox{\hyperlink{class_ready_state_a497319f3099ba7ab061bfae0658da9bd}{ReadyState}}(ctx);}
+\DoxyCodeLine{00183\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00184\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_ready_state_ad9b81807720099562fb7e0c6b77a94a6}{instance}}-\/>context\ =\ ctx;}
+\DoxyCodeLine{00185\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ \mbox{\hyperlink{class_ready_state_ad9b81807720099562fb7e0c6b77a94a6}{instance}};}
+\DoxyCodeLine{00186\ \ \ \ \ \}}
+\DoxyCodeLine{00187\ }
+\DoxyCodeLine{00188\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_ready_state_ac0edeca2ab8f5ab14ac729e7476a6407}{selfTestOk}}()\textcolor{keyword}{\ override\ }\{\ std::cout\ <<\ \textcolor{stringliteral}{"{}\ \ [Ready]\ selfTestOk()\ -\/\ Invalid\ event\(\backslash\)n"{}};\ \}}
+\DoxyCodeLine{00189\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_ready_state_a7dd632f321ebd39488f78d1844ba13f4}{initialized}}()\textcolor{keyword}{\ override\ }\{\ std::cout\ <<\ \textcolor{stringliteral}{"{}\ \ [Ready]\ initialized()\ -\/\ Invalid\ event\(\backslash\)n"{}};\ \}}
+\DoxyCodeLine{00190\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_ready_state_abbd0ed06994f93d3c2a2e4ee7aa1f7e5}{restart}}()\ \textcolor{keyword}{override};}
+\DoxyCodeLine{00191\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_ready_state_ada1648588197196473a3cef4104633a6}{selfTestFailed}}(\textcolor{keywordtype}{int}\ errorNo)\textcolor{keyword}{\ override\ }\{\ std::cout\ <<\ \textcolor{stringliteral}{"{}\ \ [Ready]\ selfTestFailed()\ -\/\ Invalid\ event\(\backslash\)n"{}};\ \}}
+\DoxyCodeLine{00192\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_ready_state_a9cabd1bcb8ee050b4fa621e4c593468e}{configure}}()\ \textcolor{keyword}{override};}
+\DoxyCodeLine{00193\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_ready_state_a5dbebdfdf0b2539d6da82c7d5f638dc4}{configurationEnded}}()\textcolor{keyword}{\ override\ }\{\ std::cout\ <<\ \textcolor{stringliteral}{"{}\ \ [Ready]\ configurationEnded()\ -\/\ Invalid\ event\(\backslash\)n"{}};\ \}}
+\DoxyCodeLine{00194\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_ready_state_afca7afc96e449d8a719f3f22e61bc924}{start}}()\ \textcolor{keyword}{override};}
+\DoxyCodeLine{00195\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_ready_state_add9ad4412cf6beb08f953f4b0ee40521}{suspend}}()\textcolor{keyword}{\ override\ }\{\ std::cout\ <<\ \textcolor{stringliteral}{"{}\ \ [Ready]\ suspend()\ -\/\ Invalid\ event\(\backslash\)n"{}};\ \}}
+\DoxyCodeLine{00196\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_ready_state_aef07ad6ab7bde38014ae521e1d72db86}{resume}}()\textcolor{keyword}{\ override\ }\{\ std::cout\ <<\ \textcolor{stringliteral}{"{}\ \ [Ready]\ resume()\ -\/\ Invalid\ event\(\backslash\)n"{}};\ \}}
+\DoxyCodeLine{00197\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_ready_state_a7c0f1f0c7e72a26a6c62949ce36818f2}{exit}}()\ \textcolor{keyword}{override};}
+\DoxyCodeLine{00198\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_ready_state_a38b6968e4106fe587c443d46e64fdb51}{stop}}()\textcolor{keyword}{\ override\ }\{\ std::cout\ <<\ \textcolor{stringliteral}{"{}\ \ [Ready]\ stop()\ -\/\ Invalid\ event\(\backslash\)n"{}};\ \}}
+\DoxyCodeLine{00199\ \};}
+\DoxyCodeLine{00200\ }
+\DoxyCodeLine{00201\ \textcolor{keyword}{class\ }\mbox{\hyperlink{class_suspended_state_afcec59fe5067ed66b3d544224ea3d7e6}{SuspendedState}}\ :\ \textcolor{keyword}{public}\ \mbox{\hyperlink{class_embedded_system_x_state_a5630d67a88100d0e67c1578a7ee43e91}{EmbeddedSystemXState}}\ \{}
+\DoxyCodeLine{00202\ \textcolor{keyword}{private}:}
+\DoxyCodeLine{00203\ \ \ \ \ \textcolor{keyword}{static}\ \mbox{\hyperlink{class_suspended_state_afcec59fe5067ed66b3d544224ea3d7e6}{SuspendedState}}*\ \mbox{\hyperlink{class_suspended_state_a4535d9647d1fbc8ce487afaa58a9cae4}{instance}};}
+\DoxyCodeLine{00204\ \ \ \ \ \mbox{\hyperlink{class_suspended_state_afcec59fe5067ed66b3d544224ea3d7e6}{SuspendedState}}(\mbox{\hyperlink{class_embedded_system_x}{EmbeddedSystemX}}*\ ctx)\ :\ \mbox{\hyperlink{class_embedded_system_x_state_a5630d67a88100d0e67c1578a7ee43e91}{EmbeddedSystemXState}}(ctx)\ \{\}}
+\DoxyCodeLine{00205\ }
+\DoxyCodeLine{00206\ \textcolor{keyword}{public}:}
+\DoxyCodeLine{00207\ \ \ \ \ \textcolor{keyword}{static}\ \mbox{\hyperlink{class_suspended_state_afcec59fe5067ed66b3d544224ea3d7e6}{SuspendedState}}*\ \mbox{\hyperlink{class_suspended_state_a7c5ac4f52a44311e301be89e4c8b8bf0}{getInstance}}(\mbox{\hyperlink{class_embedded_system_x}{EmbeddedSystemX}}*\ ctx)\ \{}
+\DoxyCodeLine{00208\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (!\mbox{\hyperlink{class_suspended_state_a4535d9647d1fbc8ce487afaa58a9cae4}{instance}})\ \{}
+\DoxyCodeLine{00209\ \ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_suspended_state_a4535d9647d1fbc8ce487afaa58a9cae4}{instance}}\ =\ \textcolor{keyword}{new}\ \mbox{\hyperlink{class_suspended_state_afcec59fe5067ed66b3d544224ea3d7e6}{SuspendedState}}(ctx);}
+\DoxyCodeLine{00210\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00211\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_suspended_state_a4535d9647d1fbc8ce487afaa58a9cae4}{instance}}-\/>context\ =\ ctx;}
+\DoxyCodeLine{00212\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ \mbox{\hyperlink{class_suspended_state_a4535d9647d1fbc8ce487afaa58a9cae4}{instance}};}
+\DoxyCodeLine{00213\ \ \ \ \ \}}
+\DoxyCodeLine{00214\ }
+\DoxyCodeLine{00215\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_suspended_state_a739ef8d11375694310c3785ecc7b28f2}{selfTestOk}}()\textcolor{keyword}{\ override\ }\{\ std::cout\ <<\ \textcolor{stringliteral}{"{}\ \ [Suspended]\ selfTestOk()\ -\/\ Invalid\ event\(\backslash\)n"{}};\ \}}
+\DoxyCodeLine{00216\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_suspended_state_a0cb04e868e285c5a1cbe09a625fd942f}{initialized}}()\textcolor{keyword}{\ override\ }\{\ std::cout\ <<\ \textcolor{stringliteral}{"{}\ \ [Suspended]\ initialized()\ -\/\ Invalid\ event\(\backslash\)n"{}};\ \}}
+\DoxyCodeLine{00217\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_suspended_state_a935123391a7a11cecedda11cdef3c231}{restart}}()\ \textcolor{keyword}{override};}
+\DoxyCodeLine{00218\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_suspended_state_af8d529e74e9bea3a52c62f96146583a6}{selfTestFailed}}(\textcolor{keywordtype}{int}\ errorNo)\textcolor{keyword}{\ override\ }\{\ std::cout\ <<\ \textcolor{stringliteral}{"{}\ \ [Suspended]\ selfTestFailed()\ -\/\ Invalid\ event\(\backslash\)n"{}};\ \}}
+\DoxyCodeLine{00219\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_suspended_state_aa62cd0cc1f6977a6dacba9d56439838e}{configure}}()\textcolor{keyword}{\ override\ }\{\ std::cout\ <<\ \textcolor{stringliteral}{"{}\ \ [Suspended]\ configure()\ -\/\ Invalid\ event\(\backslash\)n"{}};\ \}}
+\DoxyCodeLine{00220\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_suspended_state_abdb96bea9e1ba156c4dd0ef10ea4f00b}{configurationEnded}}()\textcolor{keyword}{\ override\ }\{\ std::cout\ <<\ \textcolor{stringliteral}{"{}\ \ [Suspended]\ configurationEnded()\ -\/\ Invalid\ event\(\backslash\)n"{}};\ \}}
+\DoxyCodeLine{00221\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_suspended_state_aae7d88eb331faaba997c98a55adcc21c}{start}}()\textcolor{keyword}{\ override\ }\{\ std::cout\ <<\ \textcolor{stringliteral}{"{}\ \ [Suspended]\ start()\ -\/\ Invalid\ event\(\backslash\)n"{}};\ \}}
+\DoxyCodeLine{00222\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_suspended_state_af19733fedaa450fe4119054b82dfee42}{suspend}}()\textcolor{keyword}{\ override\ }\{\ std::cout\ <<\ \textcolor{stringliteral}{"{}\ \ [Suspended]\ suspend()\ -\/\ Invalid\ event\(\backslash\)n"{}};\ \}}
+\DoxyCodeLine{00223\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_suspended_state_a98d4671ae0657e7113be352bf3cffc8e}{resume}}()\ \textcolor{keyword}{override};}
+\DoxyCodeLine{00224\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_suspended_state_a2871b3b0b56972ce83872473eb3b8cd9}{exit}}()\ \textcolor{keyword}{override};}
+\DoxyCodeLine{00225\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_suspended_state_af793eb953e3128c262841520fd6118b2}{stop}}()\textcolor{keyword}{\ override\ }\{\ std::cout\ <<\ \textcolor{stringliteral}{"{}\ \ [Suspended]\ stop()\ -\/\ Invalid\ event\(\backslash\)n"{}};\ \}}
+\DoxyCodeLine{00226\ \};}
+\DoxyCodeLine{00227\ }
+\DoxyCodeLine{00228\ \textcolor{keyword}{class\ }\mbox{\hyperlink{class_real_time_loop_outer_state_ad89ca507e9f62d9a94e078c66ae45cd4}{RealTimeLoopOuterState}}\ :\ \textcolor{keyword}{public}\ \mbox{\hyperlink{class_embedded_system_x_state_a5630d67a88100d0e67c1578a7ee43e91}{EmbeddedSystemXState}}\ \{}
+\DoxyCodeLine{00229\ \textcolor{keyword}{private}:}
+\DoxyCodeLine{00230\ \ \ \ \ \textcolor{keyword}{static}\ \mbox{\hyperlink{class_real_time_loop_outer_state_ad89ca507e9f62d9a94e078c66ae45cd4}{RealTimeLoopOuterState}}*\ \mbox{\hyperlink{class_real_time_loop_outer_state_a501412b47cfd5b2de3c47b681f83f009}{instance}};}
+\DoxyCodeLine{00231\ \ \ \ \ \mbox{\hyperlink{class_real_time_loop_outer_state_ad89ca507e9f62d9a94e078c66ae45cd4}{RealTimeLoopOuterState}}(\mbox{\hyperlink{class_embedded_system_x}{EmbeddedSystemX}}*\ ctx)\ :\ \mbox{\hyperlink{class_embedded_system_x_state_a5630d67a88100d0e67c1578a7ee43e91}{EmbeddedSystemXState}}(ctx)\ \{\}}
+\DoxyCodeLine{00232\ }
+\DoxyCodeLine{00233\ \textcolor{keyword}{public}:}
+\DoxyCodeLine{00234\ \ \ \ \ \textcolor{keyword}{static}\ \mbox{\hyperlink{class_real_time_loop_outer_state_ad89ca507e9f62d9a94e078c66ae45cd4}{RealTimeLoopOuterState}}*\ \mbox{\hyperlink{class_real_time_loop_outer_state_aa45421e00258a8ee2687d8c99efc0dea}{getInstance}}(\mbox{\hyperlink{class_embedded_system_x}{EmbeddedSystemX}}*\ ctx)\ \{}
+\DoxyCodeLine{00235\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (!\mbox{\hyperlink{class_real_time_loop_outer_state_a501412b47cfd5b2de3c47b681f83f009}{instance}})\ \{}
+\DoxyCodeLine{00236\ \ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_real_time_loop_outer_state_a501412b47cfd5b2de3c47b681f83f009}{instance}}\ =\ \textcolor{keyword}{new}\ \mbox{\hyperlink{class_real_time_loop_outer_state_ad89ca507e9f62d9a94e078c66ae45cd4}{RealTimeLoopOuterState}}(ctx);}
+\DoxyCodeLine{00237\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00238\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_real_time_loop_outer_state_a501412b47cfd5b2de3c47b681f83f009}{instance}}-\/>context\ =\ ctx;}
+\DoxyCodeLine{00239\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ \mbox{\hyperlink{class_real_time_loop_outer_state_a501412b47cfd5b2de3c47b681f83f009}{instance}};}
+\DoxyCodeLine{00240\ \ \ \ \ \}}
+\DoxyCodeLine{00241\ }
+\DoxyCodeLine{00242\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_real_time_loop_outer_state_a385467a7fc073b82c7f713ad21be286c}{selfTestOk}}()\textcolor{keyword}{\ override\ }\{\ std::cout\ <<\ \textcolor{stringliteral}{"{}\ \ [RealTimeLoopOuterState]\ selfTestOk()\ -\/\ Invalid\ event\(\backslash\)n"{}};\ \}}
+\DoxyCodeLine{00243\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_real_time_loop_outer_state_adb0c2fa8bb211f64472f7c21ce5e79cc}{initialized}}()\textcolor{keyword}{\ override\ }\{\ std::cout\ <<\ \textcolor{stringliteral}{"{}\ \ [RealTimeLoopOuterState]\ initialized()\ -\/\ Invalid\ event\(\backslash\)n"{}};\ \}}
+\DoxyCodeLine{00244\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_real_time_loop_outer_state_a01925a6ddfdbd6bd3d5dd1364d43798b}{restart}}()\ \textcolor{keyword}{override};}
+\DoxyCodeLine{00245\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_real_time_loop_outer_state_aa325d80f73acf87f9c79dfd3190b3241}{selfTestFailed}}(\textcolor{keywordtype}{int}\ errorNo)\textcolor{keyword}{\ override\ }\{\ std::cout\ <<\ \textcolor{stringliteral}{"{}\ \ [RealTimeLoopOuterState]\ selfTestFailed()\ -\/\ Invalid\ event\(\backslash\)n"{}};\ \}}
+\DoxyCodeLine{00246\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_real_time_loop_outer_state_a1ce503aec7fdd28db83f26798d1b1872}{configure}}()\textcolor{keyword}{\ override\ }\{\ std::cout\ <<\ \textcolor{stringliteral}{"{}\ \ [RealTimeLoopOuterState]\ configure()\ -\/\ Invalid\ event\(\backslash\)n"{}};\ \}}
+\DoxyCodeLine{00247\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_real_time_loop_outer_state_aa1c6a44d5edded76ec2001dfb1dd3bf0}{configurationEnded}}()\textcolor{keyword}{\ override\ }\{\ std::cout\ <<\ \textcolor{stringliteral}{"{}\ \ [RealTimeLoopOuterState]\ configurationEnded()\ -\/\ Invalid\ event\(\backslash\)n"{}};\ \}}
+\DoxyCodeLine{00248\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_real_time_loop_outer_state_a9f4cc159c4e8d130ce3dd4be817caf4f}{start}}()\textcolor{keyword}{\ override\ }\{\ std::cout\ <<\ \textcolor{stringliteral}{"{}\ \ [RealTimeLoopOuterState]\ start()\ -\/\ Invalid\ event\(\backslash\)n"{}};\ \}}
+\DoxyCodeLine{00249\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_real_time_loop_outer_state_ad38a02f7799b345e521974f80d0784f3}{suspend}}()\ \textcolor{keyword}{override};}
+\DoxyCodeLine{00250\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_real_time_loop_outer_state_a811c163bf96278e880ff16caa302ba32}{resume}}()\textcolor{keyword}{\ override\ }\{\ std::cout\ <<\ \textcolor{stringliteral}{"{}\ \ [RealTimeLoopOuterState]\ resume()\ -\/\ Invalid\ event\(\backslash\)n"{}};\ \}}
+\DoxyCodeLine{00251\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_real_time_loop_outer_state_a3e33b3ddccb6c330578f72456b0f1e66}{exit}}()\textcolor{keyword}{\ override\ }\{\ std::cout\ <<\ \textcolor{stringliteral}{"{}\ \ [RealTimeLoopOuterState]\ exit()\ -\/\ Invalid\ event\(\backslash\)n"{}};\ \}}
+\DoxyCodeLine{00252\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_real_time_loop_outer_state_a4dad87dab493eb6f379066118e76157b}{stop}}()\ \textcolor{keyword}{override};}
+\DoxyCodeLine{00253\ \};}
+\DoxyCodeLine{00254\ }
+\DoxyCodeLine{00255\ \textcolor{comment}{//\ ====================\ REALTIME\ LOOP\ STATE\ CLASSES\ ====================}}
+\DoxyCodeLine{00256\ }
+\DoxyCodeLine{00257\ \textcolor{keyword}{class\ }\mbox{\hyperlink{class_real_time_loop_state_ab5424a183c7d0bc0f850bc08d6583b3a}{RealTimeLoopState}}\ \{}
+\DoxyCodeLine{00258\ \textcolor{keyword}{protected}:}
+\DoxyCodeLine{00259\ \ \ \ \ \mbox{\hyperlink{class_real_time_loop}{RealTimeLoop}}*\ \mbox{\hyperlink{class_real_time_loop_state_a1536912b6a7a9672c9b5d6c17690c66c}{context}};}
+\DoxyCodeLine{00260\ }
+\DoxyCodeLine{00261\ \textcolor{keyword}{public}:}
+\DoxyCodeLine{00262\ \ \ \ \ \mbox{\hyperlink{class_real_time_loop_state_ab5424a183c7d0bc0f850bc08d6583b3a}{RealTimeLoopState}}(\mbox{\hyperlink{class_real_time_loop}{RealTimeLoop}}*\ ctx)\ :\ \mbox{\hyperlink{class_real_time_loop_state_a1536912b6a7a9672c9b5d6c17690c66c}{context}}(ctx)\ \{\}}
+\DoxyCodeLine{00263\ \ \ \ \ \textcolor{keyword}{virtual}\ \mbox{\hyperlink{class_real_time_loop_state_a2bf10f5c535a2fa4f9280376e5bf83cd}{\string~RealTimeLoopState}}()\ =\ \textcolor{keywordflow}{default};}
+\DoxyCodeLine{00264\ }
+\DoxyCodeLine{00265\ \ \ \ \ \textcolor{keyword}{virtual}\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_real_time_loop_state_a8408eb96c20ac0b329ba63f5633b9757}{eventX}}()\ =\ 0;}
+\DoxyCodeLine{00266\ \};}
+\DoxyCodeLine{00267\ }
+\DoxyCodeLine{00268\ \textcolor{keyword}{class\ }\mbox{\hyperlink{class_mode1_state_aef0717445295b2fe1e876a7ed72442b9}{Mode1State}}\ :\ \textcolor{keyword}{public}\ \mbox{\hyperlink{class_real_time_loop_state_ab5424a183c7d0bc0f850bc08d6583b3a}{RealTimeLoopState}}\ \{}
+\DoxyCodeLine{00269\ \textcolor{keyword}{private}:}
+\DoxyCodeLine{00270\ \ \ \ \ \textcolor{keyword}{static}\ \mbox{\hyperlink{class_mode1_state_aef0717445295b2fe1e876a7ed72442b9}{Mode1State}}*\ \mbox{\hyperlink{class_mode1_state_a5d4ee889e07f7bfcf57eae243692e8f4}{instance}};}
+\DoxyCodeLine{00271\ \ \ \ \ \mbox{\hyperlink{class_mode1_state_aef0717445295b2fe1e876a7ed72442b9}{Mode1State}}(\mbox{\hyperlink{class_real_time_loop}{RealTimeLoop}}*\ ctx)\ :\ \mbox{\hyperlink{class_real_time_loop_state_ab5424a183c7d0bc0f850bc08d6583b3a}{RealTimeLoopState}}(ctx)\ \{\}}
+\DoxyCodeLine{00272\ }
+\DoxyCodeLine{00273\ \textcolor{keyword}{public}:}
+\DoxyCodeLine{00274\ \ \ \ \ \textcolor{keyword}{static}\ \mbox{\hyperlink{class_mode1_state_aef0717445295b2fe1e876a7ed72442b9}{Mode1State}}*\ \mbox{\hyperlink{class_mode1_state_a80247eeeae6ef230cc5baa630d7d3aaa}{getInstance}}(\mbox{\hyperlink{class_real_time_loop}{RealTimeLoop}}*\ ctx)\ \{}
+\DoxyCodeLine{00275\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (!\mbox{\hyperlink{class_mode1_state_a5d4ee889e07f7bfcf57eae243692e8f4}{instance}})\ \{}
+\DoxyCodeLine{00276\ \ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_mode1_state_a5d4ee889e07f7bfcf57eae243692e8f4}{instance}}\ =\ \textcolor{keyword}{new}\ \mbox{\hyperlink{class_mode1_state_aef0717445295b2fe1e876a7ed72442b9}{Mode1State}}(ctx);}
+\DoxyCodeLine{00277\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00278\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_mode1_state_a5d4ee889e07f7bfcf57eae243692e8f4}{instance}}-\/>context\ =\ ctx;}
+\DoxyCodeLine{00279\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ \mbox{\hyperlink{class_mode1_state_a5d4ee889e07f7bfcf57eae243692e8f4}{instance}};}
+\DoxyCodeLine{00280\ \ \ \ \ \}}
+\DoxyCodeLine{00281\ }
+\DoxyCodeLine{00282\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_mode1_state_a5913fca01e1b86f5497c0331749cb67f}{eventX}}()\ \textcolor{keyword}{override};}
+\DoxyCodeLine{00283\ \};}
 \DoxyCodeLine{00284\ }
-\DoxyCodeLine{00285\ \textcolor{keyword}{class\ }\mbox{\hyperlink{class_real_time_loop_a7f4d11646d3c7df4048ae5b84471aa52}{RealTimeLoop}}\ \{}
+\DoxyCodeLine{00285\ \textcolor{keyword}{class\ }\mbox{\hyperlink{class_mode2_state_a1c93961d41188f65efc613526d0f6a23}{Mode2State}}\ :\ \textcolor{keyword}{public}\ \mbox{\hyperlink{class_real_time_loop_state_ab5424a183c7d0bc0f850bc08d6583b3a}{RealTimeLoopState}}\ \{}
 \DoxyCodeLine{00286\ \textcolor{keyword}{private}:}
-\DoxyCodeLine{00287\ \ \ \ \ \mbox{\hyperlink{class_real_time_loop_state}{RealTimeLoopState}}*\ \mbox{\hyperlink{class_real_time_loop_ae52417cb05b6bcd2ddccb07a81594b31}{currentMode}};}
-\DoxyCodeLine{00288\ }
-\DoxyCodeLine{00289\ \textcolor{keyword}{public}:}
-\DoxyCodeLine{00290\ \ \ \ \ \mbox{\hyperlink{class_real_time_loop_a7f4d11646d3c7df4048ae5b84471aa52}{RealTimeLoop}}()\ :\ \mbox{\hyperlink{class_real_time_loop_ae52417cb05b6bcd2ddccb07a81594b31}{currentMode}}(\mbox{\hyperlink{class_mode1_state}{Mode1State}}::getInstance(this))\ \{\}}
-\DoxyCodeLine{00291\ }
-\DoxyCodeLine{00292\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_real_time_loop_a9e832a39566f0ba7950f3ffa803d1eb5}{changeMode}}(\textcolor{keywordtype}{int}\ modeNumber)\ \{}
-\DoxyCodeLine{00293\ \ \ \ \ \ \ \ \ std::cout\ <<\ \textcolor{stringliteral}{"{}\ \ RealTimeLoop::changeMode("{}}\ <<\ modeNumber\ <<\ \textcolor{stringliteral}{"{})\(\backslash\)n"{}};}
-\DoxyCodeLine{00294\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{switch}\ (modeNumber)\ \{}
-\DoxyCodeLine{00295\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{case}\ 1:}
-\DoxyCodeLine{00296\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_real_time_loop_ae52417cb05b6bcd2ddccb07a81594b31}{currentMode}}\ =\ \mbox{\hyperlink{class_mode1_state_a80247eeeae6ef230cc5baa630d7d3aaa}{Mode1State::getInstance}}(\textcolor{keyword}{this});}
-\DoxyCodeLine{00297\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ std::cout\ <<\ \textcolor{stringliteral}{"{}\ \ \ \ Transitioned\ to\ Mode1\(\backslash\)n"{}};}
-\DoxyCodeLine{00298\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{break};}
-\DoxyCodeLine{00299\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{case}\ 2:}
-\DoxyCodeLine{00300\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_real_time_loop_ae52417cb05b6bcd2ddccb07a81594b31}{currentMode}}\ =\ \mbox{\hyperlink{class_mode2_state_a3e155cf381133854a95dbae089f73b68}{Mode2State::getInstance}}(\textcolor{keyword}{this});}
-\DoxyCodeLine{00301\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ std::cout\ <<\ \textcolor{stringliteral}{"{}\ \ \ \ Transitioned\ to\ Mode2\(\backslash\)n"{}};}
-\DoxyCodeLine{00302\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{break};}
-\DoxyCodeLine{00303\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{case}\ 3:}
-\DoxyCodeLine{00304\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_real_time_loop_ae52417cb05b6bcd2ddccb07a81594b31}{currentMode}}\ =\ \mbox{\hyperlink{class_mode3_state_a597b98e563c80d2ec1b2d1fe367221d1}{Mode3State::getInstance}}(\textcolor{keyword}{this});}
-\DoxyCodeLine{00305\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ std::cout\ <<\ \textcolor{stringliteral}{"{}\ \ \ \ Transitioned\ to\ Mode3\(\backslash\)n"{}};}
-\DoxyCodeLine{00306\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{break};}
-\DoxyCodeLine{00307\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{default}:}
-\DoxyCodeLine{00308\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ std::cout\ <<\ \textcolor{stringliteral}{"{}\ \ \ \ Invalid\ mode\(\backslash\)n"{}};}
-\DoxyCodeLine{00309\ \ \ \ \ \ \ \ \ \}}
-\DoxyCodeLine{00310\ \ \ \ \ \}}
-\DoxyCodeLine{00311\ }
-\DoxyCodeLine{00312\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_real_time_loop_a922c2155a31600937565a059ded04f7a}{eventX}}()\ \{}
-\DoxyCodeLine{00313\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (\mbox{\hyperlink{class_real_time_loop_ae52417cb05b6bcd2ddccb07a81594b31}{currentMode}})\ \{}
-\DoxyCodeLine{00314\ \ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_real_time_loop_ae52417cb05b6bcd2ddccb07a81594b31}{currentMode}}-\/>eventX();}
-\DoxyCodeLine{00315\ \ \ \ \ \ \ \ \ \}}
-\DoxyCodeLine{00316\ \ \ \ \ \}}
-\DoxyCodeLine{00317\ }
-\DoxyCodeLine{00318\ \ \ \ \ std::string\ \mbox{\hyperlink{class_real_time_loop_aa8e6558bcf12fa434547de53732540cc}{getCurrentMode}}()\textcolor{keyword}{\ const\ }\{}
-\DoxyCodeLine{00319\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (\textcolor{keyword}{dynamic\_cast<}\mbox{\hyperlink{class_mode1_state}{Mode1State}}*\textcolor{keyword}{>}(\mbox{\hyperlink{class_real_time_loop_ae52417cb05b6bcd2ddccb07a81594b31}{currentMode}}))\ \textcolor{keywordflow}{return}\ \textcolor{stringliteral}{"{}Mode1"{}};}
-\DoxyCodeLine{00320\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (\textcolor{keyword}{dynamic\_cast<}\mbox{\hyperlink{class_mode2_state}{Mode2State}}*\textcolor{keyword}{>}(\mbox{\hyperlink{class_real_time_loop_ae52417cb05b6bcd2ddccb07a81594b31}{currentMode}}))\ \textcolor{keywordflow}{return}\ \textcolor{stringliteral}{"{}Mode2"{}};}
-\DoxyCodeLine{00321\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (\textcolor{keyword}{dynamic\_cast<}\mbox{\hyperlink{class_mode3_state}{Mode3State}}*\textcolor{keyword}{>}(\mbox{\hyperlink{class_real_time_loop_ae52417cb05b6bcd2ddccb07a81594b31}{currentMode}}))\ \textcolor{keywordflow}{return}\ \textcolor{stringliteral}{"{}Mode3"{}};}
-\DoxyCodeLine{00322\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ \textcolor{stringliteral}{"{}Unknown"{}};}
-\DoxyCodeLine{00323\ \ \ \ \ \}}
-\DoxyCodeLine{00324\ \};}
-\DoxyCodeLine{00325\ }
-\DoxyCodeLine{00326\ \textcolor{comment}{//\ ====================\ EMBEDDED\ SYSTEM\ CONTEXT\ ====================}}
+\DoxyCodeLine{00287\ \ \ \ \ \textcolor{keyword}{static}\ \mbox{\hyperlink{class_mode2_state_a1c93961d41188f65efc613526d0f6a23}{Mode2State}}*\ \mbox{\hyperlink{class_mode2_state_acb5abbb67cf9ba1a239ec1c5669c7238}{instance}};}
+\DoxyCodeLine{00288\ \ \ \ \ \mbox{\hyperlink{class_mode2_state_a1c93961d41188f65efc613526d0f6a23}{Mode2State}}(\mbox{\hyperlink{class_real_time_loop}{RealTimeLoop}}*\ ctx)\ :\ \mbox{\hyperlink{class_real_time_loop_state_ab5424a183c7d0bc0f850bc08d6583b3a}{RealTimeLoopState}}(ctx)\ \{\}}
+\DoxyCodeLine{00289\ }
+\DoxyCodeLine{00290\ \textcolor{keyword}{public}:}
+\DoxyCodeLine{00291\ \ \ \ \ \textcolor{keyword}{static}\ \mbox{\hyperlink{class_mode2_state_a1c93961d41188f65efc613526d0f6a23}{Mode2State}}*\ \mbox{\hyperlink{class_mode2_state_a3e155cf381133854a95dbae089f73b68}{getInstance}}(\mbox{\hyperlink{class_real_time_loop}{RealTimeLoop}}*\ ctx)\ \{}
+\DoxyCodeLine{00292\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (!\mbox{\hyperlink{class_mode2_state_acb5abbb67cf9ba1a239ec1c5669c7238}{instance}})\ \{}
+\DoxyCodeLine{00293\ \ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_mode2_state_acb5abbb67cf9ba1a239ec1c5669c7238}{instance}}\ =\ \textcolor{keyword}{new}\ \mbox{\hyperlink{class_mode2_state_a1c93961d41188f65efc613526d0f6a23}{Mode2State}}(ctx);}
+\DoxyCodeLine{00294\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00295\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_mode2_state_acb5abbb67cf9ba1a239ec1c5669c7238}{instance}}-\/>context\ =\ ctx;}
+\DoxyCodeLine{00296\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ \mbox{\hyperlink{class_mode2_state_acb5abbb67cf9ba1a239ec1c5669c7238}{instance}};}
+\DoxyCodeLine{00297\ \ \ \ \ \}}
+\DoxyCodeLine{00298\ }
+\DoxyCodeLine{00299\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_mode2_state_add95d83304f5d7461d87a577b3bc3337}{eventX}}()\ \textcolor{keyword}{override};}
+\DoxyCodeLine{00300\ \};}
+\DoxyCodeLine{00301\ }
+\DoxyCodeLine{00302\ \textcolor{keyword}{class\ }\mbox{\hyperlink{class_mode3_state_a7b64f389a91cc6c73d87bc1a8c3efbdf}{Mode3State}}\ :\ \textcolor{keyword}{public}\ \mbox{\hyperlink{class_real_time_loop_state_ab5424a183c7d0bc0f850bc08d6583b3a}{RealTimeLoopState}}\ \{}
+\DoxyCodeLine{00303\ \textcolor{keyword}{private}:}
+\DoxyCodeLine{00304\ \ \ \ \ \textcolor{keyword}{static}\ \mbox{\hyperlink{class_mode3_state_a7b64f389a91cc6c73d87bc1a8c3efbdf}{Mode3State}}*\ \mbox{\hyperlink{class_mode3_state_a5f02ee2da693da70c3f0bbd902e79449}{instance}};}
+\DoxyCodeLine{00305\ \ \ \ \ \mbox{\hyperlink{class_mode3_state_a7b64f389a91cc6c73d87bc1a8c3efbdf}{Mode3State}}(\mbox{\hyperlink{class_real_time_loop}{RealTimeLoop}}*\ ctx)\ :\ \mbox{\hyperlink{class_real_time_loop_state_ab5424a183c7d0bc0f850bc08d6583b3a}{RealTimeLoopState}}(ctx)\ \{\}}
+\DoxyCodeLine{00306\ }
+\DoxyCodeLine{00307\ \textcolor{keyword}{public}:}
+\DoxyCodeLine{00308\ \ \ \ \ \textcolor{keyword}{static}\ \mbox{\hyperlink{class_mode3_state_a7b64f389a91cc6c73d87bc1a8c3efbdf}{Mode3State}}*\ \mbox{\hyperlink{class_mode3_state_a597b98e563c80d2ec1b2d1fe367221d1}{getInstance}}(\mbox{\hyperlink{class_real_time_loop}{RealTimeLoop}}*\ ctx)\ \{}
+\DoxyCodeLine{00309\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (!\mbox{\hyperlink{class_mode3_state_a5f02ee2da693da70c3f0bbd902e79449}{instance}})\ \{}
+\DoxyCodeLine{00310\ \ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_mode3_state_a5f02ee2da693da70c3f0bbd902e79449}{instance}}\ =\ \textcolor{keyword}{new}\ \mbox{\hyperlink{class_mode3_state_a7b64f389a91cc6c73d87bc1a8c3efbdf}{Mode3State}}(ctx);}
+\DoxyCodeLine{00311\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00312\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_mode3_state_a5f02ee2da693da70c3f0bbd902e79449}{instance}}-\/>context\ =\ ctx;}
+\DoxyCodeLine{00313\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ \mbox{\hyperlink{class_mode3_state_a5f02ee2da693da70c3f0bbd902e79449}{instance}};}
+\DoxyCodeLine{00314\ \ \ \ \ \}}
+\DoxyCodeLine{00315\ }
+\DoxyCodeLine{00316\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_mode3_state_ad5c78a63a9a111ccb04ecb502f85bd3d}{eventX}}()\ \textcolor{keyword}{override};}
+\DoxyCodeLine{00317\ \};}
+\DoxyCodeLine{00318\ }
+\DoxyCodeLine{00319\ \textcolor{comment}{//\ ====================\ REALTIME\ LOOP\ CONTEXT\ ====================}}
+\DoxyCodeLine{00320\ }
+\DoxyCodeLine{00321\ \textcolor{keyword}{class\ }\mbox{\hyperlink{class_real_time_loop_a7f4d11646d3c7df4048ae5b84471aa52}{RealTimeLoop}}\ \{}
+\DoxyCodeLine{00322\ \textcolor{keyword}{private}:}
+\DoxyCodeLine{00323\ \ \ \ \ \mbox{\hyperlink{class_real_time_loop_state}{RealTimeLoopState}}*\ \mbox{\hyperlink{class_real_time_loop_ae52417cb05b6bcd2ddccb07a81594b31}{currentMode}};}
+\DoxyCodeLine{00324\ }
+\DoxyCodeLine{00325\ \textcolor{keyword}{public}:}
+\DoxyCodeLine{00326\ \ \ \ \ \mbox{\hyperlink{class_real_time_loop_a7f4d11646d3c7df4048ae5b84471aa52}{RealTimeLoop}}()\ :\ \mbox{\hyperlink{class_real_time_loop_ae52417cb05b6bcd2ddccb07a81594b31}{currentMode}}(\mbox{\hyperlink{class_mode1_state}{Mode1State}}::getInstance(this))\ \{\}}
 \DoxyCodeLine{00327\ }
-\DoxyCodeLine{00328\ \textcolor{keyword}{class\ }\mbox{\hyperlink{class_embedded_system_x_a65dda5484708ed6806407955a2a2d631}{EmbeddedSystemX}}\ \{}
-\DoxyCodeLine{00329\ \textcolor{keyword}{private}:}
-\DoxyCodeLine{00330\ \ \ \ \ \mbox{\hyperlink{class_embedded_system_x_state}{EmbeddedSystemXState}}*\ \mbox{\hyperlink{class_embedded_system_x_ad12e2505d440e2255c6c867e71c4f150}{currentState}};}
-\DoxyCodeLine{00331\ \ \ \ \ \mbox{\hyperlink{class_real_time_loop}{RealTimeLoop}}*\ \mbox{\hyperlink{class_embedded_system_x_a7beb63a9d769365185b3a55cc177cc79}{realTimeLoop}};}
-\DoxyCodeLine{00332\ }
-\DoxyCodeLine{00333\ \textcolor{keyword}{public}:}
-\DoxyCodeLine{00334\ \ \ \ \ \mbox{\hyperlink{class_embedded_system_x_a65dda5484708ed6806407955a2a2d631}{EmbeddedSystemX}}()}
-\DoxyCodeLine{00335\ \ \ \ \ \ \ \ \ \ \ \ \ :\ \mbox{\hyperlink{class_embedded_system_x_ad12e2505d440e2255c6c867e71c4f150}{currentState}}(\mbox{\hyperlink{class_power_on_self_test_state}{PowerOnSelfTestState}}::getInstance(this)),}
-\DoxyCodeLine{00336\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_embedded_system_x_a7beb63a9d769365185b3a55cc177cc79}{realTimeLoop}}(new\ \mbox{\hyperlink{class_real_time_loop}{RealTimeLoop}}())\ \{\}}
-\DoxyCodeLine{00337\ }
-\DoxyCodeLine{00338\ \ \ \ \ \mbox{\hyperlink{class_embedded_system_x_a282e1e9fe3cc56f8c0bf56fb74e8b7a3}{\string~EmbeddedSystemX}}()\ \{}
-\DoxyCodeLine{00339\ \ \ \ \ \ \ \ \ \textcolor{keyword}{delete}\ \mbox{\hyperlink{class_embedded_system_x_a7beb63a9d769365185b3a55cc177cc79}{realTimeLoop}};}
-\DoxyCodeLine{00340\ \ \ \ \ \}}
-\DoxyCodeLine{00341\ }
-\DoxyCodeLine{00342\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_embedded_system_x_a9cac3ea7b0ebc577cb3798f844fc352a}{changeState}}(\mbox{\hyperlink{class_embedded_system_x_state}{EmbeddedSystemXState}}*\ newState)\ \{}
-\DoxyCodeLine{00343\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_embedded_system_x_ad12e2505d440e2255c6c867e71c4f150}{currentState}}\ =\ newState;}
-\DoxyCodeLine{00344\ \ \ \ \ \}}
-\DoxyCodeLine{00345\ }
-\DoxyCodeLine{00346\ \ \ \ \ \mbox{\hyperlink{class_real_time_loop}{RealTimeLoop}}*\ \mbox{\hyperlink{class_embedded_system_x_a307333e66cc96873a421d642ac439f16}{getRealTimeLoop}}()\ \{}
-\DoxyCodeLine{00347\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ \mbox{\hyperlink{class_embedded_system_x_a7beb63a9d769365185b3a55cc177cc79}{realTimeLoop}};}
-\DoxyCodeLine{00348\ \ \ \ \ \}}
-\DoxyCodeLine{00349\ }
-\DoxyCodeLine{00350\ \ \ \ \ \textcolor{comment}{//\ Event\ operations}}
-\DoxyCodeLine{00351\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_embedded_system_x_ab043ef3b463385ffb3587aca15db128f}{selfTestOk}}()\ \{}
-\DoxyCodeLine{00352\ \ \ \ \ \ \ \ \ std::cout\ <<\ \textcolor{stringliteral}{"{}Event:\ selfTestOk()\(\backslash\)n"{}};}
-\DoxyCodeLine{00353\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_embedded_system_x_ad12e2505d440e2255c6c867e71c4f150}{currentState}}-\/>selfTestOk();}
-\DoxyCodeLine{00354\ \ \ \ \ \}}
-\DoxyCodeLine{00355\ }
-\DoxyCodeLine{00356\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_embedded_system_x_a7ceff0f335a80b4421a0be8adf18d004}{initialized}}()\ \{}
-\DoxyCodeLine{00357\ \ \ \ \ \ \ \ \ std::cout\ <<\ \textcolor{stringliteral}{"{}Event:\ initialized()\(\backslash\)n"{}};}
-\DoxyCodeLine{00358\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_embedded_system_x_ad12e2505d440e2255c6c867e71c4f150}{currentState}}-\/>initialized();}
+\DoxyCodeLine{00328\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_real_time_loop_a9e832a39566f0ba7950f3ffa803d1eb5}{changeMode}}(\textcolor{keywordtype}{int}\ modeNumber)\ \{}
+\DoxyCodeLine{00329\ \ \ \ \ \ \ \ \ std::cout\ <<\ \textcolor{stringliteral}{"{}\ \ RealTimeLoop::changeMode("{}}\ <<\ modeNumber\ <<\ \textcolor{stringliteral}{"{})\(\backslash\)n"{}};}
+\DoxyCodeLine{00330\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{switch}\ (modeNumber)\ \{}
+\DoxyCodeLine{00331\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{case}\ 1:}
+\DoxyCodeLine{00332\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_real_time_loop_ae52417cb05b6bcd2ddccb07a81594b31}{currentMode}}\ =\ \mbox{\hyperlink{class_mode1_state_a80247eeeae6ef230cc5baa630d7d3aaa}{Mode1State::getInstance}}(\textcolor{keyword}{this});}
+\DoxyCodeLine{00333\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ std::cout\ <<\ \textcolor{stringliteral}{"{}\ \ \ \ Transitioned\ to\ Mode1\(\backslash\)n"{}};}
+\DoxyCodeLine{00334\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{break};}
+\DoxyCodeLine{00335\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{case}\ 2:}
+\DoxyCodeLine{00336\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_real_time_loop_ae52417cb05b6bcd2ddccb07a81594b31}{currentMode}}\ =\ \mbox{\hyperlink{class_mode2_state_a3e155cf381133854a95dbae089f73b68}{Mode2State::getInstance}}(\textcolor{keyword}{this});}
+\DoxyCodeLine{00337\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ std::cout\ <<\ \textcolor{stringliteral}{"{}\ \ \ \ Transitioned\ to\ Mode2\(\backslash\)n"{}};}
+\DoxyCodeLine{00338\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{break};}
+\DoxyCodeLine{00339\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{case}\ 3:}
+\DoxyCodeLine{00340\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_real_time_loop_ae52417cb05b6bcd2ddccb07a81594b31}{currentMode}}\ =\ \mbox{\hyperlink{class_mode3_state_a597b98e563c80d2ec1b2d1fe367221d1}{Mode3State::getInstance}}(\textcolor{keyword}{this});}
+\DoxyCodeLine{00341\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ std::cout\ <<\ \textcolor{stringliteral}{"{}\ \ \ \ Transitioned\ to\ Mode3\(\backslash\)n"{}};}
+\DoxyCodeLine{00342\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{break};}
+\DoxyCodeLine{00343\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{default}:}
+\DoxyCodeLine{00344\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ std::cout\ <<\ \textcolor{stringliteral}{"{}\ \ \ \ Invalid\ mode\(\backslash\)n"{}};}
+\DoxyCodeLine{00345\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00346\ \ \ \ \ \}}
+\DoxyCodeLine{00347\ }
+\DoxyCodeLine{00348\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_real_time_loop_a922c2155a31600937565a059ded04f7a}{eventX}}()\ \{}
+\DoxyCodeLine{00349\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (\mbox{\hyperlink{class_real_time_loop_ae52417cb05b6bcd2ddccb07a81594b31}{currentMode}})\ \{}
+\DoxyCodeLine{00350\ \ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_real_time_loop_ae52417cb05b6bcd2ddccb07a81594b31}{currentMode}}-\/>eventX();}
+\DoxyCodeLine{00351\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00352\ \ \ \ \ \}}
+\DoxyCodeLine{00353\ }
+\DoxyCodeLine{00354\ \ \ \ \ std::string\ \mbox{\hyperlink{class_real_time_loop_aa8e6558bcf12fa434547de53732540cc}{getCurrentMode}}()\textcolor{keyword}{\ const\ }\{}
+\DoxyCodeLine{00355\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (\textcolor{keyword}{dynamic\_cast<}\mbox{\hyperlink{class_mode1_state}{Mode1State}}*\textcolor{keyword}{>}(\mbox{\hyperlink{class_real_time_loop_ae52417cb05b6bcd2ddccb07a81594b31}{currentMode}}))\ \textcolor{keywordflow}{return}\ \textcolor{stringliteral}{"{}Mode1"{}};}
+\DoxyCodeLine{00356\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (\textcolor{keyword}{dynamic\_cast<}\mbox{\hyperlink{class_mode2_state}{Mode2State}}*\textcolor{keyword}{>}(\mbox{\hyperlink{class_real_time_loop_ae52417cb05b6bcd2ddccb07a81594b31}{currentMode}}))\ \textcolor{keywordflow}{return}\ \textcolor{stringliteral}{"{}Mode2"{}};}
+\DoxyCodeLine{00357\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (\textcolor{keyword}{dynamic\_cast<}\mbox{\hyperlink{class_mode3_state}{Mode3State}}*\textcolor{keyword}{>}(\mbox{\hyperlink{class_real_time_loop_ae52417cb05b6bcd2ddccb07a81594b31}{currentMode}}))\ \textcolor{keywordflow}{return}\ \textcolor{stringliteral}{"{}Mode3"{}};}
+\DoxyCodeLine{00358\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ \textcolor{stringliteral}{"{}Unknown"{}};}
 \DoxyCodeLine{00359\ \ \ \ \ \}}
-\DoxyCodeLine{00360\ }
-\DoxyCodeLine{00361\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_embedded_system_x_af8bb9d0d010e5e326083d66c8206e9d9}{restart}}()\ \{}
-\DoxyCodeLine{00362\ \ \ \ \ \ \ \ \ std::cout\ <<\ \textcolor{stringliteral}{"{}Event:\ restart()\(\backslash\)n"{}};}
-\DoxyCodeLine{00363\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_embedded_system_x_ad12e2505d440e2255c6c867e71c4f150}{currentState}}-\/>restart();}
-\DoxyCodeLine{00364\ \ \ \ \ \}}
-\DoxyCodeLine{00365\ }
-\DoxyCodeLine{00366\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_embedded_system_x_a77a35bde3aa1584a956805cf049d06e8}{selfTestFailed}}(\textcolor{keywordtype}{int}\ errorNo)\ \{}
-\DoxyCodeLine{00367\ \ \ \ \ \ \ \ \ std::cout\ <<\ \textcolor{stringliteral}{"{}Event:\ selfTestFailed(ErrorNo:\ "{}}\ <<\ errorNo\ <<\ \textcolor{stringliteral}{"{})\(\backslash\)n"{}};}
-\DoxyCodeLine{00368\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_embedded_system_x_ad12e2505d440e2255c6c867e71c4f150}{currentState}}-\/>selfTestFailed(errorNo);}
-\DoxyCodeLine{00369\ \ \ \ \ \}}
-\DoxyCodeLine{00370\ }
-\DoxyCodeLine{00371\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_embedded_system_x_a5a243554e8f66701591dc80918ef8f92}{configure}}()\ \{}
-\DoxyCodeLine{00372\ \ \ \ \ \ \ \ \ std::cout\ <<\ \textcolor{stringliteral}{"{}Event:\ configure()\(\backslash\)n"{}};}
-\DoxyCodeLine{00373\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_embedded_system_x_ad12e2505d440e2255c6c867e71c4f150}{currentState}}-\/>configure();}
-\DoxyCodeLine{00374\ \ \ \ \ \}}
-\DoxyCodeLine{00375\ }
-\DoxyCodeLine{00376\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_embedded_system_x_a1db535a07c00cd4b61c8560aaa93a109}{configurationEnded}}()\ \{}
-\DoxyCodeLine{00377\ \ \ \ \ \ \ \ \ std::cout\ <<\ \textcolor{stringliteral}{"{}Event:\ configurationEnded()\(\backslash\)n"{}};}
-\DoxyCodeLine{00378\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_embedded_system_x_ad12e2505d440e2255c6c867e71c4f150}{currentState}}-\/>configurationEnded();}
-\DoxyCodeLine{00379\ \ \ \ \ \}}
-\DoxyCodeLine{00380\ }
-\DoxyCodeLine{00381\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_embedded_system_x_aa1e38d16fd891e7caaf8ff93e29e5112}{start}}()\ \{}
-\DoxyCodeLine{00382\ \ \ \ \ \ \ \ \ std::cout\ <<\ \textcolor{stringliteral}{"{}Event:\ start()\(\backslash\)n"{}};}
-\DoxyCodeLine{00383\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_embedded_system_x_ad12e2505d440e2255c6c867e71c4f150}{currentState}}-\/>start();}
+\DoxyCodeLine{00360\ \};}
+\DoxyCodeLine{00361\ }
+\DoxyCodeLine{00362\ \textcolor{comment}{//\ ====================\ EMBEDDED\ SYSTEM\ CONTEXT\ ====================}}
+\DoxyCodeLine{00363\ }
+\DoxyCodeLine{00364\ \textcolor{keyword}{class\ }\mbox{\hyperlink{class_embedded_system_x_a65dda5484708ed6806407955a2a2d631}{EmbeddedSystemX}}\ \{}
+\DoxyCodeLine{00365\ \textcolor{keyword}{private}:}
+\DoxyCodeLine{00366\ \ \ \ \ \mbox{\hyperlink{class_embedded_system_x_state}{EmbeddedSystemXState}}*\ \mbox{\hyperlink{class_embedded_system_x_ad12e2505d440e2255c6c867e71c4f150}{currentState}};}
+\DoxyCodeLine{00367\ \ \ \ \ \mbox{\hyperlink{class_real_time_loop}{RealTimeLoop}}*\ \mbox{\hyperlink{class_embedded_system_x_a7beb63a9d769365185b3a55cc177cc79}{realTimeLoop}};}
+\DoxyCodeLine{00368\ }
+\DoxyCodeLine{00369\ \textcolor{keyword}{public}:}
+\DoxyCodeLine{00370\ \ \ \ \ \mbox{\hyperlink{class_embedded_system_x_a65dda5484708ed6806407955a2a2d631}{EmbeddedSystemX}}()}
+\DoxyCodeLine{00371\ \ \ \ \ \ \ \ \ \ \ \ \ :\ \mbox{\hyperlink{class_embedded_system_x_ad12e2505d440e2255c6c867e71c4f150}{currentState}}(\mbox{\hyperlink{class_power_on_self_test_state}{PowerOnSelfTestState}}::getInstance(this)),}
+\DoxyCodeLine{00372\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_embedded_system_x_a7beb63a9d769365185b3a55cc177cc79}{realTimeLoop}}(new\ \mbox{\hyperlink{class_real_time_loop}{RealTimeLoop}}())\ \{\}}
+\DoxyCodeLine{00373\ }
+\DoxyCodeLine{00374\ \ \ \ \ \mbox{\hyperlink{class_embedded_system_x_a282e1e9fe3cc56f8c0bf56fb74e8b7a3}{\string~EmbeddedSystemX}}()\ \{}
+\DoxyCodeLine{00375\ \ \ \ \ \ \ \ \ \textcolor{keyword}{delete}\ \mbox{\hyperlink{class_embedded_system_x_a7beb63a9d769365185b3a55cc177cc79}{realTimeLoop}};}
+\DoxyCodeLine{00376\ \ \ \ \ \}}
+\DoxyCodeLine{00377\ }
+\DoxyCodeLine{00378\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_embedded_system_x_a9cac3ea7b0ebc577cb3798f844fc352a}{changeState}}(\mbox{\hyperlink{class_embedded_system_x_state}{EmbeddedSystemXState}}*\ newState)\ \{}
+\DoxyCodeLine{00379\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_embedded_system_x_ad12e2505d440e2255c6c867e71c4f150}{currentState}}\ =\ newState;}
+\DoxyCodeLine{00380\ \ \ \ \ \}}
+\DoxyCodeLine{00381\ }
+\DoxyCodeLine{00382\ \ \ \ \ \mbox{\hyperlink{class_real_time_loop}{RealTimeLoop}}*\ \mbox{\hyperlink{class_embedded_system_x_a307333e66cc96873a421d642ac439f16}{getRealTimeLoop}}()\ \{}
+\DoxyCodeLine{00383\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ \mbox{\hyperlink{class_embedded_system_x_a7beb63a9d769365185b3a55cc177cc79}{realTimeLoop}};}
 \DoxyCodeLine{00384\ \ \ \ \ \}}
 \DoxyCodeLine{00385\ }
-\DoxyCodeLine{00386\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_embedded_system_x_a433f5de4dce4090e609637f00c1735fd}{suspend}}()\ \{}
-\DoxyCodeLine{00387\ \ \ \ \ \ \ \ \ std::cout\ <<\ \textcolor{stringliteral}{"{}Event:\ suspend()\(\backslash\)n"{}};}
-\DoxyCodeLine{00388\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_embedded_system_x_ad12e2505d440e2255c6c867e71c4f150}{currentState}}-\/>suspend();}
-\DoxyCodeLine{00389\ \ \ \ \ \}}
-\DoxyCodeLine{00390\ }
-\DoxyCodeLine{00391\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_embedded_system_x_a5e66835e849cbe7611b7c7ff581c62be}{resume}}()\ \{}
-\DoxyCodeLine{00392\ \ \ \ \ \ \ \ \ std::cout\ <<\ \textcolor{stringliteral}{"{}Event:\ resume()\(\backslash\)n"{}};}
-\DoxyCodeLine{00393\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_embedded_system_x_ad12e2505d440e2255c6c867e71c4f150}{currentState}}-\/>resume();}
-\DoxyCodeLine{00394\ \ \ \ \ \}}
-\DoxyCodeLine{00395\ }
-\DoxyCodeLine{00396\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_embedded_system_x_af69870eb4b35bbabd4026f486cf7865e}{exit}}()\ \{}
-\DoxyCodeLine{00397\ \ \ \ \ \ \ \ \ std::cout\ <<\ \textcolor{stringliteral}{"{}Event:\ exit()\(\backslash\)n"{}};}
-\DoxyCodeLine{00398\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_embedded_system_x_ad12e2505d440e2255c6c867e71c4f150}{currentState}}-\/>exit();}
-\DoxyCodeLine{00399\ \ \ \ \ \}}
-\DoxyCodeLine{00400\ }
-\DoxyCodeLine{00401\ \ \ \ \ std::string\ \mbox{\hyperlink{class_embedded_system_x_a1886e1d66fe63c21c0333c8900cdad0d}{getStateName}}()\textcolor{keyword}{\ const\ }\{}
-\DoxyCodeLine{00402\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (\textcolor{keyword}{dynamic\_cast<}\mbox{\hyperlink{class_power_on_self_test_state}{PowerOnSelfTestState}}*\textcolor{keyword}{>}(\mbox{\hyperlink{class_embedded_system_x_ad12e2505d440e2255c6c867e71c4f150}{currentState}}))\ \textcolor{keywordflow}{return}\ \textcolor{stringliteral}{"{}PowerOnSelfTest"{}};}
-\DoxyCodeLine{00403\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (\textcolor{keyword}{dynamic\_cast<}\mbox{\hyperlink{class_initializing_state}{InitializingState}}*\textcolor{keyword}{>}(\mbox{\hyperlink{class_embedded_system_x_ad12e2505d440e2255c6c867e71c4f150}{currentState}}))\ \textcolor{keywordflow}{return}\ \textcolor{stringliteral}{"{}Initializing"{}};}
-\DoxyCodeLine{00404\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (\textcolor{keyword}{dynamic\_cast<}\mbox{\hyperlink{class_failure_state}{FailureState}}*\textcolor{keyword}{>}(\mbox{\hyperlink{class_embedded_system_x_ad12e2505d440e2255c6c867e71c4f150}{currentState}}))\ \textcolor{keywordflow}{return}\ \textcolor{stringliteral}{"{}Failure"{}};}
-\DoxyCodeLine{00405\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (\textcolor{keyword}{dynamic\_cast<}\mbox{\hyperlink{class_operational_state}{OperationalState}}*\textcolor{keyword}{>}(\mbox{\hyperlink{class_embedded_system_x_ad12e2505d440e2255c6c867e71c4f150}{currentState}}))\ \textcolor{keywordflow}{return}\ \textcolor{stringliteral}{"{}Operational"{}};}
-\DoxyCodeLine{00406\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (\textcolor{keyword}{dynamic\_cast<}\mbox{\hyperlink{class_configuration_state}{ConfigurationState}}*\textcolor{keyword}{>}(\mbox{\hyperlink{class_embedded_system_x_ad12e2505d440e2255c6c867e71c4f150}{currentState}}))\ \textcolor{keywordflow}{return}\ \textcolor{stringliteral}{"{}Configuration"{}};}
-\DoxyCodeLine{00407\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (\textcolor{keyword}{dynamic\_cast<}\mbox{\hyperlink{class_ready_state}{ReadyState}}*\textcolor{keyword}{>}(\mbox{\hyperlink{class_embedded_system_x_ad12e2505d440e2255c6c867e71c4f150}{currentState}}))\ \textcolor{keywordflow}{return}\ \textcolor{stringliteral}{"{}Ready"{}};}
-\DoxyCodeLine{00408\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (\textcolor{keyword}{dynamic\_cast<}\mbox{\hyperlink{class_suspended_state}{SuspendedState}}*\textcolor{keyword}{>}(\mbox{\hyperlink{class_embedded_system_x_ad12e2505d440e2255c6c867e71c4f150}{currentState}}))\ \textcolor{keywordflow}{return}\ \textcolor{stringliteral}{"{}Suspended"{}};}
-\DoxyCodeLine{00409\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ \textcolor{stringliteral}{"{}Unknown"{}};}
+\DoxyCodeLine{00386\ \ \ \ \ \textcolor{comment}{//\ Event\ operations}}
+\DoxyCodeLine{00387\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_embedded_system_x_ab043ef3b463385ffb3587aca15db128f}{selfTestOk}}()\ \{}
+\DoxyCodeLine{00388\ \ \ \ \ \ \ \ \ std::cout\ <<\ \textcolor{stringliteral}{"{}Event:\ selfTestOk()\(\backslash\)n"{}};}
+\DoxyCodeLine{00389\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_embedded_system_x_ad12e2505d440e2255c6c867e71c4f150}{currentState}}-\/>selfTestOk();}
+\DoxyCodeLine{00390\ \ \ \ \ \}}
+\DoxyCodeLine{00391\ }
+\DoxyCodeLine{00392\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_embedded_system_x_a7ceff0f335a80b4421a0be8adf18d004}{initialized}}()\ \{}
+\DoxyCodeLine{00393\ \ \ \ \ \ \ \ \ std::cout\ <<\ \textcolor{stringliteral}{"{}Event:\ initialized()\(\backslash\)n"{}};}
+\DoxyCodeLine{00394\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_embedded_system_x_ad12e2505d440e2255c6c867e71c4f150}{currentState}}-\/>initialized();}
+\DoxyCodeLine{00395\ \ \ \ \ \}}
+\DoxyCodeLine{00396\ }
+\DoxyCodeLine{00397\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_embedded_system_x_af8bb9d0d010e5e326083d66c8206e9d9}{restart}}()\ \{}
+\DoxyCodeLine{00398\ \ \ \ \ \ \ \ \ std::cout\ <<\ \textcolor{stringliteral}{"{}Event:\ restart()\(\backslash\)n"{}};}
+\DoxyCodeLine{00399\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_embedded_system_x_ad12e2505d440e2255c6c867e71c4f150}{currentState}}-\/>restart();}
+\DoxyCodeLine{00400\ \ \ \ \ \}}
+\DoxyCodeLine{00401\ }
+\DoxyCodeLine{00402\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_embedded_system_x_a77a35bde3aa1584a956805cf049d06e8}{selfTestFailed}}(\textcolor{keywordtype}{int}\ errorNo)\ \{}
+\DoxyCodeLine{00403\ \ \ \ \ \ \ \ \ std::cout\ <<\ \textcolor{stringliteral}{"{}Event:\ selfTestFailed(ErrorNo:\ "{}}\ <<\ errorNo\ <<\ \textcolor{stringliteral}{"{})\(\backslash\)n"{}};}
+\DoxyCodeLine{00404\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_embedded_system_x_ad12e2505d440e2255c6c867e71c4f150}{currentState}}-\/>selfTestFailed(errorNo);}
+\DoxyCodeLine{00405\ \ \ \ \ \}}
+\DoxyCodeLine{00406\ }
+\DoxyCodeLine{00407\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_embedded_system_x_a5a243554e8f66701591dc80918ef8f92}{configure}}()\ \{}
+\DoxyCodeLine{00408\ \ \ \ \ \ \ \ \ std::cout\ <<\ \textcolor{stringliteral}{"{}Event:\ configure()\(\backslash\)n"{}};}
+\DoxyCodeLine{00409\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_embedded_system_x_ad12e2505d440e2255c6c867e71c4f150}{currentState}}-\/>configure();}
 \DoxyCodeLine{00410\ \ \ \ \ \}}
-\DoxyCodeLine{00411\ \};}
-\DoxyCodeLine{00412\ }
-\DoxyCodeLine{00413\ \textcolor{comment}{//\ ====================\ SINGLETON\ INSTANTIATIONS\ ====================}}
-\DoxyCodeLine{00414\ }
-\DoxyCodeLine{00415\ \mbox{\hyperlink{class_power_on_self_test_state}{PowerOnSelfTestState}}*\ \mbox{\hyperlink{class_power_on_self_test_state_a11c228bfba1c3e8ee11fa2f90b2cbd10}{PowerOnSelfTestState::instance}}\ =\ \textcolor{keyword}{nullptr};}
-\DoxyCodeLine{00416\ \mbox{\hyperlink{class_initializing_state}{InitializingState}}*\ \mbox{\hyperlink{class_initializing_state_a749faad06d367b1d0fb9cef804b6c99e}{InitializingState::instance}}\ =\ \textcolor{keyword}{nullptr};}
-\DoxyCodeLine{00417\ \mbox{\hyperlink{class_failure_state}{FailureState}}*\ \mbox{\hyperlink{class_failure_state_a888554181c307d6eef104b801170542e}{FailureState::instance}}\ =\ \textcolor{keyword}{nullptr};}
-\DoxyCodeLine{00418\ \mbox{\hyperlink{class_operational_state}{OperationalState}}*\ \mbox{\hyperlink{class_operational_state_acef346890b79b8d14941f17985a6fb38}{OperationalState::instance}}\ =\ \textcolor{keyword}{nullptr};}
-\DoxyCodeLine{00419\ \mbox{\hyperlink{class_configuration_state}{ConfigurationState}}*\ \mbox{\hyperlink{class_configuration_state_a35588153201be2fca68d8fc18a9b8cbd}{ConfigurationState::instance}}\ =\ \textcolor{keyword}{nullptr};}
-\DoxyCodeLine{00420\ \mbox{\hyperlink{class_ready_state}{ReadyState}}*\ \mbox{\hyperlink{class_ready_state_ad9b81807720099562fb7e0c6b77a94a6}{ReadyState::instance}}\ =\ \textcolor{keyword}{nullptr};}
-\DoxyCodeLine{00421\ \mbox{\hyperlink{class_suspended_state}{SuspendedState}}*\ \mbox{\hyperlink{class_suspended_state_a4535d9647d1fbc8ce487afaa58a9cae4}{SuspendedState::instance}}\ =\ \textcolor{keyword}{nullptr};}
-\DoxyCodeLine{00422\ }
-\DoxyCodeLine{00423\ \mbox{\hyperlink{class_mode1_state}{Mode1State}}*\ \mbox{\hyperlink{class_mode1_state_a5d4ee889e07f7bfcf57eae243692e8f4}{Mode1State::instance}}\ =\ \textcolor{keyword}{nullptr};}
-\DoxyCodeLine{00424\ \mbox{\hyperlink{class_mode2_state}{Mode2State}}*\ \mbox{\hyperlink{class_mode2_state_acb5abbb67cf9ba1a239ec1c5669c7238}{Mode2State::instance}}\ =\ \textcolor{keyword}{nullptr};}
-\DoxyCodeLine{00425\ \mbox{\hyperlink{class_mode3_state}{Mode3State}}*\ \mbox{\hyperlink{class_mode3_state_a5f02ee2da693da70c3f0bbd902e79449}{Mode3State::instance}}\ =\ \textcolor{keyword}{nullptr};}
+\DoxyCodeLine{00411\ }
+\DoxyCodeLine{00412\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_embedded_system_x_a1db535a07c00cd4b61c8560aaa93a109}{configurationEnded}}()\ \{}
+\DoxyCodeLine{00413\ \ \ \ \ \ \ \ \ std::cout\ <<\ \textcolor{stringliteral}{"{}Event:\ configurationEnded()\(\backslash\)n"{}};}
+\DoxyCodeLine{00414\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_embedded_system_x_ad12e2505d440e2255c6c867e71c4f150}{currentState}}-\/>configurationEnded();}
+\DoxyCodeLine{00415\ \ \ \ \ \}}
+\DoxyCodeLine{00416\ }
+\DoxyCodeLine{00417\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_embedded_system_x_aa1e38d16fd891e7caaf8ff93e29e5112}{start}}()\ \{}
+\DoxyCodeLine{00418\ \ \ \ \ \ \ \ \ std::cout\ <<\ \textcolor{stringliteral}{"{}Event:\ start()\(\backslash\)n"{}};}
+\DoxyCodeLine{00419\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_embedded_system_x_ad12e2505d440e2255c6c867e71c4f150}{currentState}}-\/>start();}
+\DoxyCodeLine{00420\ \ \ \ \ \}}
+\DoxyCodeLine{00421\ }
+\DoxyCodeLine{00422\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_embedded_system_x_a433f5de4dce4090e609637f00c1735fd}{suspend}}()\ \{}
+\DoxyCodeLine{00423\ \ \ \ \ \ \ \ \ std::cout\ <<\ \textcolor{stringliteral}{"{}Event:\ suspend()\(\backslash\)n"{}};}
+\DoxyCodeLine{00424\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_embedded_system_x_ad12e2505d440e2255c6c867e71c4f150}{currentState}}-\/>suspend();}
+\DoxyCodeLine{00425\ \ \ \ \ \}}
 \DoxyCodeLine{00426\ }
-\DoxyCodeLine{00427\ \textcolor{comment}{//\ ====================\ STATE\ IMPLEMENTATIONS\ ====================}}
-\DoxyCodeLine{00428\ }
-\DoxyCodeLine{00429\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_power_on_self_test_state_a27ae316e06235041d8f13039a7bc2afe}{PowerOnSelfTestState::selfTestOk}}()\ \{}
-\DoxyCodeLine{00430\ \ \ \ \ std::cout\ <<\ \textcolor{stringliteral}{"{}\ \ [PowerOnSelfTest]\ SelfTest\ OK!\ Transitioning\ to\ Initializing...\(\backslash\)n"{}};}
-\DoxyCodeLine{00431\ \ \ \ \ \mbox{\hyperlink{class_embedded_system_x_state_a69e38693afc90b2c7bb616e480f019e3}{context}}-\/>changeState(\mbox{\hyperlink{class_initializing_state_a5f2b35fd0799f7c5e3f1c5fe50ef5f0f}{InitializingState::getInstance}}(\mbox{\hyperlink{class_embedded_system_x_state_a69e38693afc90b2c7bb616e480f019e3}{context}}));}
-\DoxyCodeLine{00432\ \}}
-\DoxyCodeLine{00433\ }
-\DoxyCodeLine{00434\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_power_on_self_test_state_ac76686c6a614576d3872e4a647ea6aa3}{PowerOnSelfTestState::restart}}()\ \{}
-\DoxyCodeLine{00435\ \ \ \ \ std::cout\ <<\ \textcolor{stringliteral}{"{}\ \ [PowerOnSelfTest]\ Restarting\ from\ PowerOnSelfTest...\(\backslash\)n"{}};}
-\DoxyCodeLine{00436\ \ \ \ \ \textcolor{comment}{//\ Stays\ in\ same\ state\ after\ restart\ from\ this\ state}}
-\DoxyCodeLine{00437\ \}}
-\DoxyCodeLine{00438\ }
-\DoxyCodeLine{00439\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_power_on_self_test_state_a68e3bab150a0b81941bab395f2ce9635}{PowerOnSelfTestState::selfTestFailed}}(\textcolor{keywordtype}{int}\ errorNo)\ \{}
-\DoxyCodeLine{00440\ \ \ \ \ std::cout\ <<\ \textcolor{stringliteral}{"{}\ \ [PowerOnSelfTest]\ SelfTest\ FAILED\ with\ error\ "{}}\ <<\ errorNo\ <<\ \textcolor{stringliteral}{"{}!\ Transitioning\ to\ Failure...\(\backslash\)n"{}};}
-\DoxyCodeLine{00441\ \ \ \ \ \mbox{\hyperlink{class_embedded_system_x_state_a69e38693afc90b2c7bb616e480f019e3}{context}}-\/>changeState(\mbox{\hyperlink{class_failure_state_af8df67121215589d804b1f1872eec2ab}{FailureState::getInstance}}(\mbox{\hyperlink{class_embedded_system_x_state_a69e38693afc90b2c7bb616e480f019e3}{context}}));}
-\DoxyCodeLine{00442\ \}}
-\DoxyCodeLine{00443\ }
-\DoxyCodeLine{00444\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_initializing_state_a2582cc2e25714a49ede134c3fc606cbb}{InitializingState::initialized}}()\ \{}
-\DoxyCodeLine{00445\ \ \ \ \ std::cout\ <<\ \textcolor{stringliteral}{"{}\ \ [Initializing]\ System\ initialized!\ Transitioning\ to\ Ready...\(\backslash\)n"{}};}
-\DoxyCodeLine{00446\ \ \ \ \ \mbox{\hyperlink{class_embedded_system_x_state_a69e38693afc90b2c7bb616e480f019e3}{context}}-\/>changeState(\mbox{\hyperlink{class_ready_state_a078711a8e92dab314ef4fd17e67a2a95}{ReadyState::getInstance}}(\mbox{\hyperlink{class_embedded_system_x_state_a69e38693afc90b2c7bb616e480f019e3}{context}}));}
-\DoxyCodeLine{00447\ \}}
-\DoxyCodeLine{00448\ }
-\DoxyCodeLine{00449\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_initializing_state_a67d16e73603bd66acfbc7e2568a631a1}{InitializingState::restart}}()\ \{}
-\DoxyCodeLine{00450\ \ \ \ \ std::cout\ <<\ \textcolor{stringliteral}{"{}\ \ [Initializing]\ Restarting\ system\ back\ to\ PowerOnSelfTest...\(\backslash\)n"{}};}
-\DoxyCodeLine{00451\ \ \ \ \ \mbox{\hyperlink{class_embedded_system_x_state_a69e38693afc90b2c7bb616e480f019e3}{context}}-\/>changeState(\mbox{\hyperlink{class_power_on_self_test_state_ae152baf800ee583b4c4c0c5ca16aa904}{PowerOnSelfTestState::getInstance}}(\mbox{\hyperlink{class_embedded_system_x_state_a69e38693afc90b2c7bb616e480f019e3}{context}}));}
-\DoxyCodeLine{00452\ \}}
-\DoxyCodeLine{00453\ }
-\DoxyCodeLine{00454\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_failure_state_a92512453ab6c2bc05c7913955cdf3228}{FailureState::restart}}()\ \{}
-\DoxyCodeLine{00455\ \ \ \ \ std::cout\ <<\ \textcolor{stringliteral}{"{}\ \ [Failure]\ Restarting\ system\ back\ to\ PowerOnSelfTest...\(\backslash\)n"{}};}
-\DoxyCodeLine{00456\ \ \ \ \ \mbox{\hyperlink{class_embedded_system_x_state_a69e38693afc90b2c7bb616e480f019e3}{context}}-\/>changeState(\mbox{\hyperlink{class_power_on_self_test_state_ae152baf800ee583b4c4c0c5ca16aa904}{PowerOnSelfTestState::getInstance}}(\mbox{\hyperlink{class_embedded_system_x_state_a69e38693afc90b2c7bb616e480f019e3}{context}}));}
-\DoxyCodeLine{00457\ \}}
-\DoxyCodeLine{00458\ }
-\DoxyCodeLine{00459\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_operational_state_a8efc9f71ab6dcd775e998d4ad2a96c2b}{OperationalState::configure}}()\ \{}
-\DoxyCodeLine{00460\ \ \ \ \ std::cout\ <<\ \textcolor{stringliteral}{"{}\ \ [Operational]\ Starting\ configuration...\(\backslash\)n"{}};}
-\DoxyCodeLine{00461\ \ \ \ \ \mbox{\hyperlink{class_embedded_system_x_state_a69e38693afc90b2c7bb616e480f019e3}{context}}-\/>changeState(\mbox{\hyperlink{class_configuration_state_ae8c10885d597cc4cacf9cde057cc4723}{ConfigurationState::getInstance}}(\mbox{\hyperlink{class_embedded_system_x_state_a69e38693afc90b2c7bb616e480f019e3}{context}}));}
-\DoxyCodeLine{00462\ \}}
-\DoxyCodeLine{00463\ }
-\DoxyCodeLine{00464\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_operational_state_ac442e55c4f713d7c7cbe036cdc490102}{OperationalState::suspend}}()\ \{}
-\DoxyCodeLine{00465\ \ \ \ \ std::cout\ <<\ \textcolor{stringliteral}{"{}\ \ [Operational]\ Suspending\ system...\(\backslash\)n"{}};}
-\DoxyCodeLine{00466\ \ \ \ \ \mbox{\hyperlink{class_embedded_system_x_state_a69e38693afc90b2c7bb616e480f019e3}{context}}-\/>changeState(\mbox{\hyperlink{class_suspended_state_a7c5ac4f52a44311e301be89e4c8b8bf0}{SuspendedState::getInstance}}(\mbox{\hyperlink{class_embedded_system_x_state_a69e38693afc90b2c7bb616e480f019e3}{context}}));}
-\DoxyCodeLine{00467\ \}}
-\DoxyCodeLine{00468\ }
-\DoxyCodeLine{00469\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_operational_state_ab4fb1ab9af563a2566b1c6c48062ce0d}{OperationalState::restart}}()\ \{}
-\DoxyCodeLine{00470\ \ \ \ \ std::cout\ <<\ \textcolor{stringliteral}{"{}\ \ [Operational]\ Restarting\ system\ back\ to\ PowerOnSelfTest...\(\backslash\)n"{}};}
-\DoxyCodeLine{00471\ \ \ \ \ \mbox{\hyperlink{class_embedded_system_x_state_a69e38693afc90b2c7bb616e480f019e3}{context}}-\/>changeState(\mbox{\hyperlink{class_power_on_self_test_state_ae152baf800ee583b4c4c0c5ca16aa904}{PowerOnSelfTestState::getInstance}}(\mbox{\hyperlink{class_embedded_system_x_state_a69e38693afc90b2c7bb616e480f019e3}{context}}));}
-\DoxyCodeLine{00472\ \}}
-\DoxyCodeLine{00473\ }
-\DoxyCodeLine{00474\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_operational_state_ad8b142e600532fea93388e560eb86c75}{OperationalState::exit}}()\ \{}
-\DoxyCodeLine{00475\ \ \ \ \ std::cout\ <<\ \textcolor{stringliteral}{"{}\ \ [Operational]\ System\ exiting...\(\backslash\)n"{}};}
-\DoxyCodeLine{00476\ \}}
-\DoxyCodeLine{00477\ }
-\DoxyCodeLine{00478\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_configuration_state_ab667ff4fd7114cce9a39042235b7ed90}{ConfigurationState::restart}}()\ \{}
-\DoxyCodeLine{00479\ \ \ \ \ std::cout\ <<\ \textcolor{stringliteral}{"{}\ \ [Configuration]\ Restarting\ system\ back\ to\ PowerOnSelfTest...\(\backslash\)n"{}};}
-\DoxyCodeLine{00480\ \ \ \ \ \mbox{\hyperlink{class_embedded_system_x_state_a69e38693afc90b2c7bb616e480f019e3}{context}}-\/>changeState(\mbox{\hyperlink{class_power_on_self_test_state_ae152baf800ee583b4c4c0c5ca16aa904}{PowerOnSelfTestState::getInstance}}(\mbox{\hyperlink{class_embedded_system_x_state_a69e38693afc90b2c7bb616e480f019e3}{context}}));}
-\DoxyCodeLine{00481\ \}}
-\DoxyCodeLine{00482\ }
-\DoxyCodeLine{00483\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_configuration_state_a3823e276d58c7ae43411fda154df3eda}{ConfigurationState::configurationEnded}}()\ \{}
-\DoxyCodeLine{00484\ \ \ \ \ std::cout\ <<\ \textcolor{stringliteral}{"{}\ \ [Configuration]\ Configuration\ completed!\ Transitioning\ to\ Ready...\(\backslash\)n"{}};}
-\DoxyCodeLine{00485\ \ \ \ \ \mbox{\hyperlink{class_embedded_system_x_state_a69e38693afc90b2c7bb616e480f019e3}{context}}-\/>changeState(\mbox{\hyperlink{class_ready_state_a078711a8e92dab314ef4fd17e67a2a95}{ReadyState::getInstance}}(\mbox{\hyperlink{class_embedded_system_x_state_a69e38693afc90b2c7bb616e480f019e3}{context}}));}
-\DoxyCodeLine{00486\ \}}
-\DoxyCodeLine{00487\ }
-\DoxyCodeLine{00488\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_ready_state_abbd0ed06994f93d3c2a2e4ee7aa1f7e5}{ReadyState::restart}}()\ \{}
-\DoxyCodeLine{00489\ \ \ \ \ std::cout\ <<\ \textcolor{stringliteral}{"{}\ \ [Ready]\ Restarting\ system\ back\ to\ PowerOnSelfTest...\(\backslash\)n"{}};}
-\DoxyCodeLine{00490\ \ \ \ \ \mbox{\hyperlink{class_embedded_system_x_state_a69e38693afc90b2c7bb616e480f019e3}{context}}-\/>changeState(\mbox{\hyperlink{class_power_on_self_test_state_ae152baf800ee583b4c4c0c5ca16aa904}{PowerOnSelfTestState::getInstance}}(\mbox{\hyperlink{class_embedded_system_x_state_a69e38693afc90b2c7bb616e480f019e3}{context}}));}
-\DoxyCodeLine{00491\ \}}
-\DoxyCodeLine{00492\ }
-\DoxyCodeLine{00493\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_ready_state_afca7afc96e449d8a719f3f22e61bc924}{ReadyState::start}}()\ \{}
-\DoxyCodeLine{00494\ \ \ \ \ std::cout\ <<\ \textcolor{stringliteral}{"{}\ \ [Ready]\ Starting\ RealTimeLoop...\(\backslash\)n"{}};}
-\DoxyCodeLine{00495\ \ \ \ \ \mbox{\hyperlink{class_embedded_system_x_state_a69e38693afc90b2c7bb616e480f019e3}{context}}-\/>changeState(\mbox{\hyperlink{class_operational_state_a6ff26e3449b8162a35c0a7e8223c799d}{OperationalState::getInstance}}(\mbox{\hyperlink{class_embedded_system_x_state_a69e38693afc90b2c7bb616e480f019e3}{context}}));}
-\DoxyCodeLine{00496\ \}}
-\DoxyCodeLine{00497\ }
-\DoxyCodeLine{00498\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_ready_state_a7c0f1f0c7e72a26a6c62949ce36818f2}{ReadyState::exit}}()\ \{}
-\DoxyCodeLine{00499\ \ \ \ \ std::cout\ <<\ \textcolor{stringliteral}{"{}\ \ [Ready]\ Exiting...\(\backslash\)n"{}};}
+\DoxyCodeLine{00427\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_embedded_system_x_a5e66835e849cbe7611b7c7ff581c62be}{resume}}()\ \{}
+\DoxyCodeLine{00428\ \ \ \ \ \ \ \ \ std::cout\ <<\ \textcolor{stringliteral}{"{}Event:\ resume()\(\backslash\)n"{}};}
+\DoxyCodeLine{00429\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_embedded_system_x_ad12e2505d440e2255c6c867e71c4f150}{currentState}}-\/>resume();}
+\DoxyCodeLine{00430\ \ \ \ \ \}}
+\DoxyCodeLine{00431\ }
+\DoxyCodeLine{00432\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_embedded_system_x_af69870eb4b35bbabd4026f486cf7865e}{exit}}()\ \{}
+\DoxyCodeLine{00433\ \ \ \ \ \ \ \ \ std::cout\ <<\ \textcolor{stringliteral}{"{}Event:\ exit()\(\backslash\)n"{}};}
+\DoxyCodeLine{00434\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_embedded_system_x_ad12e2505d440e2255c6c867e71c4f150}{currentState}}-\/>exit();}
+\DoxyCodeLine{00435\ \ \ \ \ \}}
+\DoxyCodeLine{00436\ }
+\DoxyCodeLine{00437\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_embedded_system_x_af76cbf591323da258c5964ce18079d9b}{stop}}()\ \{}
+\DoxyCodeLine{00438\ \ \ \ \ \ \ \ \ std::cout\ <<\ \textcolor{stringliteral}{"{}Event:\ stop()\(\backslash\)n"{}};}
+\DoxyCodeLine{00439\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_embedded_system_x_ad12e2505d440e2255c6c867e71c4f150}{currentState}}-\/>stop();}
+\DoxyCodeLine{00440\ \ \ \ \ \}}
+\DoxyCodeLine{00441\ }
+\DoxyCodeLine{00442\ \ \ \ \ std::string\ \mbox{\hyperlink{class_embedded_system_x_a1886e1d66fe63c21c0333c8900cdad0d}{getStateName}}()\textcolor{keyword}{\ const\ }\{}
+\DoxyCodeLine{00443\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (\textcolor{keyword}{dynamic\_cast<}\mbox{\hyperlink{class_power_on_self_test_state}{PowerOnSelfTestState}}*\textcolor{keyword}{>}(\mbox{\hyperlink{class_embedded_system_x_ad12e2505d440e2255c6c867e71c4f150}{currentState}}))\ \textcolor{keywordflow}{return}\ \textcolor{stringliteral}{"{}PowerOnSelfTest"{}};}
+\DoxyCodeLine{00444\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (\textcolor{keyword}{dynamic\_cast<}\mbox{\hyperlink{class_initializing_state}{InitializingState}}*\textcolor{keyword}{>}(\mbox{\hyperlink{class_embedded_system_x_ad12e2505d440e2255c6c867e71c4f150}{currentState}}))\ \textcolor{keywordflow}{return}\ \textcolor{stringliteral}{"{}Initializing"{}};}
+\DoxyCodeLine{00445\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (\textcolor{keyword}{dynamic\_cast<}\mbox{\hyperlink{class_failure_state}{FailureState}}*\textcolor{keyword}{>}(\mbox{\hyperlink{class_embedded_system_x_ad12e2505d440e2255c6c867e71c4f150}{currentState}}))\ \textcolor{keywordflow}{return}\ \textcolor{stringliteral}{"{}Failure"{}};}
+\DoxyCodeLine{00446\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (\textcolor{keyword}{dynamic\_cast<}\mbox{\hyperlink{class_operational_state}{OperationalState}}*\textcolor{keyword}{>}(\mbox{\hyperlink{class_embedded_system_x_ad12e2505d440e2255c6c867e71c4f150}{currentState}}))\ \textcolor{keywordflow}{return}\ \textcolor{stringliteral}{"{}Operational"{}};}
+\DoxyCodeLine{00447\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (\textcolor{keyword}{dynamic\_cast<}\mbox{\hyperlink{class_configuration_state}{ConfigurationState}}*\textcolor{keyword}{>}(\mbox{\hyperlink{class_embedded_system_x_ad12e2505d440e2255c6c867e71c4f150}{currentState}}))\ \textcolor{keywordflow}{return}\ \textcolor{stringliteral}{"{}Configuration"{}};}
+\DoxyCodeLine{00448\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (\textcolor{keyword}{dynamic\_cast<}\mbox{\hyperlink{class_ready_state}{ReadyState}}*\textcolor{keyword}{>}(\mbox{\hyperlink{class_embedded_system_x_ad12e2505d440e2255c6c867e71c4f150}{currentState}}))\ \textcolor{keywordflow}{return}\ \textcolor{stringliteral}{"{}Ready"{}};}
+\DoxyCodeLine{00449\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (\textcolor{keyword}{dynamic\_cast<}\mbox{\hyperlink{class_suspended_state}{SuspendedState}}*\textcolor{keyword}{>}(\mbox{\hyperlink{class_embedded_system_x_ad12e2505d440e2255c6c867e71c4f150}{currentState}}))\ \textcolor{keywordflow}{return}\ \textcolor{stringliteral}{"{}Suspended"{}};}
+\DoxyCodeLine{00450\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (\textcolor{keyword}{dynamic\_cast<}\mbox{\hyperlink{class_real_time_loop_outer_state}{RealTimeLoopOuterState}}*\textcolor{keyword}{>}(\mbox{\hyperlink{class_embedded_system_x_ad12e2505d440e2255c6c867e71c4f150}{currentState}}))\ \textcolor{keywordflow}{return}\ \textcolor{stringliteral}{"{}RealTimeLoop"{}};}
+\DoxyCodeLine{00451\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ \textcolor{stringliteral}{"{}Unknown"{}};}
+\DoxyCodeLine{00452\ \ \ \ \ \}}
+\DoxyCodeLine{00453\ \};}
+\DoxyCodeLine{00454\ }
+\DoxyCodeLine{00455\ \textcolor{comment}{//\ ====================\ SINGLETON\ INSTANTIATIONS\ ====================}}
+\DoxyCodeLine{00456\ }
+\DoxyCodeLine{00457\ \mbox{\hyperlink{class_power_on_self_test_state}{PowerOnSelfTestState}}*\ \mbox{\hyperlink{class_power_on_self_test_state_a11c228bfba1c3e8ee11fa2f90b2cbd10}{PowerOnSelfTestState::instance}}\ =\ \textcolor{keyword}{nullptr};}
+\DoxyCodeLine{00458\ \mbox{\hyperlink{class_initializing_state}{InitializingState}}*\ \mbox{\hyperlink{class_initializing_state_a749faad06d367b1d0fb9cef804b6c99e}{InitializingState::instance}}\ =\ \textcolor{keyword}{nullptr};}
+\DoxyCodeLine{00459\ \mbox{\hyperlink{class_failure_state}{FailureState}}*\ \mbox{\hyperlink{class_failure_state_a888554181c307d6eef104b801170542e}{FailureState::instance}}\ =\ \textcolor{keyword}{nullptr};}
+\DoxyCodeLine{00460\ \mbox{\hyperlink{class_operational_state}{OperationalState}}*\ \mbox{\hyperlink{class_operational_state_acef346890b79b8d14941f17985a6fb38}{OperationalState::instance}}\ =\ \textcolor{keyword}{nullptr};}
+\DoxyCodeLine{00461\ \mbox{\hyperlink{class_configuration_state}{ConfigurationState}}*\ \mbox{\hyperlink{class_configuration_state_a35588153201be2fca68d8fc18a9b8cbd}{ConfigurationState::instance}}\ =\ \textcolor{keyword}{nullptr};}
+\DoxyCodeLine{00462\ \mbox{\hyperlink{class_ready_state}{ReadyState}}*\ \mbox{\hyperlink{class_ready_state_ad9b81807720099562fb7e0c6b77a94a6}{ReadyState::instance}}\ =\ \textcolor{keyword}{nullptr};}
+\DoxyCodeLine{00463\ \mbox{\hyperlink{class_suspended_state}{SuspendedState}}*\ \mbox{\hyperlink{class_suspended_state_a4535d9647d1fbc8ce487afaa58a9cae4}{SuspendedState::instance}}\ =\ \textcolor{keyword}{nullptr};}
+\DoxyCodeLine{00464\ \mbox{\hyperlink{class_real_time_loop_outer_state}{RealTimeLoopOuterState}}*\ \mbox{\hyperlink{class_real_time_loop_outer_state_a501412b47cfd5b2de3c47b681f83f009}{RealTimeLoopOuterState::instance}}\ =\ \textcolor{keyword}{nullptr};}
+\DoxyCodeLine{00465\ }
+\DoxyCodeLine{00466\ \mbox{\hyperlink{class_mode1_state}{Mode1State}}*\ \mbox{\hyperlink{class_mode1_state_a5d4ee889e07f7bfcf57eae243692e8f4}{Mode1State::instance}}\ =\ \textcolor{keyword}{nullptr};}
+\DoxyCodeLine{00467\ \mbox{\hyperlink{class_mode2_state}{Mode2State}}*\ \mbox{\hyperlink{class_mode2_state_acb5abbb67cf9ba1a239ec1c5669c7238}{Mode2State::instance}}\ =\ \textcolor{keyword}{nullptr};}
+\DoxyCodeLine{00468\ \mbox{\hyperlink{class_mode3_state}{Mode3State}}*\ \mbox{\hyperlink{class_mode3_state_a5f02ee2da693da70c3f0bbd902e79449}{Mode3State::instance}}\ =\ \textcolor{keyword}{nullptr};}
+\DoxyCodeLine{00469\ }
+\DoxyCodeLine{00470\ \textcolor{comment}{//\ ====================\ STATE\ IMPLEMENTATIONS\ ====================}}
+\DoxyCodeLine{00471\ }
+\DoxyCodeLine{00472\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_power_on_self_test_state_a27ae316e06235041d8f13039a7bc2afe}{PowerOnSelfTestState::selfTestOk}}()\ \{}
+\DoxyCodeLine{00473\ \ \ \ \ std::cout\ <<\ \textcolor{stringliteral}{"{}\ \ [PowerOnSelfTest]\ SelfTest\ OK!\ Transitioning\ to\ Initializing...\(\backslash\)n"{}};}
+\DoxyCodeLine{00474\ \ \ \ \ \mbox{\hyperlink{class_embedded_system_x_state_a69e38693afc90b2c7bb616e480f019e3}{context}}-\/>changeState(\mbox{\hyperlink{class_initializing_state_a5f2b35fd0799f7c5e3f1c5fe50ef5f0f}{InitializingState::getInstance}}(\mbox{\hyperlink{class_embedded_system_x_state_a69e38693afc90b2c7bb616e480f019e3}{context}}));}
+\DoxyCodeLine{00475\ \}}
+\DoxyCodeLine{00476\ }
+\DoxyCodeLine{00477\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_power_on_self_test_state_ac76686c6a614576d3872e4a647ea6aa3}{PowerOnSelfTestState::restart}}()\ \{}
+\DoxyCodeLine{00478\ \ \ \ \ std::cout\ <<\ \textcolor{stringliteral}{"{}\ \ [PowerOnSelfTest]\ Restarting\ from\ PowerOnSelfTest...\(\backslash\)n"{}};}
+\DoxyCodeLine{00479\ \ \ \ \ \textcolor{comment}{//\ Stays\ in\ same\ state\ after\ restart\ from\ this\ state}}
+\DoxyCodeLine{00480\ \}}
+\DoxyCodeLine{00481\ }
+\DoxyCodeLine{00482\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_power_on_self_test_state_a68e3bab150a0b81941bab395f2ce9635}{PowerOnSelfTestState::selfTestFailed}}(\textcolor{keywordtype}{int}\ errorNo)\ \{}
+\DoxyCodeLine{00483\ \ \ \ \ std::cout\ <<\ \textcolor{stringliteral}{"{}\ \ [PowerOnSelfTest]\ SelfTest\ FAILED\ with\ error\ "{}}\ <<\ errorNo\ <<\ \textcolor{stringliteral}{"{}!\ Transitioning\ to\ Failure...\(\backslash\)n"{}};}
+\DoxyCodeLine{00484\ \ \ \ \ \mbox{\hyperlink{class_embedded_system_x_state_a69e38693afc90b2c7bb616e480f019e3}{context}}-\/>changeState(\mbox{\hyperlink{class_failure_state_af8df67121215589d804b1f1872eec2ab}{FailureState::getInstance}}(\mbox{\hyperlink{class_embedded_system_x_state_a69e38693afc90b2c7bb616e480f019e3}{context}}));}
+\DoxyCodeLine{00485\ \}}
+\DoxyCodeLine{00486\ }
+\DoxyCodeLine{00487\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_initializing_state_a2582cc2e25714a49ede134c3fc606cbb}{InitializingState::initialized}}()\ \{}
+\DoxyCodeLine{00488\ \ \ \ \ std::cout\ <<\ \textcolor{stringliteral}{"{}\ \ [Initializing]\ System\ initialized!\ Transitioning\ to\ Ready...\(\backslash\)n"{}};}
+\DoxyCodeLine{00489\ \ \ \ \ \mbox{\hyperlink{class_embedded_system_x_state_a69e38693afc90b2c7bb616e480f019e3}{context}}-\/>changeState(\mbox{\hyperlink{class_ready_state_a078711a8e92dab314ef4fd17e67a2a95}{ReadyState::getInstance}}(\mbox{\hyperlink{class_embedded_system_x_state_a69e38693afc90b2c7bb616e480f019e3}{context}}));}
+\DoxyCodeLine{00490\ \}}
+\DoxyCodeLine{00491\ }
+\DoxyCodeLine{00492\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_initializing_state_a67d16e73603bd66acfbc7e2568a631a1}{InitializingState::restart}}()\ \{}
+\DoxyCodeLine{00493\ \ \ \ \ std::cout\ <<\ \textcolor{stringliteral}{"{}\ \ [Initializing]\ Restarting\ system\ back\ to\ PowerOnSelfTest...\(\backslash\)n"{}};}
+\DoxyCodeLine{00494\ \ \ \ \ \mbox{\hyperlink{class_embedded_system_x_state_a69e38693afc90b2c7bb616e480f019e3}{context}}-\/>changeState(\mbox{\hyperlink{class_power_on_self_test_state_ae152baf800ee583b4c4c0c5ca16aa904}{PowerOnSelfTestState::getInstance}}(\mbox{\hyperlink{class_embedded_system_x_state_a69e38693afc90b2c7bb616e480f019e3}{context}}));}
+\DoxyCodeLine{00495\ \}}
+\DoxyCodeLine{00496\ }
+\DoxyCodeLine{00497\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_failure_state_a92512453ab6c2bc05c7913955cdf3228}{FailureState::restart}}()\ \{}
+\DoxyCodeLine{00498\ \ \ \ \ std::cout\ <<\ \textcolor{stringliteral}{"{}\ \ [Failure]\ Restarting\ system\ back\ to\ PowerOnSelfTest...\(\backslash\)n"{}};}
+\DoxyCodeLine{00499\ \ \ \ \ \mbox{\hyperlink{class_embedded_system_x_state_a69e38693afc90b2c7bb616e480f019e3}{context}}-\/>changeState(\mbox{\hyperlink{class_power_on_self_test_state_ae152baf800ee583b4c4c0c5ca16aa904}{PowerOnSelfTestState::getInstance}}(\mbox{\hyperlink{class_embedded_system_x_state_a69e38693afc90b2c7bb616e480f019e3}{context}}));}
 \DoxyCodeLine{00500\ \}}
 \DoxyCodeLine{00501\ }
-\DoxyCodeLine{00502\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_suspended_state_a935123391a7a11cecedda11cdef3c231}{SuspendedState::restart}}()\ \{}
-\DoxyCodeLine{00503\ \ \ \ \ std::cout\ <<\ \textcolor{stringliteral}{"{}\ \ [Suspended]\ Restarting\ system\ back\ to\ PowerOnSelfTest...\(\backslash\)n"{}};}
-\DoxyCodeLine{00504\ \ \ \ \ \mbox{\hyperlink{class_embedded_system_x_state_a69e38693afc90b2c7bb616e480f019e3}{context}}-\/>changeState(\mbox{\hyperlink{class_power_on_self_test_state_ae152baf800ee583b4c4c0c5ca16aa904}{PowerOnSelfTestState::getInstance}}(\mbox{\hyperlink{class_embedded_system_x_state_a69e38693afc90b2c7bb616e480f019e3}{context}}));}
+\DoxyCodeLine{00502\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_operational_state_a8efc9f71ab6dcd775e998d4ad2a96c2b}{OperationalState::configure}}()\ \{}
+\DoxyCodeLine{00503\ \ \ \ \ std::cout\ <<\ \textcolor{stringliteral}{"{}\ \ [Operational]\ Starting\ configuration...\(\backslash\)n"{}};}
+\DoxyCodeLine{00504\ \ \ \ \ \mbox{\hyperlink{class_embedded_system_x_state_a69e38693afc90b2c7bb616e480f019e3}{context}}-\/>changeState(\mbox{\hyperlink{class_configuration_state_ae8c10885d597cc4cacf9cde057cc4723}{ConfigurationState::getInstance}}(\mbox{\hyperlink{class_embedded_system_x_state_a69e38693afc90b2c7bb616e480f019e3}{context}}));}
 \DoxyCodeLine{00505\ \}}
 \DoxyCodeLine{00506\ }
-\DoxyCodeLine{00507\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_suspended_state_a98d4671ae0657e7113be352bf3cffc8e}{SuspendedState::resume}}()\ \{}
-\DoxyCodeLine{00508\ \ \ \ \ std::cout\ <<\ \textcolor{stringliteral}{"{}\ \ [Suspended]\ Resuming\ system\ back\ to\ Operational...\(\backslash\)n"{}};}
-\DoxyCodeLine{00509\ \ \ \ \ \mbox{\hyperlink{class_embedded_system_x_state_a69e38693afc90b2c7bb616e480f019e3}{context}}-\/>changeState(\mbox{\hyperlink{class_operational_state_a6ff26e3449b8162a35c0a7e8223c799d}{OperationalState::getInstance}}(\mbox{\hyperlink{class_embedded_system_x_state_a69e38693afc90b2c7bb616e480f019e3}{context}}));}
+\DoxyCodeLine{00507\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_operational_state_ac442e55c4f713d7c7cbe036cdc490102}{OperationalState::suspend}}()\ \{}
+\DoxyCodeLine{00508\ \ \ \ \ std::cout\ <<\ \textcolor{stringliteral}{"{}\ \ [Operational]\ Suspending\ system...\(\backslash\)n"{}};}
+\DoxyCodeLine{00509\ \ \ \ \ \mbox{\hyperlink{class_embedded_system_x_state_a69e38693afc90b2c7bb616e480f019e3}{context}}-\/>changeState(\mbox{\hyperlink{class_suspended_state_a7c5ac4f52a44311e301be89e4c8b8bf0}{SuspendedState::getInstance}}(\mbox{\hyperlink{class_embedded_system_x_state_a69e38693afc90b2c7bb616e480f019e3}{context}}));}
 \DoxyCodeLine{00510\ \}}
 \DoxyCodeLine{00511\ }
-\DoxyCodeLine{00512\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_suspended_state_a2871b3b0b56972ce83872473eb3b8cd9}{SuspendedState::exit}}()\ \{}
-\DoxyCodeLine{00513\ \ \ \ \ std::cout\ <<\ \textcolor{stringliteral}{"{}\ \ [Suspended]\ Exiting...\(\backslash\)n"{}};}
-\DoxyCodeLine{00514\ \}}
-\DoxyCodeLine{00515\ }
-\DoxyCodeLine{00516\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_mode1_state_a5913fca01e1b86f5497c0331749cb67f}{Mode1State::eventX}}()\ \{}
-\DoxyCodeLine{00517\ \ \ \ \ std::cout\ <<\ \textcolor{stringliteral}{"{}\ \ \ \ [Mode1]\ responseM1eventX\(\backslash\)n"{}};}
-\DoxyCodeLine{00518\ \}}
-\DoxyCodeLine{00519\ }
-\DoxyCodeLine{00520\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_mode2_state_add95d83304f5d7461d87a577b3bc3337}{Mode2State::eventX}}()\ \{}
-\DoxyCodeLine{00521\ \ \ \ \ std::cout\ <<\ \textcolor{stringliteral}{"{}\ \ \ \ [Mode2]\ responseM2eventX\(\backslash\)n"{}};}
-\DoxyCodeLine{00522\ \}}
-\DoxyCodeLine{00523\ }
-\DoxyCodeLine{00524\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_mode3_state_ad5c78a63a9a111ccb04ecb502f85bd3d}{Mode3State::eventX}}()\ \{}
-\DoxyCodeLine{00525\ \ \ \ \ std::cout\ <<\ \textcolor{stringliteral}{"{}\ \ \ \ [Mode3]\ responseM3eventX\(\backslash\)n"{}};}
-\DoxyCodeLine{00526\ \}}
-\DoxyCodeLine{00527\ }
-\DoxyCodeLine{00528\ \textcolor{preprocessor}{\#endif\ }\textcolor{comment}{//A1\_STATESASSINGLETONS\_H}}
+\DoxyCodeLine{00512\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_operational_state_ab4fb1ab9af563a2566b1c6c48062ce0d}{OperationalState::restart}}()\ \{}
+\DoxyCodeLine{00513\ \ \ \ \ std::cout\ <<\ \textcolor{stringliteral}{"{}\ \ [Operational]\ Restarting\ system\ back\ to\ PowerOnSelfTest...\(\backslash\)n"{}};}
+\DoxyCodeLine{00514\ \ \ \ \ \mbox{\hyperlink{class_embedded_system_x_state_a69e38693afc90b2c7bb616e480f019e3}{context}}-\/>changeState(\mbox{\hyperlink{class_power_on_self_test_state_ae152baf800ee583b4c4c0c5ca16aa904}{PowerOnSelfTestState::getInstance}}(\mbox{\hyperlink{class_embedded_system_x_state_a69e38693afc90b2c7bb616e480f019e3}{context}}));}
+\DoxyCodeLine{00515\ \}}
+\DoxyCodeLine{00516\ }
+\DoxyCodeLine{00517\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_operational_state_ad8b142e600532fea93388e560eb86c75}{OperationalState::exit}}()\ \{}
+\DoxyCodeLine{00518\ \ \ \ \ std::cout\ <<\ \textcolor{stringliteral}{"{}\ \ [Operational]\ System\ exiting...\(\backslash\)n"{}};}
+\DoxyCodeLine{00519\ \}}
+\DoxyCodeLine{00520\ }
+\DoxyCodeLine{00521\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_configuration_state_ab667ff4fd7114cce9a39042235b7ed90}{ConfigurationState::restart}}()\ \{}
+\DoxyCodeLine{00522\ \ \ \ \ std::cout\ <<\ \textcolor{stringliteral}{"{}\ \ [Configuration]\ Restarting\ system\ back\ to\ PowerOnSelfTest...\(\backslash\)n"{}};}
+\DoxyCodeLine{00523\ \ \ \ \ \mbox{\hyperlink{class_embedded_system_x_state_a69e38693afc90b2c7bb616e480f019e3}{context}}-\/>changeState(\mbox{\hyperlink{class_power_on_self_test_state_ae152baf800ee583b4c4c0c5ca16aa904}{PowerOnSelfTestState::getInstance}}(\mbox{\hyperlink{class_embedded_system_x_state_a69e38693afc90b2c7bb616e480f019e3}{context}}));}
+\DoxyCodeLine{00524\ \}}
+\DoxyCodeLine{00525\ }
+\DoxyCodeLine{00526\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_configuration_state_a3823e276d58c7ae43411fda154df3eda}{ConfigurationState::configurationEnded}}()\ \{}
+\DoxyCodeLine{00527\ \ \ \ \ std::cout\ <<\ \textcolor{stringliteral}{"{}\ \ [Configuration]\ Configuration\ completed!\ Transitioning\ to\ Ready...\(\backslash\)n"{}};}
+\DoxyCodeLine{00528\ \ \ \ \ \mbox{\hyperlink{class_embedded_system_x_state_a69e38693afc90b2c7bb616e480f019e3}{context}}-\/>changeState(\mbox{\hyperlink{class_ready_state_a078711a8e92dab314ef4fd17e67a2a95}{ReadyState::getInstance}}(\mbox{\hyperlink{class_embedded_system_x_state_a69e38693afc90b2c7bb616e480f019e3}{context}}));}
+\DoxyCodeLine{00529\ \}}
+\DoxyCodeLine{00530\ }
+\DoxyCodeLine{00531\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_ready_state_abbd0ed06994f93d3c2a2e4ee7aa1f7e5}{ReadyState::restart}}()\ \{}
+\DoxyCodeLine{00532\ \ \ \ \ std::cout\ <<\ \textcolor{stringliteral}{"{}\ \ [Ready]\ Restarting\ system\ back\ to\ PowerOnSelfTest...\(\backslash\)n"{}};}
+\DoxyCodeLine{00533\ \ \ \ \ \mbox{\hyperlink{class_embedded_system_x_state_a69e38693afc90b2c7bb616e480f019e3}{context}}-\/>changeState(\mbox{\hyperlink{class_power_on_self_test_state_ae152baf800ee583b4c4c0c5ca16aa904}{PowerOnSelfTestState::getInstance}}(\mbox{\hyperlink{class_embedded_system_x_state_a69e38693afc90b2c7bb616e480f019e3}{context}}));}
+\DoxyCodeLine{00534\ \}}
+\DoxyCodeLine{00535\ }
+\DoxyCodeLine{00536\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_real_time_loop_outer_state_ad38a02f7799b345e521974f80d0784f3}{RealTimeLoopOuterState::suspend}}()\ \{}
+\DoxyCodeLine{00537\ \ \ \ \ std::cout\ <<\ \textcolor{stringliteral}{"{}\ \ [RealTimeLoopOuterState]\ Suspending...\(\backslash\)n"{}};}
+\DoxyCodeLine{00538\ \ \ \ \ \mbox{\hyperlink{class_embedded_system_x_state_a69e38693afc90b2c7bb616e480f019e3}{context}}-\/>changeState(\mbox{\hyperlink{class_suspended_state_a7c5ac4f52a44311e301be89e4c8b8bf0}{SuspendedState::getInstance}}(\mbox{\hyperlink{class_embedded_system_x_state_a69e38693afc90b2c7bb616e480f019e3}{context}}));}
+\DoxyCodeLine{00539\ \}}
+\DoxyCodeLine{00540\ }
+\DoxyCodeLine{00541\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_real_time_loop_outer_state_a4dad87dab493eb6f379066118e76157b}{RealTimeLoopOuterState::stop}}()\ \{}
+\DoxyCodeLine{00542\ \ \ \ \ std::cout\ <<\ \textcolor{stringliteral}{"{}\ \ [RealTimeLoopOuterState]\ Stopping...\(\backslash\)n"{}};}
+\DoxyCodeLine{00543\ \ \ \ \ \mbox{\hyperlink{class_embedded_system_x_state_a69e38693afc90b2c7bb616e480f019e3}{context}}-\/>changeState(\mbox{\hyperlink{class_ready_state_a078711a8e92dab314ef4fd17e67a2a95}{ReadyState::getInstance}}(\mbox{\hyperlink{class_embedded_system_x_state_a69e38693afc90b2c7bb616e480f019e3}{context}}));}
+\DoxyCodeLine{00544\ \}}
+\DoxyCodeLine{00545\ }
+\DoxyCodeLine{00546\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_real_time_loop_outer_state_a01925a6ddfdbd6bd3d5dd1364d43798b}{RealTimeLoopOuterState::restart}}()\ \{}
+\DoxyCodeLine{00547\ \ \ \ \ std::cout\ <<\ \textcolor{stringliteral}{"{}\ \ [RealTimeLoopOuterState]\ Restarting\ system\ back\ to\ PowerOnSelfTest...\(\backslash\)n"{}};}
+\DoxyCodeLine{00548\ \ \ \ \ \mbox{\hyperlink{class_embedded_system_x_state_a69e38693afc90b2c7bb616e480f019e3}{context}}-\/>changeState(\mbox{\hyperlink{class_power_on_self_test_state_ae152baf800ee583b4c4c0c5ca16aa904}{PowerOnSelfTestState::getInstance}}(\mbox{\hyperlink{class_embedded_system_x_state_a69e38693afc90b2c7bb616e480f019e3}{context}}));}
+\DoxyCodeLine{00549\ \}}
+\DoxyCodeLine{00550\ }
+\DoxyCodeLine{00551\ }
+\DoxyCodeLine{00552\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_ready_state_afca7afc96e449d8a719f3f22e61bc924}{ReadyState::start}}()\ \{}
+\DoxyCodeLine{00553\ \ \ \ \ std::cout\ <<\ \textcolor{stringliteral}{"{}\ \ [Ready]\ Starting\ RealTimeLoop...\(\backslash\)n"{}};}
+\DoxyCodeLine{00554\ \ \ \ \ \mbox{\hyperlink{class_embedded_system_x_state_a69e38693afc90b2c7bb616e480f019e3}{context}}-\/>changeState(\mbox{\hyperlink{class_real_time_loop_outer_state_aa45421e00258a8ee2687d8c99efc0dea}{RealTimeLoopOuterState::getInstance}}(\mbox{\hyperlink{class_embedded_system_x_state_a69e38693afc90b2c7bb616e480f019e3}{context}}));}
+\DoxyCodeLine{00555\ \}}
+\DoxyCodeLine{00556\ }
+\DoxyCodeLine{00557\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_ready_state_a7c0f1f0c7e72a26a6c62949ce36818f2}{ReadyState::exit}}()\ \{}
+\DoxyCodeLine{00558\ \ \ \ \ std::cout\ <<\ \textcolor{stringliteral}{"{}\ \ [Ready]\ Leaving\ RealTimeLoop...\(\backslash\)n"{}};}
+\DoxyCodeLine{00559\ \ \ \ \ \mbox{\hyperlink{class_embedded_system_x_state_a69e38693afc90b2c7bb616e480f019e3}{context}}-\/>changeState(\mbox{\hyperlink{class_power_on_self_test_state_ae152baf800ee583b4c4c0c5ca16aa904}{PowerOnSelfTestState::getInstance}}(\mbox{\hyperlink{class_embedded_system_x_state_a69e38693afc90b2c7bb616e480f019e3}{context}}));}
+\DoxyCodeLine{00560\ \}}
+\DoxyCodeLine{00561\ }
+\DoxyCodeLine{00562\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_ready_state_a9cabd1bcb8ee050b4fa621e4c593468e}{ReadyState::configure}}()\ \{}
+\DoxyCodeLine{00563\ \ \ \ \ std::cout\ <<\ \textcolor{stringliteral}{"{}\ \ [Ready]\ Configuring\ RealTimeLoop...\(\backslash\)n"{}};}
+\DoxyCodeLine{00564\ \ \ \ \ \mbox{\hyperlink{class_embedded_system_x_state_a69e38693afc90b2c7bb616e480f019e3}{context}}-\/>changeState(\mbox{\hyperlink{class_configuration_state_ae8c10885d597cc4cacf9cde057cc4723}{ConfigurationState::getInstance}}(\mbox{\hyperlink{class_embedded_system_x_state_a69e38693afc90b2c7bb616e480f019e3}{context}}));}
+\DoxyCodeLine{00565\ \}}
+\DoxyCodeLine{00566\ }
+\DoxyCodeLine{00567\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_suspended_state_a935123391a7a11cecedda11cdef3c231}{SuspendedState::restart}}()\ \{}
+\DoxyCodeLine{00568\ \ \ \ \ std::cout\ <<\ \textcolor{stringliteral}{"{}\ \ [Suspended]\ Restarting\ system\ back\ to\ PowerOnSelfTest...\(\backslash\)n"{}};}
+\DoxyCodeLine{00569\ \ \ \ \ \mbox{\hyperlink{class_embedded_system_x_state_a69e38693afc90b2c7bb616e480f019e3}{context}}-\/>changeState(\mbox{\hyperlink{class_power_on_self_test_state_ae152baf800ee583b4c4c0c5ca16aa904}{PowerOnSelfTestState::getInstance}}(\mbox{\hyperlink{class_embedded_system_x_state_a69e38693afc90b2c7bb616e480f019e3}{context}}));}
+\DoxyCodeLine{00570\ \}}
+\DoxyCodeLine{00571\ }
+\DoxyCodeLine{00572\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_suspended_state_a98d4671ae0657e7113be352bf3cffc8e}{SuspendedState::resume}}()\ \{}
+\DoxyCodeLine{00573\ \ \ \ \ std::cout\ <<\ \textcolor{stringliteral}{"{}\ \ [Suspended]\ Resuming\ system\ back\ to\ RealTimeLoop...\(\backslash\)n"{}};}
+\DoxyCodeLine{00574\ \ \ \ \ \mbox{\hyperlink{class_embedded_system_x_state_a69e38693afc90b2c7bb616e480f019e3}{context}}-\/>changeState(\mbox{\hyperlink{class_real_time_loop_outer_state_aa45421e00258a8ee2687d8c99efc0dea}{RealTimeLoopOuterState::getInstance}}(\mbox{\hyperlink{class_embedded_system_x_state_a69e38693afc90b2c7bb616e480f019e3}{context}}));}
+\DoxyCodeLine{00575\ \}}
+\DoxyCodeLine{00576\ }
+\DoxyCodeLine{00577\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_suspended_state_a2871b3b0b56972ce83872473eb3b8cd9}{SuspendedState::exit}}()\ \{}
+\DoxyCodeLine{00578\ \ \ \ \ std::cout\ <<\ \textcolor{stringliteral}{"{}\ \ [Suspended]\ Exiting...\(\backslash\)n"{}};}
+\DoxyCodeLine{00579\ \}}
+\DoxyCodeLine{00580\ }
+\DoxyCodeLine{00581\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_mode1_state_a5913fca01e1b86f5497c0331749cb67f}{Mode1State::eventX}}()\ \{}
+\DoxyCodeLine{00582\ \ \ \ \ std::cout\ <<\ \textcolor{stringliteral}{"{}\ \ \ \ [Mode1]\ responseM1eventX\(\backslash\)n"{}};}
+\DoxyCodeLine{00583\ \}}
+\DoxyCodeLine{00584\ }
+\DoxyCodeLine{00585\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_mode2_state_add95d83304f5d7461d87a577b3bc3337}{Mode2State::eventX}}()\ \{}
+\DoxyCodeLine{00586\ \ \ \ \ std::cout\ <<\ \textcolor{stringliteral}{"{}\ \ \ \ [Mode2]\ responseM2eventX\(\backslash\)n"{}};}
+\DoxyCodeLine{00587\ \}}
+\DoxyCodeLine{00588\ }
+\DoxyCodeLine{00589\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_mode3_state_ad5c78a63a9a111ccb04ecb502f85bd3d}{Mode3State::eventX}}()\ \{}
+\DoxyCodeLine{00590\ \ \ \ \ std::cout\ <<\ \textcolor{stringliteral}{"{}\ \ \ \ [Mode3]\ responseM3eventX\(\backslash\)n"{}};}
+\DoxyCodeLine{00591\ \}}
+\DoxyCodeLine{00592\ }
+\DoxyCodeLine{00593\ \textcolor{preprocessor}{\#endif\ }\textcolor{comment}{//A1\_STATESASSINGLETONS\_H}}
 
 \end{DoxyCode}

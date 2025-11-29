@@ -11,6 +11,7 @@ var class_power_on_self_test_state =
     [ "selfTestFailed", "class_power_on_self_test_state.html#a68e3bab150a0b81941bab395f2ce9635", null ],
     [ "selfTestOk", "class_power_on_self_test_state.html#a27ae316e06235041d8f13039a7bc2afe", null ],
     [ "start", "class_power_on_self_test_state.html#ad5c5599e20a9fe2bc19d94bf492a4bf7", null ],
+    [ "stop", "class_power_on_self_test_state.html#abb634d78497fddafded9b0262b3ea68a", null ],
     [ "suspend", "class_power_on_self_test_state.html#a925116a76ea9e73f0744398d00853db3", null ],
     [ "instance", "class_power_on_self_test_state.html#a11c228bfba1c3e8ee11fa2f90b2cbd10", null ]
 ];

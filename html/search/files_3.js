@@ -1,6 +1,4 @@
 var searchData=
 [
-  ['simple_5fprocess_5fex_2ecpp_0',['simple_process_ex.cpp',['../simple__process__ex_8cpp.html',1,'']]],
-  ['simple_5fprocess_5fex_2eh_1',['simple_process_ex.h',['../simple__process__ex_8h.html',1,'']]],
-  ['statesassingletons_2eh_2',['StatesAsSingletons.h',['../_states_as_singletons_8h.html',1,'']]]
+  ['readme_2emd_0',['README.md',['../_r_e_a_d_m_e_8md.html',1,'']]]
 ];

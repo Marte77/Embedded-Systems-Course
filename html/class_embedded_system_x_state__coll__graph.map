@@ -1,11 +1,11 @@
 <map id="EmbeddedSystemXState" name="EmbeddedSystemXState">
-<area shape="rect" id="Node000001" title=" " alt="" coords="5,5,223,355"/>
-<area shape="rect" id="Node000002" href="$class_embedded_system_x.html" title=" " alt="" coords="80,426,274,837"/>
-<area shape="poly" id="edge2_Node000002_Node000001" title=" " alt="" coords="55,352,62,402,76,447,71,448,57,403,55,358"/>
-<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="151,426,145,380,146,375,147,370,150,379,157,427"/>
-<area shape="rect" id="Node000003" href="$class_real_time_loop.html" title=" " alt="" coords="298,102,477,259"/>
-<area shape="poly" id="edge3_Node000002_Node000003" title=" " alt="" coords="349,256,291,380,276,412,271,410,286,378,347,261"/>
-<area shape="rect" id="Node000004" href="$class_real_time_loop_state.html" title=" " alt="" coords="341,563,527,700"/>
-<area shape="poly" id="edge5_Node000004_Node000003" title=" " alt="" coords="387,256,387,379,387,402,399,476,414,548,409,547,393,477,382,403,382,379,385,261"/>
-<area shape="poly" id="edge4_Node000003_Node000004" title=" " alt="" coords="443,562,450,476,449,427,445,380,434,327,422,278,423,273,440,326,450,379,455,427,455,476,448,565"/>
+<area shape="rect" id="Node000001" title=" " alt="" coords="5,5,223,376"/>
+<area shape="rect" id="Node000002" href="$class_embedded_system_x.html" title=" " alt="" coords="80,447,274,878"/>
+<area shape="poly" id="edge2_Node000002_Node000001" title=" " alt="" coords="55,372,62,422,76,470,71,470,57,423,55,378"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="151,447,145,400,146,395,147,390,150,399,156,447"/>
+<area shape="rect" id="Node000003" href="$class_real_time_loop.html" title=" " alt="" coords="298,112,477,269"/>
+<area shape="poly" id="edge3_Node000002_Node000003" title=" " alt="" coords="351,267,291,401,277,432,272,430,286,399,349,271"/>
+<area shape="rect" id="Node000004" href="$class_real_time_loop_state.html" title=" " alt="" coords="341,594,527,731"/>
+<area shape="poly" id="edge5_Node000004_Node000003" title=" " alt="" coords="387,266,387,400,387,422,399,502,415,578,410,577,394,503,382,423,382,400,385,271"/>
+<area shape="poly" id="edge4_Node000003_Node000004" title=" " alt="" coords="442,593,449,502,449,450,445,400,434,342,420,288,421,283,439,341,450,399,455,450,455,502,447,595"/>
 </map>

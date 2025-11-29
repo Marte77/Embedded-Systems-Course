@@ -1,0 +1,7 @@
+<map id="State_of_machine" name="State_of_machine">
+<area shape="rect" id="Node000001" title=" " alt="" coords="110,5,277,152"/>
+<area shape="rect" id="Node000002" href="$class_specific__state___o_f_f.html" title=" " alt="" coords="5,200,182,322"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="148,163,129,202,125,199,145,167"/>
+<area shape="rect" id="Node000003" href="$class_specific__state___o_n.html" title=" " alt="" coords="207,200,384,322"/>
+<area shape="poly" id="edge2_Node000001_Node000003" title=" " alt="" coords="243,162,264,201,259,200,241,167"/>
+</map>

@@ -39,7 +39,7 @@ int sc_main(int, char*[]) {
     if (true) {
         EmbeddedSystemX system;
         std::cout << "Initial State: " << system.getStateName() << "\n\n";
-
+        //starts on PowerOnSelfTest
         // Test sequence following the state diagram
         std::cout << "--- Testing Power-On SelfTest ---\n";
         system.selfTestOk();
@@ -57,7 +57,7 @@ int sc_main(int, char*[]) {
         system.configurationEnded();
         std::cout << "Current State: " << system.getStateName() << "\n\n";
 
-        std::cout << "--- Testing Start/Run (Ready to Operational) ---\n";
+        std::cout << "--- Testing Start/Run (Ready to RealTimeLoop) ---\n";
         system.start();
         std::cout << "Current State: " << system.getStateName() << "\n\n";
 
@@ -75,19 +75,23 @@ int sc_main(int, char*[]) {
         rtl->eventX();
         std::cout << "\n";
 
-        std::cout << "--- Testing Suspend (Operational to Suspended) ---\n";
+        std::cout << "--- Testing Suspend (RealTimeLoop to Suspended) ---\n";
         system.suspend();
         std::cout << "Current State: " << system.getStateName() << "\n\n";
 
-        std::cout << "--- Testing Resume (Suspended back to Operational) ---\n";
+        std::cout << "--- Testing Resume (Suspended back to RealTimeLoop) ---\n";
         system.resume();
         std::cout << "Current State: " << system.getStateName() << "\n\n";
 
-        std::cout << "--- Testing Configure from Operational ---\n";
-        system.configure();
+        std::cout << "--- Testing an invalid state transition (RealTimeLoop to Failure) ---\n";
+        system.selfTestFailed(123);
         std::cout << "Current State: " << system.getStateName() << "\n\n";
 
-        std::cout << "--- Testing Restart from Configuration ---\n";
+        std::cout << "--- Testing Stop (RealTimeLoop to Ready) ---\n";
+        system.stop();
+        std::cout << "Current State: " << system.getStateName() << "\n\n";
+
+        std::cout << "--- Testing Restart from Ready ---\n";
         system.restart();
         std::cout << "Current State: " << system.getStateName() << "\n\n";
 

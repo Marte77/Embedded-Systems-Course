@@ -1,7 +1,9 @@
 <map id="ConfigurationState::ConfigurationState" name="ConfigurationState::ConfigurationState">
-<area shape="rect" id="Node000001" title=" " alt="" coords="410,5,547,46"/>
-<area shape="rect" id="Node000002" href="$class_configuration_state.html#ae8c10885d597cc4cacf9cde057cc4723" title=" " alt="" coords="233,5,362,46"/>
-<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="392,26,362,28,362,23,397,26"/>
-<area shape="rect" id="Node000003" href="$class_operational_state.html#a8efc9f71ab6dcd775e998d4ad2a96c2b" title=" " alt="" coords="5,13,185,38"/>
-<area shape="poly" id="edge2_Node000002_Node000003" title=" " alt="" coords="215,26,185,28,185,23,220,25"/>
+<area shape="rect" id="Node000001" title=" " alt="" coords="410,23,547,64"/>
+<area shape="rect" id="Node000002" href="$class_configuration_state.html#ae8c10885d597cc4cacf9cde057cc4723" title=" " alt="" coords="233,23,362,64"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="392,44,362,46,362,41,397,43"/>
+<area shape="rect" id="Node000003" href="$class_operational_state.html#a8efc9f71ab6dcd775e998d4ad2a96c2b" title=" " alt="" coords="5,5,185,31"/>
+<area shape="poly" id="edge2_Node000002_Node000003" title=" " alt="" coords="215,34,185,32,185,27,220,33"/>
+<area shape="rect" id="Node000004" href="$class_ready_state.html#a9cabd1bcb8ee050b4fa621e4c593468e" title=" " alt="" coords="19,55,171,80"/>
+<area shape="poly" id="edge3_Node000002_Node000004" title=" " alt="" coords="215,53,172,61,171,56,220,53"/>
 </map>

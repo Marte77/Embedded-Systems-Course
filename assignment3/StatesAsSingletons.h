@@ -32,6 +32,7 @@ public:
     virtual void suspend() = 0;
     virtual void resume() = 0;
     virtual void exit() = 0;
+    virtual void stop() = 0;
 };
 
 class PowerOnSelfTestState : public EmbeddedSystemXState {
@@ -58,6 +59,7 @@ public:
     void suspend() override { std::cout << "  [PowerOnSelfTest] suspend() - Invalid event\n"; }
     void resume() override { std::cout << "  [PowerOnSelfTest] resume() - Invalid event\n"; }
     void exit() override { std::cout << "  [PowerOnSelfTest] exit() - Invalid event\n"; }
+    void stop() override { std::cout << "  [PowerOnSelfTest] exit() - Invalid event\n"; }
 };
 
 class InitializingState : public EmbeddedSystemXState {
@@ -84,7 +86,9 @@ public:
     void suspend() override { std::cout << "  [Initializing] suspend() - Invalid event\n"; }
     void resume() override { std::cout << "  [Initializing] resume() - Invalid event\n"; }
     void exit() override { std::cout << "  [Initializing] exit() - Invalid event\n"; }
+    void stop() override { std::cout << "  [Initializing] stop() - Invalid event\n"; }
 };
+
 
 class FailureState : public EmbeddedSystemXState {
 private:
@@ -110,6 +114,7 @@ public:
     void suspend() override { std::cout << "  [Failure] suspend() - Invalid event\n"; }
     void resume() override { std::cout << "  [Failure] resume() - Invalid event\n"; }
     void exit() override { std::cout << "  [Failure] exit() - Invalid event\n"; }
+    void stop() override { std::cout << "  [Failure] stop() - Invalid event\n"; }
 };
 
 class OperationalState : public EmbeddedSystemXState {
@@ -136,6 +141,7 @@ public:
     void suspend() override;
     void resume() override { std::cout << "  [Operational] resume() - Invalid event\n"; }
     void exit() override;
+    void stop() override { std::cout << "  [Operational] stop() - Invalid event\n"; }
 };
 
 class ConfigurationState : public EmbeddedSystemXState {
@@ -162,6 +168,7 @@ public:
     void suspend() override { std::cout << "  [Configuration] suspend() - Invalid event\n"; }
     void resume() override { std::cout << "  [Configuration] resume() - Invalid event\n"; }
     void exit() override { std::cout << "  [Configuration] exit() - Invalid event\n"; }
+    void stop() override { std::cout << "  [Configuration] stop() - Invalid event\n"; }
 };
 
 class ReadyState : public EmbeddedSystemXState {
@@ -182,12 +189,13 @@ public:
     void initialized() override { std::cout << "  [Ready] initialized() - Invalid event\n"; }
     void restart() override;
     void selfTestFailed(int errorNo) override { std::cout << "  [Ready] selfTestFailed() - Invalid event\n"; }
-    void configure() override { std::cout << "  [Ready] configure() - Invalid event\n"; }
+    void configure() override;
     void configurationEnded() override { std::cout << "  [Ready] configurationEnded() - Invalid event\n"; }
     void start() override;
     void suspend() override { std::cout << "  [Ready] suspend() - Invalid event\n"; }
     void resume() override { std::cout << "  [Ready] resume() - Invalid event\n"; }
     void exit() override;
+    void stop() override { std::cout << "  [Ready] stop() - Invalid event\n"; }
 };
 
 class SuspendedState : public EmbeddedSystemXState {
@@ -214,6 +222,34 @@ public:
     void suspend() override { std::cout << "  [Suspended] suspend() - Invalid event\n"; }
     void resume() override;
     void exit() override;
+    void stop() override { std::cout << "  [Suspended] stop() - Invalid event\n"; }
+};
+
+class RealTimeLoopOuterState : public EmbeddedSystemXState {
+private:
+    static RealTimeLoopOuterState* instance;
+    RealTimeLoopOuterState(EmbeddedSystemX* ctx) : EmbeddedSystemXState(ctx) {}
+
+public:
+    static RealTimeLoopOuterState* getInstance(EmbeddedSystemX* ctx) {
+        if (!instance) {
+            instance = new RealTimeLoopOuterState(ctx);
+        }
+        instance->context = ctx;
+        return instance;
+    }
+
+    void selfTestOk() override { std::cout << "  [RealTimeLoopOuterState] selfTestOk() - Invalid event\n"; }
+    void initialized() override { std::cout << "  [RealTimeLoopOuterState] initialized() - Invalid event\n"; }
+    void restart() override;
+    void selfTestFailed(int errorNo) override { std::cout << "  [RealTimeLoopOuterState] selfTestFailed() - Invalid event\n"; }
+    void configure() override { std::cout << "  [RealTimeLoopOuterState] configure() - Invalid event\n"; }
+    void configurationEnded() override { std::cout << "  [RealTimeLoopOuterState] configurationEnded() - Invalid event\n"; }
+    void start() override { std::cout << "  [RealTimeLoopOuterState] start() - Invalid event\n"; }
+    void suspend() override;
+    void resume() override { std::cout << "  [RealTimeLoopOuterState] resume() - Invalid event\n"; }
+    void exit() override { std::cout << "  [RealTimeLoopOuterState] exit() - Invalid event\n"; }
+    void stop() override;
 };
 
 // ==================== REALTIME LOOP STATE CLASSES ====================
@@ -398,6 +434,11 @@ public:
         currentState->exit();
     }
 
+    void stop() {
+        std::cout << "Event: stop()\n";
+        currentState->stop();
+    }
+
     std::string getStateName() const {
         if (dynamic_cast<PowerOnSelfTestState*>(currentState)) return "PowerOnSelfTest";
         if (dynamic_cast<InitializingState*>(currentState)) return "Initializing";
@@ -406,6 +447,7 @@ public:
         if (dynamic_cast<ConfigurationState*>(currentState)) return "Configuration";
         if (dynamic_cast<ReadyState*>(currentState)) return "Ready";
         if (dynamic_cast<SuspendedState*>(currentState)) return "Suspended";
+        if (dynamic_cast<RealTimeLoopOuterState*>(currentState)) return "RealTimeLoop";
         return "Unknown";
     }
 };
@@ -419,6 +461,7 @@ OperationalState* OperationalState::instance = nullptr;
 ConfigurationState* ConfigurationState::instance = nullptr;
 ReadyState* ReadyState::instance = nullptr;
 SuspendedState* SuspendedState::instance = nullptr;
+RealTimeLoopOuterState* RealTimeLoopOuterState::instance = nullptr;
 
 Mode1State* Mode1State::instance = nullptr;
 Mode2State* Mode2State::instance = nullptr;
@@ -490,13 +533,35 @@ void ReadyState::restart() {
     context->changeState(PowerOnSelfTestState::getInstance(context));
 }
 
+void RealTimeLoopOuterState::suspend() {
+    std::cout << "  [RealTimeLoopOuterState] Suspending...\n";
+    context->changeState(SuspendedState::getInstance(context));
+}
+
+void RealTimeLoopOuterState::stop() {
+    std::cout << "  [RealTimeLoopOuterState] Stopping...\n";
+    context->changeState(ReadyState::getInstance(context));
+}
+
+void RealTimeLoopOuterState::restart() {
+    std::cout << "  [RealTimeLoopOuterState] Restarting system back to PowerOnSelfTest...\n";
+    context->changeState(PowerOnSelfTestState::getInstance(context));
+}
+
+
 void ReadyState::start() {
     std::cout << "  [Ready] Starting RealTimeLoop...\n";
-    context->changeState(OperationalState::getInstance(context));
+    context->changeState(RealTimeLoopOuterState::getInstance(context));
 }
 
 void ReadyState::exit() {
-    std::cout << "  [Ready] Exiting...\n";
+    std::cout << "  [Ready] Leaving RealTimeLoop...\n";
+    context->changeState(PowerOnSelfTestState::getInstance(context));
+}
+
+void ReadyState::configure() {
+    std::cout << "  [Ready] Configuring RealTimeLoop...\n";
+    context->changeState(ConfigurationState::getInstance(context));
 }
 
 void SuspendedState::restart() {
@@ -505,8 +570,8 @@ void SuspendedState::restart() {
 }
 
 void SuspendedState::resume() {
-    std::cout << "  [Suspended] Resuming system back to Operational...\n";
-    context->changeState(OperationalState::getInstance(context));
+    std::cout << "  [Suspended] Resuming system back to RealTimeLoop...\n";
+    context->changeState(RealTimeLoopOuterState::getInstance(context));
 }
 
 void SuspendedState::exit() {

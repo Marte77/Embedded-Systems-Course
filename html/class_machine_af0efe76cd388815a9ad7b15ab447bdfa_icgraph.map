@@ -1,0 +1,7 @@
+<map id="Machine::set_current_state" name="Machine::set_current_state">
+<area shape="rect" id="Node000001" title=" " alt="" coords="193,39,336,79"/>
+<area shape="rect" id="Node000002" href="$class_specific__state___o_n.html#a997a85f5703efcc08c407f47b8900329" title=" " alt="" coords="5,5,145,46"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="175,44,145,41,145,35,180,43"/>
+<area shape="rect" id="Node000003" href="$class_specific__state___o_f_f.html#a564b4ed740406b927baf2ea87a36c7dd" title=" " alt="" coords="6,71,144,111"/>
+<area shape="poly" id="edge2_Node000001_Node000003" title=" " alt="" coords="175,74,144,82,143,77,180,73"/>
+</map>
