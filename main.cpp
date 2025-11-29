@@ -37,8 +37,68 @@ int sc_main(int, char*[]) {
     //Top top("top");
     //sc_start();
     if (true) {
-        EmbeddedSystemX s;
-        s.selfTestOk();
+        EmbeddedSystemX system;
+        std::cout << "Initial State: " << system.getStateName() << "\n\n";
+
+        // Test sequence following the state diagram
+        std::cout << "--- Testing Power-On SelfTest ---\n";
+        system.selfTestOk();
+        std::cout << "Current State: " << system.getStateName() << "\n\n";
+
+        std::cout << "--- Testing Initialization ---\n";
+        system.initialized();
+        std::cout << "Current State: " << system.getStateName() << "\n\n";
+
+        std::cout << "--- Testing Configuration from Ready ---\n";
+        system.configure();
+        std::cout << "Current State: " << system.getStateName() << "\n\n";
+
+        std::cout << "--- Testing Configuration End ---\n";
+        system.configurationEnded();
+        std::cout << "Current State: " << system.getStateName() << "\n\n";
+
+        std::cout << "--- Testing Start/Run (Ready to Operational) ---\n";
+        system.start();
+        std::cout << "Current State: " << system.getStateName() << "\n\n";
+
+        std::cout << "--- Testing RealTimeLoop Mode Changes ---\n";
+        RealTimeLoop* rtl = system.getRealTimeLoop();
+        std::cout << "Current Mode: " << rtl->getCurrentMode() << "\n";
+        rtl->changeMode(2);
+        std::cout << "Current Mode: " << rtl->getCurrentMode() << "\n";
+        rtl->eventX();
+        rtl->changeMode(3);
+        std::cout << "Current Mode: " << rtl->getCurrentMode() << "\n";
+        rtl->eventX();
+        rtl->changeMode(1);
+        std::cout << "Current Mode: " << rtl->getCurrentMode() << "\n";
+        rtl->eventX();
+        std::cout << "\n";
+
+        std::cout << "--- Testing Suspend (Operational to Suspended) ---\n";
+        system.suspend();
+        std::cout << "Current State: " << system.getStateName() << "\n\n";
+
+        std::cout << "--- Testing Resume (Suspended back to Operational) ---\n";
+        system.resume();
+        std::cout << "Current State: " << system.getStateName() << "\n\n";
+
+        std::cout << "--- Testing Configure from Operational ---\n";
+        system.configure();
+        std::cout << "Current State: " << system.getStateName() << "\n\n";
+
+        std::cout << "--- Testing Restart from Configuration ---\n";
+        system.restart();
+        std::cout << "Current State: " << system.getStateName() << "\n\n";
+
+        std::cout << "--- Testing SelfTest Failure ---\n";
+        system.selfTestFailed(42);
+        std::cout << "Current State: " << system.getStateName() << "\n\n";
+
+        std::cout << "--- Testing Restart from Failure ---\n";
+        system.restart();
+        std::cout << "Current State: " << system.getStateName() << "\n\n";
+
         return 0;
     }
     else {

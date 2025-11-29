@@ -1,0 +1,9 @@
+<map id="OperationalState::OperationalState" name="OperationalState::OperationalState">
+<area shape="rect" id="Node000001" title=" " alt="" coords="464,23,656,64"/>
+<area shape="rect" id="Node000002" href="$class_operational_state.html#a6ff26e3449b8162a35c0a7e8223c799d" title=" " alt="" coords="222,31,416,56"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="446,44,417,46,416,41,451,43"/>
+<area shape="rect" id="Node000003" href="$class_suspended_state.html#a98d4671ae0657e7113be352bf3cffc8e" title=" " alt="" coords="5,5,174,31"/>
+<area shape="poly" id="edge2_Node000002_Node000003" title=" " alt="" coords="204,31,174,30,174,25,209,31"/>
+<area shape="rect" id="Node000004" href="$class_ready_state.html#afca7afc96e449d8a719f3f22e61bc924" title=" " alt="" coords="27,55,152,80"/>
+<area shape="poly" id="edge3_Node000002_Node000004" title=" " alt="" coords="204,56,153,64,152,58,209,55"/>
+</map>

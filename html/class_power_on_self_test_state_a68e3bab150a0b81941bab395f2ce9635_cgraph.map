@@ -1,0 +1,9 @@
+<map id="PowerOnSelfTestState::selfTestFailed" name="PowerOnSelfTestState::selfTestFailed">
+<area shape="rect" id="Node000001" title=" " alt="" coords="5,5,160,46"/>
+<area shape="rect" id="Node000002" href="$class_failure_state.html#af8df67121215589d804b1f1872eec2ab" title=" " alt="" coords="208,13,375,38"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="160,23,195,25,189,26,160,28"/>
+<area shape="rect" id="Node000003" href="$class_failure_state.html#a2ec44ef17dc39f0093d29ef996958325" title=" " alt="" coords="423,13,592,38"/>
+<area shape="poly" id="edge2_Node000002_Node000003" title=" " alt="" coords="375,23,410,26,405,26,375,28"/>
+<area shape="rect" id="Node000004" href="$class_embedded_system_x_state.html#a5630d67a88100d0e67c1578a7ee43e91" title=" " alt="" coords="640,5,817,46"/>
+<area shape="poly" id="edge3_Node000003_Node000004" title=" " alt="" coords="593,23,627,26,622,26,593,28"/>
+</map>

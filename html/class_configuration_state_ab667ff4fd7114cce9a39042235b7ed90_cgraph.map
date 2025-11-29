@@ -1,0 +1,9 @@
+<map id="ConfigurationState::restart" name="ConfigurationState::restart">
+<area shape="rect" id="Node000001" title=" " alt="" coords="5,5,135,46"/>
+<area shape="rect" id="Node000002" href="$class_power_on_self_test_state.html#ae152baf800ee583b4c4c0c5ca16aa904" title=" " alt="" coords="183,5,337,46"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="135,23,170,25,165,26,135,28"/>
+<area shape="rect" id="Node000003" href="$class_power_on_self_test_state.html#a1020e4af5a2b23ac1c6236d9ca2a71b0" title=" " alt="" coords="385,5,547,46"/>
+<area shape="poly" id="edge2_Node000002_Node000003" title=" " alt="" coords="338,23,372,26,367,26,338,28"/>
+<area shape="rect" id="Node000004" href="$class_embedded_system_x_state.html#a5630d67a88100d0e67c1578a7ee43e91" title=" " alt="" coords="595,5,772,46"/>
+<area shape="poly" id="edge3_Node000003_Node000004" title=" " alt="" coords="547,23,582,26,577,26,547,28"/>
+</map>

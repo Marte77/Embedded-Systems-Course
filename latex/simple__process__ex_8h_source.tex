@@ -1,0 +1,26 @@
+\doxysection{simple\+\_\+process\+\_\+ex.\+h}
+\hypertarget{simple__process__ex_8h_source}{}\label{simple__process__ex_8h_source}\index{nonassignment\_exs/simple\_process\_ex.h@{nonassignment\_exs/simple\_process\_ex.h}}
+\mbox{\hyperlink{simple__process__ex_8h}{Go to the documentation of this file.}}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00001\ \textcolor{preprocessor}{\#ifndef\ SIMPLE\_PROCESS\_EX\_H}}
+\DoxyCodeLine{00002\ \textcolor{preprocessor}{\#define\ SIMPLE\_PROCESS\_EX\_H}}
+\DoxyCodeLine{00003\ \textcolor{preprocessor}{\#include\ <systemc.h>}}
+\DoxyCodeLine{00004\ }
+\DoxyCodeLine{00005\ \mbox{\hyperlink{simple__process__ex_8h_a837294453f83895d1cb9fbceb1f74122}{SC\_MODULE}}(simple\_process\_ex)\ \{\ \textcolor{comment}{//\ same\ as\ \`{}struct\ simple\_proccess\_ex\ :\ sc\_module`\ or\ \`{}class\ simple\_proccess\_ex\ :\ sc\_module`}}
+\DoxyCodeLine{00006\ \ \ \ \ \textcolor{comment}{//\ keep\ in\ mind\ that\ if\ the\ module\ is\ defined\ as\ a\ class,\ the\ constructor\ (SC\_CTOR)\ must\ be\ set\ as\ public}}
+\DoxyCodeLine{00007\ \ \ sc\_fifo<int>\ fifo1;}
+\DoxyCodeLine{00008\ }
+\DoxyCodeLine{00009\ \ \ SC\_CTOR(simple\_process\_ex)\ \{}
+\DoxyCodeLine{00010\ \ \ \ \ SC\_THREAD(meu\_processo\_threaded);}
+\DoxyCodeLine{00011\ \ \ \ \ SC\_THREAD(meu\_processo\_threaded\_recetor);}
+\DoxyCodeLine{00012\ \ \ \ \ SC\_METHOD(meu\_method\_novo);}
+\DoxyCodeLine{00013\ \ \ \ \ \textcolor{comment}{//dont\_initialize();}}
+\DoxyCodeLine{00014\ \ \ \}}
+\DoxyCodeLine{00015\ \ \ \textcolor{keywordtype}{void}\ meu\_processo\_threaded(\textcolor{keywordtype}{void});}
+\DoxyCodeLine{00016\ \ \ \textcolor{keywordtype}{void}\ meu\_processo\_threaded\_recetor(\textcolor{keywordtype}{void});}
+\DoxyCodeLine{00017\ \ \ \textcolor{keywordtype}{void}\ meu\_method\_novo(\textcolor{keywordtype}{void});}
+\DoxyCodeLine{00018\ \};}
+\DoxyCodeLine{00019\ }
+\DoxyCodeLine{00020\ \textcolor{preprocessor}{\#endif}}
+
+\end{DoxyCode}

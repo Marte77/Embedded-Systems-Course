@@ -1,0 +1,9 @@
+<map id="assignment3/StatesAsSingletons.h" name="assignment3/StatesAsSingletons.h">
+<area shape="rect" id="Node000001" title=" " alt="" coords="22,5,247,31"/>
+<area shape="rect" id="Node000002" title=" " alt="" coords="5,79,77,105"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="121,31,70,72,67,67,116,32"/>
+<area shape="rect" id="Node000003" title=" " alt="" coords="100,79,168,105"/>
+<area shape="poly" id="edge2_Node000001_Node000003" title=" " alt="" coords="136,29,137,64,132,62,133,33"/>
+<area shape="rect" id="Node000004" title=" " alt="" coords="193,79,246,105"/>
+<area shape="poly" id="edge3_Node000001_Node000004" title=" " alt="" coords="150,29,197,69,191,69,148,34"/>
+</map>

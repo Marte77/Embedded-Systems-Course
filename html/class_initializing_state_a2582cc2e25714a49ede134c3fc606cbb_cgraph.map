@@ -1,0 +1,9 @@
+<map id="InitializingState::initialized" name="InitializingState::initialized">
+<area shape="rect" id="Node000001" title=" " alt="" coords="5,5,124,46"/>
+<area shape="rect" id="Node000002" href="$class_ready_state.html#a078711a8e92dab314ef4fd17e67a2a95" title=" " alt="" coords="172,13,338,38"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="124,23,158,25,153,26,124,28"/>
+<area shape="rect" id="Node000003" href="$class_ready_state.html#a497319f3099ba7ab061bfae0658da9bd" title=" " alt="" coords="386,13,553,38"/>
+<area shape="poly" id="edge2_Node000002_Node000003" title=" " alt="" coords="338,23,373,26,368,26,338,28"/>
+<area shape="rect" id="Node000004" href="$class_embedded_system_x_state.html#a5630d67a88100d0e67c1578a7ee43e91" title=" " alt="" coords="601,5,778,46"/>
+<area shape="poly" id="edge3_Node000003_Node000004" title=" " alt="" coords="554,23,589,26,583,26,554,28"/>
+</map>

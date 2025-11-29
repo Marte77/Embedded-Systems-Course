@@ -1,0 +1,9 @@
+<map id="SuspendedState::resume" name="SuspendedState::resume">
+<area shape="rect" id="Node000001" title=" " alt="" coords="5,13,174,38"/>
+<area shape="rect" id="Node000002" href="$class_operational_state.html#a6ff26e3449b8162a35c0a7e8223c799d" title=" " alt="" coords="222,13,416,38"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="174,23,209,25,203,26,174,28"/>
+<area shape="rect" id="Node000003" href="$class_operational_state.html#ae3abfc6d0545ae4e82369b73e745f224" title=" " alt="" coords="464,5,656,46"/>
+<area shape="poly" id="edge2_Node000002_Node000003" title=" " alt="" coords="416,23,451,26,446,26,417,28"/>
+<area shape="rect" id="Node000004" href="$class_embedded_system_x_state.html#a5630d67a88100d0e67c1578a7ee43e91" title=" " alt="" coords="704,5,881,46"/>
+<area shape="poly" id="edge3_Node000003_Node000004" title=" " alt="" coords="657,23,691,26,686,26,657,28"/>
+</map>

@@ -1,0 +1,5 @@
+<map id="FailureState::getInstance" name="FailureState::getInstance">
+<area shape="rect" id="Node000001" title=" " alt="" coords="208,13,375,38"/>
+<area shape="rect" id="Node000002" href="$class_power_on_self_test_state.html#a68e3bab150a0b81941bab395f2ce9635" title=" " alt="" coords="5,5,160,46"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="189,26,160,28,160,23,195,25"/>
+</map>

@@ -1,0 +1,191 @@
+\doxysection{Embedded\+SystemX Class Reference}
+\hypertarget{class_embedded_system_x}{}\label{class_embedded_system_x}\index{EmbeddedSystemX@{EmbeddedSystemX}}
+
+
+{\ttfamily \#include $<$States\+As\+Singletons.\+h$>$}
+
+
+
+Collaboration diagram for Embedded\+SystemX\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=550pt]{class_embedded_system_x__coll__graph}
+\end{center}
+\end{figure}
+\doxysubsubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{class_embedded_system_x_a65dda5484708ed6806407955a2a2d631}{Embedded\+SystemX}} ()
+\item 
+\mbox{\hyperlink{class_embedded_system_x_a282e1e9fe3cc56f8c0bf56fb74e8b7a3}{\texorpdfstring{$\sim$}{\string~}\+Embedded\+SystemX}} ()
+\item 
+void \mbox{\hyperlink{class_embedded_system_x_a9cac3ea7b0ebc577cb3798f844fc352a}{change\+State}} (\mbox{\hyperlink{class_embedded_system_x_state}{Embedded\+System\+XState}} \texorpdfstring{$\ast$}{*}new\+State)
+\item 
+\mbox{\hyperlink{class_real_time_loop}{Real\+Time\+Loop}} \texorpdfstring{$\ast$}{*} \mbox{\hyperlink{class_embedded_system_x_a307333e66cc96873a421d642ac439f16}{get\+Real\+Time\+Loop}} ()
+\item 
+void \mbox{\hyperlink{class_embedded_system_x_ab043ef3b463385ffb3587aca15db128f}{self\+Test\+Ok}} ()
+\item 
+void \mbox{\hyperlink{class_embedded_system_x_a7ceff0f335a80b4421a0be8adf18d004}{initialized}} ()
+\item 
+void \mbox{\hyperlink{class_embedded_system_x_af8bb9d0d010e5e326083d66c8206e9d9}{restart}} ()
+\item 
+void \mbox{\hyperlink{class_embedded_system_x_a77a35bde3aa1584a956805cf049d06e8}{self\+Test\+Failed}} (int error\+No)
+\item 
+void \mbox{\hyperlink{class_embedded_system_x_a5a243554e8f66701591dc80918ef8f92}{configure}} ()
+\item 
+void \mbox{\hyperlink{class_embedded_system_x_a1db535a07c00cd4b61c8560aaa93a109}{configuration\+Ended}} ()
+\item 
+void \mbox{\hyperlink{class_embedded_system_x_aa1e38d16fd891e7caaf8ff93e29e5112}{start}} ()
+\item 
+void \mbox{\hyperlink{class_embedded_system_x_a433f5de4dce4090e609637f00c1735fd}{suspend}} ()
+\item 
+void \mbox{\hyperlink{class_embedded_system_x_a5e66835e849cbe7611b7c7ff581c62be}{resume}} ()
+\item 
+void \mbox{\hyperlink{class_embedded_system_x_af69870eb4b35bbabd4026f486cf7865e}{exit}} ()
+\item 
+std\+::string \mbox{\hyperlink{class_embedded_system_x_a1886e1d66fe63c21c0333c8900cdad0d}{get\+State\+Name}} () const
+\end{DoxyCompactItemize}
+\doxysubsubsection*{Private Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{class_embedded_system_x_state}{Embedded\+System\+XState}} \texorpdfstring{$\ast$}{*} \mbox{\hyperlink{class_embedded_system_x_ad12e2505d440e2255c6c867e71c4f150}{current\+State}}
+\item 
+\mbox{\hyperlink{class_real_time_loop}{Real\+Time\+Loop}} \texorpdfstring{$\ast$}{*} \mbox{\hyperlink{class_embedded_system_x_a7beb63a9d769365185b3a55cc177cc79}{real\+Time\+Loop}}
+\end{DoxyCompactItemize}
+
+
+\label{doc-constructors}
+\Hypertarget{class_embedded_system_x_doc-constructors}
+\doxysubsection{Constructor \& Destructor Documentation}
+\Hypertarget{class_embedded_system_x_a65dda5484708ed6806407955a2a2d631}\index{EmbeddedSystemX@{EmbeddedSystemX}!EmbeddedSystemX@{EmbeddedSystemX}}
+\index{EmbeddedSystemX@{EmbeddedSystemX}!EmbeddedSystemX@{EmbeddedSystemX}}
+\doxysubsubsection{\texorpdfstring{EmbeddedSystemX()}{EmbeddedSystemX()}}
+{\footnotesize\ttfamily \label{class_embedded_system_x_a65dda5484708ed6806407955a2a2d631} 
+Embedded\+System\+X\+::\+Embedded\+SystemX (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+\Hypertarget{class_embedded_system_x_a282e1e9fe3cc56f8c0bf56fb74e8b7a3}\index{EmbeddedSystemX@{EmbeddedSystemX}!````~EmbeddedSystemX@{\texorpdfstring{$\sim$}{\string~}EmbeddedSystemX}}
+\index{````~EmbeddedSystemX@{\texorpdfstring{$\sim$}{\string~}EmbeddedSystemX}!EmbeddedSystemX@{EmbeddedSystemX}}
+\doxysubsubsection{\texorpdfstring{\texorpdfstring{$\sim$}{\string~}EmbeddedSystemX()}{\string~EmbeddedSystemX()}}
+{\footnotesize\ttfamily \label{class_embedded_system_x_a282e1e9fe3cc56f8c0bf56fb74e8b7a3} 
+Embedded\+System\+X\+::\texorpdfstring{$\sim$}{\string~}\+Embedded\+SystemX (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+\label{doc-func-members}
+\Hypertarget{class_embedded_system_x_doc-func-members}
+\doxysubsection{Member Function Documentation}
+\Hypertarget{class_embedded_system_x_a9cac3ea7b0ebc577cb3798f844fc352a}\index{EmbeddedSystemX@{EmbeddedSystemX}!changeState@{changeState}}
+\index{changeState@{changeState}!EmbeddedSystemX@{EmbeddedSystemX}}
+\doxysubsubsection{\texorpdfstring{changeState()}{changeState()}}
+{\footnotesize\ttfamily \label{class_embedded_system_x_a9cac3ea7b0ebc577cb3798f844fc352a} 
+void Embedded\+System\+X\+::change\+State (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{class_embedded_system_x_state}{Embedded\+System\+XState}} \texorpdfstring{$\ast$}{*}}]{new\+State}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+\Hypertarget{class_embedded_system_x_a1db535a07c00cd4b61c8560aaa93a109}\index{EmbeddedSystemX@{EmbeddedSystemX}!configurationEnded@{configurationEnded}}
+\index{configurationEnded@{configurationEnded}!EmbeddedSystemX@{EmbeddedSystemX}}
+\doxysubsubsection{\texorpdfstring{configurationEnded()}{configurationEnded()}}
+{\footnotesize\ttfamily \label{class_embedded_system_x_a1db535a07c00cd4b61c8560aaa93a109} 
+void Embedded\+System\+X\+::configuration\+Ended (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+\Hypertarget{class_embedded_system_x_a5a243554e8f66701591dc80918ef8f92}\index{EmbeddedSystemX@{EmbeddedSystemX}!configure@{configure}}
+\index{configure@{configure}!EmbeddedSystemX@{EmbeddedSystemX}}
+\doxysubsubsection{\texorpdfstring{configure()}{configure()}}
+{\footnotesize\ttfamily \label{class_embedded_system_x_a5a243554e8f66701591dc80918ef8f92} 
+void Embedded\+System\+X\+::configure (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+\Hypertarget{class_embedded_system_x_af69870eb4b35bbabd4026f486cf7865e}\index{EmbeddedSystemX@{EmbeddedSystemX}!exit@{exit}}
+\index{exit@{exit}!EmbeddedSystemX@{EmbeddedSystemX}}
+\doxysubsubsection{\texorpdfstring{exit()}{exit()}}
+{\footnotesize\ttfamily \label{class_embedded_system_x_af69870eb4b35bbabd4026f486cf7865e} 
+void Embedded\+System\+X\+::exit (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+\Hypertarget{class_embedded_system_x_a307333e66cc96873a421d642ac439f16}\index{EmbeddedSystemX@{EmbeddedSystemX}!getRealTimeLoop@{getRealTimeLoop}}
+\index{getRealTimeLoop@{getRealTimeLoop}!EmbeddedSystemX@{EmbeddedSystemX}}
+\doxysubsubsection{\texorpdfstring{getRealTimeLoop()}{getRealTimeLoop()}}
+{\footnotesize\ttfamily \label{class_embedded_system_x_a307333e66cc96873a421d642ac439f16} 
+\mbox{\hyperlink{class_real_time_loop}{Real\+Time\+Loop}} \texorpdfstring{$\ast$}{*} Embedded\+System\+X\+::get\+Real\+Time\+Loop (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+Here is the caller graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=312pt]{class_embedded_system_x_a307333e66cc96873a421d642ac439f16_icgraph}
+\end{center}
+\end{figure}
+\Hypertarget{class_embedded_system_x_a1886e1d66fe63c21c0333c8900cdad0d}\index{EmbeddedSystemX@{EmbeddedSystemX}!getStateName@{getStateName}}
+\index{getStateName@{getStateName}!EmbeddedSystemX@{EmbeddedSystemX}}
+\doxysubsubsection{\texorpdfstring{getStateName()}{getStateName()}}
+{\footnotesize\ttfamily \label{class_embedded_system_x_a1886e1d66fe63c21c0333c8900cdad0d} 
+std\+::string Embedded\+System\+X\+::get\+State\+Name (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+\Hypertarget{class_embedded_system_x_a7ceff0f335a80b4421a0be8adf18d004}\index{EmbeddedSystemX@{EmbeddedSystemX}!initialized@{initialized}}
+\index{initialized@{initialized}!EmbeddedSystemX@{EmbeddedSystemX}}
+\doxysubsubsection{\texorpdfstring{initialized()}{initialized()}}
+{\footnotesize\ttfamily \label{class_embedded_system_x_a7ceff0f335a80b4421a0be8adf18d004} 
+void Embedded\+System\+X\+::initialized (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+\Hypertarget{class_embedded_system_x_af8bb9d0d010e5e326083d66c8206e9d9}\index{EmbeddedSystemX@{EmbeddedSystemX}!restart@{restart}}
+\index{restart@{restart}!EmbeddedSystemX@{EmbeddedSystemX}}
+\doxysubsubsection{\texorpdfstring{restart()}{restart()}}
+{\footnotesize\ttfamily \label{class_embedded_system_x_af8bb9d0d010e5e326083d66c8206e9d9} 
+void Embedded\+System\+X\+::restart (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+\Hypertarget{class_embedded_system_x_a5e66835e849cbe7611b7c7ff581c62be}\index{EmbeddedSystemX@{EmbeddedSystemX}!resume@{resume}}
+\index{resume@{resume}!EmbeddedSystemX@{EmbeddedSystemX}}
+\doxysubsubsection{\texorpdfstring{resume()}{resume()}}
+{\footnotesize\ttfamily \label{class_embedded_system_x_a5e66835e849cbe7611b7c7ff581c62be} 
+void Embedded\+System\+X\+::resume (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+\Hypertarget{class_embedded_system_x_a77a35bde3aa1584a956805cf049d06e8}\index{EmbeddedSystemX@{EmbeddedSystemX}!selfTestFailed@{selfTestFailed}}
+\index{selfTestFailed@{selfTestFailed}!EmbeddedSystemX@{EmbeddedSystemX}}
+\doxysubsubsection{\texorpdfstring{selfTestFailed()}{selfTestFailed()}}
+{\footnotesize\ttfamily \label{class_embedded_system_x_a77a35bde3aa1584a956805cf049d06e8} 
+void Embedded\+System\+X\+::self\+Test\+Failed (\begin{DoxyParamCaption}\item[{int}]{error\+No}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+\Hypertarget{class_embedded_system_x_ab043ef3b463385ffb3587aca15db128f}\index{EmbeddedSystemX@{EmbeddedSystemX}!selfTestOk@{selfTestOk}}
+\index{selfTestOk@{selfTestOk}!EmbeddedSystemX@{EmbeddedSystemX}}
+\doxysubsubsection{\texorpdfstring{selfTestOk()}{selfTestOk()}}
+{\footnotesize\ttfamily \label{class_embedded_system_x_ab043ef3b463385ffb3587aca15db128f} 
+void Embedded\+System\+X\+::self\+Test\+Ok (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+Here is the caller graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=325pt]{class_embedded_system_x_ab043ef3b463385ffb3587aca15db128f_icgraph}
+\end{center}
+\end{figure}
+\Hypertarget{class_embedded_system_x_aa1e38d16fd891e7caaf8ff93e29e5112}\index{EmbeddedSystemX@{EmbeddedSystemX}!start@{start}}
+\index{start@{start}!EmbeddedSystemX@{EmbeddedSystemX}}
+\doxysubsubsection{\texorpdfstring{start()}{start()}}
+{\footnotesize\ttfamily \label{class_embedded_system_x_aa1e38d16fd891e7caaf8ff93e29e5112} 
+void Embedded\+System\+X\+::start (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+\Hypertarget{class_embedded_system_x_a433f5de4dce4090e609637f00c1735fd}\index{EmbeddedSystemX@{EmbeddedSystemX}!suspend@{suspend}}
+\index{suspend@{suspend}!EmbeddedSystemX@{EmbeddedSystemX}}
+\doxysubsubsection{\texorpdfstring{suspend()}{suspend()}}
+{\footnotesize\ttfamily \label{class_embedded_system_x_a433f5de4dce4090e609637f00c1735fd} 
+void Embedded\+System\+X\+::suspend (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+\label{doc-variable-members}
+\Hypertarget{class_embedded_system_x_doc-variable-members}
+\doxysubsection{Member Data Documentation}
+\Hypertarget{class_embedded_system_x_ad12e2505d440e2255c6c867e71c4f150}\index{EmbeddedSystemX@{EmbeddedSystemX}!currentState@{currentState}}
+\index{currentState@{currentState}!EmbeddedSystemX@{EmbeddedSystemX}}
+\doxysubsubsection{\texorpdfstring{currentState}{currentState}}
+{\footnotesize\ttfamily \label{class_embedded_system_x_ad12e2505d440e2255c6c867e71c4f150} 
+\mbox{\hyperlink{class_embedded_system_x_state}{Embedded\+System\+XState}}\texorpdfstring{$\ast$}{*} Embedded\+System\+X\+::current\+State\hspace{0.3cm}{\ttfamily [private]}}
+
+\Hypertarget{class_embedded_system_x_a7beb63a9d769365185b3a55cc177cc79}\index{EmbeddedSystemX@{EmbeddedSystemX}!realTimeLoop@{realTimeLoop}}
+\index{realTimeLoop@{realTimeLoop}!EmbeddedSystemX@{EmbeddedSystemX}}
+\doxysubsubsection{\texorpdfstring{realTimeLoop}{realTimeLoop}}
+{\footnotesize\ttfamily \label{class_embedded_system_x_a7beb63a9d769365185b3a55cc177cc79} 
+\mbox{\hyperlink{class_real_time_loop}{Real\+Time\+Loop}}\texorpdfstring{$\ast$}{*} Embedded\+System\+X\+::real\+Time\+Loop\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+assignment3/\mbox{\hyperlink{_states_as_singletons_8h}{States\+As\+Singletons.\+h}}\end{DoxyCompactItemize}

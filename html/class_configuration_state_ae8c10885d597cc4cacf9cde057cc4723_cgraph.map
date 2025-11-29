@@ -1,0 +1,7 @@
+<map id="ConfigurationState::getInstance" name="ConfigurationState::getInstance">
+<area shape="rect" id="Node000001" title=" " alt="" coords="5,5,135,46"/>
+<area shape="rect" id="Node000002" href="$class_configuration_state.html#ad64970b29021309679964cf9c3bce36a" title=" " alt="" coords="183,5,320,46"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="135,23,170,25,165,26,135,28"/>
+<area shape="rect" id="Node000003" href="$class_embedded_system_x_state.html#a5630d67a88100d0e67c1578a7ee43e91" title=" " alt="" coords="368,5,544,46"/>
+<area shape="poly" id="edge2_Node000002_Node000003" title=" " alt="" coords="320,23,355,26,350,26,321,28"/>
+</map>
