@@ -1,0 +1,27 @@
+@startuml
+'https://plantuml.com/state-diagram
+
+scale 350 width
+[*] --> NotShooting
+
+state InitializingSteps {
+    [*] --> PowerOnSelfTest : Turning system on
+    PowerOnSelfTest --> Failure : Initial steps \nfailed for some\n reason
+    Failure --> [*] : Exit. Cannot recover
+    Failure --> PowerOnSelfTest : Restart
+    PowerOnSelfTest --> Initializing : Start initializing \nfor Operational
+    Initializing --> Operational : RealTimeLoop can start
+    Operational --> PowerOnSelfTest : Restart event is sent
+}
+
+state Operational {
+  [*] --> Ready
+  Ready --> Configuration : If configuration required
+  Configuration --> Ready : Configuration done
+  Ready --> RealTimeLoop : Start RTL
+  RealTimeLoop --> Ready : RTL chooses to stop
+  RealTimeLoop --> Suspended : Something causes suspension
+  Suspended --> RealTimeLoop : Can resume RTL
+  Suspended --> Ready : Something causes RTL to stop
+}
+@enduml

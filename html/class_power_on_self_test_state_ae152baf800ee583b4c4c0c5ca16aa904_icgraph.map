@@ -1,15 +1,19 @@
 <map id="PowerOnSelfTestState::getInstance" name="PowerOnSelfTestState::getInstance">
-<area shape="rect" id="Node000001" title=" " alt="" coords="217,149,371,190"/>
-<area shape="rect" id="Node000002" href="$class_configuration_state.html#ab667ff4fd7114cce9a39042235b7ed90" title=" " alt="" coords="22,5,152,46"/>
-<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="261,139,219,99,167,60,148,49,147,44,170,55,223,95,267,138"/>
-<area shape="rect" id="Node000003" href="$class_failure_state.html#a92512453ab6c2bc05c7913955cdf3228" title=" " alt="" coords="19,70,155,96"/>
-<area shape="poly" id="edge2_Node000001_Node000003" title=" " alt="" coords="239,143,168,111,136,99,135,94,170,106,244,141"/>
-<area shape="rect" id="Node000004" href="$class_initializing_state.html#a67d16e73603bd66acfbc7e2568a631a1" title=" " alt="" coords="28,120,146,161"/>
-<area shape="poly" id="edge3_Node000001_Node000004" title=" " alt="" coords="199,158,147,151,146,146,204,155"/>
-<area shape="rect" id="Node000005" href="$class_operational_state.html#ab4fb1ab9af563a2566b1c6c48062ce0d" title=" " alt="" coords="5,185,169,210"/>
-<area shape="poly" id="edge4_Node000001_Node000005" title=" " alt="" coords="199,183,170,189,168,184,204,181"/>
-<area shape="rect" id="Node000006" href="$class_ready_state.html#abbd0ed06994f93d3c2a2e4ee7aa1f7e5" title=" " alt="" coords="19,234,155,260"/>
-<area shape="poly" id="edge5_Node000001_Node000006" title=" " alt="" coords="232,198,170,226,138,236,136,231,168,220,236,195"/>
-<area shape="rect" id="Node000007" href="$class_suspended_state.html#a935123391a7a11cecedda11cdef3c231" title=" " alt="" coords="6,284,168,309"/>
-<area shape="poly" id="edge6_Node000001_Node000007" title=" " alt="" coords="265,200,221,240,170,275,145,285,143,280,167,270,218,236,260,202"/>
+<area shape="rect" id="Node000001" title=" " alt="" coords="222,199,376,240"/>
+<area shape="rect" id="Node000002" href="$class_ready_state.html#a7c0f1f0c7e72a26a6c62949ce36818f2" title=" " alt="" coords="30,5,149,31"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="279,185,238,115,208,78,172,46,151,33,149,28,175,41,211,74,242,112,285,185"/>
+<area shape="rect" id="Node000003" href="$class_configuration_state.html#ab667ff4fd7114cce9a39042235b7ed90" title=" " alt="" coords="25,55,154,96"/>
+<area shape="poly" id="edge2_Node000001_Node000003" title=" " alt="" coords="266,188,224,149,172,110,153,99,152,94,175,105,228,145,272,188"/>
+<area shape="rect" id="Node000004" href="$class_failure_state.html#a92512453ab6c2bc05c7913955cdf3228" title=" " alt="" coords="21,120,158,146"/>
+<area shape="poly" id="edge3_Node000001_Node000004" title=" " alt="" coords="244,193,173,161,140,149,139,144,175,156,249,191"/>
+<area shape="rect" id="Node000005" href="$class_initializing_state.html#a67d16e73603bd66acfbc7e2568a631a1" title=" " alt="" coords="30,170,149,210"/>
+<area shape="poly" id="edge4_Node000001_Node000005" title=" " alt="" coords="204,208,150,201,148,196,209,205"/>
+<area shape="rect" id="Node000006" href="$class_operational_state.html#ab4fb1ab9af563a2566b1c6c48062ce0d" title=" " alt="" coords="8,235,171,260"/>
+<area shape="poly" id="edge5_Node000001_Node000006" title=" " alt="" coords="204,233,173,239,171,234,208,230"/>
+<area shape="rect" id="Node000007" href="$class_ready_state.html#abbd0ed06994f93d3c2a2e4ee7aa1f7e5" title=" " alt="" coords="22,284,157,310"/>
+<area shape="poly" id="edge6_Node000001_Node000007" title=" " alt="" coords="237,248,175,275,142,286,140,281,173,270,241,245"/>
+<area shape="rect" id="Node000008" href="$class_real_time_loop_outer_state.html#a01925a6ddfdbd6bd3d5dd1364d43798b" title=" " alt="" coords="5,334,174,374"/>
+<area shape="poly" id="edge7_Node000001_Node000008" title=" " alt="" coords="268,249,225,289,175,324,153,336,150,331,172,320,222,285,264,252"/>
+<area shape="rect" id="Node000009" href="$class_suspended_state.html#a935123391a7a11cecedda11cdef3c231" title=" " alt="" coords="8,399,171,424"/>
+<area shape="poly" id="edge8_Node000001_Node000009" title=" " alt="" coords="283,252,240,323,210,358,175,388,152,401,150,396,172,384,206,354,236,319,279,255"/>
 </map>

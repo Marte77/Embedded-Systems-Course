@@ -1,0 +1,15 @@
+@startuml
+'https://plantuml.com/use-case-diagram
+
+actor User
+
+package EmbeddedSystemX {
+    usecase "Start the system" as STS
+}
+User -> STS
+package RealTimeLoop {
+    usecase "Start the loop" as STL
+}
+EmbeddedSystemX -> STL : After initialization
+
+@enduml

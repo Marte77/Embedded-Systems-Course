@@ -1,0 +1,9 @@
+<map id="RealTimeLoopOuterState::RealTimeLoopOuterState" name="RealTimeLoopOuterState::RealTimeLoopOuterState">
+<area shape="rect" id="Node000001" title=" " alt="" coords="438,23,614,64"/>
+<area shape="rect" id="Node000002" href="$class_real_time_loop_outer_state.html#aa45421e00258a8ee2687d8c99efc0dea" title=" " alt="" coords="222,23,390,64"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="420,44,391,46,390,41,425,43"/>
+<area shape="rect" id="Node000003" href="$class_suspended_state.html#a98d4671ae0657e7113be352bf3cffc8e" title=" " alt="" coords="5,5,174,31"/>
+<area shape="poly" id="edge2_Node000002_Node000003" title=" " alt="" coords="204,32,174,31,174,25,209,31"/>
+<area shape="rect" id="Node000004" href="$class_ready_state.html#afca7afc96e449d8a719f3f22e61bc924" title=" " alt="" coords="27,55,152,80"/>
+<area shape="poly" id="edge3_Node000002_Node000004" title=" " alt="" coords="203,55,153,63,152,58,209,54"/>
+</map>

@@ -1,17 +1,19 @@
 <map id="Graphical Class Hierarchy" name="Graphical Class Hierarchy">
-<area shape="rect" id="Node000000" href="$class_embedded_system_x_state.html" title=" " alt="" coords="5,153,174,179"/>
-<area shape="rect" id="Node000001" href="$class_configuration_state.html" title=" " alt="" coords="234,5,364,31"/>
-<area shape="poly" id="edge1_Node000000_Node000001" title=" " alt="" coords="109,140,156,89,187,63,220,40,246,30,242,33,223,44,190,67,160,93,113,143"/>
-<area shape="rect" id="Node000002" href="$class_failure_state.html" title=" " alt="" coords="253,55,344,80"/>
-<area shape="poly" id="edge2_Node000000_Node000002" title=" " alt="" coords="122,143,168,115,221,89,255,78,251,81,223,94,171,120,125,147"/>
-<area shape="rect" id="Node000003" href="$class_initializing_state.html" title=" " alt="" coords="244,104,354,130"/>
-<area shape="poly" id="edge3_Node000000_Node000003" title=" " alt="" coords="161,147,245,128,241,131,163,152"/>
-<area shape="rect" id="Node000004" href="$class_operational_state.html" title=" " alt="" coords="240,153,358,179"/>
-<area shape="poly" id="edge4_Node000000_Node000004" title=" " alt="" coords="189,164,242,165,237,167,190,169"/>
-<area shape="rect" id="Node000005" href="$class_power_on_self_test_state.html" title=" " alt="" coords="222,203,376,228"/>
-<area shape="poly" id="edge5_Node000000_Node000005" title=" " alt="" coords="162,181,244,201,239,203,162,186"/>
-<area shape="rect" id="Node000006" href="$class_ready_state.html" title=" " alt="" coords="254,252,344,278"/>
-<area shape="poly" id="edge6_Node000000_Node000006" title=" " alt="" coords="124,185,171,212,223,238,256,252,251,253,221,243,168,217,124,190"/>
-<area shape="rect" id="Node000007" href="$class_suspended_state.html" title=" " alt="" coords="240,301,358,327"/>
-<area shape="poly" id="edge7_Node000000_Node000007" title=" " alt="" coords="112,188,160,239,190,265,223,288,247,301,242,300,220,292,187,269,156,243,110,193"/>
+<area shape="rect" id="Node000000" href="$class_embedded_system_x_state.html" title=" " alt="" coords="5,179,174,204"/>
+<area shape="rect" id="Node000001" href="$class_configuration_state.html" title=" " alt="" coords="241,5,370,31"/>
+<area shape="poly" id="edge1_Node000000_Node000001" title=" " alt="" coords="105,164,151,102,184,68,220,40,245,30,241,33,223,44,187,72,156,105,109,167"/>
+<area shape="rect" id="Node000002" href="$class_failure_state.html" title=" " alt="" coords="260,55,352,80"/>
+<area shape="poly" id="edge2_Node000000_Node000002" title=" " alt="" coords="114,166,161,127,220,89,262,75,258,79,223,94,165,131,118,170"/>
+<area shape="rect" id="Node000003" href="$class_initializing_state.html" title=" " alt="" coords="251,104,361,130"/>
+<area shape="poly" id="edge3_Node000000_Node000003" title=" " alt="" coords="136,170,221,138,258,129,253,132,223,143,138,175"/>
+<area shape="rect" id="Node000004" href="$class_operational_state.html" title=" " alt="" coords="247,153,365,179"/>
+<area shape="poly" id="edge4_Node000000_Node000004" title=" " alt="" coords="188,177,249,172,244,174,190,182"/>
+<area shape="rect" id="Node000005" href="$class_power_on_self_test_state.html" title=" " alt="" coords="229,203,383,228"/>
+<area shape="poly" id="edge5_Node000000_Node000005" title=" " alt="" coords="189,200,231,206,226,208,190,205"/>
+<area shape="rect" id="Node000006" href="$class_ready_state.html" title=" " alt="" coords="261,252,351,278"/>
+<area shape="poly" id="edge6_Node000000_Node000006" title=" " alt="" coords="138,208,223,238,263,252,257,253,221,243,138,213"/>
+<area shape="rect" id="Node000007" href="$class_real_time_loop_outer_state.html" title=" " alt="" coords="222,301,390,327"/>
+<area shape="poly" id="edge7_Node000000_Node000007" title=" " alt="" coords="117,213,165,251,223,288,250,301,245,301,220,293,162,256,116,218"/>
+<area shape="rect" id="Node000008" href="$class_suspended_state.html" title=" " alt="" coords="247,351,364,376"/>
+<area shape="poly" id="edge8_Node000000_Node000008" title=" " alt="" coords="108,215,156,277,187,310,223,337,249,352,244,351,220,342,184,314,152,281,106,220"/>
 </map>

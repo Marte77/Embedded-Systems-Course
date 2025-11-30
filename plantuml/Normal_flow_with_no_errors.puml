@@ -1,0 +1,39 @@
+@startuml
+'https://plantuml.com/sequence-diagram
+title Normal flow with no errors
+autonumber
+participant User as U
+participant EmbeddedSystem as E
+participant "RealTimeLoop (RTL)" as RTL
+
+U -> E: Turns on system
+activate E #FF6666
+E -> E: Starts with \nPowerOnSelfTest \nstate.
+E -> E: selfTestOk() called.\nInitialized state.
+E -> E: initialized() called.\nOperational state.
+E -> E: Initialized and set Ready state\nstart() called.
+
+note over E
+Ready State
+means we are in Operational
+end note
+activate E #FFAAAA
+E->E: configure() called.\nConfiguration state.
+E->E: configurationEnded() called.\nBack to Ready state.
+E->E: start() called.\nRealTimeLoop state.
+
+E->RTL: changeMode(1) called.\nRTL in Mode1 state.
+activate RTL #66FF66
+E->RTL: changeMode(3) called.\nRTL in Mode1 state since \nit can't transition from 1 to 2
+E->RTL: changeMode(2) called.\nRTL in Mode2 state.
+E->RTL: changeMode(3) called.\nRTL in Mode3 state.
+
+E->E: stop() called.\nReady state.
+deactivate RTL
+E->E: restart() called.\nPowerOnSelfTest state.
+deactivate E
+
+E->E: selfTestFailed() called.\nFailure state.
+E->E: exit() called.
+deactivate E
+@enduml

@@ -222,7 +222,7 @@ public:
     void suspend() override { std::cout << "  [Suspended] suspend() - Invalid event\n"; }
     void resume() override;
     void exit() override;
-    void stop() override { std::cout << "  [Suspended] stop() - Invalid event\n"; }
+    void stop() override;
 };
 
 class RealTimeLoopOuterState : public EmbeddedSystemXState {
@@ -329,14 +329,26 @@ public:
         std::cout << "  RealTimeLoop::changeMode(" << modeNumber << ")\n";
         switch (modeNumber) {
             case 1:
+                if (dynamic_cast<Mode2State*>(currentMode)) {
+                    std::cout << "    Cannot transition to Mode1 using mode2\n";
+                    break;
+                }
                 currentMode = Mode1State::getInstance(this);
                 std::cout << "    Transitioned to Mode1\n";
                 break;
             case 2:
+                if (dynamic_cast<Mode3State*>(currentMode)) {
+                    std::cout << "    Cannot transition to Mode2 using mode3\n";
+                    break;
+                }
                 currentMode = Mode2State::getInstance(this);
                 std::cout << "    Transitioned to Mode2\n";
                 break;
             case 3:
+                if (dynamic_cast<Mode1State*>(currentMode)) {
+                    std::cout << "    Cannot transition to Mode3 using mode1\n";
+                    break;
+                }
                 currentMode = Mode3State::getInstance(this);
                 std::cout << "    Transitioned to Mode3\n";
                 break;
@@ -573,7 +585,10 @@ void SuspendedState::resume() {
     std::cout << "  [Suspended] Resuming system back to RealTimeLoop...\n";
     context->changeState(RealTimeLoopOuterState::getInstance(context));
 }
-
+void SuspendedState::stop() {
+    std::cout << "  [Suspended] Stopping RTL, changing back to ready...\n";
+    context->changeState(ReadyState::getInstance(context));
+}
 void SuspendedState::exit() {
     std::cout << "  [Suspended] Exiting...\n";
 }

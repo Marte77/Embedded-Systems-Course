@@ -63,6 +63,7 @@ int sc_main(int, char*[]) {
 
         std::cout << "--- Testing RealTimeLoop Mode Changes ---\n";
         RealTimeLoop* rtl = system.getRealTimeLoop();
+        rtl->changeMode(1);
         std::cout << "Current Mode: " << rtl->getCurrentMode() << "\n";
         rtl->changeMode(2);
         std::cout << "Current Mode: " << rtl->getCurrentMode() << "\n";

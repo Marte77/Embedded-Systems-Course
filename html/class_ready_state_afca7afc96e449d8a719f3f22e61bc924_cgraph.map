@@ -1,9 +1,9 @@
 <map id="ReadyState::start" name="ReadyState::start">
 <area shape="rect" id="Node000001" title=" " alt="" coords="5,13,130,38"/>
-<area shape="rect" id="Node000002" href="$class_operational_state.html#a6ff26e3449b8162a35c0a7e8223c799d" title=" " alt="" coords="178,13,372,38"/>
-<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="130,23,165,25,160,26,130,28"/>
-<area shape="rect" id="Node000003" href="$class_operational_state.html#ae3abfc6d0545ae4e82369b73e745f224" title=" " alt="" coords="420,5,612,46"/>
-<area shape="poly" id="edge2_Node000002_Node000003" title=" " alt="" coords="372,23,407,26,402,26,373,28"/>
-<area shape="rect" id="Node000004" href="$class_embedded_system_x_state.html#a5630d67a88100d0e67c1578a7ee43e91" title=" " alt="" coords="660,5,837,46"/>
-<area shape="poly" id="edge3_Node000003_Node000004" title=" " alt="" coords="613,23,647,26,642,26,613,28"/>
+<area shape="rect" id="Node000002" href="$class_real_time_loop_outer_state.html#aa45421e00258a8ee2687d8c99efc0dea" title=" " alt="" coords="178,5,346,46"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="130,23,165,25,159,26,130,28"/>
+<area shape="rect" id="Node000003" href="$class_real_time_loop_outer_state.html#ad89ca507e9f62d9a94e078c66ae45cd4" title=" " alt="" coords="394,5,570,46"/>
+<area shape="poly" id="edge2_Node000002_Node000003" title=" " alt="" coords="346,23,381,26,376,26,346,28"/>
+<area shape="rect" id="Node000004" href="$class_embedded_system_x_state.html#a5630d67a88100d0e67c1578a7ee43e91" title=" " alt="" coords="618,5,795,46"/>
+<area shape="poly" id="edge3_Node000003_Node000004" title=" " alt="" coords="570,23,605,26,600,26,571,28"/>
 </map>

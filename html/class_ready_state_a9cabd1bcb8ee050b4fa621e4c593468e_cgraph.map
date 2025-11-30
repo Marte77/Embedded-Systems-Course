@@ -1,0 +1,9 @@
+<map id="ReadyState::configure" name="ReadyState::configure">
+<area shape="rect" id="Node000001" title=" " alt="" coords="5,13,157,38"/>
+<area shape="rect" id="Node000002" href="$class_configuration_state.html#ae8c10885d597cc4cacf9cde057cc4723" title=" " alt="" coords="205,5,334,46"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="157,23,192,25,186,26,157,28"/>
+<area shape="rect" id="Node000003" href="$class_configuration_state.html#ad64970b29021309679964cf9c3bce36a" title=" " alt="" coords="382,5,519,46"/>
+<area shape="poly" id="edge2_Node000002_Node000003" title=" " alt="" coords="335,23,369,26,364,26,335,28"/>
+<area shape="rect" id="Node000004" href="$class_embedded_system_x_state.html#a5630d67a88100d0e67c1578a7ee43e91" title=" " alt="" coords="567,5,744,46"/>
+<area shape="poly" id="edge3_Node000003_Node000004" title=" " alt="" coords="520,23,554,26,549,26,520,28"/>
+</map>
