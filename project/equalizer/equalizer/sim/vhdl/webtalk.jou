@@ -1,0 +1,12 @@
+#-----------------------------------------------------------
+# Webtalk v2017.2 (64-bit)
+# SW Build 1909853 on Thu Jun 15 18:39:09 MDT 2017
+# IP Build 1909766 on Thu Jun 15 19:58:00 MDT 2017
+# Start of session at: Tue Dec 16 00:55:50 2025
+# Process ID: 5192
+# Current directory: C:/Users/marti/Documents/EmbeddedSystems/project/equalizer/equalizer/sim/vhdl
+# Command line: wbtcv.exe -mode batch -source C:/Users/marti/Documents/EmbeddedSystems/project/equalizer/equalizer/sim/vhdl/xsim.dir/equalizer/webtalk/xsim_webtalk.tcl -notrace
+# Log file: C:/Users/marti/Documents/EmbeddedSystems/project/equalizer/equalizer/sim/vhdl/webtalk.log
+# Journal file: C:/Users/marti/Documents/EmbeddedSystems/project/equalizer/equalizer/sim/vhdl\webtalk.jou
+#-----------------------------------------------------------
+source C:/Users/marti/Documents/EmbeddedSystems/project/equalizer/equalizer/sim/vhdl/xsim.dir/equalizer/webtalk/xsim_webtalk.tcl -notrace

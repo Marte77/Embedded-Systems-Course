@@ -1,0 +1,46 @@
+<AutoPilot:ProjectResources xmlns:AutoPilot="com.autoesl.autopilot.ui.directiveView">
+    <sourceFile name="">
+        <directive functionName="equalizer" label="" functionLabel="">
+            <pragma name="INTERFACE">
+                <option name="s_axilite" value="" positionalBoolean="mode"/>
+                <option name="port" value="y" positionalBoolean="4"/>
+                <option name="bundle" value="eq_io"/>
+            </pragma>
+        </directive>
+        <directive functionName="equalizer" label="" functionLabel="">
+            <pragma name="INTERFACE">
+                <option name="s_axilite" value="" positionalBoolean="mode"/>
+                <option name="port" value="return" positionalBoolean="4"/>
+                <option name="bundle" value="eq_io"/>
+            </pragma>
+        </directive>
+        <directive functionName="IIRFilter::filter" label="filter_loop" functionLabel="">
+            <pragma name="PIPELINE"/>
+        </directive>
+        <directive functionName="equalizer" label="" functionLabel="">
+            <pragma name="INTERFACE">
+                <option name="s_axilite" value="" positionalBoolean="mode"/>
+                <option name="port" value="x" positionalBoolean="4"/>
+                <option name="bundle" value="eq_io"/>
+            </pragma>
+        </directive>
+        <directive functionName="equalizer" label="" functionLabel="">
+            <pragma name="INTERFACE">
+                <option name="s_axilite" value="" positionalBoolean="mode"/>
+                <option name="port" value="mode" positionalBoolean="4"/>
+                <option name="bundle" value="eq_io"/>
+            </pragma>
+        </directive>
+        <directive functionName="equalizer" label="" functionLabel="">
+            <pragma name="INTERFACE">
+                <option name="s_axilite" value="" positionalBoolean="mode"/>
+                <option name="port" value="coeffs" positionalBoolean="4"/>
+                <option name="bundle" value="eq_io"/>
+            </pragma>
+        </directive>
+        <directive functionName="IIRFilter::setCoeffs" label="setCoeffs_loop" functionLabel="">
+            <pragma name="LOOP_FLATTEN"/>
+        </directive>
+    </sourceFile>
+</AutoPilot:ProjectResources>
+

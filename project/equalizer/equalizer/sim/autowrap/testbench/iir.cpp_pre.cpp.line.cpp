@@ -1,0 +1,74 @@
+#pragma line 1 "C:/Users/marti/Documents/EmbeddedSystems/project/equalizer/iir.cpp"
+#pragma line 1 "<built-in>"
+#pragma line 1 "<command-line>"
+#pragma line 1 "C:/Users/marti/Documents/EmbeddedSystems/project/equalizer/iir.cpp"
+#pragma line 1 "C:/Users/marti/Documents/EmbeddedSystems/project/equalizer/iir.h" 1
+#pragma empty_line
+typedef float data_t;
+#pragma empty_line
+#pragma empty_line
+#pragma empty_line
+#pragma empty_line
+#pragma empty_line
+class IIRFilter {
+public:
+ data_t x[5][3];
+ data_t y[5][3];
+ data_t coeff_array[5][6];
+ IIRFilter() {
+  for (int i = 0; i < 5; i++) {
+   for (int j = 0; j < 5; j++) {
+    x[i][j] = 0.0;
+    y[i][j] = 0.0;
+   }
+  }
+  for(int i=0; i< 5; i++)
+   for (int j=0; j < 6; j++)
+    coeff_array[i][j] =0;
+ }
+ void setCoeffs(data_t coefs[5][6]) {
+  for(int i=0; i< 5; i++) {
+   setCoeffs_loop:for (int j=0; j < 6; j++) {
+    coeff_array[i][j] = coefs[i][j];
+   }
+  }
+ }
+ data_t filter(data_t input) {
+  data_t b0, b1, b2, a1, a2, temp = input, acc;
+#pragma empty_line
+  filter_loop:for(int i=0; i< 5; i++){
+#pragma empty_line
+   b0=coeff_array[i][0];
+   b1=coeff_array[i][1];
+   b2=coeff_array[i][2];
+   a1=coeff_array[i][4];
+   a2=coeff_array[i][5];
+#pragma empty_line
+   x[i][2] = x[i][1];
+   x[i][1] = x[i][0];
+   x[i][0] = temp;
+#pragma empty_line
+   acc = b0*x[i][0] + b1*x[i][1] + b2*x[i][2] - a1*y[i][1] - a2*y[i][2];
+   y[i][0] = acc;
+#pragma empty_line
+#pragma empty_line
+   y[i][2] = y[i][1];
+   y[i][1] = y[i][0];
+   temp = y[i][0];
+  }
+  return temp;
+ }
+#pragma empty_line
+};
+#pragma empty_line
+void equalizer(data_t *y, data_t x, int mode, data_t coeffs[5][6]);
+#pragma line 2 "C:/Users/marti/Documents/EmbeddedSystems/project/equalizer/iir.cpp" 2
+#pragma empty_line
+void equalizer(data_t *y, data_t x, int mode, data_t coeffs[5][6]) {
+  static IIRFilter iir;
+  if (mode == 1)
+   *y = iir.filter(x);
+  else {
+   iir.setCoeffs(coeffs);
+  }
+}

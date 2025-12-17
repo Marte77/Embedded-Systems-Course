@@ -1,0 +1,509 @@
+#-----------------------------------------------------------
+# Vivado v2017.2 (64-bit)
+# SW Build 1909853 on Thu Jun 15 18:39:09 MDT 2017
+# IP Build 1909766 on Thu Jun 15 19:58:00 MDT 2017
+# Start of session at: Tue Dec 16 01:01:57 2025
+# Process ID: 6604
+# Current directory: C:/Users/marti/Documents/RealTimeAudioSystemCode/audio/audio.runs/system_equalizer_0_0_synth_1
+# Command line: vivado.exe -log system_equalizer_0_0.vds -product Vivado -mode batch -messageDb vivado.pb -notrace -source system_equalizer_0_0.tcl
+# Log file: C:/Users/marti/Documents/RealTimeAudioSystemCode/audio/audio.runs/system_equalizer_0_0_synth_1/system_equalizer_0_0.vds
+# Journal file: C:/Users/marti/Documents/RealTimeAudioSystemCode/audio/audio.runs/system_equalizer_0_0_synth_1\vivado.jou
+#-----------------------------------------------------------
+source system_equalizer_0_0.tcl -notrace
+Command: synth_design -top system_equalizer_0_0 -part xc7z010clg400-1 -mode out_of_context
+Starting synth_design
+Attempting to get a license for feature 'Synthesis' and/or device 'xc7z010-clg400'
+INFO: [Common 17-349] Got license for feature 'Synthesis' and/or device 'xc7z010-clg400'
+INFO: Launching helper process for spawning children vivado processes
+INFO: Helper process launched with PID 15576 
+---------------------------------------------------------------------------------
+Starting RTL Elaboration : Time (s): cpu = 00:00:02 ; elapsed = 00:00:03 . Memory (MB): peak = 313.434 ; gain = 81.500
+---------------------------------------------------------------------------------
+INFO: [Synth 8-638] synthesizing module 'system_equalizer_0_0' [c:/Users/marti/Documents/RealTimeAudioSystemCode/audio/audio.srcs/sources_1/bd/system/ip/system_equalizer_0_0/synth/system_equalizer_0_0.v:56]
+INFO: [Synth 8-638] synthesizing module 'equalizer' [c:/Users/marti/Documents/RealTimeAudioSystemCode/audio/audio.srcs/sources_1/bd/system/ipshared/82e7/hdl/verilog/equalizer.v:12]
+INFO: [Synth 8-5534] Detected attribute (* fsm_encoding = "none" *) [c:/Users/marti/Documents/RealTimeAudioSystemCode/audio/audio.srcs/sources_1/bd/system/ipshared/82e7/hdl/verilog/equalizer.v:105]
+INFO: [Synth 8-638] synthesizing module 'equalizer_iir_coebkb' [c:/Users/marti/Documents/RealTimeAudioSystemCode/audio/audio.srcs/sources_1/bd/system/ipshared/82e7/hdl/verilog/equalizer_iir_coebkb.v:61]
+INFO: [Synth 8-638] synthesizing module 'equalizer_iir_coebkb_ram' [c:/Users/marti/Documents/RealTimeAudioSystemCode/audio/audio.srcs/sources_1/bd/system/ipshared/82e7/hdl/verilog/equalizer_iir_coebkb.v:9]
+INFO: [Synth 8-5534] Detected attribute (* ram_style = "distributed" *) [c:/Users/marti/Documents/RealTimeAudioSystemCode/audio/audio.srcs/sources_1/bd/system/ipshared/82e7/hdl/verilog/equalizer_iir_coebkb.v:25]
+INFO: [Synth 8-3876] $readmem data file './equalizer_iir_coebkb_ram.dat' is read successfully [c:/Users/marti/Documents/RealTimeAudioSystemCode/audio/audio.srcs/sources_1/bd/system/ipshared/82e7/hdl/verilog/equalizer_iir_coebkb.v:28]
+INFO: [Synth 8-256] done synthesizing module 'equalizer_iir_coebkb_ram' (1#1) [c:/Users/marti/Documents/RealTimeAudioSystemCode/audio/audio.srcs/sources_1/bd/system/ipshared/82e7/hdl/verilog/equalizer_iir_coebkb.v:9]
+INFO: [Synth 8-256] done synthesizing module 'equalizer_iir_coebkb' (2#1) [c:/Users/marti/Documents/RealTimeAudioSystemCode/audio/audio.srcs/sources_1/bd/system/ipshared/82e7/hdl/verilog/equalizer_iir_coebkb.v:61]
+INFO: [Synth 8-638] synthesizing module 'equalizer_iir_x_1' [c:/Users/marti/Documents/RealTimeAudioSystemCode/audio/audio.srcs/sources_1/bd/system/ipshared/82e7/hdl/verilog/equalizer_iir_x_1.v:49]
+INFO: [Synth 8-638] synthesizing module 'equalizer_iir_x_1_ram' [c:/Users/marti/Documents/RealTimeAudioSystemCode/audio/audio.srcs/sources_1/bd/system/ipshared/82e7/hdl/verilog/equalizer_iir_x_1.v:9]
+INFO: [Synth 8-5534] Detected attribute (* ram_style = "distributed" *) [c:/Users/marti/Documents/RealTimeAudioSystemCode/audio/audio.srcs/sources_1/bd/system/ipshared/82e7/hdl/verilog/equalizer_iir_x_1.v:22]
+INFO: [Synth 8-3876] $readmem data file './equalizer_iir_x_1_ram.dat' is read successfully [c:/Users/marti/Documents/RealTimeAudioSystemCode/audio/audio.srcs/sources_1/bd/system/ipshared/82e7/hdl/verilog/equalizer_iir_x_1.v:25]
+INFO: [Synth 8-256] done synthesizing module 'equalizer_iir_x_1_ram' (3#1) [c:/Users/marti/Documents/RealTimeAudioSystemCode/audio/audio.srcs/sources_1/bd/system/ipshared/82e7/hdl/verilog/equalizer_iir_x_1.v:9]
+INFO: [Synth 8-256] done synthesizing module 'equalizer_iir_x_1' (4#1) [c:/Users/marti/Documents/RealTimeAudioSystemCode/audio/audio.srcs/sources_1/bd/system/ipshared/82e7/hdl/verilog/equalizer_iir_x_1.v:49]
+INFO: [Synth 8-638] synthesizing module 'equalizer_eq_io_s_axi' [c:/Users/marti/Documents/RealTimeAudioSystemCode/audio/audio.srcs/sources_1/bd/system/ipshared/82e7/hdl/verilog/equalizer_eq_io_s_axi.v:9]
+INFO: [Synth 8-638] synthesizing module 'equalizer_eq_io_s_axi_ram' [c:/Users/marti/Documents/RealTimeAudioSystemCode/audio/audio.srcs/sources_1/bd/system/ipshared/82e7/hdl/verilog/equalizer_eq_io_s_axi.v:466]
+WARNING: [Synth 8-6014] Unused sequential element gen_write[0].mem_reg was removed. 
+WARNING: [Synth 8-6014] Unused sequential element gen_write[0].mem_reg was removed. 
+WARNING: [Synth 8-6014] Unused sequential element gen_write[2].mem_reg was removed. 
+WARNING: [Synth 8-6014] Unused sequential element gen_write[2].mem_reg was removed. 
+WARNING: [Synth 8-6014] Unused sequential element gen_write[3].mem_reg was removed. 
+WARNING: [Synth 8-6014] Unused sequential element gen_write[3].mem_reg was removed. 
+INFO: [Synth 8-256] done synthesizing module 'equalizer_eq_io_s_axi_ram' (5#1) [c:/Users/marti/Documents/RealTimeAudioSystemCode/audio/audio.srcs/sources_1/bd/system/ipshared/82e7/hdl/verilog/equalizer_eq_io_s_axi.v:466]
+INFO: [Synth 8-155] case statement is not full and has no default [c:/Users/marti/Documents/RealTimeAudioSystemCode/audio/audio.srcs/sources_1/bd/system/ipshared/82e7/hdl/verilog/equalizer_eq_io_s_axi.v:257]
+WARNING: [Synth 8-6014] Unused sequential element int_isr_reg was removed.  [c:/Users/marti/Documents/RealTimeAudioSystemCode/audio/audio.srcs/sources_1/bd/system/ipshared/82e7/hdl/verilog/equalizer_eq_io_s_axi.v:296]
+WARNING: [Synth 8-6014] Unused sequential element int_isr_reg was removed.  [c:/Users/marti/Documents/RealTimeAudioSystemCode/audio/audio.srcs/sources_1/bd/system/ipshared/82e7/hdl/verilog/equalizer_eq_io_s_axi.v:371]
+INFO: [Synth 8-256] done synthesizing module 'equalizer_eq_io_s_axi' (6#1) [c:/Users/marti/Documents/RealTimeAudioSystemCode/audio/audio.srcs/sources_1/bd/system/ipshared/82e7/hdl/verilog/equalizer_eq_io_s_axi.v:9]
+INFO: [Synth 8-638] synthesizing module 'equalizer_faddfsucud' [c:/Users/marti/Documents/RealTimeAudioSystemCode/audio/audio.srcs/sources_1/bd/system/ipshared/82e7/hdl/verilog/equalizer_faddfsucud.v:11]
+INFO: [Synth 8-638] synthesizing module 'equalizer_ap_faddfsub_5_full_dsp_32' [c:/Users/marti/Documents/RealTimeAudioSystemCode/audio/audio.srcs/sources_1/bd/system/ipshared/82e7/hdl/ip/equalizer_ap_faddfsub_5_full_dsp_32.vhd:74]
+INFO: [Synth 8-3491] module 'floating_point_v7_1_4' declared at 'c:/Users/marti/Documents/RealTimeAudioSystemCode/audio/audio.srcs/sources_1/bd/system/ipshared/4a02/hdl/floating_point_v7_1_vh_rfs.vhd:91604' bound to instance 'U0' of component 'floating_point_v7_1_4' [c:/Users/marti/Documents/RealTimeAudioSystemCode/audio/audio.srcs/sources_1/bd/system/ipshared/82e7/hdl/ip/equalizer_ap_faddfsub_5_full_dsp_32.vhd:201]
+INFO: [Synth 8-256] done synthesizing module 'equalizer_ap_faddfsub_5_full_dsp_32' (24#1) [c:/Users/marti/Documents/RealTimeAudioSystemCode/audio/audio.srcs/sources_1/bd/system/ipshared/82e7/hdl/ip/equalizer_ap_faddfsub_5_full_dsp_32.vhd:74]
+INFO: [Synth 8-256] done synthesizing module 'equalizer_faddfsucud' (25#1) [c:/Users/marti/Documents/RealTimeAudioSystemCode/audio/audio.srcs/sources_1/bd/system/ipshared/82e7/hdl/verilog/equalizer_faddfsucud.v:11]
+INFO: [Synth 8-638] synthesizing module 'equalizer_fmul_32dEe' [c:/Users/marti/Documents/RealTimeAudioSystemCode/audio/audio.srcs/sources_1/bd/system/ipshared/82e7/hdl/verilog/equalizer_fmul_32dEe.v:11]
+INFO: [Synth 8-638] synthesizing module 'equalizer_ap_fmul_2_max_dsp_32' [c:/Users/marti/Documents/RealTimeAudioSystemCode/audio/audio.srcs/sources_1/bd/system/ipshared/82e7/hdl/ip/equalizer_ap_fmul_2_max_dsp_32.vhd:72]
+INFO: [Synth 8-3491] module 'floating_point_v7_1_4' declared at 'c:/Users/marti/Documents/RealTimeAudioSystemCode/audio/audio.srcs/sources_1/bd/system/ipshared/4a02/hdl/floating_point_v7_1_vh_rfs.vhd:91604' bound to instance 'U0' of component 'floating_point_v7_1_4' [c:/Users/marti/Documents/RealTimeAudioSystemCode/audio/audio.srcs/sources_1/bd/system/ipshared/82e7/hdl/ip/equalizer_ap_fmul_2_max_dsp_32.vhd:197]
+INFO: [Synth 8-256] done synthesizing module 'equalizer_ap_fmul_2_max_dsp_32' (33#1) [c:/Users/marti/Documents/RealTimeAudioSystemCode/audio/audio.srcs/sources_1/bd/system/ipshared/82e7/hdl/ip/equalizer_ap_fmul_2_max_dsp_32.vhd:72]
+INFO: [Synth 8-256] done synthesizing module 'equalizer_fmul_32dEe' (34#1) [c:/Users/marti/Documents/RealTimeAudioSystemCode/audio/audio.srcs/sources_1/bd/system/ipshared/82e7/hdl/verilog/equalizer_fmul_32dEe.v:11]
+WARNING: [Synth 8-6014] Unused sequential element ap_ready_reg was removed.  [c:/Users/marti/Documents/RealTimeAudioSystemCode/audio/audio.srcs/sources_1/bd/system/ipshared/82e7/hdl/verilog/equalizer.v:324]
+WARNING: [Synth 8-6014] Unused sequential element tmp_s_reg_474_reg was removed.  [c:/Users/marti/Documents/RealTimeAudioSystemCode/audio/audio.srcs/sources_1/bd/system/ipshared/82e7/hdl/verilog/equalizer.v:432]
+WARNING: [Synth 8-6014] Unused sequential element iir_coeff_array_addr_2_reg_497_reg was removed.  [c:/Users/marti/Documents/RealTimeAudioSystemCode/audio/audio.srcs/sources_1/bd/system/ipshared/82e7/hdl/verilog/equalizer.v:439]
+WARNING: [Synth 8-6014] Unused sequential element iir_coeff_array_addr_3_reg_502_reg was removed.  [c:/Users/marti/Documents/RealTimeAudioSystemCode/audio/audio.srcs/sources_1/bd/system/ipshared/82e7/hdl/verilog/equalizer.v:440]
+WARNING: [Synth 8-6014] Unused sequential element iir_coeff_array_addr_4_reg_507_reg was removed.  [c:/Users/marti/Documents/RealTimeAudioSystemCode/audio/audio.srcs/sources_1/bd/system/ipshared/82e7/hdl/verilog/equalizer.v:441]
+WARNING: [Synth 8-6014] Unused sequential element tmp_s_reg_474_reg was removed.  [c:/Users/marti/Documents/RealTimeAudioSystemCode/audio/audio.srcs/sources_1/bd/system/ipshared/82e7/hdl/verilog/equalizer.v:945]
+WARNING: [Synth 8-6014] Unused sequential element iir_coeff_array_addr_2_reg_497_reg was removed.  [c:/Users/marti/Documents/RealTimeAudioSystemCode/audio/audio.srcs/sources_1/bd/system/ipshared/82e7/hdl/verilog/equalizer.v:983]
+WARNING: [Synth 8-6014] Unused sequential element iir_coeff_array_addr_3_reg_502_reg was removed.  [c:/Users/marti/Documents/RealTimeAudioSystemCode/audio/audio.srcs/sources_1/bd/system/ipshared/82e7/hdl/verilog/equalizer.v:984]
+WARNING: [Synth 8-6014] Unused sequential element iir_coeff_array_addr_4_reg_507_reg was removed.  [c:/Users/marti/Documents/RealTimeAudioSystemCode/audio/audio.srcs/sources_1/bd/system/ipshared/82e7/hdl/verilog/equalizer.v:985]
+INFO: [Synth 8-256] done synthesizing module 'equalizer' (35#1) [c:/Users/marti/Documents/RealTimeAudioSystemCode/audio/audio.srcs/sources_1/bd/system/ipshared/82e7/hdl/verilog/equalizer.v:12]
+INFO: [Synth 8-256] done synthesizing module 'system_equalizer_0_0' (36#1) [c:/Users/marti/Documents/RealTimeAudioSystemCode/audio/audio.srcs/sources_1/bd/system/ip/system_equalizer_0_0/synth/system_equalizer_0_0.v:56]
+WARNING: [Synth 8-3331] design flt_dec_op_lat has unconnected port DEC_OP_STATE[11]
+WARNING: [Synth 8-3331] design flt_dec_op_lat has unconnected port DEC_OP_STATE[10]
+WARNING: [Synth 8-3331] design flt_dec_op_lat has unconnected port DEC_OP_STATE[9]
+WARNING: [Synth 8-3331] design flt_dec_op_lat has unconnected port DEC_OP_STATE[8]
+WARNING: [Synth 8-3331] design flt_dec_op_lat has unconnected port DIVIDE_BY_ZERO_IN
+WARNING: [Synth 8-3331] design xbip_pipe_v3_0_3_viv__parameterized33 has unconnected port CLK
+WARNING: [Synth 8-3331] design xbip_pipe_v3_0_3_viv__parameterized33 has unconnected port CE
+WARNING: [Synth 8-3331] design xbip_pipe_v3_0_3_viv__parameterized33 has unconnected port SCLR
+WARNING: [Synth 8-3331] design xbip_pipe_v3_0_3_viv__parameterized33 has unconnected port SSET
+WARNING: [Synth 8-3331] design xbip_pipe_v3_0_3_viv__parameterized33 has unconnected port SINIT
+WARNING: [Synth 8-3331] design xbip_pipe_v3_0_3_viv__parameterized78 has unconnected port CLK
+WARNING: [Synth 8-3331] design xbip_pipe_v3_0_3_viv__parameterized78 has unconnected port CE
+WARNING: [Synth 8-3331] design xbip_pipe_v3_0_3_viv__parameterized78 has unconnected port SCLR
+WARNING: [Synth 8-3331] design xbip_pipe_v3_0_3_viv__parameterized78 has unconnected port SSET
+WARNING: [Synth 8-3331] design xbip_pipe_v3_0_3_viv__parameterized78 has unconnected port SINIT
+WARNING: [Synth 8-3331] design xbip_pipe_v3_0_3_viv__parameterized76 has unconnected port CLK
+WARNING: [Synth 8-3331] design xbip_pipe_v3_0_3_viv__parameterized76 has unconnected port CE
+WARNING: [Synth 8-3331] design xbip_pipe_v3_0_3_viv__parameterized76 has unconnected port SCLR
+WARNING: [Synth 8-3331] design xbip_pipe_v3_0_3_viv__parameterized76 has unconnected port SSET
+WARNING: [Synth 8-3331] design xbip_pipe_v3_0_3_viv__parameterized76 has unconnected port SINIT
+WARNING: [Synth 8-3331] design xbip_pipe_v3_0_3_viv__parameterized15 has unconnected port CLK
+WARNING: [Synth 8-3331] design xbip_pipe_v3_0_3_viv__parameterized15 has unconnected port CE
+WARNING: [Synth 8-3331] design xbip_pipe_v3_0_3_viv__parameterized15 has unconnected port SCLR
+WARNING: [Synth 8-3331] design xbip_pipe_v3_0_3_viv__parameterized15 has unconnected port SSET
+WARNING: [Synth 8-3331] design xbip_pipe_v3_0_3_viv__parameterized15 has unconnected port SINIT
+WARNING: [Synth 8-3331] design xbip_pipe_v3_0_3_viv__parameterized3 has unconnected port CLK
+WARNING: [Synth 8-3331] design xbip_pipe_v3_0_3_viv__parameterized3 has unconnected port CE
+WARNING: [Synth 8-3331] design xbip_pipe_v3_0_3_viv__parameterized3 has unconnected port SCLR
+WARNING: [Synth 8-3331] design xbip_pipe_v3_0_3_viv__parameterized3 has unconnected port SSET
+WARNING: [Synth 8-3331] design xbip_pipe_v3_0_3_viv__parameterized3 has unconnected port SINIT
+WARNING: [Synth 8-3331] design xbip_pipe_v3_0_3_viv__parameterized13 has unconnected port CLK
+WARNING: [Synth 8-3331] design xbip_pipe_v3_0_3_viv__parameterized13 has unconnected port CE
+WARNING: [Synth 8-3331] design xbip_pipe_v3_0_3_viv__parameterized13 has unconnected port SCLR
+WARNING: [Synth 8-3331] design xbip_pipe_v3_0_3_viv__parameterized13 has unconnected port SSET
+WARNING: [Synth 8-3331] design xbip_pipe_v3_0_3_viv__parameterized13 has unconnected port SINIT
+WARNING: [Synth 8-3331] design xbip_pipe_v3_0_3_viv__parameterized7 has unconnected port CLK
+WARNING: [Synth 8-3331] design xbip_pipe_v3_0_3_viv__parameterized7 has unconnected port CE
+WARNING: [Synth 8-3331] design xbip_pipe_v3_0_3_viv__parameterized7 has unconnected port SCLR
+WARNING: [Synth 8-3331] design xbip_pipe_v3_0_3_viv__parameterized7 has unconnected port SSET
+WARNING: [Synth 8-3331] design xbip_pipe_v3_0_3_viv__parameterized7 has unconnected port SINIT
+WARNING: [Synth 8-3331] design dsp48e1_wrapper__parameterized3 has unconnected port SCLR
+WARNING: [Synth 8-3331] design flt_round_dsp_opt_full has unconnected port SIGN
+WARNING: [Synth 8-3331] design xbip_pipe_v3_0_3_viv__parameterized66 has unconnected port CLK
+WARNING: [Synth 8-3331] design xbip_pipe_v3_0_3_viv__parameterized66 has unconnected port CE
+WARNING: [Synth 8-3331] design xbip_pipe_v3_0_3_viv__parameterized66 has unconnected port SCLR
+WARNING: [Synth 8-3331] design xbip_pipe_v3_0_3_viv__parameterized66 has unconnected port SSET
+WARNING: [Synth 8-3331] design xbip_pipe_v3_0_3_viv__parameterized66 has unconnected port SINIT
+WARNING: [Synth 8-3331] design xbip_pipe_v3_0_3_viv__parameterized74 has unconnected port CLK
+WARNING: [Synth 8-3331] design xbip_pipe_v3_0_3_viv__parameterized74 has unconnected port CE
+WARNING: [Synth 8-3331] design xbip_pipe_v3_0_3_viv__parameterized74 has unconnected port SCLR
+WARNING: [Synth 8-3331] design xbip_pipe_v3_0_3_viv__parameterized74 has unconnected port SSET
+WARNING: [Synth 8-3331] design xbip_pipe_v3_0_3_viv__parameterized74 has unconnected port SINIT
+WARNING: [Synth 8-3331] design xbip_pipe_v3_0_3_viv__parameterized55 has unconnected port CLK
+WARNING: [Synth 8-3331] design xbip_pipe_v3_0_3_viv__parameterized55 has unconnected port CE
+WARNING: [Synth 8-3331] design xbip_pipe_v3_0_3_viv__parameterized55 has unconnected port SCLR
+WARNING: [Synth 8-3331] design xbip_pipe_v3_0_3_viv__parameterized55 has unconnected port SSET
+WARNING: [Synth 8-3331] design xbip_pipe_v3_0_3_viv__parameterized55 has unconnected port SINIT
+WARNING: [Synth 8-3331] design xbip_pipe_v3_0_3_viv__parameterized53 has unconnected port CLK
+WARNING: [Synth 8-3331] design xbip_pipe_v3_0_3_viv__parameterized53 has unconnected port CE
+WARNING: [Synth 8-3331] design xbip_pipe_v3_0_3_viv__parameterized53 has unconnected port SCLR
+WARNING: [Synth 8-3331] design xbip_pipe_v3_0_3_viv__parameterized53 has unconnected port SSET
+WARNING: [Synth 8-3331] design xbip_pipe_v3_0_3_viv__parameterized53 has unconnected port SINIT
+WARNING: [Synth 8-3331] design xbip_pipe_v3_0_3_viv__parameterized72 has unconnected port CLK
+WARNING: [Synth 8-3331] design xbip_pipe_v3_0_3_viv__parameterized72 has unconnected port CE
+WARNING: [Synth 8-3331] design xbip_pipe_v3_0_3_viv__parameterized72 has unconnected port SCLR
+WARNING: [Synth 8-3331] design xbip_pipe_v3_0_3_viv__parameterized72 has unconnected port SSET
+WARNING: [Synth 8-3331] design xbip_pipe_v3_0_3_viv__parameterized72 has unconnected port SINIT
+WARNING: [Synth 8-3331] design xbip_pipe_v3_0_3_viv__parameterized37 has unconnected port SCLR
+WARNING: [Synth 8-3331] design xbip_pipe_v3_0_3_viv__parameterized37 has unconnected port SSET
+WARNING: [Synth 8-3331] design xbip_pipe_v3_0_3_viv__parameterized37 has unconnected port SINIT
+WARNING: [Synth 8-3331] design xbip_pipe_v3_0_3_viv__parameterized70 has unconnected port SCLR
+WARNING: [Synth 8-3331] design xbip_pipe_v3_0_3_viv__parameterized70 has unconnected port SSET
+WARNING: [Synth 8-3331] design xbip_pipe_v3_0_3_viv__parameterized70 has unconnected port SINIT
+WARNING: [Synth 8-3331] design xbip_pipe_v3_0_3_viv__parameterized35 has unconnected port SCLR
+WARNING: [Synth 8-3331] design xbip_pipe_v3_0_3_viv__parameterized35 has unconnected port SSET
+WARNING: [Synth 8-3331] design xbip_pipe_v3_0_3_viv__parameterized35 has unconnected port SINIT
+WARNING: [Synth 8-3331] design xbip_pipe_v3_0_3_viv__parameterized68 has unconnected port SCLR
+WARNING: [Synth 8-3331] design xbip_pipe_v3_0_3_viv__parameterized68 has unconnected port SSET
+WARNING: [Synth 8-3331] design xbip_pipe_v3_0_3_viv__parameterized68 has unconnected port SINIT
+WARNING: [Synth 8-3331] design xbip_pipe_v3_0_3_viv__parameterized11 has unconnected port SCLR
+WARNING: [Synth 8-3331] design xbip_pipe_v3_0_3_viv__parameterized11 has unconnected port SSET
+WARNING: [Synth 8-3331] design xbip_pipe_v3_0_3_viv__parameterized11 has unconnected port SINIT
+WARNING: [Synth 8-3331] design compare_eq_im__parameterized1 has unconnected port CARRYS_OUT[0]
+WARNING: [Synth 8-3331] design special_detect__parameterized0 has unconnected port A[31]
+WARNING: [Synth 8-3331] design xbip_pipe_v3_0_3_viv__parameterized61 has unconnected port CLK
+WARNING: [Synth 8-3331] design xbip_pipe_v3_0_3_viv__parameterized61 has unconnected port CE
+WARNING: [Synth 8-3331] design xbip_pipe_v3_0_3_viv__parameterized61 has unconnected port SCLR
+WARNING: [Synth 8-3331] design xbip_pipe_v3_0_3_viv__parameterized61 has unconnected port SSET
+WARNING: [Synth 8-3331] design xbip_pipe_v3_0_3_viv__parameterized61 has unconnected port SINIT
+WARNING: [Synth 8-3331] design xbip_pipe_v3_0_3_viv__parameterized17 has unconnected port CLK
+WARNING: [Synth 8-3331] design xbip_pipe_v3_0_3_viv__parameterized17 has unconnected port CE
+WARNING: [Synth 8-3331] design xbip_pipe_v3_0_3_viv__parameterized17 has unconnected port SCLR
+WARNING: [Synth 8-3331] design xbip_pipe_v3_0_3_viv__parameterized17 has unconnected port SSET
+WARNING: [Synth 8-3331] design xbip_pipe_v3_0_3_viv__parameterized17 has unconnected port SINIT
+WARNING: [Synth 8-3331] design xbip_pipe_v3_0_3_viv__parameterized64 has unconnected port CLK
+WARNING: [Synth 8-3331] design xbip_pipe_v3_0_3_viv__parameterized64 has unconnected port CE
+WARNING: [Synth 8-3331] design xbip_pipe_v3_0_3_viv__parameterized64 has unconnected port SCLR
+WARNING: [Synth 8-3331] design xbip_pipe_v3_0_3_viv__parameterized64 has unconnected port SSET
+WARNING: [Synth 8-3331] design xbip_pipe_v3_0_3_viv__parameterized64 has unconnected port SINIT
+WARNING: [Synth 8-3331] design xbip_pipe_v3_0_3_viv__parameterized9 has unconnected port CLK
+INFO: [Common 17-14] Message 'Synth 8-3331' appears 100 times and further instances of the messages will be disabled. Use the Tcl command set_msg_config to change the current settings.
+---------------------------------------------------------------------------------
+Finished RTL Elaboration : Time (s): cpu = 00:00:06 ; elapsed = 00:00:06 . Memory (MB): peak = 410.625 ; gain = 178.691
+---------------------------------------------------------------------------------
+
+Report Check Netlist: 
++------+------------------+-------+---------+-------+------------------+
+|      |Item              |Errors |Warnings |Status |Description       |
++------+------------------+-------+---------+-------+------------------+
+|1     |multi_driven_nets |      0|        0|Passed |Multi driven nets |
++------+------------------+-------+---------+-------+------------------+
+---------------------------------------------------------------------------------
+Finished RTL Optimization Phase 1 : Time (s): cpu = 00:00:06 ; elapsed = 00:00:06 . Memory (MB): peak = 410.625 ; gain = 178.691
+---------------------------------------------------------------------------------
+INFO: [Netlist 29-17] Analyzing 137 Unisim elements for replacement
+INFO: [Netlist 29-28] Unisim Transformation completed in 0 CPU seconds
+INFO: [Device 21-403] Loading part xc7z010clg400-1
+INFO: [Project 1-570] Preparing netlist for logic optimization
+
+Processing XDC Constraints
+Initializing timing engine
+Parsing XDC File [c:/Users/marti/Documents/RealTimeAudioSystemCode/audio/audio.srcs/sources_1/bd/system/ip/system_equalizer_0_0/constraints/equalizer_ooc.xdc] for cell 'inst'
+Finished Parsing XDC File [c:/Users/marti/Documents/RealTimeAudioSystemCode/audio/audio.srcs/sources_1/bd/system/ip/system_equalizer_0_0/constraints/equalizer_ooc.xdc] for cell 'inst'
+Parsing XDC File [C:/Users/marti/Documents/RealTimeAudioSystemCode/audio/audio.runs/system_equalizer_0_0_synth_1/dont_touch.xdc]
+Finished Parsing XDC File [C:/Users/marti/Documents/RealTimeAudioSystemCode/audio/audio.runs/system_equalizer_0_0_synth_1/dont_touch.xdc]
+Completed Processing XDC Constraints
+
+INFO: [Project 1-111] Unisim Transformation Summary:
+  A total of 3 instances were transformed.
+  FDE => FDRE: 3 instances
+
+Constraint Validation Runtime : Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.096 . Memory (MB): peak = 641.445 ; gain = 0.000
+---------------------------------------------------------------------------------
+Finished Constraint Validation : Time (s): cpu = 00:00:11 ; elapsed = 00:00:13 . Memory (MB): peak = 641.445 ; gain = 409.512
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Loading Part and Timing Information
+---------------------------------------------------------------------------------
+Loading part: xc7z010clg400-1
+---------------------------------------------------------------------------------
+Finished Loading Part and Timing Information : Time (s): cpu = 00:00:11 ; elapsed = 00:00:13 . Memory (MB): peak = 641.445 ; gain = 409.512
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Applying 'set_property' XDC Constraints
+---------------------------------------------------------------------------------
+Applied set_property DONT_TOUCH = true for inst. (constraint file  C:/Users/marti/Documents/RealTimeAudioSystemCode/audio/audio.runs/system_equalizer_0_0_synth_1/dont_touch.xdc, line 9).
+---------------------------------------------------------------------------------
+Finished applying 'set_property' XDC Constraints : Time (s): cpu = 00:00:11 ; elapsed = 00:00:13 . Memory (MB): peak = 641.445 ; gain = 409.512
+---------------------------------------------------------------------------------
+INFO: [Synth 8-802] inferred FSM for state register 'wstate_reg' in module 'equalizer_eq_io_s_axi'
+WARNING: [Synth 8-6014] Unused sequential element wstate_reg was removed.  [c:/Users/marti/Documents/RealTimeAudioSystemCode/audio/audio.srcs/sources_1/bd/system/ipshared/82e7/hdl/verilog/equalizer_eq_io_s_axi.v:171]
+INFO: [Synth 8-5544] ROM "wnext" won't be mapped to Block RAM because address size (1) smaller than threshold (5)
+INFO: [Synth 8-5544] ROM "wnext" won't be mapped to Block RAM because address size (1) smaller than threshold (5)
+INFO: [Synth 8-5546] ROM "exp_all_one_ip" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5546] ROM "exp_all_zero_ip" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5546] ROM "exp_over_int" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5546] ROM "ip_sig" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5546] ROM "exp_over_int" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5546] ROM "ip_sig" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5544] ROM "det_state" won't be mapped to Block RAM because address size (1) smaller than threshold (5)
+INFO: [Synth 8-5546] ROM "exp_all_one_ip" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5546] ROM "exp_all_zero_ip" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5546] ROM "exp_just_over_sig" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5546] ROM "flow_sig" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5546] ROM "flow_sig" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5546] ROM "exp_just_over_sig" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5546] ROM "flow_sig" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5546] ROM "flow_sig" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5544] ROM "state_int_up" won't be mapped to Block RAM because address size (1) smaller than threshold (5)
+INFO: [Synth 8-4471] merging register 'iir_x_1_addr_reg_520_reg[2:0]' into 'iir_x_0_addr_reg_525_reg[2:0]' [c:/Users/marti/Documents/RealTimeAudioSystemCode/audio/audio.srcs/sources_1/bd/system/ipshared/82e7/hdl/verilog/equalizer.v:249]
+INFO: [Synth 8-4471] merging register 'iir_y_1_addr_reg_530_reg[2:0]' into 'iir_x_0_addr_reg_525_reg[2:0]' [c:/Users/marti/Documents/RealTimeAudioSystemCode/audio/audio.srcs/sources_1/bd/system/ipshared/82e7/hdl/verilog/equalizer.v:277]
+INFO: [Synth 8-4471] merging register 'iir_y_2_addr_reg_535_reg[2:0]' into 'iir_x_0_addr_reg_525_reg[2:0]' [c:/Users/marti/Documents/RealTimeAudioSystemCode/audio/audio.srcs/sources_1/bd/system/ipshared/82e7/hdl/verilog/equalizer.v:291]
+INFO: [Synth 8-4471] merging register 'iir_coeff_array_addr_2_reg_497_reg[0:0]' into 'tmp_s_reg_474_reg[0:0]' [c:/Users/marti/Documents/RealTimeAudioSystemCode/audio/audio.srcs/sources_1/bd/system/ipshared/82e7/hdl/verilog/equalizer.v:983]
+INFO: [Synth 8-4471] merging register 'iir_coeff_array_addr_3_reg_502_reg[0:0]' into 'tmp_s_reg_474_reg[0:0]' [c:/Users/marti/Documents/RealTimeAudioSystemCode/audio/audio.srcs/sources_1/bd/system/ipshared/82e7/hdl/verilog/equalizer.v:984]
+WARNING: [Synth 8-6014] Unused sequential element iir_x_1_addr_reg_520_reg was removed.  [c:/Users/marti/Documents/RealTimeAudioSystemCode/audio/audio.srcs/sources_1/bd/system/ipshared/82e7/hdl/verilog/equalizer.v:249]
+WARNING: [Synth 8-6014] Unused sequential element iir_y_1_addr_reg_530_reg was removed.  [c:/Users/marti/Documents/RealTimeAudioSystemCode/audio/audio.srcs/sources_1/bd/system/ipshared/82e7/hdl/verilog/equalizer.v:277]
+WARNING: [Synth 8-6014] Unused sequential element iir_y_2_addr_reg_535_reg was removed.  [c:/Users/marti/Documents/RealTimeAudioSystemCode/audio/audio.srcs/sources_1/bd/system/ipshared/82e7/hdl/verilog/equalizer.v:291]
+WARNING: [Synth 8-6014] Unused sequential element iir_coeff_array_addr_2_reg_497_reg was removed.  [c:/Users/marti/Documents/RealTimeAudioSystemCode/audio/audio.srcs/sources_1/bd/system/ipshared/82e7/hdl/verilog/equalizer.v:983]
+WARNING: [Synth 8-6014] Unused sequential element iir_coeff_array_addr_3_reg_502_reg was removed.  [c:/Users/marti/Documents/RealTimeAudioSystemCode/audio/audio.srcs/sources_1/bd/system/ipshared/82e7/hdl/verilog/equalizer.v:984]
+WARNING: [Synth 8-3936] Found unconnected internal register 'tmp_s_reg_474_reg' and it is trimmed from '5' to '4' bits. [c:/Users/marti/Documents/RealTimeAudioSystemCode/audio/audio.srcs/sources_1/bd/system/ipshared/82e7/hdl/verilog/equalizer.v:432]
+INFO: [Synth 8-4490] FSM extraction disabled for register 'ap_CS_fsm_reg' through user attribute
+INFO: [Synth 8-5544] ROM "exitcond_i_fu_426_p2" won't be mapped to Block RAM because address size (3) smaller than threshold (5)
+INFO: [Synth 8-5544] ROM "exitcond1_i_fu_331_p2" won't be mapped to Block RAM because address size (3) smaller than threshold (5)
+INFO: [Synth 8-5544] ROM "exitcond_i2_fu_453_p2" won't be mapped to Block RAM because address size (3) smaller than threshold (5)
+INFO: [Synth 8-5545] ROM "tmp_1_fu_299_p2" won't be mapped to RAM because address size (32) is larger than maximum supported(25)
+INFO: [Synth 8-3971] The signal gen_write[1].mem_reg was recognized as a true dual port RAM template.
+WARNING: [Synth 8-6014] Unused sequential element wstate_reg was removed.  [c:/Users/marti/Documents/RealTimeAudioSystemCode/audio/audio.srcs/sources_1/bd/system/ipshared/82e7/hdl/verilog/equalizer_eq_io_s_axi.v:171]
+WARNING: [Synth 8-6014] Unused sequential element wstate_reg was removed.  [c:/Users/marti/Documents/RealTimeAudioSystemCode/audio/audio.srcs/sources_1/bd/system/ipshared/82e7/hdl/verilog/equalizer_eq_io_s_axi.v:171]
+---------------------------------------------------------------------------------------------------
+                   State |                     New Encoding |                Previous Encoding 
+---------------------------------------------------------------------------------------------------
+                  iSTATE |                             0001 |                               11
+*
+                  WRIDLE |                             0010 |                               00
+                  WRDATA |                             0100 |                               01
+                  WRRESP |                             1000 |                               10
+---------------------------------------------------------------------------------------------------
+INFO: [Synth 8-3354] encoded FSM with state register 'wstate_reg' using encoding 'one-hot' in module 'equalizer_eq_io_s_axi'
+WARNING: [Synth 8-6014] Unused sequential element wstate_reg was removed.  [c:/Users/marti/Documents/RealTimeAudioSystemCode/audio/audio.srcs/sources_1/bd/system/ipshared/82e7/hdl/verilog/equalizer_eq_io_s_axi.v:171]
+---------------------------------------------------------------------------------
+Finished RTL Optimization Phase 2 : Time (s): cpu = 00:00:12 ; elapsed = 00:00:14 . Memory (MB): peak = 641.445 ; gain = 409.512
+---------------------------------------------------------------------------------
+INFO: [Synth 8-223] decloning instance 'inst/equalizer_faddfsucud_U0/equalizer_ap_faddfsub_5_full_dsp_32_u/U0/i_synth/DELAY_DIVIDE_BY_ZERO' (delay__parameterized0) to 'inst/equalizer_faddfsucud_U0/equalizer_ap_faddfsub_5_full_dsp_32_u/U0/i_synth/DELAY_ACCUM_OVERFLOW'
+INFO: [Synth 8-223] decloning instance 'inst/equalizer_faddfsucud_U0/equalizer_ap_faddfsub_5_full_dsp_32_u/U0/i_synth/DELAY_DIVIDE_BY_ZERO' (delay__parameterized0) to 'inst/equalizer_faddfsucud_U0/equalizer_ap_faddfsub_5_full_dsp_32_u/U0/i_synth/DELAY_ACCUM_INPUT_OVERFLOW'
+INFO: [Synth 8-223] decloning instance 'equalizer_fmul_32dEe:/equalizer_ap_fmul_2_max_dsp_32_u/U0/i_synth/DELAY_DIVIDE_BY_ZERO' (delay__parameterized0) to 'equalizer_fmul_32dEe:/equalizer_ap_fmul_2_max_dsp_32_u/U0/i_synth/DELAY_ACCUM_OVERFLOW'
+INFO: [Synth 8-223] decloning instance 'equalizer_fmul_32dEe:/equalizer_ap_fmul_2_max_dsp_32_u/U0/i_synth/DELAY_DIVIDE_BY_ZERO' (delay__parameterized0) to 'equalizer_fmul_32dEe:/equalizer_ap_fmul_2_max_dsp_32_u/U0/i_synth/DELAY_ACCUM_INPUT_OVERFLOW'
+
+Report RTL Partitions: 
++-+--------------+------------+----------+
+| |RTL Partition |Replication |Instances |
++-+--------------+------------+----------+
++-+--------------+------------+----------+
+---------------------------------------------------------------------------------
+Start RTL Component Statistics 
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished RTL Component Statistics 
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start RTL Hierarchical Component Statistics 
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished RTL Hierarchical Component Statistics
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Part Resource Summary
+---------------------------------------------------------------------------------
+Part Resources:
+DSPs: 80 (col length:40)
+BRAMs: 120 (col length: RAMB18 40 RAMB36 20)
+---------------------------------------------------------------------------------
+Finished Part Resource Summary
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Cross Boundary and Area Optimization
+---------------------------------------------------------------------------------
+INFO: [Synth 8-5546] ROM "ADDSUB_OP.ADDSUB/SPEED_OP.DSP.OP/DSP48E1_BODY.EXP/COND_DET_A/exp_all_one_ip" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5546] ROM "ADDSUB_OP.ADDSUB/SPEED_OP.DSP.OP/DSP48E1_BODY.EXP/COND_DET_A/exp_all_zero_ip" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5546] ROM "ADDSUB_OP.ADDSUB/SPEED_OP.DSP.OP/DSP48E1_BODY.EXP/COND_DET_B/exp_all_one_ip" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5546] ROM "ADDSUB_OP.ADDSUB/SPEED_OP.DSP.OP/DSP48E1_BODY.EXP/COND_DET_B/exp_all_zero_ip" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5546] ROM "ADDSUB_OP.ADDSUB/SPEED_OP.DSP.OP/DSP48E1_BODY.EXP/exp_over_int" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5546] ROM "ADDSUB_OP.ADDSUB/SPEED_OP.DSP.OP/DSP48E1_BODY.EXP/ip_sig" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5546] ROM "MULT.OP/EXP/COND_DET_A/exp_all_one_ip" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5546] ROM "MULT.OP/EXP/COND_DET_A/exp_all_zero_ip" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5546] ROM "MULT.OP/EXP/COND_DET_B/exp_all_one_ip" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5546] ROM "MULT.OP/EXP/COND_DET_B/exp_all_zero_ip" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5546] ROM "MULT.OP/EXP/exp_just_over_sig" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5546] ROM "MULT.OP/EXP/flow_sig" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5546] ROM "MULT.OP/EXP/flow_sig" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5546] ROM "MULT.OP/EXP/COND_DET_A/exp_all_one_ip" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5546] ROM "MULT.OP/EXP/COND_DET_A/exp_all_zero_ip" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5546] ROM "MULT.OP/EXP/COND_DET_B/exp_all_one_ip" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5546] ROM "MULT.OP/EXP/COND_DET_B/exp_all_zero_ip" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5546] ROM "MULT.OP/EXP/exp_just_over_sig" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5546] ROM "MULT.OP/EXP/flow_sig" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5546] ROM "MULT.OP/EXP/flow_sig" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5545] ROM "tmp_1_fu_299_p2" won't be mapped to RAM because address size (32) is larger than maximum supported(25)
+INFO: [Synth 8-3971] The signal equalizer_eq_io_s_axi_U/int_coeffs/gen_write[1].mem_reg was recognized as a true dual port RAM template.
+INFO: [Synth 8-3886] merging instance 'inst/iir_coeff_array_addr_4_reg_507_reg[1]' (FDE) to 'inst/iir_coeff_array_addr_3_reg_502_reg[1]'
+INFO: [Synth 8-3886] merging instance 'inst/iir_coeff_array_addr_2_reg_497_reg[1]' (FDE) to 'inst/i_reg_515_reg[0]'
+INFO: [Synth 8-3333] propagating constant 1 across sequential element (inst/\iir_coeff_array_addr_4_reg_507_reg[0] )
+INFO: [Synth 8-3886] merging instance 'inst/equalizer_faddfsucud_U0/equalizer_ap_faddfsub_5_full_dsp_32_u/U0/i_synth/ADDSUB_OP.ADDSUB/SPEED_OP.DSP.OP/DSP48E1_BODY.EXP/NOT_LOW_LATENCY_NORM_DIST.NORM_EXP_DELAY/i_pipe/opt_has_pipe.first_q_reg[8]' (FDE) to 'inst/equalizer_faddfsucud_U0/equalizer_ap_faddfsub_5_full_dsp_32_u/U0/i_synth/ADDSUB_OP.ADDSUB/SPEED_OP.DSP.OP/DSP48E1_BODY.EXP/NOT_LOW_LATENCY_NORM_DIST.NORM_EXP_DELAY/i_pipe/opt_has_pipe.first_q_reg[9]'
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (inst/\tmp_s_reg_474_reg[0] )
+INFO: [Synth 8-3332] Sequential element (i_nd_to_rdy/opt_has_pipe.i_pipe[2].pipe_reg[2][0]) is unused and will be removed from module floating_point_v7_1_4_viv.
+INFO: [Synth 8-3332] Sequential element (i_nd_to_rdy/opt_has_pipe.i_pipe[3].pipe_reg[3][0]) is unused and will be removed from module floating_point_v7_1_4_viv.
+INFO: [Synth 8-3332] Sequential element (i_nd_to_rdy/opt_has_pipe.i_pipe[4].pipe_reg[4][0]) is unused and will be removed from module floating_point_v7_1_4_viv.
+INFO: [Synth 8-3332] Sequential element (i_nd_to_rdy/opt_has_pipe.i_pipe[5].pipe_reg[5][0]) is unused and will be removed from module floating_point_v7_1_4_viv.
+INFO: [Synth 8-3332] Sequential element (i_nd_to_rdy/opt_has_pipe.i_pipe[2].pipe_reg[2][0]) is unused and will be removed from module floating_point_v7_1_4_viv__parameterized1__1.
+INFO: [Synth 8-3332] Sequential element (i_nd_to_rdy/opt_has_pipe.i_pipe[2].pipe_reg[2][0]) is unused and will be removed from module floating_point_v7_1_4_viv__parameterized1.
+WARNING: [Synth 8-3332] Sequential element (tmp_s_reg_474_reg[0]) is unused and will be removed from module equalizer.
+WARNING: [Synth 8-3332] Sequential element (iir_coeff_array_addr_4_reg_507_reg[0]) is unused and will be removed from module equalizer.
+INFO: [Synth 8-3886] merging instance 'inst/iir_coeff_array_addr_4_reg_507_reg[3]' (FDE) to 'inst/iir_coeff_array_addr_3_reg_502_reg[3]'
+INFO: [Synth 8-3886] merging instance 'inst/iir_coeff_array_addr_4_reg_507_reg[2]' (FDE) to 'inst/iir_coeff_array_addr_3_reg_502_reg[2]'
+INFO: [Synth 8-3886] merging instance 'inst/iir_coeff_array_addr_3_reg_502_reg[4]' (FDE) to 'inst/iir_coeff_array_addr_4_reg_507_reg[4]'
+INFO: [Synth 8-3886] merging instance 'inst/i_1_reg_482_reg[1]' (FDE) to 'inst/tmp_s_reg_474_reg[2]'
+---------------------------------------------------------------------------------
+Finished Cross Boundary and Area Optimization : Time (s): cpu = 00:00:14 ; elapsed = 00:00:16 . Memory (MB): peak = 641.445 ; gain = 409.512
+---------------------------------------------------------------------------------
+
+Report RTL Partitions: 
++-+--------------+------------+----------+
+| |RTL Partition |Replication |Instances |
++-+--------------+------------+----------+
++-+--------------+------------+----------+
+---------------------------------------------------------------------------------
+Start Applying XDC Timing Constraints
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Applying XDC Timing Constraints : Time (s): cpu = 00:00:23 ; elapsed = 00:00:24 . Memory (MB): peak = 711.402 ; gain = 479.469
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Timing Optimization
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Timing Optimization : Time (s): cpu = 00:00:23 ; elapsed = 00:00:25 . Memory (MB): peak = 724.551 ; gain = 492.617
+---------------------------------------------------------------------------------
+
+Report RTL Partitions: 
++-+--------------+------------+----------+
+| |RTL Partition |Replication |Instances |
++-+--------------+------------+----------+
++-+--------------+------------+----------+
+---------------------------------------------------------------------------------
+Start Technology Mapping
+---------------------------------------------------------------------------------
+INFO: [Synth 8-4480] The timing for the instance inst/equalizer_eq_io_s_axi_U/int_coeffs/gen_write[1].mem_reg (implemented as a block RAM) might be sub-optimal as no optional output register could be merged into the block ram. Providing additional output register may help in improving timing.
+INFO: [Synth 8-4480] The timing for the instance inst/equalizer_eq_io_s_axi_U/int_coeffs/gen_write[1].mem_reg (implemented as a block RAM) might be sub-optimal as no optional output register could be merged into the block ram. Providing additional output register may help in improving timing.
+---------------------------------------------------------------------------------
+Finished Technology Mapping : Time (s): cpu = 00:00:24 ; elapsed = 00:00:26 . Memory (MB): peak = 740.711 ; gain = 508.777
+---------------------------------------------------------------------------------
+
+Report RTL Partitions: 
++-+--------------+------------+----------+
+| |RTL Partition |Replication |Instances |
++-+--------------+------------+----------+
++-+--------------+------------+----------+
+---------------------------------------------------------------------------------
+Start IO Insertion
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Flattening Before IO Insertion
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Flattening Before IO Insertion
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Final Netlist Cleanup
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Final Netlist Cleanup
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished IO Insertion : Time (s): cpu = 00:00:24 ; elapsed = 00:00:26 . Memory (MB): peak = 740.711 ; gain = 508.777
+---------------------------------------------------------------------------------
+
+Report Check Netlist: 
++------+------------------+-------+---------+-------+------------------+
+|      |Item              |Errors |Warnings |Status |Description       |
++------+------------------+-------+---------+-------+------------------+
+|1     |multi_driven_nets |      0|        0|Passed |Multi driven nets |
++------+------------------+-------+---------+-------+------------------+
+---------------------------------------------------------------------------------
+Start Renaming Generated Instances
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Renaming Generated Instances : Time (s): cpu = 00:00:24 ; elapsed = 00:00:26 . Memory (MB): peak = 740.711 ; gain = 508.777
+---------------------------------------------------------------------------------
+
+Report RTL Partitions: 
++-+--------------+------------+----------+
+| |RTL Partition |Replication |Instances |
++-+--------------+------------+----------+
++-+--------------+------------+----------+
+---------------------------------------------------------------------------------
+Start Rebuilding User Hierarchy
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Rebuilding User Hierarchy : Time (s): cpu = 00:00:24 ; elapsed = 00:00:26 . Memory (MB): peak = 740.711 ; gain = 508.777
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Renaming Generated Ports
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Renaming Generated Ports : Time (s): cpu = 00:00:24 ; elapsed = 00:00:26 . Memory (MB): peak = 740.711 ; gain = 508.777
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Handling Custom Attributes
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Handling Custom Attributes : Time (s): cpu = 00:00:24 ; elapsed = 00:00:26 . Memory (MB): peak = 740.711 ; gain = 508.777
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Renaming Generated Nets
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Renaming Generated Nets : Time (s): cpu = 00:00:24 ; elapsed = 00:00:26 . Memory (MB): peak = 740.711 ; gain = 508.777
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Writing Synthesis Report
+---------------------------------------------------------------------------------
+
+Report BlackBoxes: 
++-+--------------+----------+
+| |BlackBox name |Instances |
++-+--------------+----------+
++-+--------------+----------+
+
+Report Cell Usage: 
++------+----------+------+
+|      |Cell      |Count |
++------+----------+------+
+|1     |CARRY4    |     3|
+|2     |DSP48E1   |     1|
+|3     |DSP48E1_1 |     1|
+|4     |DSP48E1_2 |     2|
+|5     |DSP48E1_3 |     2|
+|6     |DSP48E1_4 |     2|
+|7     |LUT1      |     8|
+|8     |LUT2      |    73|
+|9     |LUT3      |   390|
+|10    |LUT4      |   116|
+|11    |LUT5      |   284|
+|12    |LUT6      |   287|
+|13    |MUXCY     |    90|
+|14    |RAM16X1D  |    64|
+|15    |RAM16X1S  |   128|
+|16    |RAMB36E1  |     1|
+|17    |XORCY     |    33|
+|18    |FDE       |     3|
+|19    |FDRE      |  1379|
+|20    |FDSE      |     3|
++------+----------+------+
+---------------------------------------------------------------------------------
+Finished Writing Synthesis Report : Time (s): cpu = 00:00:24 ; elapsed = 00:00:26 . Memory (MB): peak = 740.711 ; gain = 508.777
+---------------------------------------------------------------------------------
+Synthesis finished with 0 errors, 0 critical warnings and 166 warnings.
+Synthesis Optimization Runtime : Time (s): cpu = 00:00:14 ; elapsed = 00:00:22 . Memory (MB): peak = 740.711 ; gain = 277.957
+Synthesis Optimization Complete : Time (s): cpu = 00:00:24 ; elapsed = 00:00:26 . Memory (MB): peak = 740.711 ; gain = 508.777
+INFO: [Project 1-571] Translating synthesized netlist
+INFO: [Netlist 29-17] Analyzing 330 Unisim elements for replacement
+INFO: [Netlist 29-28] Unisim Transformation completed in 0 CPU seconds
+INFO: [Project 1-570] Preparing netlist for logic optimization
+INFO: [Opt 31-138] Pushed 0 inverter(s) to 0 load pin(s).
+INFO: [Project 1-111] Unisim Transformation Summary:
+  A total of 219 instances were transformed.
+  (MUXCY,XORCY) => CARRY4: 24 instances
+  FDE => FDRE: 3 instances
+  RAM16X1D => RAM32X1D (RAMD32, RAMD32): 64 instances
+  RAM16X1S => RAM32X1S (RAMS32): 128 instances
+
+119 Infos, 129 Warnings, 0 Critical Warnings and 0 Errors encountered.
+synth_design completed successfully
+synth_design: Time (s): cpu = 00:00:25 ; elapsed = 00:00:28 . Memory (MB): peak = 740.711 ; gain = 512.410
+INFO: [Common 17-1381] The checkpoint 'C:/Users/marti/Documents/RealTimeAudioSystemCode/audio/audio.runs/system_equalizer_0_0_synth_1/system_equalizer_0_0.dcp' has been generated.
+WARNING: [Coretcl 2-1488] Problem adding IP cache entry: Directory already exists: c:/Users/marti/Documents/RealTimeAudioSystemCode/audio/audio.cache/ip/2017.2/08dedff51d107ec3
+INFO: [Coretcl 2-1174] Renamed 163 cell refs.
+INFO: [Common 17-1381] The checkpoint 'C:/Users/marti/Documents/RealTimeAudioSystemCode/audio/audio.runs/system_equalizer_0_0_synth_1/system_equalizer_0_0.dcp' has been generated.
+report_utilization: Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.018 . Memory (MB): peak = 740.711 ; gain = 0.000
+INFO: [Common 17-206] Exiting Vivado at Tue Dec 16 01:02:29 2025...
