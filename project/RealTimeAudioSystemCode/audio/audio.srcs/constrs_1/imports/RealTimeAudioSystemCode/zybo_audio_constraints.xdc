@@ -32,7 +32,7 @@ set_property PACKAGE_PIN N17 [get_ports iic_1_sda_io]
 set_property IOSTANDARD LVCMOS33 [get_ports iic_1_sda_io]
 
 # GPIO2[0] for bypass a sample or send it through the filter
-#set_property PACKAGE_PIN G15 [get_ports {gpio2_tri_i[0]}]
-#set_property IOSTANDARD LVCMOS33 [get_ports {gpio2_tri_i[0]}]
+set_property PACKAGE_PIN G15 [get_ports {gpio2_tri_i[0]}]
+set_property IOSTANDARD LVCMOS33 [get_ports {gpio2_tri_i[0]}]
 
 

@@ -24,7 +24,7 @@ else
 fi
 export LD_LIBRARY_PATH
 
-HD_PWD='C:/Users/marti/Documents/RealTimeAudioSystemCode/audio/audio.runs/impl_1'
+HD_PWD='C:/Users/marti/Documents/GitHub/Embedded-Systems-Course/project/RealTimeAudioSystemCode/audio/audio.runs/impl_1'
 cd "$HD_PWD"
 
 HD_LOG=runme.log

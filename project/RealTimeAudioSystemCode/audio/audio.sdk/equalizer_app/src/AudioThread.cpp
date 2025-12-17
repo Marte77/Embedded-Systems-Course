@@ -11,20 +11,21 @@ Equalizer* AudioThread::getRight() {
 	return eqRight;
 }
 AudioThread::AudioThread(EQSettings *eqSettings,Equalizer* eqLeft, Equalizer* eqRight) :
-	AbstractThread(eqSettings, "Audio",0/*less priority than UserThread*/), eqLeft(eqLeft), eqRight(eqRight) {}
+	AbstractThread(eqSettings, "Audio",0/*less priority than UserThread*/, 28+252), eqLeft(eqLeft), eqRight(eqRight) {}
 void AudioThread::transitionState(AudioThreadState *s) {
 	this->state = s;
 }
 void AudioThread::updateGain() {
 	eqLeft->updateGain(eqSettings->getCoeffs());
 	eqRight->updateGain(eqSettings->getCoeffs());
+	eqSettings->setGainUpdated(false);
 }
 void AudioThread::readLeftAndReadAudio(unsigned long &sLeft, unsigned long &sRight) { // taken from the profs code
 	sLeft = Xil_In32(I2S_DATA_RX_L_REG);
 	sRight = Xil_In32(I2S_DATA_RX_R_REG);
 }
 void AudioThread::run() {
-	xil_printf("AudioThread::run()\r\n");
+	//xil_printf("AudioThread::run()\r\n");
 	while (1) {
 		if (eqSettings->wasGainUpdated()) {
 			transitionState(UpdateGainState::getInstance(this));

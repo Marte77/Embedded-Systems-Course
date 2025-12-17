@@ -3,7 +3,7 @@
 <!--                                                         -->
 <!-- Copyright 1986-2017 Xilinx, Inc. All Rights Reserved.   -->
 
-<Project Version="7" Minor="20" Path="C:/Users/marti/Documents/RealTimeAudioSystemCode/audio/audio.xpr">
+<Project Version="7" Minor="20" Path="C:/Users/marti/Documents/GitHub/Embedded-Systems-Course/project/RealTimeAudioSystemCode/audio/audio.xpr">
   <DefaultLaunch Dir="$PRUNDIR"/>
   <Configuration>
     <Option Name="Id" Val="1c6481a9912f4800bdc992a4dffb3cc7"/>
@@ -21,8 +21,9 @@
     <Option Name="ActiveSimSet" Val="sim_1"/>
     <Option Name="DefaultLib" Val="xil_defaultlib"/>
     <Option Name="IPRepoPath" Val="$PPRDIR/../ip_repo"/>
-    <Option Name="IPRepoPath" Val="$PPRDIR/../../EmbeddedSystems/project/iir_filter/hls_proj/solution1/impl/ip"/>
-    <Option Name="IPRepoPath" Val="$PPRDIR/../../EmbeddedSystems/project/equalizer/equalizer/impl/ip"/>
+    <Option Name="IPRepoPath" Val="$PPRDIR/../../equalizer/equalizer/impl/ip"/>
+    <Option Name="IPRepoPath" Val="$PPRDIR/../../../../../EmbeddedSystems/project/iir_filter/hls_proj/solution1/impl/ip"/>
+    <Option Name="IPRepoPath" Val="$PPRDIR/../../../../../EmbeddedSystems/project/equalizer/equalizer/impl/ip"/>
     <Option Name="IPRepoPath" Val="$PPRDIR/../fir.prj"/>
     <Option Name="IPOutputRepo" Val="$PCACHEDIR/ip"/>
     <Option Name="IPCachePermission" Val="read"/>
@@ -314,9 +315,7 @@
     </Run>
     <Run Id="system_equalizer_0_0_synth_1" Type="Ft3:Synth" SrcSet="system_equalizer_0_0" Part="xc7z010clg400-1" ConstrsSet="system_equalizer_0_0" Description="Vivado Synthesis Defaults" Dir="$PRUNDIR/system_equalizer_0_0_synth_1" IncludeInArchive="true">
       <Strategy Version="1" Minor="2">
-        <StratHandle Name="Vivado Synthesis Defaults" Flow="Vivado Synthesis 2017">
-          <Desc>Vivado Synthesis Defaults</Desc>
-        </StratHandle>
+        <StratHandle Name="Vivado Synthesis Defaults" Flow="Vivado Synthesis 2017"/>
         <Step Id="synth_design"/>
       </Strategy>
       <GeneratedRun Dir="$PRUNDIR" File="gen_run.xml"/>
@@ -325,9 +324,7 @@
     </Run>
     <Run Id="system_equalizer_0_1_synth_1" Type="Ft3:Synth" SrcSet="system_equalizer_0_1" Part="xc7z010clg400-1" ConstrsSet="system_equalizer_0_1" Description="Vivado Synthesis Defaults" Dir="$PRUNDIR/system_equalizer_0_1_synth_1" IncludeInArchive="true">
       <Strategy Version="1" Minor="2">
-        <StratHandle Name="Vivado Synthesis Defaults" Flow="Vivado Synthesis 2017">
-          <Desc>Vivado Synthesis Defaults</Desc>
-        </StratHandle>
+        <StratHandle Name="Vivado Synthesis Defaults" Flow="Vivado Synthesis 2017"/>
         <Step Id="synth_design"/>
       </Strategy>
       <GeneratedRun Dir="$PRUNDIR" File="gen_run.xml"/>
@@ -497,9 +494,7 @@
     </Run>
     <Run Id="system_equalizer_0_0_impl_1" Type="Ft2:EntireDesign" Part="xc7z010clg400-1" ConstrsSet="system_equalizer_0_0" Description="Default settings for Implementation." SynthRun="system_equalizer_0_0_synth_1" IncludeInArchive="false">
       <Strategy Version="1" Minor="2">
-        <StratHandle Name="Vivado Implementation Defaults" Flow="Vivado Implementation 2017">
-          <Desc>Default settings for Implementation.</Desc>
-        </StratHandle>
+        <StratHandle Name="Vivado Implementation Defaults" Flow="Vivado Implementation 2017"/>
         <Step Id="init_design"/>
         <Step Id="opt_design"/>
         <Step Id="power_opt_design"/>
@@ -515,9 +510,7 @@
     </Run>
     <Run Id="system_equalizer_0_1_impl_1" Type="Ft2:EntireDesign" Part="xc7z010clg400-1" ConstrsSet="system_equalizer_0_1" Description="Default settings for Implementation." SynthRun="system_equalizer_0_1_synth_1" IncludeInArchive="false">
       <Strategy Version="1" Minor="2">
-        <StratHandle Name="Vivado Implementation Defaults" Flow="Vivado Implementation 2017">
-          <Desc>Default settings for Implementation.</Desc>
-        </StratHandle>
+        <StratHandle Name="Vivado Implementation Defaults" Flow="Vivado Implementation 2017"/>
         <Step Id="init_design"/>
         <Step Id="opt_design"/>
         <Step Id="power_opt_design"/>

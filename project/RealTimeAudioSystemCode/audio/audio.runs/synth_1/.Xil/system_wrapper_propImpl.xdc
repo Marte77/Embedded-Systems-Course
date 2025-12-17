@@ -1,4 +1,4 @@
-set_property SRC_FILE_INFO {cfile:C:/Users/marti/Documents/RealTimeAudioSystemCode/audio/audio.srcs/constrs_1/imports/RealTimeAudioSystemCode/zybo_audio_constraints.xdc rfile:../../../audio.srcs/constrs_1/imports/RealTimeAudioSystemCode/zybo_audio_constraints.xdc id:1} [current_design]
+set_property SRC_FILE_INFO {cfile:C:/Users/marti/Documents/GitHub/Embedded-Systems-Course/project/RealTimeAudioSystemCode/audio/audio.srcs/constrs_1/imports/RealTimeAudioSystemCode/zybo_audio_constraints.xdc rfile:../../../audio.srcs/constrs_1/imports/RealTimeAudioSystemCode/zybo_audio_constraints.xdc id:1} [current_design]
 set_property src_info {type:XDC file:1 line:3 export:INPUT save:INPUT read:READ} [current_design]
 set_property PACKAGE_PIN R19 [get_ports BCLK]
 set_property src_info {type:XDC file:1 line:6 export:INPUT save:INPUT read:READ} [current_design]
@@ -17,3 +17,7 @@ set_property src_info {type:XDC file:1 line:27 export:INPUT save:INPUT read:READ
 set_property PACKAGE_PIN N18 [get_ports iic_1_scl_io]
 set_property src_info {type:XDC file:1 line:31 export:INPUT save:INPUT read:READ} [current_design]
 set_property PACKAGE_PIN N17 [get_ports iic_1_sda_io]
+set_property src_info {type:XDC file:1 line:35 export:INPUT save:INPUT read:READ} [current_design]
+set_property PACKAGE_PIN G15 [get_ports {gpio2_tri_i[0]}]
+set_property src_info {type:XDC file:1 line:36 export:INPUT save:INPUT read:READ} [current_design]
+set_property IOSTANDARD LVCMOS33 [get_ports {gpio2_tri_i[0]}]

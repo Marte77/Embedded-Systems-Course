@@ -21,15 +21,17 @@ class AbstractThread {
         return;
 	}
 public:
-	AbstractThread(EQSettings *eqSettings, const char* name, int priority) : eqSettings(eqSettings) {
+	AbstractThread(EQSettings *eqSettings, const char* name, int priority, int size) : eqSettings(eqSettings) {
         xTaskCreate(threadMapper, 				/* The function that implements the task. */
 				name, 	                        /* Text name for the task, provided to assist debugging only. */
-				350,//configMINIMAL_STACK_SIZE  /*x3 because the EQSettings class uses 236 bytes*/ , 	    /* The stack allocated to the task. */
+				size,//configMINIMAL_STACK_SIZE  /*x3 because the EQSettings class uses 236 bytes*/ , 	    /* The stack allocated to the task. */
 				this, 						    /* The task parameter is pointer to the thread class. */
 				tskIDLE_PRIORITY + priority,	/* The task runs at the idle priority. */
 				&handle );
 	}
-	virtual ~AbstractThread(){}
+	virtual ~AbstractThread(){
+		if (handle) vTaskDelete(handle);
+	}
     virtual void run() {}
     void yield() { // taken from profs code
 		taskYIELD();

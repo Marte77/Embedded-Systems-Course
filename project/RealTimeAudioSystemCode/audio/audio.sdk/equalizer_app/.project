@@ -3,7 +3,7 @@
 	<name>equalizer_app</name>
 	<comment></comment>
 	<projects>
-		<project>freertos901_xilinx_bsp_1</project>
+		<project>freertos901_xilinx_bsp_2</project>
 	</projects>
 	<buildSpec>
 		<buildCommand>

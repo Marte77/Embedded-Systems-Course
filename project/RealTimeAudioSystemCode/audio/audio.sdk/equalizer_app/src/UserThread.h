@@ -15,7 +15,7 @@
 class UserThread : public AbstractThread {
 	EQSettings *eqSettings;
 public:
-	UserThread(EQSettings *eqSettings) : AbstractThread(eqSettings, "User",1) {}
+	UserThread(EQSettings *eqSettings) : AbstractThread(eqSettings, "User",1,16+252) {}
 	void run() override {
 		xil_printf("UserThread::run()\r\n");
 		char value_read = -1;
