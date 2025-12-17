@@ -29,47 +29,47 @@
 		<link>
 			<name>source</name>
 			<type>2</type>
-			<location>C:/Users/marti/Documents/EmbeddedSystems/project/equalizer/.apc/.src</location>
+			<location>C:/Users/marti/Documents/GitHub/Embedded-Systems-Course/project/equalizer/.apc/.src</location>
 		</link>
 		<link>
 			<name>testbench</name>
 			<type>2</type>
-			<location>C:/Users/marti/Documents/EmbeddedSystems/project/equalizer/.apc/.tb</location>
+			<location>C:/Users/marti/Documents/GitHub/Embedded-Systems-Course/project/equalizer/.apc/.tb</location>
 		</link>
 		<link>
 			<name>equalizer/constraints</name>
 			<type>2</type>
-			<location>C:/Users/marti/Documents/EmbeddedSystems/project/equalizer/equalizer/.tcls</location>
+			<location>C:/Users/marti/Documents/GitHub/Embedded-Systems-Course/project/equalizer/equalizer/.tcls</location>
 		</link>
 		<link>
 			<name>source/iir.cpp</name>
 			<type>1</type>
-			<location>C:/Users/marti/Documents/EmbeddedSystems/project/equalizer/iir.cpp</location>
+			<location>C:/Users/marti/Documents/GitHub/Embedded-Systems-Course/project/equalizer/iir.cpp</location>
 		</link>
 		<link>
 			<name>source/iir.h</name>
 			<type>1</type>
-			<location>C:/Users/marti/Documents/EmbeddedSystems/project/equalizer/iir.h</location>
+			<location>C:/Users/marti/Documents/GitHub/Embedded-Systems-Course/project/equalizer/iir.h</location>
 		</link>
 		<link>
 			<name>testbench/iir_test.cpp</name>
 			<type>1</type>
-			<location>C:/Users/marti/Documents/EmbeddedSystems/project/equalizer/iir_test.cpp</location>
+			<location>C:/Users/marti/Documents/GitHub/Embedded-Systems-Course/project/equalizer/iir_test.cpp</location>
 		</link>
 		<link>
 			<name>equalizer/constraints/.xml.directive</name>
 			<type>1</type>
-			<location>C:/Users/marti/Documents/EmbeddedSystems/project/equalizer/equalizer/equalizer.directive</location>
+			<location>C:/Users/marti/Documents/GitHub/Embedded-Systems-Course/project/equalizer/equalizer/equalizer.directive</location>
 		</link>
 		<link>
 			<name>equalizer/constraints/directives.tcl</name>
 			<type>1</type>
-			<location>C:/Users/marti/Documents/EmbeddedSystems/project/equalizer/equalizer/directives.tcl</location>
+			<location>C:/Users/marti/Documents/GitHub/Embedded-Systems-Course/project/equalizer/equalizer/directives.tcl</location>
 		</link>
 		<link>
 			<name>equalizer/constraints/script.tcl</name>
 			<type>1</type>
-			<location>C:/Users/marti/Documents/EmbeddedSystems/project/equalizer/equalizer/script.tcl</location>
+			<location>C:/Users/marti/Documents/GitHub/Embedded-Systems-Course/project/equalizer/equalizer/script.tcl</location>
 		</link>
 	</linkedResources>
 </projectDescription>

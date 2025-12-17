@@ -1,10 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <autopilotfilemapping:AutoPilotFileMapping xmlns:autopilotfilemapping="www.autoesl.com/autopilotfilemapping">
   <source>
-    <originFiles name="iir.cpp" path="C:\Users\marti\Documents\EmbeddedSystems\project\equalizer\iir.cpp"/>
-    <originFiles name="iir.h" path="C:\Users\marti\Documents\EmbeddedSystems\project\equalizer\iir.h"/>
+    <originFiles name="iir.cpp" path="C:\Users\marti\Documents\GitHub\Embedded-Systems-Course\project\equalizer\iir.cpp"/>
+    <originFiles name="iir.h" path="C:\Users\marti\Documents\GitHub\Embedded-Systems-Course\project\equalizer\iir.h"/>
   </source>
   <testbench>
-    <originFiles name="iir_test.cpp" path="C:\Users\marti\Documents\EmbeddedSystems\project\equalizer\iir_test.cpp"/>
+    <originFiles name="iir_test.cpp" path="C:\Users\marti\Documents\GitHub\Embedded-Systems-Course\project\equalizer\iir_test.cpp"/>
   </testbench>
 </autopilotfilemapping:AutoPilotFileMapping>
