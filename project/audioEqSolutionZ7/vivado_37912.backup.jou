@@ -1,0 +1,15 @@
+#-----------------------------------------------------------
+# Vivado v2017.2 (64-bit)
+# SW Build 1909853 on Thu Jun 15 18:39:09 MDT 2017
+# IP Build 1909766 on Thu Jun 15 19:58:00 MDT 2017
+# Start of session at: Mon Nov  3 19:11:42 2025
+# Process ID: 37912
+# Current directory: C:/Users/au288681/AppData/Roaming/Xilinx/Vivado
+# Command line: vivado.exe -gui_launcher_event rodinguilauncherevent34564
+# Log file: C:/Users/au288681/AppData/Roaming/Xilinx/Vivado/vivado.log
+# Journal file: C:/Users/au288681/AppData/Roaming/Xilinx/Vivado\vivado.jou
+#-----------------------------------------------------------
+start_gui
+open_project C:/IHAK/ERTS/project/audioEqSolutionZ7/audioEqSolutionZ7.xpr
+update_compile_order -fileset sources_1
+archive_project C:/IHAK/ERTS/project/audioEqSolutionZ7.xpr.zip -temp_dir C:/Users/au288681/AppData/Roaming/Xilinx/Vivado/.Xil/Vivado-37912-D54069 -force

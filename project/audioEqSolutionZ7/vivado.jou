@@ -1,0 +1,15 @@
+#-----------------------------------------------------------
+# Vivado v2017.2 (64-bit)
+# SW Build 1909853 on Thu Jun 15 18:39:09 MDT 2017
+# IP Build 1909766 on Thu Jun 15 19:58:00 MDT 2017
+# Start of session at: Wed Dec 17 23:40:59 2025
+# Process ID: 1756
+# Current directory: C:/Users/marti/Documents/GitHub/Embedded-Systems-Course/project/audioEqSolutionZ7
+# Command line: vivado.exe -gui_launcher_event rodinguilauncherevent17724 C:\Users\marti\Documents\GitHub\Embedded-Systems-Course\project\audioEqSolutionZ7\audioEqSolutionZ7.xpr
+# Log file: C:/Users/marti/Documents/GitHub/Embedded-Systems-Course/project/audioEqSolutionZ7/vivado.log
+# Journal file: C:/Users/marti/Documents/GitHub/Embedded-Systems-Course/project/audioEqSolutionZ7\vivado.jou
+#-----------------------------------------------------------
+start_gui
+open_project C:/Users/marti/Documents/GitHub/Embedded-Systems-Course/project/audioEqSolutionZ7/audioEqSolutionZ7.xpr
+update_compile_order -fileset sources_1
+launch_sdk -workspace C:/Users/marti/Documents/GitHub/Embedded-Systems-Course/project/audioEqSolutionZ7/audioEqSolutionZ7.sdk -hwspec C:/Users/marti/Documents/GitHub/Embedded-Systems-Course/project/audioEqSolutionZ7/audioEqSolutionZ7.sdk/system_wrapper.hdf
