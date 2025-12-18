@@ -2,7 +2,6 @@
 'https://plantuml.com/state-diagram
 
 scale 350 width
-[*] --> NotShooting
 
 state InitializingSteps {
     [*] --> PowerOnSelfTest : Turning system on
