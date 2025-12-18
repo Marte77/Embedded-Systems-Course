@@ -1,7 +1,7 @@
 <profile>
 
 <section name = "Vivado HLS Report for 'equalizer'" level="0">
-<item name = "Date">Tue Dec 16 00:52:41 2025
+<item name = "Date">Thu Dec 18 21:16:05 2025
 </item>
 <item name = "Version">2017.2 (Build 1909853 on Thu Jun 15 18:55:24 MDT 2017)</item>
 <item name = "Project">equalizer</item>
@@ -22,7 +22,7 @@
 <section name = "" level="1">
 <item name = "Summary"><table name="" hasTotal="0">
 <keys size="6">, min, max, min, max, Type</keys>
-<column name="">71, 176, 72, 177, none</column>
+<column name="">71, 256, 72, 257, none</column>
 </table>
 </item>
 <item name = "Detail">
@@ -33,7 +33,7 @@
 </item>
 <item name = "Loop"><table name="" hasTotal="0">
 <keys size="8">Loop Name, min, max, Latency, achieved, target, Count, Pipelined</keys>
-<column name="- filter_loop">175, 175, 35, -, -, 5, no</column>
+<column name="- filter_loop">255, 255, 51, -, -, 5, no</column>
 <column name="- Loop 2">70, 70, 14, -, -, 5, no</column>
 <column name=" + setCoeffs_loop">12, 12, 2, -, -, 6, no</column>
 </table>
@@ -48,14 +48,14 @@
 <item name = "Summary"><table name="" hasTotal="1">
 <keys size="5">Name, BRAM_18K, DSP48E, FF, LUT</keys>
 <column name="DSP">-, -, -, -</column>
-<column name="Expression">-, -, 180, 118</column>
+<column name="Expression">-, -, 203, 129</column>
 <column name="FIFO">-, -, -, -</column>
-<column name="Instance">2, 8, 822, 1362</column>
+<column name="Instance">2, 8, 2344, 3350</column>
 <column name="Memory">0, -, 320, 27</column>
-<column name="Multiplexer">-, -, -, 365</column>
-<column name="Register">-, -, 475, -</column>
+<column name="Multiplexer">-, -, -, 498</column>
+<column name="Register">-, -, 623, -</column>
 <specialColumn name="Available">120, 80, 35200, 17600</specialColumn>
-<specialColumn name="Utilization (%)">1, 10, 5, 10</specialColumn>
+<specialColumn name="Utilization (%)">1, 10, 9, 22</specialColumn>
 </table>
 </item>
 <item name = "Detail">
@@ -64,6 +64,8 @@
 <keys size="6">Instance, Module, BRAM_18K, DSP48E, FF, LUT</keys>
 <column name="equalizer_eq_io_s_axi_U">equalizer_eq_io_s_axi, 2, 0, 230, 302</column>
 <column name="equalizer_faddfsucud_U0">equalizer_faddfsucud, 0, 2, 306, 418</column>
+<column name="equalizer_fdiv_32eOg_U3">equalizer_fdiv_32eOg, 0, 0, 761, 994</column>
+<column name="equalizer_fdiv_32eOg_U4">equalizer_fdiv_32eOg, 0, 0, 761, 994</column>
 <column name="equalizer_fmul_32dEe_U1">equalizer_fmul_32dEe, 0, 3, 143, 321</column>
 <column name="equalizer_fmul_32dEe_U2">equalizer_fmul_32dEe, 0, 3, 143, 321</column>
 </table>
@@ -87,70 +89,81 @@
 </item>
 <item name = "Expression"><table name="" hasTotal="1">
 <keys size="7">Variable Name, Operation, DSP48E, FF, LUT, Bitwidth P0, Bitwidth P1</keys>
-<column name="i_1_fu_337_p2">+, 0, 14, 9, 3, 1</column>
-<column name="i_fu_432_p2">+, 0, 14, 9, 3, 1</column>
-<column name="j_fu_459_p2">+, 0, 14, 9, 3, 1</column>
-<column name="tmp_10_fu_442_p2">+, 0, 23, 11, 6, 6</column>
-<column name="tmp_5_fu_393_p2">+, 0, 23, 11, 6, 2</column>
-<column name="tmp_6_fu_404_p2">+, 0, 23, 11, 6, 3</column>
-<column name="tmp_7_fu_415_p2">+, 0, 23, 11, 6, 3</column>
-<column name="tmp_3_fu_371_p2">-, 0, 23, 11, 6, 6</column>
-<column name="tmp_s_fu_325_p2">-, 0, 23, 11, 6, 6</column>
-<column name="exitcond1_i_fu_331_p2">icmp, 0, 0, 1, 3, 3</column>
-<column name="exitcond_i2_fu_453_p2">icmp, 0, 0, 1, 3, 3</column>
-<column name="exitcond_i_fu_426_p2">icmp, 0, 0, 1, 3, 3</column>
-<column name="tmp_1_fu_299_p2">icmp, 0, 0, 16, 32, 1</column>
-<column name="tmp_4_fu_382_p2">or, 0, 0, 6, 6, 1</column>
+<column name="i_1_fu_364_p2">+, 0, 14, 9, 3, 1</column>
+<column name="i_fu_470_p2">+, 0, 14, 9, 3, 1</column>
+<column name="j_fu_497_p2">+, 0, 14, 9, 3, 1</column>
+<column name="tmp_11_fu_480_p2">+, 0, 23, 11, 6, 6</column>
+<column name="tmp_5_fu_420_p2">+, 0, 23, 11, 6, 2</column>
+<column name="tmp_6_fu_431_p2">+, 0, 23, 11, 6, 2</column>
+<column name="tmp_7_fu_442_p2">+, 0, 23, 11, 6, 3</column>
+<column name="tmp_8_fu_453_p2">+, 0, 23, 11, 6, 3</column>
+<column name="tmp_10_fu_352_p2">-, 0, 23, 11, 6, 6</column>
+<column name="tmp_3_fu_398_p2">-, 0, 23, 11, 6, 6</column>
+<column name="exitcond1_i_fu_358_p2">icmp, 0, 0, 1, 3, 3</column>
+<column name="exitcond_i2_fu_491_p2">icmp, 0, 0, 1, 3, 3</column>
+<column name="exitcond_i_fu_464_p2">icmp, 0, 0, 1, 3, 3</column>
+<column name="tmp_1_fu_326_p2">icmp, 0, 0, 16, 32, 1</column>
+<column name="tmp_4_fu_409_p2">or, 0, 0, 6, 6, 1</column>
 </table>
 </item>
 <item name = "Multiplexer"><table name="" hasTotal="1">
 <keys size="5">Name, LUT, Input Size, Bits, Total Bits</keys>
-<column name="ap_NS_fsm">173, 39, 1, 39</column>
-<column name="grp_fu_257_opcode">15, 3, 2, 6</column>
-<column name="grp_fu_257_p0">15, 3, 32, 96</column>
-<column name="grp_fu_257_p1">21, 4, 32, 128</column>
-<column name="grp_fu_261_p0">21, 4, 32, 128</column>
-<column name="grp_fu_261_p1">27, 5, 32, 160</column>
-<column name="i_i1_reg_212">9, 2, 3, 6</column>
-<column name="i_i_reg_235">9, 2, 3, 6</column>
-<column name="iir_coeff_array_address0">21, 4, 5, 20</column>
+<column name="ap_NS_fsm">237, 55, 1, 55</column>
+<column name="grp_fu_267_opcode">15, 3, 2, 6</column>
+<column name="grp_fu_267_p0">15, 3, 32, 96</column>
+<column name="grp_fu_267_p1">15, 3, 32, 96</column>
+<column name="grp_fu_271_p0">21, 4, 32, 128</column>
+<column name="grp_fu_271_p1">21, 4, 32, 128</column>
+<column name="grp_fu_276_p0">15, 3, 32, 96</column>
+<column name="grp_fu_276_p1">15, 3, 32, 96</column>
+<column name="grp_fu_280_p0">21, 4, 32, 128</column>
+<column name="grp_fu_284_p0">15, 3, 32, 96</column>
+<column name="i_i1_reg_222">9, 2, 3, 6</column>
+<column name="i_i_reg_245">9, 2, 3, 6</column>
+<column name="iir_coeff_array_address0">27, 5, 5, 25</column>
 <column name="iir_coeff_array_address1">21, 4, 5, 20</column>
 <column name="iir_x_0_address0">15, 3, 3, 9</column>
-<column name="j_i_reg_246">9, 2, 3, 6</column>
-<column name="temp_i_reg_223">9, 2, 32, 64</column>
+<column name="j_i_reg_256">9, 2, 3, 6</column>
+<column name="reg_301">9, 2, 32, 64</column>
+<column name="temp_i_reg_233">9, 2, 32, 64</column>
 </table>
 </item>
 <item name = "Register"><table name="" hasTotal="1">
 <keys size="5">Name, FF, LUT, Bits, Const Bits</keys>
-<column name="ap_CS_fsm">38, 0, 38, 0</column>
-<column name="b2_reg_564">32, 0, 32, 0</column>
-<column name="i_1_reg_482">3, 0, 3, 0</column>
-<column name="i_i1_reg_212">3, 0, 3, 0</column>
-<column name="i_i_reg_235">3, 0, 3, 0</column>
-<column name="i_reg_515">3, 0, 3, 0</column>
-<column name="iir_coeff_array_addr_2_reg_497">4, 0, 5, 1</column>
-<column name="iir_coeff_array_addr_3_reg_502">4, 0, 5, 1</column>
-<column name="iir_coeff_array_addr_4_reg_507">4, 0, 5, 1</column>
-<column name="iir_coeff_array_addr_5_reg_545">5, 0, 5, 0</column>
-<column name="iir_x_0_addr_reg_525">3, 0, 3, 0</column>
-<column name="iir_x_0_load_reg_558">32, 0, 32, 0</column>
-<column name="iir_x_1_addr_reg_520">3, 0, 3, 0</column>
-<column name="iir_x_1_load_reg_569">32, 0, 32, 0</column>
-<column name="iir_y_1_addr_reg_530">3, 0, 3, 0</column>
-<column name="iir_y_1_load_reg_579">32, 0, 32, 0</column>
-<column name="iir_y_2_addr_reg_535">3, 0, 3, 0</column>
-<column name="iir_y_2_load_reg_585">32, 0, 32, 0</column>
-<column name="j_i_reg_246">3, 0, 3, 0</column>
-<column name="j_reg_553">3, 0, 3, 0</column>
-<column name="reg_270">32, 0, 32, 0</column>
-<column name="reg_275">32, 0, 32, 0</column>
-<column name="reg_281">32, 0, 32, 0</column>
-<column name="reg_287">32, 0, 32, 0</column>
-<column name="reg_292">32, 0, 32, 0</column>
-<column name="temp_i_reg_223">32, 0, 32, 0</column>
-<column name="tmp_1_reg_470">1, 0, 1, 0</column>
-<column name="tmp_3_i_reg_574">32, 0, 32, 0</column>
-<column name="tmp_s_reg_474">5, 0, 6, 1</column>
+<column name="ap_CS_fsm">54, 0, 54, 0</column>
+<column name="i_1_reg_520">3, 0, 3, 0</column>
+<column name="i_i1_reg_222">3, 0, 3, 0</column>
+<column name="i_i_reg_245">3, 0, 3, 0</column>
+<column name="i_reg_558">3, 0, 3, 0</column>
+<column name="iir_coeff_array_addr_2_reg_535">4, 0, 5, 1</column>
+<column name="iir_coeff_array_addr_3_reg_540">4, 0, 5, 1</column>
+<column name="iir_coeff_array_addr_4_reg_545">4, 0, 5, 1</column>
+<column name="iir_coeff_array_addr_5_reg_550">4, 0, 5, 1</column>
+<column name="iir_coeff_array_addr_6_reg_588">5, 0, 5, 0</column>
+<column name="iir_x_0_addr_reg_568">3, 0, 3, 0</column>
+<column name="iir_x_0_load_reg_601">32, 0, 32, 0</column>
+<column name="iir_x_1_addr_reg_563">3, 0, 3, 0</column>
+<column name="iir_x_1_load_reg_607">32, 0, 32, 0</column>
+<column name="iir_y_1_addr_reg_573">3, 0, 3, 0</column>
+<column name="iir_y_1_load_reg_627">32, 0, 32, 0</column>
+<column name="iir_y_2_addr_reg_578">3, 0, 3, 0</column>
+<column name="iir_y_2_load_reg_632">32, 0, 32, 0</column>
+<column name="j_i_reg_256">3, 0, 3, 0</column>
+<column name="j_reg_596">3, 0, 3, 0</column>
+<column name="reg_288">32, 0, 32, 0</column>
+<column name="reg_295">32, 0, 32, 0</column>
+<column name="reg_301">32, 0, 32, 0</column>
+<column name="reg_308">32, 0, 32, 0</column>
+<column name="reg_314">32, 0, 32, 0</column>
+<column name="reg_319">32, 0, 32, 0</column>
+<column name="temp_i_reg_233">32, 0, 32, 0</column>
+<column name="tmp_10_i_reg_642">32, 0, 32, 0</column>
+<column name="tmp_10_reg_512">5, 0, 6, 1</column>
+<column name="tmp_1_reg_508">1, 0, 1, 0</column>
+<column name="tmp_4_i_reg_617">32, 0, 32, 0</column>
+<column name="tmp_7_i_reg_622">32, 0, 32, 0</column>
+<column name="tmp_i_3_reg_637">32, 0, 32, 0</column>
+<column name="tmp_i_reg_612">32, 0, 32, 0</column>
 </table>
 </item>
 </section>
@@ -188,7 +201,7 @@
 <item name = "Max Delay">6.44</item>
 <item name = "Critical Path Table"><table name="Critical Path Table" hasTotal="0">
 <keys size="15">Name, Operator, Delay, Accumulated Delay, Store Source, Resource, Core, Interface, Type, Port, Array, Scope, Pointer, Callee, Phi Node</keys>
-<column name="'tmp_4_i', equalizer/iir.h:46->equalizer/iir.cpp:6">fadd, 6.44, 6.44, -, -, -, -, -, -, -, -, -, -, -</column>
+<column name="'tmp_6_i', equalizer/iir.h:47->equalizer/iir.cpp:6">fadd, 6.44, 6.44, -, -, -, -, -, -, -, -, -, -, -</column>
 </table>
 </item>
 </section>

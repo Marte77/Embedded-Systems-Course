@@ -43,7 +43,7 @@ set SCTraceOption "all"
 set TargetInfo "xc7z010:clg400:-1"
 set SourceFiles {sc {} c ../iir.cpp}
 set SourceFlags {sc {} c {{}}}
-set DirectiveFile {C:/Users/marti/Documents/EmbeddedSystems/project/equalizer/equalizer/equalizer.directive}
+set DirectiveFile {C:/Users/marti/Documents/GitHub/Embedded-Systems-Course/project/equalizer/equalizer/equalizer.directive}
 set TBFiles {verilog ../iir_test.cpp bc ../iir_test.cpp vhdl ../iir_test.cpp sc ../iir_test.cpp cas ../iir_test.cpp c {}}
 set SpecLanguage "C"
 set TVInFiles {bc {} c {} sc {} cas {} vhdl {} verilog {}}

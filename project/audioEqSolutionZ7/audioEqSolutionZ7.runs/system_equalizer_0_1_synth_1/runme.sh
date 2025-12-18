@@ -24,7 +24,7 @@ else
 fi
 export LD_LIBRARY_PATH
 
-HD_PWD='C:/Users/marti/Desktop/audioEqSolutionZ7/audioEqSolutionZ7.runs/system_equalizer_0_1_synth_1'
+HD_PWD='C:/Users/marti/Documents/GitHub/Embedded-Systems-Course/project/audioEqSolutionZ7/audioEqSolutionZ7.runs/system_equalizer_0_1_synth_1'
 cd "$HD_PWD"
 
 HD_LOG=runme.log

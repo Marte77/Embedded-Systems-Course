@@ -1,4 +1,4 @@
-set_property SRC_FILE_INFO {cfile:C:/Users/marti/Desktop/audioEqSolutionZ7/audioEqSolutionZ7.srcs/constrs_1/imports/RealTimeAudioSystemCode/zybo_audio_constraints.xdc rfile:../../../audioEqSolutionZ7.srcs/constrs_1/imports/RealTimeAudioSystemCode/zybo_audio_constraints.xdc id:1} [current_design]
+set_property SRC_FILE_INFO {cfile:C:/Users/marti/Documents/GitHub/Embedded-Systems-Course/project/audioEqSolutionZ7/audioEqSolutionZ7.srcs/constrs_1/imports/RealTimeAudioSystemCode/zybo_audio_constraints.xdc rfile:../../../audioEqSolutionZ7.srcs/constrs_1/imports/RealTimeAudioSystemCode/zybo_audio_constraints.xdc id:1} [current_design]
 set_property src_info {type:XDC file:1 line:3 export:INPUT save:INPUT read:READ} [current_design]
 set_property PACKAGE_PIN R19 [get_ports BCLK]
 set_property src_info {type:XDC file:1 line:6 export:INPUT save:INPUT read:READ} [current_design]

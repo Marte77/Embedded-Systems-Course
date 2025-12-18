@@ -48,7 +48,7 @@
 
 
 // IP VLNV: martinho:hls:equalizer:1.11
-// IP Revision: 2114393218
+// IP Revision: 2114397316
 
 (* X_CORE_INFO = "equalizer,Vivado 2017.2" *)
 (* CHECK_LICENSE_TYPE = "system_equalizer_0_0,equalizer,{}" *)

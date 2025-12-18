@@ -1054,6 +1054,10 @@ y {} format long minimum {} maximum {}} value 32} bitoffset {attribs {resolve_ty
         <spirit:fileType>vhdlSource</spirit:fileType>
       </spirit:file>
       <spirit:file>
+        <spirit:name>hdl/ip/equalizer_ap_fdiv_14_no_dsp_32.vhd</spirit:name>
+        <spirit:fileType>vhdlSource</spirit:fileType>
+      </spirit:file>
+      <spirit:file>
         <spirit:name>hdl/ip/equalizer_ap_fmul_2_max_dsp_32.vhd</spirit:name>
         <spirit:fileType>vhdlSource</spirit:fileType>
       </spirit:file>
@@ -1072,6 +1076,10 @@ y {} format long minimum {} maximum {}} value 32} bitoffset {attribs {resolve_ty
       </spirit:file>
       <spirit:file>
         <spirit:name>hdl/verilog/equalizer_faddfsucud.v</spirit:name>
+        <spirit:fileType>verilogSource</spirit:fileType>
+      </spirit:file>
+      <spirit:file>
+        <spirit:name>hdl/verilog/equalizer_fdiv_32eOg.v</spirit:name>
         <spirit:fileType>verilogSource</spirit:fileType>
       </spirit:file>
       <spirit:file>
@@ -1123,6 +1131,11 @@ y {} format long minimum {} maximum {}} value 32} bitoffset {attribs {resolve_ty
         <spirit:userFileType>USED_IN_ipstatic</spirit:userFileType>
       </spirit:file>
       <spirit:file>
+        <spirit:name>hdl/verilog/equalizer_fdiv_32eOg.v</spirit:name>
+        <spirit:fileType>verilogSource</spirit:fileType>
+        <spirit:userFileType>USED_IN_ipstatic</spirit:userFileType>
+      </spirit:file>
+      <spirit:file>
         <spirit:name>hdl/verilog/equalizer_fmul_32dEe.v</spirit:name>
         <spirit:fileType>verilogSource</spirit:fileType>
         <spirit:userFileType>USED_IN_ipstatic</spirit:userFileType>
@@ -1151,6 +1164,11 @@ y {} format long minimum {} maximum {}} value 32} bitoffset {attribs {resolve_ty
         <spirit:userFileType>USED_IN_ipstatic</spirit:userFileType>
       </spirit:file>
       <spirit:file>
+        <spirit:name>hdl/ip/equalizer_ap_fdiv_14_no_dsp_32.vhd</spirit:name>
+        <spirit:fileType>vhdlSource</spirit:fileType>
+        <spirit:userFileType>USED_IN_ipstatic</spirit:userFileType>
+      </spirit:file>
+      <spirit:file>
         <spirit:name>hdl/ip/equalizer_ap_fmul_2_max_dsp_32.vhd</spirit:name>
         <spirit:fileType>vhdlSource</spirit:fileType>
         <spirit:userFileType>USED_IN_ipstatic</spirit:userFileType>
@@ -1173,6 +1191,10 @@ y {} format long minimum {} maximum {}} value 32} bitoffset {attribs {resolve_ty
         <spirit:fileType>vhdlSource</spirit:fileType>
       </spirit:file>
       <spirit:file>
+        <spirit:name>hdl/ip/equalizer_ap_fdiv_14_no_dsp_32.vhd</spirit:name>
+        <spirit:fileType>vhdlSource</spirit:fileType>
+      </spirit:file>
+      <spirit:file>
         <spirit:name>hdl/ip/equalizer_ap_fmul_2_max_dsp_32.vhd</spirit:name>
         <spirit:fileType>vhdlSource</spirit:fileType>
       </spirit:file>
@@ -1191,6 +1213,10 @@ y {} format long minimum {} maximum {}} value 32} bitoffset {attribs {resolve_ty
       </spirit:file>
       <spirit:file>
         <spirit:name>hdl/vhdl/equalizer_faddfsucud.vhd</spirit:name>
+        <spirit:fileType>vhdlSource</spirit:fileType>
+      </spirit:file>
+      <spirit:file>
+        <spirit:name>hdl/vhdl/equalizer_fdiv_32eOg.vhd</spirit:name>
         <spirit:fileType>vhdlSource</spirit:fileType>
       </spirit:file>
       <spirit:file>
@@ -1235,6 +1261,11 @@ y {} format long minimum {} maximum {}} value 32} bitoffset {attribs {resolve_ty
         <spirit:userFileType>USED_IN_ipstatic</spirit:userFileType>
       </spirit:file>
       <spirit:file>
+        <spirit:name>hdl/vhdl/equalizer_fdiv_32eOg.vhd</spirit:name>
+        <spirit:fileType>vhdlSource</spirit:fileType>
+        <spirit:userFileType>USED_IN_ipstatic</spirit:userFileType>
+      </spirit:file>
+      <spirit:file>
         <spirit:name>hdl/vhdl/equalizer_fmul_32dEe.vhd</spirit:name>
         <spirit:fileType>vhdlSource</spirit:fileType>
         <spirit:userFileType>USED_IN_ipstatic</spirit:userFileType>
@@ -1251,6 +1282,11 @@ y {} format long minimum {} maximum {}} value 32} bitoffset {attribs {resolve_ty
       </spirit:file>
       <spirit:file>
         <spirit:name>hdl/ip/equalizer_ap_faddfsub_5_full_dsp_32.vhd</spirit:name>
+        <spirit:fileType>vhdlSource</spirit:fileType>
+        <spirit:userFileType>USED_IN_ipstatic</spirit:userFileType>
+      </spirit:file>
+      <spirit:file>
+        <spirit:name>hdl/ip/equalizer_ap_fdiv_14_no_dsp_32.vhd</spirit:name>
         <spirit:fileType>vhdlSource</spirit:fileType>
         <spirit:userFileType>USED_IN_ipstatic</spirit:userFileType>
       </spirit:file>
@@ -1374,8 +1410,8 @@ y {} format long minimum {} maximum {}} value 32} bitoffset {attribs {resolve_ty
       </xilinx:taxonomies>
       <xilinx:displayName>eq_marte</xilinx:displayName>
       <xilinx:definitionSource>HLS</xilinx:definitionSource>
-      <xilinx:coreRevision>2114393218</xilinx:coreRevision>
-      <xilinx:coreCreationDateTime>2025-12-15T23:59:04Z</xilinx:coreCreationDateTime>
+      <xilinx:coreRevision>2114397316</xilinx:coreRevision>
+      <xilinx:coreCreationDateTime>2025-12-18T20:16:39Z</xilinx:coreCreationDateTime>
     </xilinx:coreExtensions>
     <xilinx:packagingInfo>
       <xilinx:xilinxVersion>2017.2</xilinx:xilinxVersion>

@@ -1,5 +1,5 @@
 ﻿<?xml version="1.0" encoding="UTF-8" standalone="no" ?>
-<EDKSYSTEM EDWVERSION="1.2" TIMESTAMP="Wed Dec 17 21:39:05 2025" VIVADOVERSION="2017.2">
+<EDKSYSTEM EDWVERSION="1.2" TIMESTAMP="Thu Dec 18 21:17:28 2025" VIVADOVERSION="2017.2">
 
   <SYSTEMINFO ARCH="zynq" BOARD="digilentinc.com:zybo-z7-10:part0:1.2" DEVICE="7z010" NAME="system" PACKAGE="clg400" SPEEDGRADE="-1"/>
 
@@ -4270,176 +4270,6 @@
             <CONNECTION INSTANCE="zybo_audio_ctrl_0" PORT="S_AXI_RREADY"/>
           </CONNECTIONS>
         </PORT>
-        <PORT DIR="O" LEFT="31" NAME="M02_AXI_awaddr" RIGHT="0" SIGIS="undef" SIGNAME="eq_left_s_axi_eq_io_AWADDR">
-          <CONNECTIONS>
-            <CONNECTION INSTANCE="eq_left" PORT="s_axi_eq_io_AWADDR"/>
-          </CONNECTIONS>
-        </PORT>
-        <PORT DIR="O" NAME="M02_AXI_awvalid" SIGIS="undef" SIGNAME="eq_left_s_axi_eq_io_AWVALID">
-          <CONNECTIONS>
-            <CONNECTION INSTANCE="eq_left" PORT="s_axi_eq_io_AWVALID"/>
-          </CONNECTIONS>
-        </PORT>
-        <PORT DIR="I" NAME="M02_AXI_awready" SIGIS="undef" SIGNAME="eq_left_s_axi_eq_io_AWREADY">
-          <CONNECTIONS>
-            <CONNECTION INSTANCE="eq_left" PORT="s_axi_eq_io_AWREADY"/>
-          </CONNECTIONS>
-        </PORT>
-        <PORT DIR="O" LEFT="31" NAME="M02_AXI_wdata" RIGHT="0" SIGIS="undef" SIGNAME="eq_left_s_axi_eq_io_WDATA">
-          <CONNECTIONS>
-            <CONNECTION INSTANCE="eq_left" PORT="s_axi_eq_io_WDATA"/>
-          </CONNECTIONS>
-        </PORT>
-        <PORT DIR="O" LEFT="3" NAME="M02_AXI_wstrb" RIGHT="0" SIGIS="undef" SIGNAME="eq_left_s_axi_eq_io_WSTRB">
-          <CONNECTIONS>
-            <CONNECTION INSTANCE="eq_left" PORT="s_axi_eq_io_WSTRB"/>
-          </CONNECTIONS>
-        </PORT>
-        <PORT DIR="O" NAME="M02_AXI_wvalid" SIGIS="undef" SIGNAME="eq_left_s_axi_eq_io_WVALID">
-          <CONNECTIONS>
-            <CONNECTION INSTANCE="eq_left" PORT="s_axi_eq_io_WVALID"/>
-          </CONNECTIONS>
-        </PORT>
-        <PORT DIR="I" NAME="M02_AXI_wready" SIGIS="undef" SIGNAME="eq_left_s_axi_eq_io_WREADY">
-          <CONNECTIONS>
-            <CONNECTION INSTANCE="eq_left" PORT="s_axi_eq_io_WREADY"/>
-          </CONNECTIONS>
-        </PORT>
-        <PORT DIR="I" LEFT="1" NAME="M02_AXI_bresp" RIGHT="0" SIGIS="undef" SIGNAME="eq_left_s_axi_eq_io_BRESP">
-          <CONNECTIONS>
-            <CONNECTION INSTANCE="eq_left" PORT="s_axi_eq_io_BRESP"/>
-          </CONNECTIONS>
-        </PORT>
-        <PORT DIR="I" NAME="M02_AXI_bvalid" SIGIS="undef" SIGNAME="eq_left_s_axi_eq_io_BVALID">
-          <CONNECTIONS>
-            <CONNECTION INSTANCE="eq_left" PORT="s_axi_eq_io_BVALID"/>
-          </CONNECTIONS>
-        </PORT>
-        <PORT DIR="O" NAME="M02_AXI_bready" SIGIS="undef" SIGNAME="eq_left_s_axi_eq_io_BREADY">
-          <CONNECTIONS>
-            <CONNECTION INSTANCE="eq_left" PORT="s_axi_eq_io_BREADY"/>
-          </CONNECTIONS>
-        </PORT>
-        <PORT DIR="O" LEFT="31" NAME="M02_AXI_araddr" RIGHT="0" SIGIS="undef" SIGNAME="eq_left_s_axi_eq_io_ARADDR">
-          <CONNECTIONS>
-            <CONNECTION INSTANCE="eq_left" PORT="s_axi_eq_io_ARADDR"/>
-          </CONNECTIONS>
-        </PORT>
-        <PORT DIR="O" NAME="M02_AXI_arvalid" SIGIS="undef" SIGNAME="eq_left_s_axi_eq_io_ARVALID">
-          <CONNECTIONS>
-            <CONNECTION INSTANCE="eq_left" PORT="s_axi_eq_io_ARVALID"/>
-          </CONNECTIONS>
-        </PORT>
-        <PORT DIR="I" NAME="M02_AXI_arready" SIGIS="undef" SIGNAME="eq_left_s_axi_eq_io_ARREADY">
-          <CONNECTIONS>
-            <CONNECTION INSTANCE="eq_left" PORT="s_axi_eq_io_ARREADY"/>
-          </CONNECTIONS>
-        </PORT>
-        <PORT DIR="I" LEFT="31" NAME="M02_AXI_rdata" RIGHT="0" SIGIS="undef" SIGNAME="eq_left_s_axi_eq_io_RDATA">
-          <CONNECTIONS>
-            <CONNECTION INSTANCE="eq_left" PORT="s_axi_eq_io_RDATA"/>
-          </CONNECTIONS>
-        </PORT>
-        <PORT DIR="I" LEFT="1" NAME="M02_AXI_rresp" RIGHT="0" SIGIS="undef" SIGNAME="eq_left_s_axi_eq_io_RRESP">
-          <CONNECTIONS>
-            <CONNECTION INSTANCE="eq_left" PORT="s_axi_eq_io_RRESP"/>
-          </CONNECTIONS>
-        </PORT>
-        <PORT DIR="I" NAME="M02_AXI_rvalid" SIGIS="undef" SIGNAME="eq_left_s_axi_eq_io_RVALID">
-          <CONNECTIONS>
-            <CONNECTION INSTANCE="eq_left" PORT="s_axi_eq_io_RVALID"/>
-          </CONNECTIONS>
-        </PORT>
-        <PORT DIR="O" NAME="M02_AXI_rready" SIGIS="undef" SIGNAME="eq_left_s_axi_eq_io_RREADY">
-          <CONNECTIONS>
-            <CONNECTION INSTANCE="eq_left" PORT="s_axi_eq_io_RREADY"/>
-          </CONNECTIONS>
-        </PORT>
-        <PORT DIR="O" LEFT="31" NAME="M03_AXI_awaddr" RIGHT="0" SIGIS="undef" SIGNAME="eq_right_s_axi_eq_io_AWADDR">
-          <CONNECTIONS>
-            <CONNECTION INSTANCE="eq_right" PORT="s_axi_eq_io_AWADDR"/>
-          </CONNECTIONS>
-        </PORT>
-        <PORT DIR="O" NAME="M03_AXI_awvalid" SIGIS="undef" SIGNAME="eq_right_s_axi_eq_io_AWVALID">
-          <CONNECTIONS>
-            <CONNECTION INSTANCE="eq_right" PORT="s_axi_eq_io_AWVALID"/>
-          </CONNECTIONS>
-        </PORT>
-        <PORT DIR="I" NAME="M03_AXI_awready" SIGIS="undef" SIGNAME="eq_right_s_axi_eq_io_AWREADY">
-          <CONNECTIONS>
-            <CONNECTION INSTANCE="eq_right" PORT="s_axi_eq_io_AWREADY"/>
-          </CONNECTIONS>
-        </PORT>
-        <PORT DIR="O" LEFT="31" NAME="M03_AXI_wdata" RIGHT="0" SIGIS="undef" SIGNAME="eq_right_s_axi_eq_io_WDATA">
-          <CONNECTIONS>
-            <CONNECTION INSTANCE="eq_right" PORT="s_axi_eq_io_WDATA"/>
-          </CONNECTIONS>
-        </PORT>
-        <PORT DIR="O" LEFT="3" NAME="M03_AXI_wstrb" RIGHT="0" SIGIS="undef" SIGNAME="eq_right_s_axi_eq_io_WSTRB">
-          <CONNECTIONS>
-            <CONNECTION INSTANCE="eq_right" PORT="s_axi_eq_io_WSTRB"/>
-          </CONNECTIONS>
-        </PORT>
-        <PORT DIR="O" NAME="M03_AXI_wvalid" SIGIS="undef" SIGNAME="eq_right_s_axi_eq_io_WVALID">
-          <CONNECTIONS>
-            <CONNECTION INSTANCE="eq_right" PORT="s_axi_eq_io_WVALID"/>
-          </CONNECTIONS>
-        </PORT>
-        <PORT DIR="I" NAME="M03_AXI_wready" SIGIS="undef" SIGNAME="eq_right_s_axi_eq_io_WREADY">
-          <CONNECTIONS>
-            <CONNECTION INSTANCE="eq_right" PORT="s_axi_eq_io_WREADY"/>
-          </CONNECTIONS>
-        </PORT>
-        <PORT DIR="I" LEFT="1" NAME="M03_AXI_bresp" RIGHT="0" SIGIS="undef" SIGNAME="eq_right_s_axi_eq_io_BRESP">
-          <CONNECTIONS>
-            <CONNECTION INSTANCE="eq_right" PORT="s_axi_eq_io_BRESP"/>
-          </CONNECTIONS>
-        </PORT>
-        <PORT DIR="I" NAME="M03_AXI_bvalid" SIGIS="undef" SIGNAME="eq_right_s_axi_eq_io_BVALID">
-          <CONNECTIONS>
-            <CONNECTION INSTANCE="eq_right" PORT="s_axi_eq_io_BVALID"/>
-          </CONNECTIONS>
-        </PORT>
-        <PORT DIR="O" NAME="M03_AXI_bready" SIGIS="undef" SIGNAME="eq_right_s_axi_eq_io_BREADY">
-          <CONNECTIONS>
-            <CONNECTION INSTANCE="eq_right" PORT="s_axi_eq_io_BREADY"/>
-          </CONNECTIONS>
-        </PORT>
-        <PORT DIR="O" LEFT="31" NAME="M03_AXI_araddr" RIGHT="0" SIGIS="undef" SIGNAME="eq_right_s_axi_eq_io_ARADDR">
-          <CONNECTIONS>
-            <CONNECTION INSTANCE="eq_right" PORT="s_axi_eq_io_ARADDR"/>
-          </CONNECTIONS>
-        </PORT>
-        <PORT DIR="O" NAME="M03_AXI_arvalid" SIGIS="undef" SIGNAME="eq_right_s_axi_eq_io_ARVALID">
-          <CONNECTIONS>
-            <CONNECTION INSTANCE="eq_right" PORT="s_axi_eq_io_ARVALID"/>
-          </CONNECTIONS>
-        </PORT>
-        <PORT DIR="I" NAME="M03_AXI_arready" SIGIS="undef" SIGNAME="eq_right_s_axi_eq_io_ARREADY">
-          <CONNECTIONS>
-            <CONNECTION INSTANCE="eq_right" PORT="s_axi_eq_io_ARREADY"/>
-          </CONNECTIONS>
-        </PORT>
-        <PORT DIR="I" LEFT="31" NAME="M03_AXI_rdata" RIGHT="0" SIGIS="undef" SIGNAME="eq_right_s_axi_eq_io_RDATA">
-          <CONNECTIONS>
-            <CONNECTION INSTANCE="eq_right" PORT="s_axi_eq_io_RDATA"/>
-          </CONNECTIONS>
-        </PORT>
-        <PORT DIR="I" LEFT="1" NAME="M03_AXI_rresp" RIGHT="0" SIGIS="undef" SIGNAME="eq_right_s_axi_eq_io_RRESP">
-          <CONNECTIONS>
-            <CONNECTION INSTANCE="eq_right" PORT="s_axi_eq_io_RRESP"/>
-          </CONNECTIONS>
-        </PORT>
-        <PORT DIR="I" NAME="M03_AXI_rvalid" SIGIS="undef" SIGNAME="eq_right_s_axi_eq_io_RVALID">
-          <CONNECTIONS>
-            <CONNECTION INSTANCE="eq_right" PORT="s_axi_eq_io_RVALID"/>
-          </CONNECTIONS>
-        </PORT>
-        <PORT DIR="O" NAME="M03_AXI_rready" SIGIS="undef" SIGNAME="eq_right_s_axi_eq_io_RREADY">
-          <CONNECTIONS>
-            <CONNECTION INSTANCE="eq_right" PORT="s_axi_eq_io_RREADY"/>
-          </CONNECTIONS>
-        </PORT>
         <PORT DIR="O" LEFT="31" NAME="M04_AXI_araddr" RIGHT="0" SIGIS="undef" SIGNAME="ps7_0_axi_periph_M04_AXI_araddr">
           <CONNECTIONS>
             <CONNECTION INSTANCE="switch" PORT="s_axi_araddr"/>
@@ -4695,24 +4525,178 @@
             <CONNECTION INSTANCE="buttons" PORT="s_axi_wvalid"/>
           </CONNECTIONS>
         </PORT>
-        <PORT DIR="O" NAME="M07_AXI_awaddr" SIGIS="undef"/>
-        <PORT DIR="O" NAME="M07_AXI_awvalid" SIGIS="undef"/>
-        <PORT DIR="I" NAME="M07_AXI_awready" SIGIS="undef"/>
-        <PORT DIR="O" NAME="M07_AXI_wdata" SIGIS="undef"/>
-        <PORT DIR="O" NAME="M07_AXI_wstrb" SIGIS="undef"/>
-        <PORT DIR="O" NAME="M07_AXI_wvalid" SIGIS="undef"/>
-        <PORT DIR="I" NAME="M07_AXI_wready" SIGIS="undef"/>
-        <PORT DIR="I" NAME="M07_AXI_bresp" SIGIS="undef"/>
-        <PORT DIR="I" NAME="M07_AXI_bvalid" SIGIS="undef"/>
-        <PORT DIR="O" NAME="M07_AXI_bready" SIGIS="undef"/>
-        <PORT DIR="O" NAME="M07_AXI_araddr" SIGIS="undef"/>
-        <PORT DIR="O" NAME="M07_AXI_arvalid" SIGIS="undef"/>
-        <PORT DIR="I" NAME="M07_AXI_arready" SIGIS="undef"/>
-        <PORT DIR="I" NAME="M07_AXI_rdata" SIGIS="undef"/>
-        <PORT DIR="I" NAME="M07_AXI_rresp" SIGIS="undef"/>
-        <PORT DIR="I" NAME="M07_AXI_rvalid" SIGIS="undef"/>
-        <PORT DIR="O" NAME="M07_AXI_rready" SIGIS="undef"/>
+        <PORT DIR="O" LEFT="31" NAME="M02_AXI_awaddr" RIGHT="0" SIGIS="undef" SIGNAME="eq_left_s_axi_eq_io_AWADDR">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="eq_left" PORT="s_axi_eq_io_AWADDR"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="O" NAME="M02_AXI_awvalid" SIGIS="undef" SIGNAME="eq_left_s_axi_eq_io_AWVALID">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="eq_left" PORT="s_axi_eq_io_AWVALID"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="I" NAME="M02_AXI_awready" SIGIS="undef" SIGNAME="eq_left_s_axi_eq_io_AWREADY">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="eq_left" PORT="s_axi_eq_io_AWREADY"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="O" LEFT="31" NAME="M02_AXI_wdata" RIGHT="0" SIGIS="undef" SIGNAME="eq_left_s_axi_eq_io_WDATA">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="eq_left" PORT="s_axi_eq_io_WDATA"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="O" LEFT="3" NAME="M02_AXI_wstrb" RIGHT="0" SIGIS="undef" SIGNAME="eq_left_s_axi_eq_io_WSTRB">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="eq_left" PORT="s_axi_eq_io_WSTRB"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="O" NAME="M02_AXI_wvalid" SIGIS="undef" SIGNAME="eq_left_s_axi_eq_io_WVALID">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="eq_left" PORT="s_axi_eq_io_WVALID"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="I" NAME="M02_AXI_wready" SIGIS="undef" SIGNAME="eq_left_s_axi_eq_io_WREADY">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="eq_left" PORT="s_axi_eq_io_WREADY"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="I" LEFT="1" NAME="M02_AXI_bresp" RIGHT="0" SIGIS="undef" SIGNAME="eq_left_s_axi_eq_io_BRESP">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="eq_left" PORT="s_axi_eq_io_BRESP"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="I" NAME="M02_AXI_bvalid" SIGIS="undef" SIGNAME="eq_left_s_axi_eq_io_BVALID">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="eq_left" PORT="s_axi_eq_io_BVALID"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="O" NAME="M02_AXI_bready" SIGIS="undef" SIGNAME="eq_left_s_axi_eq_io_BREADY">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="eq_left" PORT="s_axi_eq_io_BREADY"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="O" LEFT="31" NAME="M02_AXI_araddr" RIGHT="0" SIGIS="undef" SIGNAME="eq_left_s_axi_eq_io_ARADDR">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="eq_left" PORT="s_axi_eq_io_ARADDR"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="O" NAME="M02_AXI_arvalid" SIGIS="undef" SIGNAME="eq_left_s_axi_eq_io_ARVALID">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="eq_left" PORT="s_axi_eq_io_ARVALID"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="I" NAME="M02_AXI_arready" SIGIS="undef" SIGNAME="eq_left_s_axi_eq_io_ARREADY">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="eq_left" PORT="s_axi_eq_io_ARREADY"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="I" LEFT="31" NAME="M02_AXI_rdata" RIGHT="0" SIGIS="undef" SIGNAME="eq_left_s_axi_eq_io_RDATA">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="eq_left" PORT="s_axi_eq_io_RDATA"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="I" LEFT="1" NAME="M02_AXI_rresp" RIGHT="0" SIGIS="undef" SIGNAME="eq_left_s_axi_eq_io_RRESP">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="eq_left" PORT="s_axi_eq_io_RRESP"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="I" NAME="M02_AXI_rvalid" SIGIS="undef" SIGNAME="eq_left_s_axi_eq_io_RVALID">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="eq_left" PORT="s_axi_eq_io_RVALID"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="O" NAME="M02_AXI_rready" SIGIS="undef" SIGNAME="eq_left_s_axi_eq_io_RREADY">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="eq_left" PORT="s_axi_eq_io_RREADY"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="O" LEFT="31" NAME="M03_AXI_awaddr" RIGHT="0" SIGIS="undef" SIGNAME="eq_right_s_axi_eq_io_AWADDR">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="eq_right" PORT="s_axi_eq_io_AWADDR"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="O" NAME="M03_AXI_awvalid" SIGIS="undef" SIGNAME="eq_right_s_axi_eq_io_AWVALID">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="eq_right" PORT="s_axi_eq_io_AWVALID"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="I" NAME="M03_AXI_awready" SIGIS="undef" SIGNAME="eq_right_s_axi_eq_io_AWREADY">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="eq_right" PORT="s_axi_eq_io_AWREADY"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="O" LEFT="31" NAME="M03_AXI_wdata" RIGHT="0" SIGIS="undef" SIGNAME="eq_right_s_axi_eq_io_WDATA">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="eq_right" PORT="s_axi_eq_io_WDATA"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="O" LEFT="3" NAME="M03_AXI_wstrb" RIGHT="0" SIGIS="undef" SIGNAME="eq_right_s_axi_eq_io_WSTRB">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="eq_right" PORT="s_axi_eq_io_WSTRB"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="O" NAME="M03_AXI_wvalid" SIGIS="undef" SIGNAME="eq_right_s_axi_eq_io_WVALID">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="eq_right" PORT="s_axi_eq_io_WVALID"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="I" NAME="M03_AXI_wready" SIGIS="undef" SIGNAME="eq_right_s_axi_eq_io_WREADY">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="eq_right" PORT="s_axi_eq_io_WREADY"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="I" LEFT="1" NAME="M03_AXI_bresp" RIGHT="0" SIGIS="undef" SIGNAME="eq_right_s_axi_eq_io_BRESP">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="eq_right" PORT="s_axi_eq_io_BRESP"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="I" NAME="M03_AXI_bvalid" SIGIS="undef" SIGNAME="eq_right_s_axi_eq_io_BVALID">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="eq_right" PORT="s_axi_eq_io_BVALID"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="O" NAME="M03_AXI_bready" SIGIS="undef" SIGNAME="eq_right_s_axi_eq_io_BREADY">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="eq_right" PORT="s_axi_eq_io_BREADY"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="O" LEFT="31" NAME="M03_AXI_araddr" RIGHT="0" SIGIS="undef" SIGNAME="eq_right_s_axi_eq_io_ARADDR">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="eq_right" PORT="s_axi_eq_io_ARADDR"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="O" NAME="M03_AXI_arvalid" SIGIS="undef" SIGNAME="eq_right_s_axi_eq_io_ARVALID">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="eq_right" PORT="s_axi_eq_io_ARVALID"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="I" NAME="M03_AXI_arready" SIGIS="undef" SIGNAME="eq_right_s_axi_eq_io_ARREADY">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="eq_right" PORT="s_axi_eq_io_ARREADY"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="I" LEFT="31" NAME="M03_AXI_rdata" RIGHT="0" SIGIS="undef" SIGNAME="eq_right_s_axi_eq_io_RDATA">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="eq_right" PORT="s_axi_eq_io_RDATA"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="I" LEFT="1" NAME="M03_AXI_rresp" RIGHT="0" SIGIS="undef" SIGNAME="eq_right_s_axi_eq_io_RRESP">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="eq_right" PORT="s_axi_eq_io_RRESP"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="I" NAME="M03_AXI_rvalid" SIGIS="undef" SIGNAME="eq_right_s_axi_eq_io_RVALID">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="eq_right" PORT="s_axi_eq_io_RVALID"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="O" NAME="M03_AXI_rready" SIGIS="undef" SIGNAME="eq_right_s_axi_eq_io_RREADY">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="eq_right" PORT="s_axi_eq_io_RREADY"/>
+          </CONNECTIONS>
+        </PORT>
         <PORT DIR="O" NAME="M08_AXI_awaddr" SIGIS="undef"/>
+        <PORT DIR="O" NAME="M08_AXI_awprot" SIGIS="undef"/>
         <PORT DIR="O" NAME="M08_AXI_awvalid" SIGIS="undef"/>
         <PORT DIR="I" NAME="M08_AXI_awready" SIGIS="undef"/>
         <PORT DIR="O" NAME="M08_AXI_wdata" SIGIS="undef"/>
@@ -4723,12 +4707,32 @@
         <PORT DIR="I" NAME="M08_AXI_bvalid" SIGIS="undef"/>
         <PORT DIR="O" NAME="M08_AXI_bready" SIGIS="undef"/>
         <PORT DIR="O" NAME="M08_AXI_araddr" SIGIS="undef"/>
+        <PORT DIR="O" NAME="M08_AXI_arprot" SIGIS="undef"/>
         <PORT DIR="O" NAME="M08_AXI_arvalid" SIGIS="undef"/>
         <PORT DIR="I" NAME="M08_AXI_arready" SIGIS="undef"/>
         <PORT DIR="I" NAME="M08_AXI_rdata" SIGIS="undef"/>
         <PORT DIR="I" NAME="M08_AXI_rresp" SIGIS="undef"/>
         <PORT DIR="I" NAME="M08_AXI_rvalid" SIGIS="undef"/>
         <PORT DIR="O" NAME="M08_AXI_rready" SIGIS="undef"/>
+        <PORT DIR="O" NAME="M07_AXI_awaddr" SIGIS="undef"/>
+        <PORT DIR="O" NAME="M07_AXI_awprot" SIGIS="undef"/>
+        <PORT DIR="O" NAME="M07_AXI_awvalid" SIGIS="undef"/>
+        <PORT DIR="I" NAME="M07_AXI_awready" SIGIS="undef"/>
+        <PORT DIR="O" NAME="M07_AXI_wdata" SIGIS="undef"/>
+        <PORT DIR="O" NAME="M07_AXI_wstrb" SIGIS="undef"/>
+        <PORT DIR="O" NAME="M07_AXI_wvalid" SIGIS="undef"/>
+        <PORT DIR="I" NAME="M07_AXI_wready" SIGIS="undef"/>
+        <PORT DIR="I" NAME="M07_AXI_bresp" SIGIS="undef"/>
+        <PORT DIR="I" NAME="M07_AXI_bvalid" SIGIS="undef"/>
+        <PORT DIR="O" NAME="M07_AXI_bready" SIGIS="undef"/>
+        <PORT DIR="O" NAME="M07_AXI_araddr" SIGIS="undef"/>
+        <PORT DIR="O" NAME="M07_AXI_arprot" SIGIS="undef"/>
+        <PORT DIR="O" NAME="M07_AXI_arvalid" SIGIS="undef"/>
+        <PORT DIR="I" NAME="M07_AXI_arready" SIGIS="undef"/>
+        <PORT DIR="I" NAME="M07_AXI_rdata" SIGIS="undef"/>
+        <PORT DIR="I" NAME="M07_AXI_rresp" SIGIS="undef"/>
+        <PORT DIR="I" NAME="M07_AXI_rvalid" SIGIS="undef"/>
+        <PORT DIR="O" NAME="M07_AXI_rready" SIGIS="undef"/>
       </PORTS>
       <BUSINTERFACES>
         <BUSINTERFACE BUSNAME="processing_system7_0_M_AXI_GP0" DATAWIDTH="32" NAME="S00_AXI" TYPE="SLAVE" VLNV="xilinx.com:interface:aximm:1.0">
@@ -4923,6 +4927,7 @@
         <BUSINTERFACE BUSNAME="__NOC__" NAME="M07_AXI" TYPE="MASTER" VLNV="xilinx.com:interface:aximm:1.0">
           <PORTMAPS>
             <PORTMAP LOGICAL="AWADDR" PHYSICAL="M07_AXI_awaddr"/>
+            <PORTMAP LOGICAL="AWPROT" PHYSICAL="M07_AXI_awprot"/>
             <PORTMAP LOGICAL="AWVALID" PHYSICAL="M07_AXI_awvalid"/>
             <PORTMAP LOGICAL="AWREADY" PHYSICAL="M07_AXI_awready"/>
             <PORTMAP LOGICAL="WDATA" PHYSICAL="M07_AXI_wdata"/>
@@ -4933,6 +4938,7 @@
             <PORTMAP LOGICAL="BVALID" PHYSICAL="M07_AXI_bvalid"/>
             <PORTMAP LOGICAL="BREADY" PHYSICAL="M07_AXI_bready"/>
             <PORTMAP LOGICAL="ARADDR" PHYSICAL="M07_AXI_araddr"/>
+            <PORTMAP LOGICAL="ARPROT" PHYSICAL="M07_AXI_arprot"/>
             <PORTMAP LOGICAL="ARVALID" PHYSICAL="M07_AXI_arvalid"/>
             <PORTMAP LOGICAL="ARREADY" PHYSICAL="M07_AXI_arready"/>
             <PORTMAP LOGICAL="RDATA" PHYSICAL="M07_AXI_rdata"/>
@@ -4944,6 +4950,7 @@
         <BUSINTERFACE BUSNAME="__NOC__" NAME="M08_AXI" TYPE="MASTER" VLNV="xilinx.com:interface:aximm:1.0">
           <PORTMAPS>
             <PORTMAP LOGICAL="AWADDR" PHYSICAL="M08_AXI_awaddr"/>
+            <PORTMAP LOGICAL="AWPROT" PHYSICAL="M08_AXI_awprot"/>
             <PORTMAP LOGICAL="AWVALID" PHYSICAL="M08_AXI_awvalid"/>
             <PORTMAP LOGICAL="AWREADY" PHYSICAL="M08_AXI_awready"/>
             <PORTMAP LOGICAL="WDATA" PHYSICAL="M08_AXI_wdata"/>
@@ -4954,6 +4961,7 @@
             <PORTMAP LOGICAL="BVALID" PHYSICAL="M08_AXI_bvalid"/>
             <PORTMAP LOGICAL="BREADY" PHYSICAL="M08_AXI_bready"/>
             <PORTMAP LOGICAL="ARADDR" PHYSICAL="M08_AXI_araddr"/>
+            <PORTMAP LOGICAL="ARPROT" PHYSICAL="M08_AXI_arprot"/>
             <PORTMAP LOGICAL="ARVALID" PHYSICAL="M08_AXI_arvalid"/>
             <PORTMAP LOGICAL="ARREADY" PHYSICAL="M08_AXI_arready"/>
             <PORTMAP LOGICAL="RDATA" PHYSICAL="M08_AXI_rdata"/>

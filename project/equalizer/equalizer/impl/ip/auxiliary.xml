@@ -1,10 +1,10 @@
 <?xml version="1.0" encoding="utf-8"?>
-<xd:acceleratorMap xmlns:xd="http://www.xilinx.com/xidane" xd:functionName="equalizer" xd:componentRef="equalizer" xd:initiationInterval="177" xd:clockPeriod="8.000000" xd:sequential="true" xd:hostMachine="64" xd:reset="control">
+<xd:acceleratorMap xmlns:xd="http://www.xilinx.com/xidane" xd:functionName="equalizer" xd:componentRef="equalizer" xd:initiationInterval="257" xd:clockPeriod="8.000000" xd:sequential="true" xd:hostMachine="64" xd:reset="control">
   <xd:controlReg xd:name="control" xd:interfaceRef="s_axi_eq_io" xd:busTypeRef="axilite" xd:type="generic_axi_lite" xd:offset="0x0"/>
   <xd:arg xd:name="*(y)" xd:originalName="y" xd:direction="out" xd:interfaceRef="s_axi_eq_io" xd:busTypeRef="axilite" xd:offset="0x10" xd:statusOffset="0x14" xd:handshakeRef="ap_vld" xd:dataWidth="32"/>
   <xd:arg xd:name="x" xd:originalName="x" xd:direction="in" xd:interfaceRef="s_axi_eq_io" xd:busTypeRef="axilite" xd:offset="0x18" xd:handshakeRef="ap_none" xd:dataWidth="32"/>
   <xd:arg xd:name="mode" xd:originalName="mode" xd:direction="in" xd:interfaceRef="s_axi_eq_io" xd:busTypeRef="axilite" xd:offset="0x20" xd:handshakeRef="ap_none" xd:dataWidth="32"/>
   <xd:arg xd:name="coeffs[][]" xd:originalName="coeffs" xd:direction="in" xd:interfaceRef="s_axi_eq_io" xd:busTypeRef="axilite" xd:offset="0x80" xd:arraySize="30" xd:dataWidth="32"/>
-  <xd:latencyEstimates xd:best-case="71" xd:worst-case="176" xd:average-case="124"/>
-  <xd:resourceEstimates xd:LUT="1872" xd:FF="1797" xd:BRAM="2" xd:DSP="8"/>
+  <xd:latencyEstimates xd:best-case="71" xd:worst-case="256" xd:average-case="164"/>
+  <xd:resourceEstimates xd:LUT="4004" xd:FF="3490" xd:BRAM="2" xd:DSP="8"/>
 </xd:acceleratorMap>

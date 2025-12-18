@@ -1,10 +1,10 @@
 // Copyright 1986-2017 Xilinx, Inc. All Rights Reserved.
 // --------------------------------------------------------------------------------
 // Tool Version: Vivado v.2017.2 (win64) Build 1909853 Thu Jun 15 18:39:09 MDT 2017
-// Date        : Wed Dec 17 21:39:42 2025
+// Date        : Thu Dec 18 21:18:12 2025
 // Host        : pc-pirata running 64-bit major release  (build 9200)
 // Command     : write_verilog -force -mode synth_stub
-//               c:/Users/marti/Desktop/audioEqSolutionZ7/audioEqSolutionZ7.srcs/sources_1/bd/system/ip/system_equalizer_0_1/system_equalizer_0_1_stub.v
+//               C:/Users/marti/Documents/GitHub/Embedded-Systems-Course/project/audioEqSolutionZ7/audioEqSolutionZ7.srcs/sources_1/bd/system/ip/system_equalizer_0_1/system_equalizer_0_1_stub.v
 // Design      : system_equalizer_0_1
 // Purpose     : Stub declaration of top-level module interface
 // Device      : xc7z010clg400-1

@@ -1,5 +1,5 @@
-# 1 "C:/Users/marti/Documents/EmbeddedSystems/project/equalizer/equalizer/.autopilot/db/iir.pragma.1.cpp"
-# 1 "C:/Users/marti/Documents/EmbeddedSystems/project/equalizer/equalizer/.autopilot/db/iir.pragma.1.cpp" 1
+# 1 "C:/Users/marti/Documents/GitHub/Embedded-Systems-Course/project/equalizer/equalizer/.autopilot/db/iir.pragma.1.cpp"
+# 1 "C:/Users/marti/Documents/GitHub/Embedded-Systems-Course/project/equalizer/equalizer/.autopilot/db/iir.pragma.1.cpp" 1
 # 1 "<built-in>" 1
 # 1 "<built-in>" 3
 # 153 "<built-in>" 3
@@ -203,7 +203,7 @@ extern "C" {
 // 67d7842dbbe25473c3c32b93c0da8047785f30d78e8a024de1b57352245f9689
 # 8 "<command line>" 2
 # 1 "<built-in>" 2
-# 1 "C:/Users/marti/Documents/EmbeddedSystems/project/equalizer/equalizer/.autopilot/db/iir.pragma.1.cpp" 2
+# 1 "C:/Users/marti/Documents/GitHub/Embedded-Systems-Course/project/equalizer/equalizer/.autopilot/db/iir.pragma.1.cpp" 2
 # 1 "equalizer/iir.cpp"
 # 1 "equalizer/iir.cpp" 1
 # 1 "<built-in>" 1
@@ -442,13 +442,14 @@ public:
   }
  }
  data_t filter(data_t input) {
-  data_t b0, b1, b2, a1, a2, temp = input, acc;
+  data_t b0, b1, b2, a1, a2, a0, temp = input, acc;
   // loop over the Second Order Sections
   filter_loop:for(int i=0; i< 5 /*3*/; i++){
    // get coeffs
    b0=coeff_array[i][0];
    b1=coeff_array[i][1];
    b2=coeff_array[i][2];
+   a0=coeff_array[i][3];
    a1=coeff_array[i][4];
    a2=coeff_array[i][5];
    // feed forward shift register
@@ -456,7 +457,7 @@ public:
    x[i][1] = x[i][0];
    x[i][0] = temp;
    // the filter
-   acc = b0*x[i][0] + b1*x[i][1] + b2*x[i][2] - a1*y[i][1] - a2*y[i][2];
+   acc = b0*x[i][0] / a0 + b1*x[i][1] / a0 + b2*x[i][2] / a0 - a1*y[i][1] / a0 - a2*y[i][2] / a0;
    y[i][0] = acc;
 
    // feedback shift register

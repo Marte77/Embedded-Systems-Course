@@ -1,4 +1,4 @@
-; ModuleID = 'C:/Users/marti/Documents/EmbeddedSystems/project/equalizer/equalizer/.autopilot/db/a.o.2.bc'
+; ModuleID = 'C:/Users/marti/Documents/GitHub/Embedded-Systems-Course/project/equalizer/equalizer/.autopilot/db/a.o.2.bc'
 target datalayout = "e-p:32:32:32-i1:8:8-i8:8:8-i16:16:16-i32:32:32-i64:64:64-f32:32:32-f64:64:64-f80:128:128-v64:64:64-v128:128:128-a0:0:64-f80:32:32-n8:16:32-S32"
 target triple = "i686-pc-mingw32"
 
@@ -58,12 +58,15 @@ codeRepl:
   %tmp_5 = add i6 %tmp_3, 2
   %tmp_5_cast = sext i6 %tmp_5 to i32
   %iir_coeff_array_addr_2 = getelementptr [30 x float]* @iir_coeff_array, i32 0, i32 %tmp_5_cast
-  %tmp_6 = add i6 %tmp_3, 4
+  %tmp_6 = add i6 %tmp_3, 3
   %tmp_6_cast = sext i6 %tmp_6 to i32
   %iir_coeff_array_addr_3 = getelementptr [30 x float]* @iir_coeff_array, i32 0, i32 %tmp_6_cast
-  %tmp_7 = add i6 %tmp_3, 5
+  %tmp_7 = add i6 %tmp_3, 4
   %tmp_7_cast = sext i6 %tmp_7 to i32
   %iir_coeff_array_addr_4 = getelementptr [30 x float]* @iir_coeff_array, i32 0, i32 %tmp_7_cast
+  %tmp_8 = add i6 %tmp_3, 5
+  %tmp_8_cast = sext i6 %tmp_8 to i32
+  %iir_coeff_array_addr_5 = getelementptr [30 x float]* @iir_coeff_array, i32 0, i32 %tmp_8_cast
   %exitcond_i = icmp eq i3 %i_i, -3
   %empty_2 = call i32 (...)* @_ssdm_op_SpecLoopTripCount(i64 5, i64 5, i64 5) nounwind
   %i = add i3 %i_i, 1
@@ -74,8 +77,9 @@ codeRepl:
   %b0 = load float* %iir_coeff_array_addr, align 8
   %b1 = load float* %iir_coeff_array_addr_1, align 4
   %b2 = load float* %iir_coeff_array_addr_2, align 8
-  %a1 = load float* %iir_coeff_array_addr_3, align 8
-  %a2 = load float* %iir_coeff_array_addr_4, align 4
+  %a0 = load float* %iir_coeff_array_addr_3, align 4
+  %a1 = load float* %iir_coeff_array_addr_4, align 8
+  %a2 = load float* %iir_coeff_array_addr_5, align 4
   %iir_x_1_addr = getelementptr [5 x float]* @iir_x_1, i32 0, i32 %i_i_cast3
   %iir_x_1_load = load float* %iir_x_1_addr, align 4
   %iir_x_0_addr = getelementptr [5 x float]* @iir_x_0, i32 0, i32 %i_i_cast3
@@ -83,18 +87,23 @@ codeRepl:
   store float %iir_x_0_load, float* %iir_x_1_addr, align 4
   store float %temp_i, float* %iir_x_0_addr, align 4
   %tmp_i = fmul float %b0, %temp_i
-  %tmp_3_i = fmul float %b1, %iir_x_0_load
-  %tmp_4_i = fadd float %tmp_i, %tmp_3_i
-  %tmp_5_i = fmul float %b2, %iir_x_1_load
-  %tmp_6_i = fadd float %tmp_4_i, %tmp_5_i
+  %tmp_3_i = fdiv float %tmp_i, %a0
+  %tmp_4_i = fmul float %b1, %iir_x_0_load
+  %tmp_5_i = fdiv float %tmp_4_i, %a0
+  %tmp_6_i = fadd float %tmp_3_i, %tmp_5_i
+  %tmp_7_i = fmul float %b2, %iir_x_1_load
+  %tmp_8_i = fdiv float %tmp_7_i, %a0
+  %tmp_9_i = fadd float %tmp_6_i, %tmp_8_i
   %iir_y_1_addr = getelementptr [5 x float]* @iir_y_1, i32 0, i32 %i_i_cast3
   %iir_y_1_load = load float* %iir_y_1_addr, align 4
-  %tmp_7_i = fmul float %a1, %iir_y_1_load
-  %tmp_8_i = fsub float %tmp_6_i, %tmp_7_i
+  %tmp_i_3 = fmul float %a1, %iir_y_1_load
+  %tmp_1_i = fdiv float %tmp_i_3, %a0
+  %tmp_2_i = fsub float %tmp_9_i, %tmp_1_i
   %iir_y_2_addr = getelementptr [5 x float]* @iir_y_2, i32 0, i32 %i_i_cast3
   %iir_y_2_load = load float* %iir_y_2_addr, align 4
-  %tmp_9_i = fmul float %a2, %iir_y_2_load
-  %acc = fsub float %tmp_8_i, %tmp_9_i
+  %tmp_10_i = fmul float %a2, %iir_y_2_load
+  %tmp_11_i = fdiv float %tmp_10_i, %a0
+  %acc = fsub float %tmp_2_i, %tmp_11_i
   store float %iir_y_1_load, float* %iir_y_2_addr, align 4
   store float %acc, float* %iir_y_1_addr, align 4
   br label %.preheader4
@@ -108,12 +117,12 @@ filter.exit:                                      ; preds = %.preheader4
 
 .preheader:                                       ; preds = %.preheader.preheader, %.preheader.loopexit
   %i_i1 = phi i3 [ %i_1, %.preheader.loopexit ], [ 0, %.preheader.preheader ]
-  %tmp_8 = call i6 @_ssdm_op_BitConcatenate.i6.i3.i3(i3 %i_i1, i3 0)
-  %tmp_9 = call i4 @_ssdm_op_BitConcatenate.i4.i3.i1(i3 %i_i1, i1 false)
-  %p_shl3_cast = zext i4 %tmp_9 to i6
-  %tmp_s = sub i6 %tmp_8, %p_shl3_cast
+  %tmp_9 = call i6 @_ssdm_op_BitConcatenate.i6.i3.i3(i3 %i_i1, i3 0)
+  %tmp_s = call i4 @_ssdm_op_BitConcatenate.i4.i3.i1(i3 %i_i1, i1 false)
+  %p_shl3_cast = zext i4 %tmp_s to i6
+  %tmp_10 = sub i6 %tmp_9, %p_shl3_cast
   %exitcond1_i = icmp eq i3 %i_i1, -3
-  %empty_3 = call i32 (...)* @_ssdm_op_SpecLoopTripCount(i64 5, i64 5, i64 5) nounwind
+  %empty_4 = call i32 (...)* @_ssdm_op_SpecLoopTripCount(i64 5, i64 5, i64 5) nounwind
   %i_1 = add i3 %i_i1, 1
   br i1 %exitcond1_i, label %setCoeffs.exit.loopexit, label %.preheader.i.preheader
 
@@ -123,19 +132,19 @@ filter.exit:                                      ; preds = %.preheader4
 .preheader.i:                                     ; preds = %.preheader.i.preheader, %1
   %j_i = phi i3 [ %j, %1 ], [ 0, %.preheader.i.preheader ]
   %j_i_cast1_cast = zext i3 %j_i to i6
-  %tmp_10 = add i6 %tmp_s, %j_i_cast1_cast
-  %tmp_11_cast = sext i6 %tmp_10 to i32
-  %coeffs_addr = getelementptr [30 x float]* %coeffs, i32 0, i32 %tmp_11_cast
-  %iir_coeff_array_addr_5 = getelementptr [30 x float]* @iir_coeff_array, i32 0, i32 %tmp_11_cast
+  %tmp_11 = add i6 %tmp_10, %j_i_cast1_cast
+  %tmp_12_cast = sext i6 %tmp_11 to i32
+  %coeffs_addr = getelementptr [30 x float]* %coeffs, i32 0, i32 %tmp_12_cast
+  %iir_coeff_array_addr_6 = getelementptr [30 x float]* @iir_coeff_array, i32 0, i32 %tmp_12_cast
   %exitcond_i2 = icmp eq i3 %j_i, -2
-  %empty_4 = call i32 (...)* @_ssdm_op_SpecLoopTripCount(i64 6, i64 6, i64 6) nounwind
+  %empty_5 = call i32 (...)* @_ssdm_op_SpecLoopTripCount(i64 6, i64 6, i64 6) nounwind
   %j = add i3 %j_i, 1
   br i1 %exitcond_i2, label %.preheader.loopexit, label %1
 
 ; <label>:1                                       ; preds = %.preheader.i
   call void (...)* @_ssdm_op_SpecLoopName([15 x i8]* @p_str3) nounwind
   %coeffs_load = load float* %coeffs_addr, align 4
-  store float %coeffs_load, float* %iir_coeff_array_addr_5, align 4
+  store float %coeffs_load, float* %iir_coeff_array_addr_6, align 4
   br label %.preheader.i
 
 setCoeffs.exit.loopexit:                          ; preds = %.preheader
@@ -194,19 +203,19 @@ entry:
 define weak i6 @_ssdm_op_BitConcatenate.i6.i3.i3(i3, i3) nounwind readnone {
 entry:
   %empty = zext i3 %0 to i6
-  %empty_5 = zext i3 %1 to i6
-  %empty_6 = shl i6 %empty, 3
-  %empty_7 = or i6 %empty_6, %empty_5
-  ret i6 %empty_7
+  %empty_6 = zext i3 %1 to i6
+  %empty_7 = shl i6 %empty, 3
+  %empty_8 = or i6 %empty_7, %empty_6
+  ret i6 %empty_8
 }
 
 define weak i4 @_ssdm_op_BitConcatenate.i4.i3.i1(i3, i1) nounwind readnone {
 entry:
   %empty = zext i3 %0 to i4
-  %empty_8 = zext i1 %1 to i4
-  %empty_9 = shl i4 %empty, 1
-  %empty_10 = or i4 %empty_9, %empty_8
-  ret i4 %empty_10
+  %empty_9 = zext i1 %1 to i4
+  %empty_10 = shl i4 %empty, 1
+  %empty_11 = or i4 %empty_10, %empty_9
+  ret i4 %empty_11
 }
 
 !opencl.kernels = !{!0, !7, !13, !17, !17}

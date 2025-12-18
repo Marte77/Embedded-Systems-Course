@@ -34,7 +34,7 @@ set Library     "hls"
 set IPName      "equalizer"
 set Version     "1.11"
 set DisplayName "eq_marte"
-set Revision    "2114393218"
+set Revision    "2114397316"
 set Description "equalizer"
 set Device      "zynq"
 set Taxonomy    "/VIVADO_HLS_IP"
@@ -1666,7 +1666,7 @@ ipx::archive_core [file join [pwd] $ZipFile] $core
 
 ## Generate XO file if kernel.xml file is dumped
 set enable_xo_gen 0
-set kernel_files {C:/Users/marti/Documents/EmbeddedSystems/project/equalizer/iir.cpp}
+set kernel_files {C:/Users/marti/Documents/GitHub/Embedded-Systems-Course/project/equalizer/iir.cpp}
 if {$enable_xo_gen} {
     set sdaccel_dir [file join [pwd] .. sdaccel]
     set db_dir [file join [pwd] .. .. .autopilot db]

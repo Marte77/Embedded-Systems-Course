@@ -3,7 +3,7 @@
 ================================================================
 == Vivado HLS Report for 'equalizer'
 ================================================================
-* Date:           Tue Dec 16 00:52:41 2025
+* Date:           Thu Dec 18 21:16:04 2025
 
 * Version:        2017.2 (Build 1909853 on Thu Jun 15 18:55:24 MDT 2017)
 * Project:        equalizer
@@ -29,7 +29,7 @@
     |  Latency  |  Interval | Pipeline|
     | min | max | min | max |   Type  |
     +-----+-----+-----+-----+---------+
-    |   71|  176|   72|  177|   none  |
+    |   71|  256|   72|  257|   none  |
     +-----+-----+-----+-----+---------+
 
     + Detail: 
@@ -41,7 +41,7 @@
         |                   |  Latency  | Iteration|  Initiation Interval  | Trip |          |
         |     Loop Name     | min | max |  Latency |  achieved |   target  | Count| Pipelined|
         +-------------------+-----+-----+----------+-----------+-----------+------+----------+
-        |- filter_loop      |  175|  175|        35|          -|          -|     5|    no    |
+        |- filter_loop      |  255|  255|        51|          -|          -|     5|    no    |
         |- Loop 2           |   70|   70|        14|          -|          -|     5|    no    |
         | + setCoeffs_loop  |   12|   12|         2|          -|          -|     6|    no    |
         +-------------------+-----+-----+----------+-----------+-----------+------+----------+
@@ -72,7 +72,7 @@ IsGatedGlobalClock: 0
 ============================================================
 + Verbose Summary: Schedule
 ============================================================
-* Number of FSM states: 38
+* Number of FSM states: 54
 * Pipeline: 0
 * Dataflow Pipeline: 0
 
@@ -154,23 +154,55 @@ IsGatedGlobalClock: 0
 37 --> 
 	38  / true
 38 --> 
+	39  / true
+39 --> 
+	40  / true
+40 --> 
+	41  / true
+41 --> 
+	42  / true
+42 --> 
+	43  / true
+43 --> 
+	44  / true
+44 --> 
+	45  / true
+45 --> 
+	46  / true
+46 --> 
+	47  / true
+47 --> 
+	48  / true
+48 --> 
+	49  / true
+49 --> 
+	50  / true
+50 --> 
+	51  / true
+51 --> 
+	52  / true
+52 --> 
+	53  / true
+53 --> 
+	54  / true
+54 --> 
 	2  / true
 * FSM state operations: 
 
  <State 1>: 4.26ns
-ST_1: StgValue_39 (10)  [1/1] 0.00ns
+ST_1: StgValue_55 (10)  [1/1] 0.00ns
 codeRepl:0  call void (...)* @_ssdm_op_SpecBitsMap(float* %y) nounwind, !map !23
 
-ST_1: StgValue_40 (11)  [1/1] 0.00ns
+ST_1: StgValue_56 (11)  [1/1] 0.00ns
 codeRepl:1  call void (...)* @_ssdm_op_SpecBitsMap(float %x) nounwind, !map !29
 
-ST_1: StgValue_41 (12)  [1/1] 0.00ns
+ST_1: StgValue_57 (12)  [1/1] 0.00ns
 codeRepl:2  call void (...)* @_ssdm_op_SpecBitsMap(i32 %mode) nounwind, !map !35
 
-ST_1: StgValue_42 (13)  [1/1] 0.00ns
+ST_1: StgValue_58 (13)  [1/1] 0.00ns
 codeRepl:3  call void (...)* @_ssdm_op_SpecBitsMap([30 x float]* %coeffs) nounwind, !map !39
 
-ST_1: StgValue_43 (14)  [1/1] 0.00ns
+ST_1: StgValue_59 (14)  [1/1] 0.00ns
 codeRepl:4  call void (...)* @_ssdm_op_SpecTopModule([10 x i8]* @equalizer_str) nounwind
 
 ST_1: mode_read (15)  [1/1] 1.00ns
@@ -182,31 +214,31 @@ codeRepl:6  %x_read = call float @_ssdm_op_Read.s_axilite.float(float %x) nounwi
 ST_1: empty (17)  [1/1] 0.00ns
 codeRepl:7  %empty = call i32 (...)* @_ssdm_op_SpecMemCore([30 x float]* %coeffs, [1 x i8]* @p_str5, [7 x i8]* @RAM_1P_str, [1 x i8]* @p_str5, i32 -1, [1 x i8]* @p_str5, [1 x i8]* @p_str5, [1 x i8]* @p_str5, [1 x i8]* @p_str5, [1 x i8]* @p_str5) nounwind
 
-ST_1: StgValue_47 (18)  [1/1] 0.00ns
+ST_1: StgValue_63 (18)  [1/1] 0.00ns
 codeRepl:8  call void (...)* @_ssdm_op_SpecInterface([30 x float]* %coeffs, [10 x i8]* @p_str, i32 0, i32 0, [1 x i8]* @p_str1, i32 0, i32 0, [6 x i8]* @p_str2, [1 x i8]* @p_str1, [1 x i8]* @p_str1, i32 0, i32 0, i32 0, i32 0, [1 x i8]* @p_str1, [1 x i8]* @p_str1)
 
-ST_1: StgValue_48 (19)  [1/1] 0.00ns  loc: equalizer/iir.cpp:4
+ST_1: StgValue_64 (19)  [1/1] 0.00ns  loc: equalizer/iir.cpp:4
 codeRepl:9  call void (...)* @_ssdm_op_SpecInterface(i32 %mode, [10 x i8]* @p_str, i32 0, i32 0, [1 x i8]* @p_str1, i32 0, i32 0, [6 x i8]* @p_str2, [1 x i8]* @p_str1, [1 x i8]* @p_str1, i32 0, i32 0, i32 0, i32 0, [1 x i8]* @p_str1, [1 x i8]* @p_str1) nounwind
 
-ST_1: StgValue_49 (20)  [1/1] 0.00ns  loc: equalizer/iir.cpp:4
+ST_1: StgValue_65 (20)  [1/1] 0.00ns  loc: equalizer/iir.cpp:4
 codeRepl:10  call void (...)* @_ssdm_op_SpecInterface(float %x, [10 x i8]* @p_str, i32 0, i32 0, [1 x i8]* @p_str1, i32 0, i32 0, [6 x i8]* @p_str2, [1 x i8]* @p_str1, [1 x i8]* @p_str1, i32 0, i32 0, i32 0, i32 0, [1 x i8]* @p_str1, [1 x i8]* @p_str1) nounwind
 
-ST_1: StgValue_50 (21)  [1/1] 0.00ns  loc: equalizer/iir.cpp:4
+ST_1: StgValue_66 (21)  [1/1] 0.00ns  loc: equalizer/iir.cpp:4
 codeRepl:11  call void (...)* @_ssdm_op_SpecInterface(i32 0, [10 x i8]* @p_str, i32 0, i32 0, [1 x i8]* @p_str1, i32 0, i32 0, [6 x i8]* @p_str2, [1 x i8]* @p_str1, [1 x i8]* @p_str1, i32 0, i32 0, i32 0, i32 0, [1 x i8]* @p_str1, [1 x i8]* @p_str1) nounwind
 
-ST_1: StgValue_51 (22)  [1/1] 0.00ns  loc: equalizer/iir.cpp:4
+ST_1: StgValue_67 (22)  [1/1] 0.00ns  loc: equalizer/iir.cpp:4
 codeRepl:12  call void (...)* @_ssdm_op_SpecInterface(float* %y, [10 x i8]* @p_str, i32 0, i32 0, [1 x i8]* @p_str1, i32 0, i32 0, [6 x i8]* @p_str2, [1 x i8]* @p_str1, [1 x i8]* @p_str1, i32 0, i32 0, i32 0, i32 0, [1 x i8]* @p_str1, [1 x i8]* @p_str1) nounwind
 
 ST_1: tmp_1 (23)  [1/1] 3.26ns  loc: equalizer/iir.cpp:5
 codeRepl:13  %tmp_1 = icmp eq i32 %mode_read, 1
 
-ST_1: StgValue_53 (24)  [1/1] 0.00ns  loc: equalizer/iir.cpp:5
+ST_1: StgValue_69 (24)  [1/1] 0.00ns  loc: equalizer/iir.cpp:5
 codeRepl:14  br i1 %tmp_1, label %.preheader4.preheader, label %.preheader.preheader
 
-ST_1: StgValue_54 (26)  [1/1] 1.59ns
+ST_1: StgValue_70 (26)  [1/1] 1.59ns
 .preheader.preheader:0  br label %.preheader
 
-ST_1: StgValue_55 (60)  [1/1] 1.59ns  loc: equalizer/iir.h:34->equalizer/iir.cpp:6
+ST_1: StgValue_71 (60)  [1/1] 1.59ns  loc: equalizer/iir.h:34->equalizer/iir.cpp:6
 .preheader4.preheader:0  br label %.preheader4
 
 
@@ -214,34 +246,34 @@ ST_1: StgValue_55 (60)  [1/1] 1.59ns  loc: equalizer/iir.h:34->equalizer/iir.cpp
 ST_2: i_i1 (28)  [1/1] 0.00ns
 .preheader:0  %i_i1 = phi i3 [ %i_1, %.preheader.loopexit ], [ 0, %.preheader.preheader ]
 
-ST_2: tmp_8 (29)  [1/1] 0.00ns  loc: equalizer/iir.h:25->equalizer/iir.cpp:8
-.preheader:1  %tmp_8 = call i6 @_ssdm_op_BitConcatenate.i6.i3.i3(i3 %i_i1, i3 0)
+ST_2: tmp_9 (29)  [1/1] 0.00ns  loc: equalizer/iir.h:25->equalizer/iir.cpp:8
+.preheader:1  %tmp_9 = call i6 @_ssdm_op_BitConcatenate.i6.i3.i3(i3 %i_i1, i3 0)
 
-ST_2: tmp_9 (30)  [1/1] 0.00ns  loc: equalizer/iir.h:25->equalizer/iir.cpp:8
-.preheader:2  %tmp_9 = call i4 @_ssdm_op_BitConcatenate.i4.i3.i1(i3 %i_i1, i1 false)
+ST_2: tmp_s (30)  [1/1] 0.00ns  loc: equalizer/iir.h:25->equalizer/iir.cpp:8
+.preheader:2  %tmp_s = call i4 @_ssdm_op_BitConcatenate.i4.i3.i1(i3 %i_i1, i1 false)
 
 ST_2: p_shl3_cast (31)  [1/1] 0.00ns  loc: equalizer/iir.h:27->equalizer/iir.cpp:8
-.preheader:3  %p_shl3_cast = zext i4 %tmp_9 to i6
+.preheader:3  %p_shl3_cast = zext i4 %tmp_s to i6
 
-ST_2: tmp_s (32)  [1/1] 2.31ns  loc: equalizer/iir.h:27->equalizer/iir.cpp:8
-.preheader:4  %tmp_s = sub i6 %tmp_8, %p_shl3_cast
+ST_2: tmp_10 (32)  [1/1] 2.31ns  loc: equalizer/iir.h:27->equalizer/iir.cpp:8
+.preheader:4  %tmp_10 = sub i6 %tmp_9, %p_shl3_cast
 
 ST_2: exitcond1_i (33)  [1/1] 2.07ns  loc: equalizer/iir.h:25->equalizer/iir.cpp:8
 .preheader:5  %exitcond1_i = icmp eq i3 %i_i1, -3
 
-ST_2: empty_3 (34)  [1/1] 0.00ns
-.preheader:6  %empty_3 = call i32 (...)* @_ssdm_op_SpecLoopTripCount(i64 5, i64 5, i64 5) nounwind
+ST_2: empty_4 (34)  [1/1] 0.00ns
+.preheader:6  %empty_4 = call i32 (...)* @_ssdm_op_SpecLoopTripCount(i64 5, i64 5, i64 5) nounwind
 
 ST_2: i_1 (35)  [1/1] 2.26ns  loc: equalizer/iir.h:25->equalizer/iir.cpp:8
 .preheader:7  %i_1 = add i3 %i_i1, 1
 
-ST_2: StgValue_64 (36)  [1/1] 0.00ns  loc: equalizer/iir.h:25->equalizer/iir.cpp:8
+ST_2: StgValue_80 (36)  [1/1] 0.00ns  loc: equalizer/iir.h:25->equalizer/iir.cpp:8
 .preheader:8  br i1 %exitcond1_i, label %setCoeffs.exit.loopexit, label %.preheader.i.preheader
 
-ST_2: StgValue_65 (38)  [1/1] 1.59ns  loc: equalizer/iir.h:27->equalizer/iir.cpp:8
+ST_2: StgValue_81 (38)  [1/1] 1.59ns  loc: equalizer/iir.h:27->equalizer/iir.cpp:8
 .preheader.i.preheader:0  br label %.preheader.i
 
-ST_2: StgValue_66 (58)  [1/1] 0.00ns
+ST_2: StgValue_82 (58)  [1/1] 0.00ns
 setCoeffs.exit.loopexit:0  br label %setCoeffs.exit
 
 ST_2: temp_i (62)  [1/1] 0.00ns
@@ -290,7 +322,7 @@ ST_2: iir_coeff_array_addr_2 (76)  [1/1] 0.00ns  loc: equalizer/iir.h:38->equali
 .preheader4:14  %iir_coeff_array_addr_2 = getelementptr [30 x float]* @iir_coeff_array, i32 0, i32 %tmp_5_cast
 
 ST_2: tmp_6 (77)  [1/1] 2.31ns  loc: equalizer/iir.h:39->equalizer/iir.cpp:6
-.preheader4:15  %tmp_6 = add i6 %tmp_3, 4
+.preheader4:15  %tmp_6 = add i6 %tmp_3, 3
 
 ST_2: tmp_6_cast (78)  [1/1] 0.00ns  loc: equalizer/iir.h:39->equalizer/iir.cpp:6
 .preheader4:16  %tmp_6_cast = sext i6 %tmp_6 to i32
@@ -299,7 +331,7 @@ ST_2: iir_coeff_array_addr_3 (79)  [1/1] 0.00ns  loc: equalizer/iir.h:39->equali
 .preheader4:17  %iir_coeff_array_addr_3 = getelementptr [30 x float]* @iir_coeff_array, i32 0, i32 %tmp_6_cast
 
 ST_2: tmp_7 (80)  [1/1] 2.31ns  loc: equalizer/iir.h:40->equalizer/iir.cpp:6
-.preheader4:18  %tmp_7 = add i6 %tmp_3, 5
+.preheader4:18  %tmp_7 = add i6 %tmp_3, 4
 
 ST_2: tmp_7_cast (81)  [1/1] 0.00ns  loc: equalizer/iir.h:40->equalizer/iir.cpp:6
 .preheader4:19  %tmp_7_cast = sext i6 %tmp_7 to i32
@@ -307,46 +339,55 @@ ST_2: tmp_7_cast (81)  [1/1] 0.00ns  loc: equalizer/iir.h:40->equalizer/iir.cpp:
 ST_2: iir_coeff_array_addr_4 (82)  [1/1] 0.00ns  loc: equalizer/iir.h:40->equalizer/iir.cpp:6
 .preheader4:20  %iir_coeff_array_addr_4 = getelementptr [30 x float]* @iir_coeff_array, i32 0, i32 %tmp_7_cast
 
-ST_2: exitcond_i (83)  [1/1] 2.07ns  loc: equalizer/iir.h:34->equalizer/iir.cpp:6
-.preheader4:21  %exitcond_i = icmp eq i3 %i_i, -3
+ST_2: tmp_8 (83)  [1/1] 2.31ns  loc: equalizer/iir.h:41->equalizer/iir.cpp:6
+.preheader4:21  %tmp_8 = add i6 %tmp_3, 5
 
-ST_2: empty_2 (84)  [1/1] 0.00ns
-.preheader4:22  %empty_2 = call i32 (...)* @_ssdm_op_SpecLoopTripCount(i64 5, i64 5, i64 5) nounwind
+ST_2: tmp_8_cast (84)  [1/1] 0.00ns  loc: equalizer/iir.h:41->equalizer/iir.cpp:6
+.preheader4:22  %tmp_8_cast = sext i6 %tmp_8 to i32
 
-ST_2: i (85)  [1/1] 2.26ns  loc: equalizer/iir.h:34->equalizer/iir.cpp:6
-.preheader4:23  %i = add i3 %i_i, 1
+ST_2: iir_coeff_array_addr_5 (85)  [1/1] 0.00ns  loc: equalizer/iir.h:41->equalizer/iir.cpp:6
+.preheader4:23  %iir_coeff_array_addr_5 = getelementptr [30 x float]* @iir_coeff_array, i32 0, i32 %tmp_8_cast
 
-ST_2: StgValue_91 (86)  [1/1] 0.00ns  loc: equalizer/iir.h:34->equalizer/iir.cpp:6
-.preheader4:24  br i1 %exitcond_i, label %filter.exit, label %0
+ST_2: exitcond_i (86)  [1/1] 2.07ns  loc: equalizer/iir.h:34->equalizer/iir.cpp:6
+.preheader4:24  %exitcond_i = icmp eq i3 %i_i, -3
 
-ST_2: b0 (89)  [2/2] 2.32ns  loc: equalizer/iir.h:36->equalizer/iir.cpp:6
+ST_2: empty_2 (87)  [1/1] 0.00ns
+.preheader4:25  %empty_2 = call i32 (...)* @_ssdm_op_SpecLoopTripCount(i64 5, i64 5, i64 5) nounwind
+
+ST_2: i (88)  [1/1] 2.26ns  loc: equalizer/iir.h:34->equalizer/iir.cpp:6
+.preheader4:26  %i = add i3 %i_i, 1
+
+ST_2: StgValue_110 (89)  [1/1] 0.00ns  loc: equalizer/iir.h:34->equalizer/iir.cpp:6
+.preheader4:27  br i1 %exitcond_i, label %filter.exit, label %0
+
+ST_2: b0 (92)  [2/2] 2.32ns  loc: equalizer/iir.h:36->equalizer/iir.cpp:6
 :1  %b0 = load float* %iir_coeff_array_addr, align 8
 
-ST_2: b1 (90)  [2/2] 2.32ns  loc: equalizer/iir.h:37->equalizer/iir.cpp:6
+ST_2: b1 (93)  [2/2] 2.32ns  loc: equalizer/iir.h:37->equalizer/iir.cpp:6
 :2  %b1 = load float* %iir_coeff_array_addr_1, align 4
 
-ST_2: iir_x_1_addr (94)  [1/1] 0.00ns  loc: equalizer/iir.h:42->equalizer/iir.cpp:6
-:6  %iir_x_1_addr = getelementptr [5 x float]* @iir_x_1, i32 0, i32 %i_i_cast3
+ST_2: iir_x_1_addr (98)  [1/1] 0.00ns  loc: equalizer/iir.h:43->equalizer/iir.cpp:6
+:7  %iir_x_1_addr = getelementptr [5 x float]* @iir_x_1, i32 0, i32 %i_i_cast3
 
-ST_2: iir_x_0_addr (96)  [1/1] 0.00ns  loc: equalizer/iir.h:43->equalizer/iir.cpp:6
-:8  %iir_x_0_addr = getelementptr [5 x float]* @iir_x_0, i32 0, i32 %i_i_cast3
+ST_2: iir_x_0_addr (100)  [1/1] 0.00ns  loc: equalizer/iir.h:44->equalizer/iir.cpp:6
+:9  %iir_x_0_addr = getelementptr [5 x float]* @iir_x_0, i32 0, i32 %i_i_cast3
 
-ST_2: iir_x_0_load (97)  [2/2] 2.32ns  loc: equalizer/iir.h:43->equalizer/iir.cpp:6
-:9  %iir_x_0_load = load float* %iir_x_0_addr, align 4
+ST_2: iir_x_0_load (101)  [2/2] 2.32ns  loc: equalizer/iir.h:44->equalizer/iir.cpp:6
+:10  %iir_x_0_load = load float* %iir_x_0_addr, align 4
 
-ST_2: iir_y_1_addr (105)  [1/1] 0.00ns  loc: equalizer/iir.h:46->equalizer/iir.cpp:6
-:17  %iir_y_1_addr = getelementptr [5 x float]* @iir_y_1, i32 0, i32 %i_i_cast3
+ST_2: iir_y_1_addr (112)  [1/1] 0.00ns  loc: equalizer/iir.h:47->equalizer/iir.cpp:6
+:21  %iir_y_1_addr = getelementptr [5 x float]* @iir_y_1, i32 0, i32 %i_i_cast3
 
-ST_2: iir_y_2_addr (109)  [1/1] 0.00ns  loc: equalizer/iir.h:46->equalizer/iir.cpp:6
-:21  %iir_y_2_addr = getelementptr [5 x float]* @iir_y_2, i32 0, i32 %i_i_cast3
+ST_2: iir_y_2_addr (117)  [1/1] 0.00ns  loc: equalizer/iir.h:47->equalizer/iir.cpp:6
+:26  %iir_y_2_addr = getelementptr [5 x float]* @iir_y_2, i32 0, i32 %i_i_cast3
 
-ST_2: StgValue_99 (117)  [1/1] 1.00ns  loc: equalizer/iir.cpp:6
+ST_2: StgValue_118 (126)  [1/1] 1.00ns  loc: equalizer/iir.cpp:6
 filter.exit:0  call void @_ssdm_op_Write.s_axilite.floatP(float* %y, float %temp_i) nounwind
 
-ST_2: StgValue_100 (118)  [1/1] 0.00ns  loc: equalizer/iir.cpp:6
+ST_2: StgValue_119 (127)  [1/1] 0.00ns  loc: equalizer/iir.cpp:6
 filter.exit:1  br label %setCoeffs.exit
 
-ST_2: StgValue_101 (120)  [1/1] 0.00ns  loc: equalizer/iir.cpp:10
+ST_2: StgValue_120 (129)  [1/1] 0.00ns  loc: equalizer/iir.cpp:10
 setCoeffs.exit:0  ret void
 
 
@@ -357,324 +398,602 @@ ST_3: j_i (40)  [1/1] 0.00ns
 ST_3: j_i_cast1_cast (41)  [1/1] 0.00ns  loc: equalizer/iir.h:27->equalizer/iir.cpp:8
 .preheader.i:1  %j_i_cast1_cast = zext i3 %j_i to i6
 
-ST_3: tmp_10 (42)  [1/1] 2.31ns  loc: equalizer/iir.h:27->equalizer/iir.cpp:8
-.preheader.i:2  %tmp_10 = add i6 %tmp_s, %j_i_cast1_cast
+ST_3: tmp_11 (42)  [1/1] 2.31ns  loc: equalizer/iir.h:27->equalizer/iir.cpp:8
+.preheader.i:2  %tmp_11 = add i6 %tmp_10, %j_i_cast1_cast
 
-ST_3: tmp_11_cast (43)  [1/1] 0.00ns  loc: equalizer/iir.h:27->equalizer/iir.cpp:8
-.preheader.i:3  %tmp_11_cast = sext i6 %tmp_10 to i32
+ST_3: tmp_12_cast (43)  [1/1] 0.00ns  loc: equalizer/iir.h:27->equalizer/iir.cpp:8
+.preheader.i:3  %tmp_12_cast = sext i6 %tmp_11 to i32
 
 ST_3: coeffs_addr (44)  [1/1] 0.00ns  loc: equalizer/iir.h:27->equalizer/iir.cpp:8
-.preheader.i:4  %coeffs_addr = getelementptr [30 x float]* %coeffs, i32 0, i32 %tmp_11_cast
+.preheader.i:4  %coeffs_addr = getelementptr [30 x float]* %coeffs, i32 0, i32 %tmp_12_cast
 
-ST_3: iir_coeff_array_addr_5 (45)  [1/1] 0.00ns  loc: equalizer/iir.h:27->equalizer/iir.cpp:8
-.preheader.i:5  %iir_coeff_array_addr_5 = getelementptr [30 x float]* @iir_coeff_array, i32 0, i32 %tmp_11_cast
+ST_3: iir_coeff_array_addr_6 (45)  [1/1] 0.00ns  loc: equalizer/iir.h:27->equalizer/iir.cpp:8
+.preheader.i:5  %iir_coeff_array_addr_6 = getelementptr [30 x float]* @iir_coeff_array, i32 0, i32 %tmp_12_cast
 
 ST_3: exitcond_i2 (46)  [1/1] 2.07ns  loc: equalizer/iir.h:26->equalizer/iir.cpp:8
 .preheader.i:6  %exitcond_i2 = icmp eq i3 %j_i, -2
 
-ST_3: empty_4 (47)  [1/1] 0.00ns
-.preheader.i:7  %empty_4 = call i32 (...)* @_ssdm_op_SpecLoopTripCount(i64 6, i64 6, i64 6) nounwind
+ST_3: empty_5 (47)  [1/1] 0.00ns
+.preheader.i:7  %empty_5 = call i32 (...)* @_ssdm_op_SpecLoopTripCount(i64 6, i64 6, i64 6) nounwind
 
 ST_3: j (48)  [1/1] 2.26ns  loc: equalizer/iir.h:26->equalizer/iir.cpp:8
 .preheader.i:8  %j = add i3 %j_i, 1
 
-ST_3: StgValue_111 (49)  [1/1] 0.00ns  loc: equalizer/iir.h:26->equalizer/iir.cpp:8
+ST_3: StgValue_130 (49)  [1/1] 0.00ns  loc: equalizer/iir.h:26->equalizer/iir.cpp:8
 .preheader.i:9  br i1 %exitcond_i2, label %.preheader.loopexit, label %1
 
 ST_3: coeffs_load (52)  [2/2] 2.32ns  loc: equalizer/iir.h:27->equalizer/iir.cpp:8
 :1  %coeffs_load = load float* %coeffs_addr, align 4
 
-ST_3: StgValue_113 (56)  [1/1] 0.00ns
+ST_3: StgValue_132 (56)  [1/1] 0.00ns
 .preheader.loopexit:0  br label %.preheader
 
 
  <State 4>: 4.64ns
-ST_4: StgValue_114 (51)  [1/1] 0.00ns  loc: equalizer/iir.h:26->equalizer/iir.cpp:8
+ST_4: StgValue_133 (51)  [1/1] 0.00ns  loc: equalizer/iir.h:26->equalizer/iir.cpp:8
 :0  call void (...)* @_ssdm_op_SpecLoopName([15 x i8]* @p_str3) nounwind
 
 ST_4: coeffs_load (52)  [1/2] 2.32ns  loc: equalizer/iir.h:27->equalizer/iir.cpp:8
 :1  %coeffs_load = load float* %coeffs_addr, align 4
 
-ST_4: StgValue_116 (53)  [1/1] 2.32ns  loc: equalizer/iir.h:27->equalizer/iir.cpp:8
-:2  store float %coeffs_load, float* %iir_coeff_array_addr_5, align 4
+ST_4: StgValue_135 (53)  [1/1] 2.32ns  loc: equalizer/iir.h:27->equalizer/iir.cpp:8
+:2  store float %coeffs_load, float* %iir_coeff_array_addr_6, align 4
 
-ST_4: StgValue_117 (54)  [1/1] 0.00ns  loc: equalizer/iir.h:26->equalizer/iir.cpp:8
+ST_4: StgValue_136 (54)  [1/1] 0.00ns  loc: equalizer/iir.h:26->equalizer/iir.cpp:8
 :3  br label %.preheader.i
 
 
  <State 5>: 2.32ns
-ST_5: b0 (89)  [1/2] 2.32ns  loc: equalizer/iir.h:36->equalizer/iir.cpp:6
+ST_5: b0 (92)  [1/2] 2.32ns  loc: equalizer/iir.h:36->equalizer/iir.cpp:6
 :1  %b0 = load float* %iir_coeff_array_addr, align 8
 
-ST_5: b1 (90)  [1/2] 2.32ns  loc: equalizer/iir.h:37->equalizer/iir.cpp:6
+ST_5: b1 (93)  [1/2] 2.32ns  loc: equalizer/iir.h:37->equalizer/iir.cpp:6
 :2  %b1 = load float* %iir_coeff_array_addr_1, align 4
 
-ST_5: b2 (91)  [2/2] 2.32ns  loc: equalizer/iir.h:38->equalizer/iir.cpp:6
+ST_5: b2 (94)  [2/2] 2.32ns  loc: equalizer/iir.h:38->equalizer/iir.cpp:6
 :3  %b2 = load float* %iir_coeff_array_addr_2, align 8
 
-ST_5: iir_x_1_load (95)  [2/2] 2.32ns  loc: equalizer/iir.h:42->equalizer/iir.cpp:6
-:7  %iir_x_1_load = load float* %iir_x_1_addr, align 4
+ST_5: iir_x_1_load (99)  [2/2] 2.32ns  loc: equalizer/iir.h:43->equalizer/iir.cpp:6
+:8  %iir_x_1_load = load float* %iir_x_1_addr, align 4
 
-ST_5: iir_x_0_load (97)  [1/2] 2.32ns  loc: equalizer/iir.h:43->equalizer/iir.cpp:6
-:9  %iir_x_0_load = load float* %iir_x_0_addr, align 4
+ST_5: iir_x_0_load (101)  [1/2] 2.32ns  loc: equalizer/iir.h:44->equalizer/iir.cpp:6
+:10  %iir_x_0_load = load float* %iir_x_0_addr, align 4
 
-ST_5: StgValue_123 (99)  [1/1] 2.32ns  loc: equalizer/iir.h:44->equalizer/iir.cpp:6
-:11  store float %temp_i, float* %iir_x_0_addr, align 4
+ST_5: StgValue_142 (103)  [1/1] 2.32ns  loc: equalizer/iir.h:45->equalizer/iir.cpp:6
+:12  store float %temp_i, float* %iir_x_0_addr, align 4
 
 
  <State 6>: 5.70ns
-ST_6: b2 (91)  [1/2] 2.32ns  loc: equalizer/iir.h:38->equalizer/iir.cpp:6
+ST_6: b2 (94)  [1/2] 2.32ns  loc: equalizer/iir.h:38->equalizer/iir.cpp:6
 :3  %b2 = load float* %iir_coeff_array_addr_2, align 8
 
-ST_6: iir_x_1_load (95)  [1/2] 2.32ns  loc: equalizer/iir.h:42->equalizer/iir.cpp:6
-:7  %iir_x_1_load = load float* %iir_x_1_addr, align 4
+ST_6: iir_x_1_load (99)  [1/2] 2.32ns  loc: equalizer/iir.h:43->equalizer/iir.cpp:6
+:8  %iir_x_1_load = load float* %iir_x_1_addr, align 4
 
-ST_6: StgValue_126 (98)  [1/1] 2.32ns  loc: equalizer/iir.h:43->equalizer/iir.cpp:6
-:10  store float %iir_x_0_load, float* %iir_x_1_addr, align 4
+ST_6: StgValue_145 (102)  [1/1] 2.32ns  loc: equalizer/iir.h:44->equalizer/iir.cpp:6
+:11  store float %iir_x_0_load, float* %iir_x_1_addr, align 4
 
-ST_6: tmp_i (100)  [4/4] 5.70ns  loc: equalizer/iir.h:46->equalizer/iir.cpp:6
-:12  %tmp_i = fmul float %b0, %temp_i
+ST_6: tmp_i (104)  [4/4] 5.70ns  loc: equalizer/iir.h:47->equalizer/iir.cpp:6
+:13  %tmp_i = fmul float %b0, %temp_i
 
-ST_6: tmp_3_i (101)  [4/4] 5.70ns  loc: equalizer/iir.h:46->equalizer/iir.cpp:6
-:13  %tmp_3_i = fmul float %b1, %iir_x_0_load
+ST_6: tmp_4_i (106)  [4/4] 5.70ns  loc: equalizer/iir.h:47->equalizer/iir.cpp:6
+:15  %tmp_4_i = fmul float %b1, %iir_x_0_load
 
 
  <State 7>: 5.70ns
-ST_7: tmp_i (100)  [3/4] 5.70ns  loc: equalizer/iir.h:46->equalizer/iir.cpp:6
-:12  %tmp_i = fmul float %b0, %temp_i
+ST_7: tmp_i (104)  [3/4] 5.70ns  loc: equalizer/iir.h:47->equalizer/iir.cpp:6
+:13  %tmp_i = fmul float %b0, %temp_i
 
-ST_7: tmp_3_i (101)  [3/4] 5.70ns  loc: equalizer/iir.h:46->equalizer/iir.cpp:6
-:13  %tmp_3_i = fmul float %b1, %iir_x_0_load
+ST_7: tmp_4_i (106)  [3/4] 5.70ns  loc: equalizer/iir.h:47->equalizer/iir.cpp:6
+:15  %tmp_4_i = fmul float %b1, %iir_x_0_load
 
-ST_7: tmp_5_i (103)  [4/4] 5.70ns  loc: equalizer/iir.h:46->equalizer/iir.cpp:6
-:15  %tmp_5_i = fmul float %b2, %iir_x_1_load
+ST_7: tmp_7_i (109)  [4/4] 5.70ns  loc: equalizer/iir.h:47->equalizer/iir.cpp:6
+:18  %tmp_7_i = fmul float %b2, %iir_x_1_load
 
 
  <State 8>: 5.70ns
-ST_8: tmp_i (100)  [2/4] 5.70ns  loc: equalizer/iir.h:46->equalizer/iir.cpp:6
-:12  %tmp_i = fmul float %b0, %temp_i
+ST_8: a0 (95)  [2/2] 2.32ns  loc: equalizer/iir.h:39->equalizer/iir.cpp:6
+:4  %a0 = load float* %iir_coeff_array_addr_3, align 4
 
-ST_8: tmp_3_i (101)  [2/4] 5.70ns  loc: equalizer/iir.h:46->equalizer/iir.cpp:6
-:13  %tmp_3_i = fmul float %b1, %iir_x_0_load
+ST_8: tmp_i (104)  [2/4] 5.70ns  loc: equalizer/iir.h:47->equalizer/iir.cpp:6
+:13  %tmp_i = fmul float %b0, %temp_i
 
-ST_8: tmp_5_i (103)  [3/4] 5.70ns  loc: equalizer/iir.h:46->equalizer/iir.cpp:6
-:15  %tmp_5_i = fmul float %b2, %iir_x_1_load
+ST_8: tmp_4_i (106)  [2/4] 5.70ns  loc: equalizer/iir.h:47->equalizer/iir.cpp:6
+:15  %tmp_4_i = fmul float %b1, %iir_x_0_load
+
+ST_8: tmp_7_i (109)  [3/4] 5.70ns  loc: equalizer/iir.h:47->equalizer/iir.cpp:6
+:18  %tmp_7_i = fmul float %b2, %iir_x_1_load
 
 
  <State 9>: 5.70ns
-ST_9: tmp_i (100)  [1/4] 5.70ns  loc: equalizer/iir.h:46->equalizer/iir.cpp:6
-:12  %tmp_i = fmul float %b0, %temp_i
+ST_9: a0 (95)  [1/2] 2.32ns  loc: equalizer/iir.h:39->equalizer/iir.cpp:6
+:4  %a0 = load float* %iir_coeff_array_addr_3, align 4
 
-ST_9: tmp_3_i (101)  [1/4] 5.70ns  loc: equalizer/iir.h:46->equalizer/iir.cpp:6
-:13  %tmp_3_i = fmul float %b1, %iir_x_0_load
+ST_9: tmp_i (104)  [1/4] 5.70ns  loc: equalizer/iir.h:47->equalizer/iir.cpp:6
+:13  %tmp_i = fmul float %b0, %temp_i
 
-ST_9: tmp_5_i (103)  [2/4] 5.70ns  loc: equalizer/iir.h:46->equalizer/iir.cpp:6
-:15  %tmp_5_i = fmul float %b2, %iir_x_1_load
+ST_9: tmp_4_i (106)  [1/4] 5.70ns  loc: equalizer/iir.h:47->equalizer/iir.cpp:6
+:15  %tmp_4_i = fmul float %b1, %iir_x_0_load
 
-
- <State 10>: 6.44ns
-ST_10: tmp_4_i (102)  [7/7] 6.44ns  loc: equalizer/iir.h:46->equalizer/iir.cpp:6
-:14  %tmp_4_i = fadd float %tmp_i, %tmp_3_i
-
-ST_10: tmp_5_i (103)  [1/4] 5.70ns  loc: equalizer/iir.h:46->equalizer/iir.cpp:6
-:15  %tmp_5_i = fmul float %b2, %iir_x_1_load
+ST_9: tmp_7_i (109)  [2/4] 5.70ns  loc: equalizer/iir.h:47->equalizer/iir.cpp:6
+:18  %tmp_7_i = fmul float %b2, %iir_x_1_load
 
 
- <State 11>: 6.44ns
-ST_11: tmp_4_i (102)  [6/7] 6.44ns  loc: equalizer/iir.h:46->equalizer/iir.cpp:6
-:14  %tmp_4_i = fadd float %tmp_i, %tmp_3_i
+ <State 10>: 6.08ns
+ST_10: tmp_3_i (105)  [16/16] 6.08ns  loc: equalizer/iir.h:47->equalizer/iir.cpp:6
+:14  %tmp_3_i = fdiv float %tmp_i, %a0
+
+ST_10: tmp_5_i (107)  [16/16] 6.08ns  loc: equalizer/iir.h:47->equalizer/iir.cpp:6
+:16  %tmp_5_i = fdiv float %tmp_4_i, %a0
+
+ST_10: tmp_7_i (109)  [1/4] 5.70ns  loc: equalizer/iir.h:47->equalizer/iir.cpp:6
+:18  %tmp_7_i = fmul float %b2, %iir_x_1_load
 
 
- <State 12>: 6.44ns
-ST_12: tmp_4_i (102)  [5/7] 6.44ns  loc: equalizer/iir.h:46->equalizer/iir.cpp:6
-:14  %tmp_4_i = fadd float %tmp_i, %tmp_3_i
+ <State 11>: 6.08ns
+ST_11: tmp_3_i (105)  [15/16] 6.08ns  loc: equalizer/iir.h:47->equalizer/iir.cpp:6
+:14  %tmp_3_i = fdiv float %tmp_i, %a0
+
+ST_11: tmp_5_i (107)  [15/16] 6.08ns  loc: equalizer/iir.h:47->equalizer/iir.cpp:6
+:16  %tmp_5_i = fdiv float %tmp_4_i, %a0
 
 
- <State 13>: 6.44ns
-ST_13: tmp_4_i (102)  [4/7] 6.44ns  loc: equalizer/iir.h:46->equalizer/iir.cpp:6
-:14  %tmp_4_i = fadd float %tmp_i, %tmp_3_i
+ <State 12>: 6.08ns
+ST_12: tmp_3_i (105)  [14/16] 6.08ns  loc: equalizer/iir.h:47->equalizer/iir.cpp:6
+:14  %tmp_3_i = fdiv float %tmp_i, %a0
+
+ST_12: tmp_5_i (107)  [14/16] 6.08ns  loc: equalizer/iir.h:47->equalizer/iir.cpp:6
+:16  %tmp_5_i = fdiv float %tmp_4_i, %a0
 
 
- <State 14>: 6.44ns
-ST_14: tmp_4_i (102)  [3/7] 6.44ns  loc: equalizer/iir.h:46->equalizer/iir.cpp:6
-:14  %tmp_4_i = fadd float %tmp_i, %tmp_3_i
+ <State 13>: 6.08ns
+ST_13: tmp_3_i (105)  [13/16] 6.08ns  loc: equalizer/iir.h:47->equalizer/iir.cpp:6
+:14  %tmp_3_i = fdiv float %tmp_i, %a0
+
+ST_13: tmp_5_i (107)  [13/16] 6.08ns  loc: equalizer/iir.h:47->equalizer/iir.cpp:6
+:16  %tmp_5_i = fdiv float %tmp_4_i, %a0
 
 
- <State 15>: 6.44ns
-ST_15: tmp_4_i (102)  [2/7] 6.44ns  loc: equalizer/iir.h:46->equalizer/iir.cpp:6
-:14  %tmp_4_i = fadd float %tmp_i, %tmp_3_i
+ <State 14>: 6.08ns
+ST_14: tmp_3_i (105)  [12/16] 6.08ns  loc: equalizer/iir.h:47->equalizer/iir.cpp:6
+:14  %tmp_3_i = fdiv float %tmp_i, %a0
+
+ST_14: tmp_5_i (107)  [12/16] 6.08ns  loc: equalizer/iir.h:47->equalizer/iir.cpp:6
+:16  %tmp_5_i = fdiv float %tmp_4_i, %a0
 
 
- <State 16>: 6.44ns
-ST_16: tmp_4_i (102)  [1/7] 6.44ns  loc: equalizer/iir.h:46->equalizer/iir.cpp:6
-:14  %tmp_4_i = fadd float %tmp_i, %tmp_3_i
+ <State 15>: 6.08ns
+ST_15: tmp_3_i (105)  [11/16] 6.08ns  loc: equalizer/iir.h:47->equalizer/iir.cpp:6
+:14  %tmp_3_i = fdiv float %tmp_i, %a0
+
+ST_15: tmp_5_i (107)  [11/16] 6.08ns  loc: equalizer/iir.h:47->equalizer/iir.cpp:6
+:16  %tmp_5_i = fdiv float %tmp_4_i, %a0
 
 
- <State 17>: 6.44ns
-ST_17: tmp_6_i (104)  [7/7] 6.44ns  loc: equalizer/iir.h:46->equalizer/iir.cpp:6
-:16  %tmp_6_i = fadd float %tmp_4_i, %tmp_5_i
+ <State 16>: 6.08ns
+ST_16: tmp_3_i (105)  [10/16] 6.08ns  loc: equalizer/iir.h:47->equalizer/iir.cpp:6
+:14  %tmp_3_i = fdiv float %tmp_i, %a0
+
+ST_16: tmp_5_i (107)  [10/16] 6.08ns  loc: equalizer/iir.h:47->equalizer/iir.cpp:6
+:16  %tmp_5_i = fdiv float %tmp_4_i, %a0
 
 
- <State 18>: 6.44ns
-ST_18: a1 (92)  [2/2] 2.32ns  loc: equalizer/iir.h:39->equalizer/iir.cpp:6
-:4  %a1 = load float* %iir_coeff_array_addr_3, align 8
+ <State 17>: 6.08ns
+ST_17: tmp_3_i (105)  [9/16] 6.08ns  loc: equalizer/iir.h:47->equalizer/iir.cpp:6
+:14  %tmp_3_i = fdiv float %tmp_i, %a0
 
-ST_18: tmp_6_i (104)  [6/7] 6.44ns  loc: equalizer/iir.h:46->equalizer/iir.cpp:6
-:16  %tmp_6_i = fadd float %tmp_4_i, %tmp_5_i
+ST_17: tmp_5_i (107)  [9/16] 6.08ns  loc: equalizer/iir.h:47->equalizer/iir.cpp:6
+:16  %tmp_5_i = fdiv float %tmp_4_i, %a0
 
-ST_18: iir_y_1_load (106)  [2/2] 2.32ns  loc: equalizer/iir.h:46->equalizer/iir.cpp:6
-:18  %iir_y_1_load = load float* %iir_y_1_addr, align 4
-
-
- <State 19>: 6.44ns
-ST_19: a1 (92)  [1/2] 2.32ns  loc: equalizer/iir.h:39->equalizer/iir.cpp:6
-:4  %a1 = load float* %iir_coeff_array_addr_3, align 8
-
-ST_19: a2 (93)  [2/2] 2.32ns  loc: equalizer/iir.h:40->equalizer/iir.cpp:6
-:5  %a2 = load float* %iir_coeff_array_addr_4, align 4
-
-ST_19: tmp_6_i (104)  [5/7] 6.44ns  loc: equalizer/iir.h:46->equalizer/iir.cpp:6
-:16  %tmp_6_i = fadd float %tmp_4_i, %tmp_5_i
-
-ST_19: iir_y_1_load (106)  [1/2] 2.32ns  loc: equalizer/iir.h:46->equalizer/iir.cpp:6
-:18  %iir_y_1_load = load float* %iir_y_1_addr, align 4
-
-ST_19: iir_y_2_load (110)  [2/2] 2.32ns  loc: equalizer/iir.h:46->equalizer/iir.cpp:6
-:22  %iir_y_2_load = load float* %iir_y_2_addr, align 4
+ST_17: tmp_8_i (110)  [16/16] 6.08ns  loc: equalizer/iir.h:47->equalizer/iir.cpp:6
+:19  %tmp_8_i = fdiv float %tmp_7_i, %a0
 
 
- <State 20>: 6.44ns
-ST_20: a2 (93)  [1/2] 2.32ns  loc: equalizer/iir.h:40->equalizer/iir.cpp:6
-:5  %a2 = load float* %iir_coeff_array_addr_4, align 4
+ <State 18>: 6.08ns
+ST_18: a1 (96)  [2/2] 2.32ns  loc: equalizer/iir.h:40->equalizer/iir.cpp:6
+:5  %a1 = load float* %iir_coeff_array_addr_4, align 8
 
-ST_20: tmp_6_i (104)  [4/7] 6.44ns  loc: equalizer/iir.h:46->equalizer/iir.cpp:6
-:16  %tmp_6_i = fadd float %tmp_4_i, %tmp_5_i
+ST_18: a2 (97)  [2/2] 2.32ns  loc: equalizer/iir.h:41->equalizer/iir.cpp:6
+:6  %a2 = load float* %iir_coeff_array_addr_5, align 4
 
-ST_20: tmp_7_i (107)  [4/4] 5.70ns  loc: equalizer/iir.h:46->equalizer/iir.cpp:6
-:19  %tmp_7_i = fmul float %a1, %iir_y_1_load
+ST_18: tmp_3_i (105)  [8/16] 6.08ns  loc: equalizer/iir.h:47->equalizer/iir.cpp:6
+:14  %tmp_3_i = fdiv float %tmp_i, %a0
 
-ST_20: iir_y_2_load (110)  [1/2] 2.32ns  loc: equalizer/iir.h:46->equalizer/iir.cpp:6
-:22  %iir_y_2_load = load float* %iir_y_2_addr, align 4
+ST_18: tmp_5_i (107)  [8/16] 6.08ns  loc: equalizer/iir.h:47->equalizer/iir.cpp:6
+:16  %tmp_5_i = fdiv float %tmp_4_i, %a0
 
-ST_20: StgValue_159 (113)  [1/1] 2.32ns  loc: equalizer/iir.h:50->equalizer/iir.cpp:6
-:25  store float %iir_y_1_load, float* %iir_y_2_addr, align 4
+ST_18: tmp_8_i (110)  [15/16] 6.08ns  loc: equalizer/iir.h:47->equalizer/iir.cpp:6
+:19  %tmp_8_i = fdiv float %tmp_7_i, %a0
 
+ST_18: iir_y_1_load (113)  [2/2] 2.32ns  loc: equalizer/iir.h:47->equalizer/iir.cpp:6
+:22  %iir_y_1_load = load float* %iir_y_1_addr, align 4
 
- <State 21>: 6.44ns
-ST_21: tmp_6_i (104)  [3/7] 6.44ns  loc: equalizer/iir.h:46->equalizer/iir.cpp:6
-:16  %tmp_6_i = fadd float %tmp_4_i, %tmp_5_i
-
-ST_21: tmp_7_i (107)  [3/4] 5.70ns  loc: equalizer/iir.h:46->equalizer/iir.cpp:6
-:19  %tmp_7_i = fmul float %a1, %iir_y_1_load
-
-ST_21: tmp_9_i (111)  [4/4] 5.70ns  loc: equalizer/iir.h:46->equalizer/iir.cpp:6
-:23  %tmp_9_i = fmul float %a2, %iir_y_2_load
+ST_18: iir_y_2_load (118)  [2/2] 2.32ns  loc: equalizer/iir.h:47->equalizer/iir.cpp:6
+:27  %iir_y_2_load = load float* %iir_y_2_addr, align 4
 
 
- <State 22>: 6.44ns
-ST_22: tmp_6_i (104)  [2/7] 6.44ns  loc: equalizer/iir.h:46->equalizer/iir.cpp:6
-:16  %tmp_6_i = fadd float %tmp_4_i, %tmp_5_i
+ <State 19>: 6.08ns
+ST_19: a1 (96)  [1/2] 2.32ns  loc: equalizer/iir.h:40->equalizer/iir.cpp:6
+:5  %a1 = load float* %iir_coeff_array_addr_4, align 8
 
-ST_22: tmp_7_i (107)  [2/4] 5.70ns  loc: equalizer/iir.h:46->equalizer/iir.cpp:6
-:19  %tmp_7_i = fmul float %a1, %iir_y_1_load
+ST_19: a2 (97)  [1/2] 2.32ns  loc: equalizer/iir.h:41->equalizer/iir.cpp:6
+:6  %a2 = load float* %iir_coeff_array_addr_5, align 4
 
-ST_22: tmp_9_i (111)  [3/4] 5.70ns  loc: equalizer/iir.h:46->equalizer/iir.cpp:6
-:23  %tmp_9_i = fmul float %a2, %iir_y_2_load
+ST_19: tmp_3_i (105)  [7/16] 6.08ns  loc: equalizer/iir.h:47->equalizer/iir.cpp:6
+:14  %tmp_3_i = fdiv float %tmp_i, %a0
 
+ST_19: tmp_5_i (107)  [7/16] 6.08ns  loc: equalizer/iir.h:47->equalizer/iir.cpp:6
+:16  %tmp_5_i = fdiv float %tmp_4_i, %a0
 
- <State 23>: 6.44ns
-ST_23: tmp_6_i (104)  [1/7] 6.44ns  loc: equalizer/iir.h:46->equalizer/iir.cpp:6
-:16  %tmp_6_i = fadd float %tmp_4_i, %tmp_5_i
+ST_19: tmp_8_i (110)  [14/16] 6.08ns  loc: equalizer/iir.h:47->equalizer/iir.cpp:6
+:19  %tmp_8_i = fdiv float %tmp_7_i, %a0
 
-ST_23: tmp_7_i (107)  [1/4] 5.70ns  loc: equalizer/iir.h:46->equalizer/iir.cpp:6
-:19  %tmp_7_i = fmul float %a1, %iir_y_1_load
+ST_19: iir_y_1_load (113)  [1/2] 2.32ns  loc: equalizer/iir.h:47->equalizer/iir.cpp:6
+:22  %iir_y_1_load = load float* %iir_y_1_addr, align 4
 
-ST_23: tmp_9_i (111)  [2/4] 5.70ns  loc: equalizer/iir.h:46->equalizer/iir.cpp:6
-:23  %tmp_9_i = fmul float %a2, %iir_y_2_load
+ST_19: iir_y_2_load (118)  [1/2] 2.32ns  loc: equalizer/iir.h:47->equalizer/iir.cpp:6
+:27  %iir_y_2_load = load float* %iir_y_2_addr, align 4
 
-
- <State 24>: 6.44ns
-ST_24: tmp_8_i (108)  [7/7] 6.44ns  loc: equalizer/iir.h:46->equalizer/iir.cpp:6
-:20  %tmp_8_i = fsub float %tmp_6_i, %tmp_7_i
-
-ST_24: tmp_9_i (111)  [1/4] 5.70ns  loc: equalizer/iir.h:46->equalizer/iir.cpp:6
-:23  %tmp_9_i = fmul float %a2, %iir_y_2_load
+ST_19: StgValue_191 (122)  [1/1] 2.32ns  loc: equalizer/iir.h:51->equalizer/iir.cpp:6
+:31  store float %iir_y_1_load, float* %iir_y_2_addr, align 4
 
 
- <State 25>: 6.44ns
-ST_25: tmp_8_i (108)  [6/7] 6.44ns  loc: equalizer/iir.h:46->equalizer/iir.cpp:6
-:20  %tmp_8_i = fsub float %tmp_6_i, %tmp_7_i
+ <State 20>: 6.08ns
+ST_20: tmp_3_i (105)  [6/16] 6.08ns  loc: equalizer/iir.h:47->equalizer/iir.cpp:6
+:14  %tmp_3_i = fdiv float %tmp_i, %a0
+
+ST_20: tmp_5_i (107)  [6/16] 6.08ns  loc: equalizer/iir.h:47->equalizer/iir.cpp:6
+:16  %tmp_5_i = fdiv float %tmp_4_i, %a0
+
+ST_20: tmp_8_i (110)  [13/16] 6.08ns  loc: equalizer/iir.h:47->equalizer/iir.cpp:6
+:19  %tmp_8_i = fdiv float %tmp_7_i, %a0
+
+ST_20: tmp_i_3 (114)  [4/4] 5.70ns  loc: equalizer/iir.h:47->equalizer/iir.cpp:6
+:23  %tmp_i_3 = fmul float %a1, %iir_y_1_load
+
+ST_20: tmp_10_i (119)  [4/4] 5.70ns  loc: equalizer/iir.h:47->equalizer/iir.cpp:6
+:28  %tmp_10_i = fmul float %a2, %iir_y_2_load
+
+
+ <State 21>: 6.08ns
+ST_21: tmp_3_i (105)  [5/16] 6.08ns  loc: equalizer/iir.h:47->equalizer/iir.cpp:6
+:14  %tmp_3_i = fdiv float %tmp_i, %a0
+
+ST_21: tmp_5_i (107)  [5/16] 6.08ns  loc: equalizer/iir.h:47->equalizer/iir.cpp:6
+:16  %tmp_5_i = fdiv float %tmp_4_i, %a0
+
+ST_21: tmp_8_i (110)  [12/16] 6.08ns  loc: equalizer/iir.h:47->equalizer/iir.cpp:6
+:19  %tmp_8_i = fdiv float %tmp_7_i, %a0
+
+ST_21: tmp_i_3 (114)  [3/4] 5.70ns  loc: equalizer/iir.h:47->equalizer/iir.cpp:6
+:23  %tmp_i_3 = fmul float %a1, %iir_y_1_load
+
+ST_21: tmp_10_i (119)  [3/4] 5.70ns  loc: equalizer/iir.h:47->equalizer/iir.cpp:6
+:28  %tmp_10_i = fmul float %a2, %iir_y_2_load
+
+
+ <State 22>: 6.08ns
+ST_22: tmp_3_i (105)  [4/16] 6.08ns  loc: equalizer/iir.h:47->equalizer/iir.cpp:6
+:14  %tmp_3_i = fdiv float %tmp_i, %a0
+
+ST_22: tmp_5_i (107)  [4/16] 6.08ns  loc: equalizer/iir.h:47->equalizer/iir.cpp:6
+:16  %tmp_5_i = fdiv float %tmp_4_i, %a0
+
+ST_22: tmp_8_i (110)  [11/16] 6.08ns  loc: equalizer/iir.h:47->equalizer/iir.cpp:6
+:19  %tmp_8_i = fdiv float %tmp_7_i, %a0
+
+ST_22: tmp_i_3 (114)  [2/4] 5.70ns  loc: equalizer/iir.h:47->equalizer/iir.cpp:6
+:23  %tmp_i_3 = fmul float %a1, %iir_y_1_load
+
+ST_22: tmp_10_i (119)  [2/4] 5.70ns  loc: equalizer/iir.h:47->equalizer/iir.cpp:6
+:28  %tmp_10_i = fmul float %a2, %iir_y_2_load
+
+
+ <State 23>: 6.08ns
+ST_23: tmp_3_i (105)  [3/16] 6.08ns  loc: equalizer/iir.h:47->equalizer/iir.cpp:6
+:14  %tmp_3_i = fdiv float %tmp_i, %a0
+
+ST_23: tmp_5_i (107)  [3/16] 6.08ns  loc: equalizer/iir.h:47->equalizer/iir.cpp:6
+:16  %tmp_5_i = fdiv float %tmp_4_i, %a0
+
+ST_23: tmp_8_i (110)  [10/16] 6.08ns  loc: equalizer/iir.h:47->equalizer/iir.cpp:6
+:19  %tmp_8_i = fdiv float %tmp_7_i, %a0
+
+ST_23: tmp_i_3 (114)  [1/4] 5.70ns  loc: equalizer/iir.h:47->equalizer/iir.cpp:6
+:23  %tmp_i_3 = fmul float %a1, %iir_y_1_load
+
+ST_23: tmp_10_i (119)  [1/4] 5.70ns  loc: equalizer/iir.h:47->equalizer/iir.cpp:6
+:28  %tmp_10_i = fmul float %a2, %iir_y_2_load
+
+
+ <State 24>: 6.08ns
+ST_24: tmp_3_i (105)  [2/16] 6.08ns  loc: equalizer/iir.h:47->equalizer/iir.cpp:6
+:14  %tmp_3_i = fdiv float %tmp_i, %a0
+
+ST_24: tmp_5_i (107)  [2/16] 6.08ns  loc: equalizer/iir.h:47->equalizer/iir.cpp:6
+:16  %tmp_5_i = fdiv float %tmp_4_i, %a0
+
+ST_24: tmp_8_i (110)  [9/16] 6.08ns  loc: equalizer/iir.h:47->equalizer/iir.cpp:6
+:19  %tmp_8_i = fdiv float %tmp_7_i, %a0
+
+ST_24: tmp_1_i (115)  [16/16] 6.08ns  loc: equalizer/iir.h:47->equalizer/iir.cpp:6
+:24  %tmp_1_i = fdiv float %tmp_i_3, %a0
+
+ST_24: tmp_11_i (120)  [16/16] 6.08ns  loc: equalizer/iir.h:47->equalizer/iir.cpp:6
+:29  %tmp_11_i = fdiv float %tmp_10_i, %a0
+
+
+ <State 25>: 6.08ns
+ST_25: tmp_3_i (105)  [1/16] 6.08ns  loc: equalizer/iir.h:47->equalizer/iir.cpp:6
+:14  %tmp_3_i = fdiv float %tmp_i, %a0
+
+ST_25: tmp_5_i (107)  [1/16] 6.08ns  loc: equalizer/iir.h:47->equalizer/iir.cpp:6
+:16  %tmp_5_i = fdiv float %tmp_4_i, %a0
+
+ST_25: tmp_8_i (110)  [8/16] 6.08ns  loc: equalizer/iir.h:47->equalizer/iir.cpp:6
+:19  %tmp_8_i = fdiv float %tmp_7_i, %a0
+
+ST_25: tmp_1_i (115)  [15/16] 6.08ns  loc: equalizer/iir.h:47->equalizer/iir.cpp:6
+:24  %tmp_1_i = fdiv float %tmp_i_3, %a0
+
+ST_25: tmp_11_i (120)  [15/16] 6.08ns  loc: equalizer/iir.h:47->equalizer/iir.cpp:6
+:29  %tmp_11_i = fdiv float %tmp_10_i, %a0
 
 
  <State 26>: 6.44ns
-ST_26: tmp_8_i (108)  [5/7] 6.44ns  loc: equalizer/iir.h:46->equalizer/iir.cpp:6
-:20  %tmp_8_i = fsub float %tmp_6_i, %tmp_7_i
+ST_26: tmp_6_i (108)  [7/7] 6.44ns  loc: equalizer/iir.h:47->equalizer/iir.cpp:6
+:17  %tmp_6_i = fadd float %tmp_3_i, %tmp_5_i
+
+ST_26: tmp_8_i (110)  [7/16] 6.08ns  loc: equalizer/iir.h:47->equalizer/iir.cpp:6
+:19  %tmp_8_i = fdiv float %tmp_7_i, %a0
+
+ST_26: tmp_1_i (115)  [14/16] 6.08ns  loc: equalizer/iir.h:47->equalizer/iir.cpp:6
+:24  %tmp_1_i = fdiv float %tmp_i_3, %a0
+
+ST_26: tmp_11_i (120)  [14/16] 6.08ns  loc: equalizer/iir.h:47->equalizer/iir.cpp:6
+:29  %tmp_11_i = fdiv float %tmp_10_i, %a0
 
 
  <State 27>: 6.44ns
-ST_27: tmp_8_i (108)  [4/7] 6.44ns  loc: equalizer/iir.h:46->equalizer/iir.cpp:6
-:20  %tmp_8_i = fsub float %tmp_6_i, %tmp_7_i
+ST_27: tmp_6_i (108)  [6/7] 6.44ns  loc: equalizer/iir.h:47->equalizer/iir.cpp:6
+:17  %tmp_6_i = fadd float %tmp_3_i, %tmp_5_i
+
+ST_27: tmp_8_i (110)  [6/16] 6.08ns  loc: equalizer/iir.h:47->equalizer/iir.cpp:6
+:19  %tmp_8_i = fdiv float %tmp_7_i, %a0
+
+ST_27: tmp_1_i (115)  [13/16] 6.08ns  loc: equalizer/iir.h:47->equalizer/iir.cpp:6
+:24  %tmp_1_i = fdiv float %tmp_i_3, %a0
+
+ST_27: tmp_11_i (120)  [13/16] 6.08ns  loc: equalizer/iir.h:47->equalizer/iir.cpp:6
+:29  %tmp_11_i = fdiv float %tmp_10_i, %a0
 
 
  <State 28>: 6.44ns
-ST_28: tmp_8_i (108)  [3/7] 6.44ns  loc: equalizer/iir.h:46->equalizer/iir.cpp:6
-:20  %tmp_8_i = fsub float %tmp_6_i, %tmp_7_i
+ST_28: tmp_6_i (108)  [5/7] 6.44ns  loc: equalizer/iir.h:47->equalizer/iir.cpp:6
+:17  %tmp_6_i = fadd float %tmp_3_i, %tmp_5_i
+
+ST_28: tmp_8_i (110)  [5/16] 6.08ns  loc: equalizer/iir.h:47->equalizer/iir.cpp:6
+:19  %tmp_8_i = fdiv float %tmp_7_i, %a0
+
+ST_28: tmp_1_i (115)  [12/16] 6.08ns  loc: equalizer/iir.h:47->equalizer/iir.cpp:6
+:24  %tmp_1_i = fdiv float %tmp_i_3, %a0
+
+ST_28: tmp_11_i (120)  [12/16] 6.08ns  loc: equalizer/iir.h:47->equalizer/iir.cpp:6
+:29  %tmp_11_i = fdiv float %tmp_10_i, %a0
 
 
  <State 29>: 6.44ns
-ST_29: tmp_8_i (108)  [2/7] 6.44ns  loc: equalizer/iir.h:46->equalizer/iir.cpp:6
-:20  %tmp_8_i = fsub float %tmp_6_i, %tmp_7_i
+ST_29: tmp_6_i (108)  [4/7] 6.44ns  loc: equalizer/iir.h:47->equalizer/iir.cpp:6
+:17  %tmp_6_i = fadd float %tmp_3_i, %tmp_5_i
+
+ST_29: tmp_8_i (110)  [4/16] 6.08ns  loc: equalizer/iir.h:47->equalizer/iir.cpp:6
+:19  %tmp_8_i = fdiv float %tmp_7_i, %a0
+
+ST_29: tmp_1_i (115)  [11/16] 6.08ns  loc: equalizer/iir.h:47->equalizer/iir.cpp:6
+:24  %tmp_1_i = fdiv float %tmp_i_3, %a0
+
+ST_29: tmp_11_i (120)  [11/16] 6.08ns  loc: equalizer/iir.h:47->equalizer/iir.cpp:6
+:29  %tmp_11_i = fdiv float %tmp_10_i, %a0
 
 
  <State 30>: 6.44ns
-ST_30: tmp_8_i (108)  [1/7] 6.44ns  loc: equalizer/iir.h:46->equalizer/iir.cpp:6
-:20  %tmp_8_i = fsub float %tmp_6_i, %tmp_7_i
+ST_30: tmp_6_i (108)  [3/7] 6.44ns  loc: equalizer/iir.h:47->equalizer/iir.cpp:6
+:17  %tmp_6_i = fadd float %tmp_3_i, %tmp_5_i
+
+ST_30: tmp_8_i (110)  [3/16] 6.08ns  loc: equalizer/iir.h:47->equalizer/iir.cpp:6
+:19  %tmp_8_i = fdiv float %tmp_7_i, %a0
+
+ST_30: tmp_1_i (115)  [10/16] 6.08ns  loc: equalizer/iir.h:47->equalizer/iir.cpp:6
+:24  %tmp_1_i = fdiv float %tmp_i_3, %a0
+
+ST_30: tmp_11_i (120)  [10/16] 6.08ns  loc: equalizer/iir.h:47->equalizer/iir.cpp:6
+:29  %tmp_11_i = fdiv float %tmp_10_i, %a0
 
 
  <State 31>: 6.44ns
-ST_31: acc (112)  [7/7] 6.44ns  loc: equalizer/iir.h:46->equalizer/iir.cpp:6
-:24  %acc = fsub float %tmp_8_i, %tmp_9_i
+ST_31: tmp_6_i (108)  [2/7] 6.44ns  loc: equalizer/iir.h:47->equalizer/iir.cpp:6
+:17  %tmp_6_i = fadd float %tmp_3_i, %tmp_5_i
+
+ST_31: tmp_8_i (110)  [2/16] 6.08ns  loc: equalizer/iir.h:47->equalizer/iir.cpp:6
+:19  %tmp_8_i = fdiv float %tmp_7_i, %a0
+
+ST_31: tmp_1_i (115)  [9/16] 6.08ns  loc: equalizer/iir.h:47->equalizer/iir.cpp:6
+:24  %tmp_1_i = fdiv float %tmp_i_3, %a0
+
+ST_31: tmp_11_i (120)  [9/16] 6.08ns  loc: equalizer/iir.h:47->equalizer/iir.cpp:6
+:29  %tmp_11_i = fdiv float %tmp_10_i, %a0
 
 
  <State 32>: 6.44ns
-ST_32: acc (112)  [6/7] 6.44ns  loc: equalizer/iir.h:46->equalizer/iir.cpp:6
-:24  %acc = fsub float %tmp_8_i, %tmp_9_i
+ST_32: tmp_6_i (108)  [1/7] 6.44ns  loc: equalizer/iir.h:47->equalizer/iir.cpp:6
+:17  %tmp_6_i = fadd float %tmp_3_i, %tmp_5_i
+
+ST_32: tmp_8_i (110)  [1/16] 6.08ns  loc: equalizer/iir.h:47->equalizer/iir.cpp:6
+:19  %tmp_8_i = fdiv float %tmp_7_i, %a0
+
+ST_32: tmp_1_i (115)  [8/16] 6.08ns  loc: equalizer/iir.h:47->equalizer/iir.cpp:6
+:24  %tmp_1_i = fdiv float %tmp_i_3, %a0
+
+ST_32: tmp_11_i (120)  [8/16] 6.08ns  loc: equalizer/iir.h:47->equalizer/iir.cpp:6
+:29  %tmp_11_i = fdiv float %tmp_10_i, %a0
 
 
  <State 33>: 6.44ns
-ST_33: acc (112)  [5/7] 6.44ns  loc: equalizer/iir.h:46->equalizer/iir.cpp:6
-:24  %acc = fsub float %tmp_8_i, %tmp_9_i
+ST_33: tmp_9_i (111)  [7/7] 6.44ns  loc: equalizer/iir.h:47->equalizer/iir.cpp:6
+:20  %tmp_9_i = fadd float %tmp_6_i, %tmp_8_i
+
+ST_33: tmp_1_i (115)  [7/16] 6.08ns  loc: equalizer/iir.h:47->equalizer/iir.cpp:6
+:24  %tmp_1_i = fdiv float %tmp_i_3, %a0
+
+ST_33: tmp_11_i (120)  [7/16] 6.08ns  loc: equalizer/iir.h:47->equalizer/iir.cpp:6
+:29  %tmp_11_i = fdiv float %tmp_10_i, %a0
 
 
  <State 34>: 6.44ns
-ST_34: acc (112)  [4/7] 6.44ns  loc: equalizer/iir.h:46->equalizer/iir.cpp:6
-:24  %acc = fsub float %tmp_8_i, %tmp_9_i
+ST_34: tmp_9_i (111)  [6/7] 6.44ns  loc: equalizer/iir.h:47->equalizer/iir.cpp:6
+:20  %tmp_9_i = fadd float %tmp_6_i, %tmp_8_i
+
+ST_34: tmp_1_i (115)  [6/16] 6.08ns  loc: equalizer/iir.h:47->equalizer/iir.cpp:6
+:24  %tmp_1_i = fdiv float %tmp_i_3, %a0
+
+ST_34: tmp_11_i (120)  [6/16] 6.08ns  loc: equalizer/iir.h:47->equalizer/iir.cpp:6
+:29  %tmp_11_i = fdiv float %tmp_10_i, %a0
 
 
  <State 35>: 6.44ns
-ST_35: acc (112)  [3/7] 6.44ns  loc: equalizer/iir.h:46->equalizer/iir.cpp:6
-:24  %acc = fsub float %tmp_8_i, %tmp_9_i
+ST_35: tmp_9_i (111)  [5/7] 6.44ns  loc: equalizer/iir.h:47->equalizer/iir.cpp:6
+:20  %tmp_9_i = fadd float %tmp_6_i, %tmp_8_i
+
+ST_35: tmp_1_i (115)  [5/16] 6.08ns  loc: equalizer/iir.h:47->equalizer/iir.cpp:6
+:24  %tmp_1_i = fdiv float %tmp_i_3, %a0
+
+ST_35: tmp_11_i (120)  [5/16] 6.08ns  loc: equalizer/iir.h:47->equalizer/iir.cpp:6
+:29  %tmp_11_i = fdiv float %tmp_10_i, %a0
 
 
  <State 36>: 6.44ns
-ST_36: acc (112)  [2/7] 6.44ns  loc: equalizer/iir.h:46->equalizer/iir.cpp:6
-:24  %acc = fsub float %tmp_8_i, %tmp_9_i
+ST_36: tmp_9_i (111)  [4/7] 6.44ns  loc: equalizer/iir.h:47->equalizer/iir.cpp:6
+:20  %tmp_9_i = fadd float %tmp_6_i, %tmp_8_i
+
+ST_36: tmp_1_i (115)  [4/16] 6.08ns  loc: equalizer/iir.h:47->equalizer/iir.cpp:6
+:24  %tmp_1_i = fdiv float %tmp_i_3, %a0
+
+ST_36: tmp_11_i (120)  [4/16] 6.08ns  loc: equalizer/iir.h:47->equalizer/iir.cpp:6
+:29  %tmp_11_i = fdiv float %tmp_10_i, %a0
 
 
  <State 37>: 6.44ns
-ST_37: acc (112)  [1/7] 6.44ns  loc: equalizer/iir.h:46->equalizer/iir.cpp:6
-:24  %acc = fsub float %tmp_8_i, %tmp_9_i
+ST_37: tmp_9_i (111)  [3/7] 6.44ns  loc: equalizer/iir.h:47->equalizer/iir.cpp:6
+:20  %tmp_9_i = fadd float %tmp_6_i, %tmp_8_i
+
+ST_37: tmp_1_i (115)  [3/16] 6.08ns  loc: equalizer/iir.h:47->equalizer/iir.cpp:6
+:24  %tmp_1_i = fdiv float %tmp_i_3, %a0
+
+ST_37: tmp_11_i (120)  [3/16] 6.08ns  loc: equalizer/iir.h:47->equalizer/iir.cpp:6
+:29  %tmp_11_i = fdiv float %tmp_10_i, %a0
 
 
- <State 38>: 2.32ns
-ST_38: StgValue_184 (88)  [1/1] 0.00ns  loc: equalizer/iir.h:34->equalizer/iir.cpp:6
+ <State 38>: 6.44ns
+ST_38: tmp_9_i (111)  [2/7] 6.44ns  loc: equalizer/iir.h:47->equalizer/iir.cpp:6
+:20  %tmp_9_i = fadd float %tmp_6_i, %tmp_8_i
+
+ST_38: tmp_1_i (115)  [2/16] 6.08ns  loc: equalizer/iir.h:47->equalizer/iir.cpp:6
+:24  %tmp_1_i = fdiv float %tmp_i_3, %a0
+
+ST_38: tmp_11_i (120)  [2/16] 6.08ns  loc: equalizer/iir.h:47->equalizer/iir.cpp:6
+:29  %tmp_11_i = fdiv float %tmp_10_i, %a0
+
+
+ <State 39>: 6.44ns
+ST_39: tmp_9_i (111)  [1/7] 6.44ns  loc: equalizer/iir.h:47->equalizer/iir.cpp:6
+:20  %tmp_9_i = fadd float %tmp_6_i, %tmp_8_i
+
+ST_39: tmp_1_i (115)  [1/16] 6.08ns  loc: equalizer/iir.h:47->equalizer/iir.cpp:6
+:24  %tmp_1_i = fdiv float %tmp_i_3, %a0
+
+ST_39: tmp_11_i (120)  [1/16] 6.08ns  loc: equalizer/iir.h:47->equalizer/iir.cpp:6
+:29  %tmp_11_i = fdiv float %tmp_10_i, %a0
+
+
+ <State 40>: 6.44ns
+ST_40: tmp_2_i (116)  [7/7] 6.44ns  loc: equalizer/iir.h:47->equalizer/iir.cpp:6
+:25  %tmp_2_i = fsub float %tmp_9_i, %tmp_1_i
+
+
+ <State 41>: 6.44ns
+ST_41: tmp_2_i (116)  [6/7] 6.44ns  loc: equalizer/iir.h:47->equalizer/iir.cpp:6
+:25  %tmp_2_i = fsub float %tmp_9_i, %tmp_1_i
+
+
+ <State 42>: 6.44ns
+ST_42: tmp_2_i (116)  [5/7] 6.44ns  loc: equalizer/iir.h:47->equalizer/iir.cpp:6
+:25  %tmp_2_i = fsub float %tmp_9_i, %tmp_1_i
+
+
+ <State 43>: 6.44ns
+ST_43: tmp_2_i (116)  [4/7] 6.44ns  loc: equalizer/iir.h:47->equalizer/iir.cpp:6
+:25  %tmp_2_i = fsub float %tmp_9_i, %tmp_1_i
+
+
+ <State 44>: 6.44ns
+ST_44: tmp_2_i (116)  [3/7] 6.44ns  loc: equalizer/iir.h:47->equalizer/iir.cpp:6
+:25  %tmp_2_i = fsub float %tmp_9_i, %tmp_1_i
+
+
+ <State 45>: 6.44ns
+ST_45: tmp_2_i (116)  [2/7] 6.44ns  loc: equalizer/iir.h:47->equalizer/iir.cpp:6
+:25  %tmp_2_i = fsub float %tmp_9_i, %tmp_1_i
+
+
+ <State 46>: 6.44ns
+ST_46: tmp_2_i (116)  [1/7] 6.44ns  loc: equalizer/iir.h:47->equalizer/iir.cpp:6
+:25  %tmp_2_i = fsub float %tmp_9_i, %tmp_1_i
+
+
+ <State 47>: 6.44ns
+ST_47: acc (121)  [7/7] 6.44ns  loc: equalizer/iir.h:47->equalizer/iir.cpp:6
+:30  %acc = fsub float %tmp_2_i, %tmp_11_i
+
+
+ <State 48>: 6.44ns
+ST_48: acc (121)  [6/7] 6.44ns  loc: equalizer/iir.h:47->equalizer/iir.cpp:6
+:30  %acc = fsub float %tmp_2_i, %tmp_11_i
+
+
+ <State 49>: 6.44ns
+ST_49: acc (121)  [5/7] 6.44ns  loc: equalizer/iir.h:47->equalizer/iir.cpp:6
+:30  %acc = fsub float %tmp_2_i, %tmp_11_i
+
+
+ <State 50>: 6.44ns
+ST_50: acc (121)  [4/7] 6.44ns  loc: equalizer/iir.h:47->equalizer/iir.cpp:6
+:30  %acc = fsub float %tmp_2_i, %tmp_11_i
+
+
+ <State 51>: 6.44ns
+ST_51: acc (121)  [3/7] 6.44ns  loc: equalizer/iir.h:47->equalizer/iir.cpp:6
+:30  %acc = fsub float %tmp_2_i, %tmp_11_i
+
+
+ <State 52>: 6.44ns
+ST_52: acc (121)  [2/7] 6.44ns  loc: equalizer/iir.h:47->equalizer/iir.cpp:6
+:30  %acc = fsub float %tmp_2_i, %tmp_11_i
+
+
+ <State 53>: 6.44ns
+ST_53: acc (121)  [1/7] 6.44ns  loc: equalizer/iir.h:47->equalizer/iir.cpp:6
+:30  %acc = fsub float %tmp_2_i, %tmp_11_i
+
+
+ <State 54>: 2.32ns
+ST_54: StgValue_285 (91)  [1/1] 0.00ns  loc: equalizer/iir.h:34->equalizer/iir.cpp:6
 :0  call void (...)* @_ssdm_op_SpecLoopName([12 x i8]* @p_str4) nounwind
 
-ST_38: StgValue_185 (114)  [1/1] 2.32ns  loc: equalizer/iir.h:51->equalizer/iir.cpp:6
-:26  store float %acc, float* %iir_y_1_addr, align 4
+ST_54: StgValue_286 (123)  [1/1] 2.32ns  loc: equalizer/iir.h:52->equalizer/iir.cpp:6
+:32  store float %acc, float* %iir_y_1_addr, align 4
 
-ST_38: StgValue_186 (115)  [1/1] 0.00ns  loc: equalizer/iir.h:34->equalizer/iir.cpp:6
-:27  br label %.preheader4
+ST_54: StgValue_287 (124)  [1/1] 0.00ns  loc: equalizer/iir.h:34->equalizer/iir.cpp:6
+:33  br label %.preheader4
 
 
 
@@ -694,12 +1013,12 @@ The critical path consists of the following:
 	'sub' operation ('tmp_3', equalizer/iir.h:36->equalizer/iir.cpp:6) [68]  (2.31 ns)
 	'or' operation ('tmp_4', equalizer/iir.h:37->equalizer/iir.cpp:6) [71]  (0 ns)
 	'getelementptr' operation ('iir_coeff_array_addr_1', equalizer/iir.h:37->equalizer/iir.cpp:6) [73]  (0 ns)
-	'load' operation ('b1', equalizer/iir.h:37->equalizer/iir.cpp:6) on array 'iir_coeff_array' [90]  (2.32 ns)
+	'load' operation ('b1', equalizer/iir.h:37->equalizer/iir.cpp:6) on array 'iir_coeff_array' [93]  (2.32 ns)
 
  <State 3>: 4.63ns
 The critical path consists of the following:
 	'phi' operation ('j') with incoming values : ('j', equalizer/iir.h:26->equalizer/iir.cpp:8) [40]  (0 ns)
-	'add' operation ('tmp_10', equalizer/iir.h:27->equalizer/iir.cpp:8) [42]  (2.31 ns)
+	'add' operation ('tmp_11', equalizer/iir.h:27->equalizer/iir.cpp:8) [42]  (2.31 ns)
 	'getelementptr' operation ('coeffs_addr', equalizer/iir.h:27->equalizer/iir.cpp:8) [44]  (0 ns)
 	'load' operation ('coeffs_load', equalizer/iir.h:27->equalizer/iir.cpp:8) on array 'coeffs' [52]  (2.32 ns)
 
@@ -710,139 +1029,203 @@ The critical path consists of the following:
 
  <State 5>: 2.32ns
 The critical path consists of the following:
-	'load' operation ('b0', equalizer/iir.h:36->equalizer/iir.cpp:6) on array 'iir_coeff_array' [89]  (2.32 ns)
+	'load' operation ('b0', equalizer/iir.h:36->equalizer/iir.cpp:6) on array 'iir_coeff_array' [92]  (2.32 ns)
 
  <State 6>: 5.7ns
 The critical path consists of the following:
-	'fmul' operation ('tmp_i', equalizer/iir.h:46->equalizer/iir.cpp:6) [100]  (5.7 ns)
+	'fmul' operation ('tmp_i', equalizer/iir.h:47->equalizer/iir.cpp:6) [104]  (5.7 ns)
 
  <State 7>: 5.7ns
 The critical path consists of the following:
-	'fmul' operation ('tmp_i', equalizer/iir.h:46->equalizer/iir.cpp:6) [100]  (5.7 ns)
+	'fmul' operation ('tmp_i', equalizer/iir.h:47->equalizer/iir.cpp:6) [104]  (5.7 ns)
 
  <State 8>: 5.7ns
 The critical path consists of the following:
-	'fmul' operation ('tmp_i', equalizer/iir.h:46->equalizer/iir.cpp:6) [100]  (5.7 ns)
+	'fmul' operation ('tmp_i', equalizer/iir.h:47->equalizer/iir.cpp:6) [104]  (5.7 ns)
 
  <State 9>: 5.7ns
 The critical path consists of the following:
-	'fmul' operation ('tmp_i', equalizer/iir.h:46->equalizer/iir.cpp:6) [100]  (5.7 ns)
+	'fmul' operation ('tmp_i', equalizer/iir.h:47->equalizer/iir.cpp:6) [104]  (5.7 ns)
 
- <State 10>: 6.44ns
+ <State 10>: 6.08ns
 The critical path consists of the following:
-	'fadd' operation ('tmp_4_i', equalizer/iir.h:46->equalizer/iir.cpp:6) [102]  (6.44 ns)
+	'fdiv' operation ('tmp_3_i', equalizer/iir.h:47->equalizer/iir.cpp:6) [105]  (6.08 ns)
 
- <State 11>: 6.44ns
+ <State 11>: 6.08ns
 The critical path consists of the following:
-	'fadd' operation ('tmp_4_i', equalizer/iir.h:46->equalizer/iir.cpp:6) [102]  (6.44 ns)
+	'fdiv' operation ('tmp_3_i', equalizer/iir.h:47->equalizer/iir.cpp:6) [105]  (6.08 ns)
 
- <State 12>: 6.44ns
+ <State 12>: 6.08ns
 The critical path consists of the following:
-	'fadd' operation ('tmp_4_i', equalizer/iir.h:46->equalizer/iir.cpp:6) [102]  (6.44 ns)
+	'fdiv' operation ('tmp_3_i', equalizer/iir.h:47->equalizer/iir.cpp:6) [105]  (6.08 ns)
 
- <State 13>: 6.44ns
+ <State 13>: 6.08ns
 The critical path consists of the following:
-	'fadd' operation ('tmp_4_i', equalizer/iir.h:46->equalizer/iir.cpp:6) [102]  (6.44 ns)
+	'fdiv' operation ('tmp_3_i', equalizer/iir.h:47->equalizer/iir.cpp:6) [105]  (6.08 ns)
 
- <State 14>: 6.44ns
+ <State 14>: 6.08ns
 The critical path consists of the following:
-	'fadd' operation ('tmp_4_i', equalizer/iir.h:46->equalizer/iir.cpp:6) [102]  (6.44 ns)
+	'fdiv' operation ('tmp_3_i', equalizer/iir.h:47->equalizer/iir.cpp:6) [105]  (6.08 ns)
 
- <State 15>: 6.44ns
+ <State 15>: 6.08ns
 The critical path consists of the following:
-	'fadd' operation ('tmp_4_i', equalizer/iir.h:46->equalizer/iir.cpp:6) [102]  (6.44 ns)
+	'fdiv' operation ('tmp_3_i', equalizer/iir.h:47->equalizer/iir.cpp:6) [105]  (6.08 ns)
 
- <State 16>: 6.44ns
+ <State 16>: 6.08ns
 The critical path consists of the following:
-	'fadd' operation ('tmp_4_i', equalizer/iir.h:46->equalizer/iir.cpp:6) [102]  (6.44 ns)
+	'fdiv' operation ('tmp_3_i', equalizer/iir.h:47->equalizer/iir.cpp:6) [105]  (6.08 ns)
 
- <State 17>: 6.44ns
+ <State 17>: 6.08ns
 The critical path consists of the following:
-	'fadd' operation ('tmp_6_i', equalizer/iir.h:46->equalizer/iir.cpp:6) [104]  (6.44 ns)
+	'fdiv' operation ('tmp_3_i', equalizer/iir.h:47->equalizer/iir.cpp:6) [105]  (6.08 ns)
 
- <State 18>: 6.44ns
+ <State 18>: 6.08ns
 The critical path consists of the following:
-	'fadd' operation ('tmp_6_i', equalizer/iir.h:46->equalizer/iir.cpp:6) [104]  (6.44 ns)
+	'fdiv' operation ('tmp_3_i', equalizer/iir.h:47->equalizer/iir.cpp:6) [105]  (6.08 ns)
 
- <State 19>: 6.44ns
+ <State 19>: 6.08ns
 The critical path consists of the following:
-	'fadd' operation ('tmp_6_i', equalizer/iir.h:46->equalizer/iir.cpp:6) [104]  (6.44 ns)
+	'fdiv' operation ('tmp_3_i', equalizer/iir.h:47->equalizer/iir.cpp:6) [105]  (6.08 ns)
 
- <State 20>: 6.44ns
+ <State 20>: 6.08ns
 The critical path consists of the following:
-	'fadd' operation ('tmp_6_i', equalizer/iir.h:46->equalizer/iir.cpp:6) [104]  (6.44 ns)
+	'fdiv' operation ('tmp_3_i', equalizer/iir.h:47->equalizer/iir.cpp:6) [105]  (6.08 ns)
 
- <State 21>: 6.44ns
+ <State 21>: 6.08ns
 The critical path consists of the following:
-	'fadd' operation ('tmp_6_i', equalizer/iir.h:46->equalizer/iir.cpp:6) [104]  (6.44 ns)
+	'fdiv' operation ('tmp_3_i', equalizer/iir.h:47->equalizer/iir.cpp:6) [105]  (6.08 ns)
 
- <State 22>: 6.44ns
+ <State 22>: 6.08ns
 The critical path consists of the following:
-	'fadd' operation ('tmp_6_i', equalizer/iir.h:46->equalizer/iir.cpp:6) [104]  (6.44 ns)
+	'fdiv' operation ('tmp_3_i', equalizer/iir.h:47->equalizer/iir.cpp:6) [105]  (6.08 ns)
 
- <State 23>: 6.44ns
+ <State 23>: 6.08ns
 The critical path consists of the following:
-	'fadd' operation ('tmp_6_i', equalizer/iir.h:46->equalizer/iir.cpp:6) [104]  (6.44 ns)
+	'fdiv' operation ('tmp_3_i', equalizer/iir.h:47->equalizer/iir.cpp:6) [105]  (6.08 ns)
 
- <State 24>: 6.44ns
+ <State 24>: 6.08ns
 The critical path consists of the following:
-	'fsub' operation ('tmp_8_i', equalizer/iir.h:46->equalizer/iir.cpp:6) [108]  (6.44 ns)
+	'fdiv' operation ('tmp_3_i', equalizer/iir.h:47->equalizer/iir.cpp:6) [105]  (6.08 ns)
 
- <State 25>: 6.44ns
+ <State 25>: 6.08ns
 The critical path consists of the following:
-	'fsub' operation ('tmp_8_i', equalizer/iir.h:46->equalizer/iir.cpp:6) [108]  (6.44 ns)
+	'fdiv' operation ('tmp_3_i', equalizer/iir.h:47->equalizer/iir.cpp:6) [105]  (6.08 ns)
 
  <State 26>: 6.44ns
 The critical path consists of the following:
-	'fsub' operation ('tmp_8_i', equalizer/iir.h:46->equalizer/iir.cpp:6) [108]  (6.44 ns)
+	'fadd' operation ('tmp_6_i', equalizer/iir.h:47->equalizer/iir.cpp:6) [108]  (6.44 ns)
 
  <State 27>: 6.44ns
 The critical path consists of the following:
-	'fsub' operation ('tmp_8_i', equalizer/iir.h:46->equalizer/iir.cpp:6) [108]  (6.44 ns)
+	'fadd' operation ('tmp_6_i', equalizer/iir.h:47->equalizer/iir.cpp:6) [108]  (6.44 ns)
 
  <State 28>: 6.44ns
 The critical path consists of the following:
-	'fsub' operation ('tmp_8_i', equalizer/iir.h:46->equalizer/iir.cpp:6) [108]  (6.44 ns)
+	'fadd' operation ('tmp_6_i', equalizer/iir.h:47->equalizer/iir.cpp:6) [108]  (6.44 ns)
 
  <State 29>: 6.44ns
 The critical path consists of the following:
-	'fsub' operation ('tmp_8_i', equalizer/iir.h:46->equalizer/iir.cpp:6) [108]  (6.44 ns)
+	'fadd' operation ('tmp_6_i', equalizer/iir.h:47->equalizer/iir.cpp:6) [108]  (6.44 ns)
 
  <State 30>: 6.44ns
 The critical path consists of the following:
-	'fsub' operation ('tmp_8_i', equalizer/iir.h:46->equalizer/iir.cpp:6) [108]  (6.44 ns)
+	'fadd' operation ('tmp_6_i', equalizer/iir.h:47->equalizer/iir.cpp:6) [108]  (6.44 ns)
 
  <State 31>: 6.44ns
 The critical path consists of the following:
-	'fsub' operation ('acc', equalizer/iir.h:46->equalizer/iir.cpp:6) [112]  (6.44 ns)
+	'fadd' operation ('tmp_6_i', equalizer/iir.h:47->equalizer/iir.cpp:6) [108]  (6.44 ns)
 
  <State 32>: 6.44ns
 The critical path consists of the following:
-	'fsub' operation ('acc', equalizer/iir.h:46->equalizer/iir.cpp:6) [112]  (6.44 ns)
+	'fadd' operation ('tmp_6_i', equalizer/iir.h:47->equalizer/iir.cpp:6) [108]  (6.44 ns)
 
  <State 33>: 6.44ns
 The critical path consists of the following:
-	'fsub' operation ('acc', equalizer/iir.h:46->equalizer/iir.cpp:6) [112]  (6.44 ns)
+	'fadd' operation ('tmp_9_i', equalizer/iir.h:47->equalizer/iir.cpp:6) [111]  (6.44 ns)
 
  <State 34>: 6.44ns
 The critical path consists of the following:
-	'fsub' operation ('acc', equalizer/iir.h:46->equalizer/iir.cpp:6) [112]  (6.44 ns)
+	'fadd' operation ('tmp_9_i', equalizer/iir.h:47->equalizer/iir.cpp:6) [111]  (6.44 ns)
 
  <State 35>: 6.44ns
 The critical path consists of the following:
-	'fsub' operation ('acc', equalizer/iir.h:46->equalizer/iir.cpp:6) [112]  (6.44 ns)
+	'fadd' operation ('tmp_9_i', equalizer/iir.h:47->equalizer/iir.cpp:6) [111]  (6.44 ns)
 
  <State 36>: 6.44ns
 The critical path consists of the following:
-	'fsub' operation ('acc', equalizer/iir.h:46->equalizer/iir.cpp:6) [112]  (6.44 ns)
+	'fadd' operation ('tmp_9_i', equalizer/iir.h:47->equalizer/iir.cpp:6) [111]  (6.44 ns)
 
  <State 37>: 6.44ns
 The critical path consists of the following:
-	'fsub' operation ('acc', equalizer/iir.h:46->equalizer/iir.cpp:6) [112]  (6.44 ns)
+	'fadd' operation ('tmp_9_i', equalizer/iir.h:47->equalizer/iir.cpp:6) [111]  (6.44 ns)
 
- <State 38>: 2.32ns
+ <State 38>: 6.44ns
 The critical path consists of the following:
-	'store' operation (equalizer/iir.h:51->equalizer/iir.cpp:6) of variable 'acc', equalizer/iir.h:46->equalizer/iir.cpp:6 on array 'iir_y_1' [114]  (2.32 ns)
+	'fadd' operation ('tmp_9_i', equalizer/iir.h:47->equalizer/iir.cpp:6) [111]  (6.44 ns)
+
+ <State 39>: 6.44ns
+The critical path consists of the following:
+	'fadd' operation ('tmp_9_i', equalizer/iir.h:47->equalizer/iir.cpp:6) [111]  (6.44 ns)
+
+ <State 40>: 6.44ns
+The critical path consists of the following:
+	'fsub' operation ('tmp_2_i', equalizer/iir.h:47->equalizer/iir.cpp:6) [116]  (6.44 ns)
+
+ <State 41>: 6.44ns
+The critical path consists of the following:
+	'fsub' operation ('tmp_2_i', equalizer/iir.h:47->equalizer/iir.cpp:6) [116]  (6.44 ns)
+
+ <State 42>: 6.44ns
+The critical path consists of the following:
+	'fsub' operation ('tmp_2_i', equalizer/iir.h:47->equalizer/iir.cpp:6) [116]  (6.44 ns)
+
+ <State 43>: 6.44ns
+The critical path consists of the following:
+	'fsub' operation ('tmp_2_i', equalizer/iir.h:47->equalizer/iir.cpp:6) [116]  (6.44 ns)
+
+ <State 44>: 6.44ns
+The critical path consists of the following:
+	'fsub' operation ('tmp_2_i', equalizer/iir.h:47->equalizer/iir.cpp:6) [116]  (6.44 ns)
+
+ <State 45>: 6.44ns
+The critical path consists of the following:
+	'fsub' operation ('tmp_2_i', equalizer/iir.h:47->equalizer/iir.cpp:6) [116]  (6.44 ns)
+
+ <State 46>: 6.44ns
+The critical path consists of the following:
+	'fsub' operation ('tmp_2_i', equalizer/iir.h:47->equalizer/iir.cpp:6) [116]  (6.44 ns)
+
+ <State 47>: 6.44ns
+The critical path consists of the following:
+	'fsub' operation ('acc', equalizer/iir.h:47->equalizer/iir.cpp:6) [121]  (6.44 ns)
+
+ <State 48>: 6.44ns
+The critical path consists of the following:
+	'fsub' operation ('acc', equalizer/iir.h:47->equalizer/iir.cpp:6) [121]  (6.44 ns)
+
+ <State 49>: 6.44ns
+The critical path consists of the following:
+	'fsub' operation ('acc', equalizer/iir.h:47->equalizer/iir.cpp:6) [121]  (6.44 ns)
+
+ <State 50>: 6.44ns
+The critical path consists of the following:
+	'fsub' operation ('acc', equalizer/iir.h:47->equalizer/iir.cpp:6) [121]  (6.44 ns)
+
+ <State 51>: 6.44ns
+The critical path consists of the following:
+	'fsub' operation ('acc', equalizer/iir.h:47->equalizer/iir.cpp:6) [121]  (6.44 ns)
+
+ <State 52>: 6.44ns
+The critical path consists of the following:
+	'fsub' operation ('acc', equalizer/iir.h:47->equalizer/iir.cpp:6) [121]  (6.44 ns)
+
+ <State 53>: 6.44ns
+The critical path consists of the following:
+	'fsub' operation ('acc', equalizer/iir.h:47->equalizer/iir.cpp:6) [121]  (6.44 ns)
+
+ <State 54>: 2.32ns
+The critical path consists of the following:
+	'store' operation (equalizer/iir.h:52->equalizer/iir.cpp:6) of variable 'acc', equalizer/iir.h:47->equalizer/iir.cpp:6 on array 'iir_y_1' [123]  (2.32 ns)
 
 
 ============================================================
@@ -891,6 +1274,22 @@ N/A
 	State 36
 	State 37
 	State 38
+	State 39
+	State 40
+	State 41
+	State 42
+	State 43
+	State 44
+	State 45
+	State 46
+	State 47
+	State 48
+	State 49
+	State 50
+	State 51
+	State 52
+	State 53
+	State 54
 
 
 ============================================================

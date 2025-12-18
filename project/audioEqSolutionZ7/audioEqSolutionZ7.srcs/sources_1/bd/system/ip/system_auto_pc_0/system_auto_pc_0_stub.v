@@ -3,8 +3,8 @@
 // Tool Version: Vivado v.2017.2 (win64) Build 1909853 Thu Jun 15 18:39:09 MDT 2017
 // Date        : Wed Dec 17 21:39:47 2025
 // Host        : pc-pirata running 64-bit major release  (build 9200)
-// Command     : write_verilog -force -mode synth_stub
-//               c:/Users/marti/Desktop/audioEqSolutionZ7/audioEqSolutionZ7.srcs/sources_1/bd/system/ip/system_auto_pc_0/system_auto_pc_0_stub.v
+// Command     : write_verilog -force -mode synth_stub -rename_top system_auto_pc_0 -prefix
+//               system_auto_pc_0_ system_auto_pc_0_stub.v
 // Design      : system_auto_pc_0
 // Purpose     : Stub declaration of top-level module interface
 // Device      : xc7z010clg400-1

@@ -236,13 +236,14 @@ public:
   }
  }
  data_t filter(data_t input) {
-  data_t b0, b1, b2, a1, a2, temp = input, acc;
+  data_t b0, b1, b2, a1, a2, a0, temp = input, acc;
   // loop over the Second Order Sections
   filter_loop:for(int i=0; i< 5 /*3*/; i++){
    // get coeffs
    b0=coeff_array[i][0];
    b1=coeff_array[i][1];
    b2=coeff_array[i][2];
+   a0=coeff_array[i][3];
    a1=coeff_array[i][4];
    a2=coeff_array[i][5];
    // feed forward shift register
@@ -250,7 +251,7 @@ public:
    x[i][1] = x[i][0];
    x[i][0] = temp;
    // the filter
-   acc = b0*x[i][0] + b1*x[i][1] + b2*x[i][2] - a1*y[i][1] - a2*y[i][2];
+   acc = b0*x[i][0] / a0 + b1*x[i][1] / a0 + b2*x[i][2] / a0 - a1*y[i][1] / a0 - a2*y[i][2] / a0;
    y[i][0] = acc;
 
    // feedback shift register

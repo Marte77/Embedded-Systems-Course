@@ -1,4 +1,4 @@
-; ModuleID = 'C:/Users/marti/Documents/EmbeddedSystems/project/equalizer/equalizer/.autopilot/db/a.o.bc'
+; ModuleID = 'C:/Users/marti/Documents/GitHub/Embedded-Systems-Course/project/equalizer/equalizer/.autopilot/db/a.o.bc'
 target datalayout = "e-p:32:32:32-i1:8:8-i8:8:8-i16:16:16-i32:32:32-i64:64:64-f32:32:32-f64:64:64-f80:128:128-v64:64:64-v128:128:128-a0:0:64-f80:32:32-n8:16:32-S32"
 target triple = "i686-pc-mingw32"
 
@@ -68,7 +68,7 @@ define void @_Z9equalizerPffiPA6_f(float* %y, float %x, i32 %mode, [6 x float]* 
   ret void, !dbg !88                              ; [debug line = 10:1]
 }
 
-; [#uses=24]
+; [#uses=25]
 declare void @llvm.dbg.declare(metadata, metadata) nounwind readnone
 
 ; [#uses=2]
@@ -96,178 +96,196 @@ define linkonce_odr float @_ZN9IIRFilter6filterEf(%class.IIRFilter* %this, float
   %b2 = alloca float, align 4                     ; [#uses=2 type=float*]
   %a1 = alloca float, align 4                     ; [#uses=2 type=float*]
   %a2 = alloca float, align 4                     ; [#uses=2 type=float*]
+  %a0 = alloca float, align 4                     ; [#uses=6 type=float*]
   %temp = alloca float, align 4                   ; [#uses=4 type=float*]
   %acc = alloca float, align 4                    ; [#uses=2 type=float*]
-  %i = alloca i32, align 4                        ; [#uses=25 type=i32*]
+  %i = alloca i32, align 4                        ; [#uses=26 type=i32*]
   store %class.IIRFilter* %this, %class.IIRFilter** %1, align 4
   call void @llvm.dbg.declare(metadata !{%class.IIRFilter** %1}, metadata !93), !dbg !94 ; [debug line = 31:9] [debug variable = this]
   store float %input, float* %2, align 4
   call void @llvm.dbg.declare(metadata !{float* %2}, metadata !95), !dbg !96 ; [debug line = 31:23] [debug variable = input]
-  %3 = load %class.IIRFilter** %1                 ; [#uses=21 type=%class.IIRFilter*]
+  %3 = load %class.IIRFilter** %1                 ; [#uses=22 type=%class.IIRFilter*]
   call void @llvm.dbg.declare(metadata !{float* %b0}, metadata !97), !dbg !99 ; [debug line = 32:10] [debug variable = b0]
   call void @llvm.dbg.declare(metadata !{float* %b1}, metadata !100), !dbg !101 ; [debug line = 32:14] [debug variable = b1]
   call void @llvm.dbg.declare(metadata !{float* %b2}, metadata !102), !dbg !103 ; [debug line = 32:18] [debug variable = b2]
   call void @llvm.dbg.declare(metadata !{float* %a1}, metadata !104), !dbg !105 ; [debug line = 32:22] [debug variable = a1]
   call void @llvm.dbg.declare(metadata !{float* %a2}, metadata !106), !dbg !107 ; [debug line = 32:26] [debug variable = a2]
-  call void @llvm.dbg.declare(metadata !{float* %temp}, metadata !108), !dbg !109 ; [debug line = 32:30] [debug variable = temp]
-  %4 = load float* %2, align 4, !dbg !110         ; [#uses=1 type=float] [debug line = 32:47]
-  store float %4, float* %temp, align 4, !dbg !110 ; [debug line = 32:47]
-  call void @llvm.dbg.declare(metadata !{float* %acc}, metadata !111), !dbg !112 ; [debug line = 32:44] [debug variable = acc]
-  br label %5, !dbg !110                          ; [debug line = 32:47]
+  call void @llvm.dbg.declare(metadata !{float* %a0}, metadata !108), !dbg !109 ; [debug line = 32:30] [debug variable = a0]
+  call void @llvm.dbg.declare(metadata !{float* %temp}, metadata !110), !dbg !111 ; [debug line = 32:34] [debug variable = temp]
+  %4 = load float* %2, align 4, !dbg !112         ; [#uses=1 type=float] [debug line = 32:51]
+  store float %4, float* %temp, align 4, !dbg !112 ; [debug line = 32:51]
+  call void @llvm.dbg.declare(metadata !{float* %acc}, metadata !113), !dbg !114 ; [debug line = 32:48] [debug variable = acc]
+  br label %5, !dbg !112                          ; [debug line = 32:51]
 
 ; <label>:5                                       ; preds = %0
-  call void @llvm.dbg.declare(metadata !{i32* %i}, metadata !113), !dbg !115 ; [debug line = 34:23] [debug variable = i]
-  store i32 0, i32* %i, align 4, !dbg !116        ; [debug line = 34:26]
-  br label %6, !dbg !116                          ; [debug line = 34:26]
+  call void @llvm.dbg.declare(metadata !{i32* %i}, metadata !115), !dbg !117 ; [debug line = 34:23] [debug variable = i]
+  store i32 0, i32* %i, align 4, !dbg !118        ; [debug line = 34:26]
+  br label %6, !dbg !118                          ; [debug line = 34:26]
 
-; <label>:6                                       ; preds = %125, %5
-  %7 = load i32* %i, align 4, !dbg !116           ; [#uses=1 type=i32] [debug line = 34:26]
-  %8 = icmp slt i32 %7, 5, !dbg !116              ; [#uses=1 type=i1] [debug line = 34:26]
-  br i1 %8, label %9, label %128, !dbg !116       ; [debug line = 34:26]
+; <label>:6                                       ; preds = %140, %5
+  %7 = load i32* %i, align 4, !dbg !118           ; [#uses=1 type=i32] [debug line = 34:26]
+  %8 = icmp slt i32 %7, 5, !dbg !118              ; [#uses=1 type=i1] [debug line = 34:26]
+  br i1 %8, label %9, label %143, !dbg !118       ; [debug line = 34:26]
 
 ; <label>:9                                       ; preds = %6
-  call void (...)* @_ssdm_op_SpecLoopName(i8* getelementptr inbounds ([12 x i8]* @.str4, i32 0, i32 0)) nounwind, !dbg !117 ; [debug line = 34:45]
-  call void (...)* @_ssdm_RegionBegin(i8* getelementptr inbounds ([12 x i8]* @.str4, i32 0, i32 0)) nounwind, !dbg !117 ; [debug line = 34:45]
-  %10 = load i32* %i, align 4, !dbg !119          ; [#uses=1 type=i32] [debug line = 36:4]
-  %11 = getelementptr inbounds %class.IIRFilter* %3, i32 0, i32 2, !dbg !119 ; [#uses=1 type=[5 x [6 x float]]*] [debug line = 36:4]
-  %12 = getelementptr inbounds [5 x [6 x float]]* %11, i32 0, i32 %10, !dbg !119 ; [#uses=1 type=[6 x float]*] [debug line = 36:4]
-  %13 = getelementptr inbounds [6 x float]* %12, i32 0, i32 0, !dbg !119 ; [#uses=1 type=float*] [debug line = 36:4]
-  %14 = load float* %13, align 4, !dbg !119       ; [#uses=1 type=float] [debug line = 36:4]
-  store float %14, float* %b0, align 4, !dbg !119 ; [debug line = 36:4]
-  %15 = load i32* %i, align 4, !dbg !120          ; [#uses=1 type=i32] [debug line = 37:4]
-  %16 = getelementptr inbounds %class.IIRFilter* %3, i32 0, i32 2, !dbg !120 ; [#uses=1 type=[5 x [6 x float]]*] [debug line = 37:4]
-  %17 = getelementptr inbounds [5 x [6 x float]]* %16, i32 0, i32 %15, !dbg !120 ; [#uses=1 type=[6 x float]*] [debug line = 37:4]
-  %18 = getelementptr inbounds [6 x float]* %17, i32 0, i32 1, !dbg !120 ; [#uses=1 type=float*] [debug line = 37:4]
-  %19 = load float* %18, align 4, !dbg !120       ; [#uses=1 type=float] [debug line = 37:4]
-  store float %19, float* %b1, align 4, !dbg !120 ; [debug line = 37:4]
-  %20 = load i32* %i, align 4, !dbg !121          ; [#uses=1 type=i32] [debug line = 38:4]
-  %21 = getelementptr inbounds %class.IIRFilter* %3, i32 0, i32 2, !dbg !121 ; [#uses=1 type=[5 x [6 x float]]*] [debug line = 38:4]
-  %22 = getelementptr inbounds [5 x [6 x float]]* %21, i32 0, i32 %20, !dbg !121 ; [#uses=1 type=[6 x float]*] [debug line = 38:4]
-  %23 = getelementptr inbounds [6 x float]* %22, i32 0, i32 2, !dbg !121 ; [#uses=1 type=float*] [debug line = 38:4]
-  %24 = load float* %23, align 4, !dbg !121       ; [#uses=1 type=float] [debug line = 38:4]
-  store float %24, float* %b2, align 4, !dbg !121 ; [debug line = 38:4]
-  %25 = load i32* %i, align 4, !dbg !122          ; [#uses=1 type=i32] [debug line = 39:4]
-  %26 = getelementptr inbounds %class.IIRFilter* %3, i32 0, i32 2, !dbg !122 ; [#uses=1 type=[5 x [6 x float]]*] [debug line = 39:4]
-  %27 = getelementptr inbounds [5 x [6 x float]]* %26, i32 0, i32 %25, !dbg !122 ; [#uses=1 type=[6 x float]*] [debug line = 39:4]
-  %28 = getelementptr inbounds [6 x float]* %27, i32 0, i32 4, !dbg !122 ; [#uses=1 type=float*] [debug line = 39:4]
-  %29 = load float* %28, align 4, !dbg !122       ; [#uses=1 type=float] [debug line = 39:4]
-  store float %29, float* %a1, align 4, !dbg !122 ; [debug line = 39:4]
-  %30 = load i32* %i, align 4, !dbg !123          ; [#uses=1 type=i32] [debug line = 40:4]
-  %31 = getelementptr inbounds %class.IIRFilter* %3, i32 0, i32 2, !dbg !123 ; [#uses=1 type=[5 x [6 x float]]*] [debug line = 40:4]
-  %32 = getelementptr inbounds [5 x [6 x float]]* %31, i32 0, i32 %30, !dbg !123 ; [#uses=1 type=[6 x float]*] [debug line = 40:4]
-  %33 = getelementptr inbounds [6 x float]* %32, i32 0, i32 5, !dbg !123 ; [#uses=1 type=float*] [debug line = 40:4]
-  %34 = load float* %33, align 4, !dbg !123       ; [#uses=1 type=float] [debug line = 40:4]
-  store float %34, float* %a2, align 4, !dbg !123 ; [debug line = 40:4]
-  %35 = load i32* %i, align 4, !dbg !124          ; [#uses=1 type=i32] [debug line = 42:4]
-  %36 = getelementptr inbounds %class.IIRFilter* %3, i32 0, i32 0, !dbg !124 ; [#uses=1 type=[5 x [3 x float]]*] [debug line = 42:4]
-  %37 = getelementptr inbounds [5 x [3 x float]]* %36, i32 0, i32 %35, !dbg !124 ; [#uses=1 type=[3 x float]*] [debug line = 42:4]
-  %38 = getelementptr inbounds [3 x float]* %37, i32 0, i32 1, !dbg !124 ; [#uses=1 type=float*] [debug line = 42:4]
-  %39 = load float* %38, align 4, !dbg !124       ; [#uses=1 type=float] [debug line = 42:4]
-  %40 = load i32* %i, align 4, !dbg !124          ; [#uses=1 type=i32] [debug line = 42:4]
-  %41 = getelementptr inbounds %class.IIRFilter* %3, i32 0, i32 0, !dbg !124 ; [#uses=1 type=[5 x [3 x float]]*] [debug line = 42:4]
-  %42 = getelementptr inbounds [5 x [3 x float]]* %41, i32 0, i32 %40, !dbg !124 ; [#uses=1 type=[3 x float]*] [debug line = 42:4]
-  %43 = getelementptr inbounds [3 x float]* %42, i32 0, i32 2, !dbg !124 ; [#uses=1 type=float*] [debug line = 42:4]
-  store float %39, float* %43, align 4, !dbg !124 ; [debug line = 42:4]
-  %44 = load i32* %i, align 4, !dbg !125          ; [#uses=1 type=i32] [debug line = 43:4]
-  %45 = getelementptr inbounds %class.IIRFilter* %3, i32 0, i32 0, !dbg !125 ; [#uses=1 type=[5 x [3 x float]]*] [debug line = 43:4]
-  %46 = getelementptr inbounds [5 x [3 x float]]* %45, i32 0, i32 %44, !dbg !125 ; [#uses=1 type=[3 x float]*] [debug line = 43:4]
-  %47 = getelementptr inbounds [3 x float]* %46, i32 0, i32 0, !dbg !125 ; [#uses=1 type=float*] [debug line = 43:4]
-  %48 = load float* %47, align 4, !dbg !125       ; [#uses=1 type=float] [debug line = 43:4]
-  %49 = load i32* %i, align 4, !dbg !125          ; [#uses=1 type=i32] [debug line = 43:4]
-  %50 = getelementptr inbounds %class.IIRFilter* %3, i32 0, i32 0, !dbg !125 ; [#uses=1 type=[5 x [3 x float]]*] [debug line = 43:4]
-  %51 = getelementptr inbounds [5 x [3 x float]]* %50, i32 0, i32 %49, !dbg !125 ; [#uses=1 type=[3 x float]*] [debug line = 43:4]
-  %52 = getelementptr inbounds [3 x float]* %51, i32 0, i32 1, !dbg !125 ; [#uses=1 type=float*] [debug line = 43:4]
-  store float %48, float* %52, align 4, !dbg !125 ; [debug line = 43:4]
-  %53 = load float* %temp, align 4, !dbg !126     ; [#uses=1 type=float] [debug line = 44:4]
-  %54 = load i32* %i, align 4, !dbg !126          ; [#uses=1 type=i32] [debug line = 44:4]
-  %55 = getelementptr inbounds %class.IIRFilter* %3, i32 0, i32 0, !dbg !126 ; [#uses=1 type=[5 x [3 x float]]*] [debug line = 44:4]
-  %56 = getelementptr inbounds [5 x [3 x float]]* %55, i32 0, i32 %54, !dbg !126 ; [#uses=1 type=[3 x float]*] [debug line = 44:4]
-  %57 = getelementptr inbounds [3 x float]* %56, i32 0, i32 0, !dbg !126 ; [#uses=1 type=float*] [debug line = 44:4]
-  store float %53, float* %57, align 4, !dbg !126 ; [debug line = 44:4]
-  %58 = load float* %b0, align 4, !dbg !127       ; [#uses=1 type=float] [debug line = 46:4]
-  %59 = load i32* %i, align 4, !dbg !127          ; [#uses=1 type=i32] [debug line = 46:4]
-  %60 = getelementptr inbounds %class.IIRFilter* %3, i32 0, i32 0, !dbg !127 ; [#uses=1 type=[5 x [3 x float]]*] [debug line = 46:4]
-  %61 = getelementptr inbounds [5 x [3 x float]]* %60, i32 0, i32 %59, !dbg !127 ; [#uses=1 type=[3 x float]*] [debug line = 46:4]
-  %62 = getelementptr inbounds [3 x float]* %61, i32 0, i32 0, !dbg !127 ; [#uses=1 type=float*] [debug line = 46:4]
-  %63 = load float* %62, align 4, !dbg !127       ; [#uses=1 type=float] [debug line = 46:4]
-  %64 = fmul float %58, %63, !dbg !127            ; [#uses=1 type=float] [debug line = 46:4]
-  %65 = load float* %b1, align 4, !dbg !127       ; [#uses=1 type=float] [debug line = 46:4]
-  %66 = load i32* %i, align 4, !dbg !127          ; [#uses=1 type=i32] [debug line = 46:4]
-  %67 = getelementptr inbounds %class.IIRFilter* %3, i32 0, i32 0, !dbg !127 ; [#uses=1 type=[5 x [3 x float]]*] [debug line = 46:4]
-  %68 = getelementptr inbounds [5 x [3 x float]]* %67, i32 0, i32 %66, !dbg !127 ; [#uses=1 type=[3 x float]*] [debug line = 46:4]
-  %69 = getelementptr inbounds [3 x float]* %68, i32 0, i32 1, !dbg !127 ; [#uses=1 type=float*] [debug line = 46:4]
-  %70 = load float* %69, align 4, !dbg !127       ; [#uses=1 type=float] [debug line = 46:4]
-  %71 = fmul float %65, %70, !dbg !127            ; [#uses=1 type=float] [debug line = 46:4]
-  %72 = fadd float %64, %71, !dbg !127            ; [#uses=1 type=float] [debug line = 46:4]
-  %73 = load float* %b2, align 4, !dbg !127       ; [#uses=1 type=float] [debug line = 46:4]
-  %74 = load i32* %i, align 4, !dbg !127          ; [#uses=1 type=i32] [debug line = 46:4]
-  %75 = getelementptr inbounds %class.IIRFilter* %3, i32 0, i32 0, !dbg !127 ; [#uses=1 type=[5 x [3 x float]]*] [debug line = 46:4]
-  %76 = getelementptr inbounds [5 x [3 x float]]* %75, i32 0, i32 %74, !dbg !127 ; [#uses=1 type=[3 x float]*] [debug line = 46:4]
-  %77 = getelementptr inbounds [3 x float]* %76, i32 0, i32 2, !dbg !127 ; [#uses=1 type=float*] [debug line = 46:4]
-  %78 = load float* %77, align 4, !dbg !127       ; [#uses=1 type=float] [debug line = 46:4]
-  %79 = fmul float %73, %78, !dbg !127            ; [#uses=1 type=float] [debug line = 46:4]
-  %80 = fadd float %72, %79, !dbg !127            ; [#uses=1 type=float] [debug line = 46:4]
-  %81 = load float* %a1, align 4, !dbg !127       ; [#uses=1 type=float] [debug line = 46:4]
-  %82 = load i32* %i, align 4, !dbg !127          ; [#uses=1 type=i32] [debug line = 46:4]
-  %83 = getelementptr inbounds %class.IIRFilter* %3, i32 0, i32 1, !dbg !127 ; [#uses=1 type=[5 x [3 x float]]*] [debug line = 46:4]
-  %84 = getelementptr inbounds [5 x [3 x float]]* %83, i32 0, i32 %82, !dbg !127 ; [#uses=1 type=[3 x float]*] [debug line = 46:4]
-  %85 = getelementptr inbounds [3 x float]* %84, i32 0, i32 1, !dbg !127 ; [#uses=1 type=float*] [debug line = 46:4]
-  %86 = load float* %85, align 4, !dbg !127       ; [#uses=1 type=float] [debug line = 46:4]
-  %87 = fmul float %81, %86, !dbg !127            ; [#uses=1 type=float] [debug line = 46:4]
-  %88 = fsub float %80, %87, !dbg !127            ; [#uses=1 type=float] [debug line = 46:4]
-  %89 = load float* %a2, align 4, !dbg !127       ; [#uses=1 type=float] [debug line = 46:4]
-  %90 = load i32* %i, align 4, !dbg !127          ; [#uses=1 type=i32] [debug line = 46:4]
-  %91 = getelementptr inbounds %class.IIRFilter* %3, i32 0, i32 1, !dbg !127 ; [#uses=1 type=[5 x [3 x float]]*] [debug line = 46:4]
-  %92 = getelementptr inbounds [5 x [3 x float]]* %91, i32 0, i32 %90, !dbg !127 ; [#uses=1 type=[3 x float]*] [debug line = 46:4]
-  %93 = getelementptr inbounds [3 x float]* %92, i32 0, i32 2, !dbg !127 ; [#uses=1 type=float*] [debug line = 46:4]
-  %94 = load float* %93, align 4, !dbg !127       ; [#uses=1 type=float] [debug line = 46:4]
-  %95 = fmul float %89, %94, !dbg !127            ; [#uses=1 type=float] [debug line = 46:4]
-  %96 = fsub float %88, %95, !dbg !127            ; [#uses=1 type=float] [debug line = 46:4]
-  store float %96, float* %acc, align 4, !dbg !127 ; [debug line = 46:4]
-  %97 = load float* %acc, align 4, !dbg !128      ; [#uses=1 type=float] [debug line = 47:4]
-  %98 = load i32* %i, align 4, !dbg !128          ; [#uses=1 type=i32] [debug line = 47:4]
-  %99 = getelementptr inbounds %class.IIRFilter* %3, i32 0, i32 1, !dbg !128 ; [#uses=1 type=[5 x [3 x float]]*] [debug line = 47:4]
-  %100 = getelementptr inbounds [5 x [3 x float]]* %99, i32 0, i32 %98, !dbg !128 ; [#uses=1 type=[3 x float]*] [debug line = 47:4]
-  %101 = getelementptr inbounds [3 x float]* %100, i32 0, i32 0, !dbg !128 ; [#uses=1 type=float*] [debug line = 47:4]
-  store float %97, float* %101, align 4, !dbg !128 ; [debug line = 47:4]
-  %102 = load i32* %i, align 4, !dbg !129         ; [#uses=1 type=i32] [debug line = 50:4]
-  %103 = getelementptr inbounds %class.IIRFilter* %3, i32 0, i32 1, !dbg !129 ; [#uses=1 type=[5 x [3 x float]]*] [debug line = 50:4]
-  %104 = getelementptr inbounds [5 x [3 x float]]* %103, i32 0, i32 %102, !dbg !129 ; [#uses=1 type=[3 x float]*] [debug line = 50:4]
-  %105 = getelementptr inbounds [3 x float]* %104, i32 0, i32 1, !dbg !129 ; [#uses=1 type=float*] [debug line = 50:4]
-  %106 = load float* %105, align 4, !dbg !129     ; [#uses=1 type=float] [debug line = 50:4]
-  %107 = load i32* %i, align 4, !dbg !129         ; [#uses=1 type=i32] [debug line = 50:4]
-  %108 = getelementptr inbounds %class.IIRFilter* %3, i32 0, i32 1, !dbg !129 ; [#uses=1 type=[5 x [3 x float]]*] [debug line = 50:4]
-  %109 = getelementptr inbounds [5 x [3 x float]]* %108, i32 0, i32 %107, !dbg !129 ; [#uses=1 type=[3 x float]*] [debug line = 50:4]
-  %110 = getelementptr inbounds [3 x float]* %109, i32 0, i32 2, !dbg !129 ; [#uses=1 type=float*] [debug line = 50:4]
-  store float %106, float* %110, align 4, !dbg !129 ; [debug line = 50:4]
-  %111 = load i32* %i, align 4, !dbg !130         ; [#uses=1 type=i32] [debug line = 51:4]
-  %112 = getelementptr inbounds %class.IIRFilter* %3, i32 0, i32 1, !dbg !130 ; [#uses=1 type=[5 x [3 x float]]*] [debug line = 51:4]
-  %113 = getelementptr inbounds [5 x [3 x float]]* %112, i32 0, i32 %111, !dbg !130 ; [#uses=1 type=[3 x float]*] [debug line = 51:4]
-  %114 = getelementptr inbounds [3 x float]* %113, i32 0, i32 0, !dbg !130 ; [#uses=1 type=float*] [debug line = 51:4]
-  %115 = load float* %114, align 4, !dbg !130     ; [#uses=1 type=float] [debug line = 51:4]
-  %116 = load i32* %i, align 4, !dbg !130         ; [#uses=1 type=i32] [debug line = 51:4]
-  %117 = getelementptr inbounds %class.IIRFilter* %3, i32 0, i32 1, !dbg !130 ; [#uses=1 type=[5 x [3 x float]]*] [debug line = 51:4]
-  %118 = getelementptr inbounds [5 x [3 x float]]* %117, i32 0, i32 %116, !dbg !130 ; [#uses=1 type=[3 x float]*] [debug line = 51:4]
-  %119 = getelementptr inbounds [3 x float]* %118, i32 0, i32 1, !dbg !130 ; [#uses=1 type=float*] [debug line = 51:4]
-  store float %115, float* %119, align 4, !dbg !130 ; [debug line = 51:4]
-  %120 = load i32* %i, align 4, !dbg !131         ; [#uses=1 type=i32] [debug line = 52:4]
-  %121 = getelementptr inbounds %class.IIRFilter* %3, i32 0, i32 1, !dbg !131 ; [#uses=1 type=[5 x [3 x float]]*] [debug line = 52:4]
-  %122 = getelementptr inbounds [5 x [3 x float]]* %121, i32 0, i32 %120, !dbg !131 ; [#uses=1 type=[3 x float]*] [debug line = 52:4]
-  %123 = getelementptr inbounds [3 x float]* %122, i32 0, i32 0, !dbg !131 ; [#uses=1 type=float*] [debug line = 52:4]
-  %124 = load float* %123, align 4, !dbg !131     ; [#uses=1 type=float] [debug line = 52:4]
-  store float %124, float* %temp, align 4, !dbg !131 ; [debug line = 52:4]
-  call void (...)* @_ssdm_RegionEnd(i8* getelementptr inbounds ([12 x i8]* @.str4, i32 0, i32 0)) nounwind, !dbg !132 ; [debug line = 53:3]
-  br label %125, !dbg !132                        ; [debug line = 53:3]
+  call void (...)* @_ssdm_op_SpecLoopName(i8* getelementptr inbounds ([12 x i8]* @.str4, i32 0, i32 0)) nounwind, !dbg !119 ; [debug line = 34:45]
+  call void (...)* @_ssdm_RegionBegin(i8* getelementptr inbounds ([12 x i8]* @.str4, i32 0, i32 0)) nounwind, !dbg !119 ; [debug line = 34:45]
+  %10 = load i32* %i, align 4, !dbg !121          ; [#uses=1 type=i32] [debug line = 36:4]
+  %11 = getelementptr inbounds %class.IIRFilter* %3, i32 0, i32 2, !dbg !121 ; [#uses=1 type=[5 x [6 x float]]*] [debug line = 36:4]
+  %12 = getelementptr inbounds [5 x [6 x float]]* %11, i32 0, i32 %10, !dbg !121 ; [#uses=1 type=[6 x float]*] [debug line = 36:4]
+  %13 = getelementptr inbounds [6 x float]* %12, i32 0, i32 0, !dbg !121 ; [#uses=1 type=float*] [debug line = 36:4]
+  %14 = load float* %13, align 4, !dbg !121       ; [#uses=1 type=float] [debug line = 36:4]
+  store float %14, float* %b0, align 4, !dbg !121 ; [debug line = 36:4]
+  %15 = load i32* %i, align 4, !dbg !122          ; [#uses=1 type=i32] [debug line = 37:4]
+  %16 = getelementptr inbounds %class.IIRFilter* %3, i32 0, i32 2, !dbg !122 ; [#uses=1 type=[5 x [6 x float]]*] [debug line = 37:4]
+  %17 = getelementptr inbounds [5 x [6 x float]]* %16, i32 0, i32 %15, !dbg !122 ; [#uses=1 type=[6 x float]*] [debug line = 37:4]
+  %18 = getelementptr inbounds [6 x float]* %17, i32 0, i32 1, !dbg !122 ; [#uses=1 type=float*] [debug line = 37:4]
+  %19 = load float* %18, align 4, !dbg !122       ; [#uses=1 type=float] [debug line = 37:4]
+  store float %19, float* %b1, align 4, !dbg !122 ; [debug line = 37:4]
+  %20 = load i32* %i, align 4, !dbg !123          ; [#uses=1 type=i32] [debug line = 38:4]
+  %21 = getelementptr inbounds %class.IIRFilter* %3, i32 0, i32 2, !dbg !123 ; [#uses=1 type=[5 x [6 x float]]*] [debug line = 38:4]
+  %22 = getelementptr inbounds [5 x [6 x float]]* %21, i32 0, i32 %20, !dbg !123 ; [#uses=1 type=[6 x float]*] [debug line = 38:4]
+  %23 = getelementptr inbounds [6 x float]* %22, i32 0, i32 2, !dbg !123 ; [#uses=1 type=float*] [debug line = 38:4]
+  %24 = load float* %23, align 4, !dbg !123       ; [#uses=1 type=float] [debug line = 38:4]
+  store float %24, float* %b2, align 4, !dbg !123 ; [debug line = 38:4]
+  %25 = load i32* %i, align 4, !dbg !124          ; [#uses=1 type=i32] [debug line = 39:4]
+  %26 = getelementptr inbounds %class.IIRFilter* %3, i32 0, i32 2, !dbg !124 ; [#uses=1 type=[5 x [6 x float]]*] [debug line = 39:4]
+  %27 = getelementptr inbounds [5 x [6 x float]]* %26, i32 0, i32 %25, !dbg !124 ; [#uses=1 type=[6 x float]*] [debug line = 39:4]
+  %28 = getelementptr inbounds [6 x float]* %27, i32 0, i32 3, !dbg !124 ; [#uses=1 type=float*] [debug line = 39:4]
+  %29 = load float* %28, align 4, !dbg !124       ; [#uses=1 type=float] [debug line = 39:4]
+  store float %29, float* %a0, align 4, !dbg !124 ; [debug line = 39:4]
+  %30 = load i32* %i, align 4, !dbg !125          ; [#uses=1 type=i32] [debug line = 40:4]
+  %31 = getelementptr inbounds %class.IIRFilter* %3, i32 0, i32 2, !dbg !125 ; [#uses=1 type=[5 x [6 x float]]*] [debug line = 40:4]
+  %32 = getelementptr inbounds [5 x [6 x float]]* %31, i32 0, i32 %30, !dbg !125 ; [#uses=1 type=[6 x float]*] [debug line = 40:4]
+  %33 = getelementptr inbounds [6 x float]* %32, i32 0, i32 4, !dbg !125 ; [#uses=1 type=float*] [debug line = 40:4]
+  %34 = load float* %33, align 4, !dbg !125       ; [#uses=1 type=float] [debug line = 40:4]
+  store float %34, float* %a1, align 4, !dbg !125 ; [debug line = 40:4]
+  %35 = load i32* %i, align 4, !dbg !126          ; [#uses=1 type=i32] [debug line = 41:4]
+  %36 = getelementptr inbounds %class.IIRFilter* %3, i32 0, i32 2, !dbg !126 ; [#uses=1 type=[5 x [6 x float]]*] [debug line = 41:4]
+  %37 = getelementptr inbounds [5 x [6 x float]]* %36, i32 0, i32 %35, !dbg !126 ; [#uses=1 type=[6 x float]*] [debug line = 41:4]
+  %38 = getelementptr inbounds [6 x float]* %37, i32 0, i32 5, !dbg !126 ; [#uses=1 type=float*] [debug line = 41:4]
+  %39 = load float* %38, align 4, !dbg !126       ; [#uses=1 type=float] [debug line = 41:4]
+  store float %39, float* %a2, align 4, !dbg !126 ; [debug line = 41:4]
+  %40 = load i32* %i, align 4, !dbg !127          ; [#uses=1 type=i32] [debug line = 43:4]
+  %41 = getelementptr inbounds %class.IIRFilter* %3, i32 0, i32 0, !dbg !127 ; [#uses=1 type=[5 x [3 x float]]*] [debug line = 43:4]
+  %42 = getelementptr inbounds [5 x [3 x float]]* %41, i32 0, i32 %40, !dbg !127 ; [#uses=1 type=[3 x float]*] [debug line = 43:4]
+  %43 = getelementptr inbounds [3 x float]* %42, i32 0, i32 1, !dbg !127 ; [#uses=1 type=float*] [debug line = 43:4]
+  %44 = load float* %43, align 4, !dbg !127       ; [#uses=1 type=float] [debug line = 43:4]
+  %45 = load i32* %i, align 4, !dbg !127          ; [#uses=1 type=i32] [debug line = 43:4]
+  %46 = getelementptr inbounds %class.IIRFilter* %3, i32 0, i32 0, !dbg !127 ; [#uses=1 type=[5 x [3 x float]]*] [debug line = 43:4]
+  %47 = getelementptr inbounds [5 x [3 x float]]* %46, i32 0, i32 %45, !dbg !127 ; [#uses=1 type=[3 x float]*] [debug line = 43:4]
+  %48 = getelementptr inbounds [3 x float]* %47, i32 0, i32 2, !dbg !127 ; [#uses=1 type=float*] [debug line = 43:4]
+  store float %44, float* %48, align 4, !dbg !127 ; [debug line = 43:4]
+  %49 = load i32* %i, align 4, !dbg !128          ; [#uses=1 type=i32] [debug line = 44:4]
+  %50 = getelementptr inbounds %class.IIRFilter* %3, i32 0, i32 0, !dbg !128 ; [#uses=1 type=[5 x [3 x float]]*] [debug line = 44:4]
+  %51 = getelementptr inbounds [5 x [3 x float]]* %50, i32 0, i32 %49, !dbg !128 ; [#uses=1 type=[3 x float]*] [debug line = 44:4]
+  %52 = getelementptr inbounds [3 x float]* %51, i32 0, i32 0, !dbg !128 ; [#uses=1 type=float*] [debug line = 44:4]
+  %53 = load float* %52, align 4, !dbg !128       ; [#uses=1 type=float] [debug line = 44:4]
+  %54 = load i32* %i, align 4, !dbg !128          ; [#uses=1 type=i32] [debug line = 44:4]
+  %55 = getelementptr inbounds %class.IIRFilter* %3, i32 0, i32 0, !dbg !128 ; [#uses=1 type=[5 x [3 x float]]*] [debug line = 44:4]
+  %56 = getelementptr inbounds [5 x [3 x float]]* %55, i32 0, i32 %54, !dbg !128 ; [#uses=1 type=[3 x float]*] [debug line = 44:4]
+  %57 = getelementptr inbounds [3 x float]* %56, i32 0, i32 1, !dbg !128 ; [#uses=1 type=float*] [debug line = 44:4]
+  store float %53, float* %57, align 4, !dbg !128 ; [debug line = 44:4]
+  %58 = load float* %temp, align 4, !dbg !129     ; [#uses=1 type=float] [debug line = 45:4]
+  %59 = load i32* %i, align 4, !dbg !129          ; [#uses=1 type=i32] [debug line = 45:4]
+  %60 = getelementptr inbounds %class.IIRFilter* %3, i32 0, i32 0, !dbg !129 ; [#uses=1 type=[5 x [3 x float]]*] [debug line = 45:4]
+  %61 = getelementptr inbounds [5 x [3 x float]]* %60, i32 0, i32 %59, !dbg !129 ; [#uses=1 type=[3 x float]*] [debug line = 45:4]
+  %62 = getelementptr inbounds [3 x float]* %61, i32 0, i32 0, !dbg !129 ; [#uses=1 type=float*] [debug line = 45:4]
+  store float %58, float* %62, align 4, !dbg !129 ; [debug line = 45:4]
+  %63 = load float* %b0, align 4, !dbg !130       ; [#uses=1 type=float] [debug line = 47:4]
+  %64 = load i32* %i, align 4, !dbg !130          ; [#uses=1 type=i32] [debug line = 47:4]
+  %65 = getelementptr inbounds %class.IIRFilter* %3, i32 0, i32 0, !dbg !130 ; [#uses=1 type=[5 x [3 x float]]*] [debug line = 47:4]
+  %66 = getelementptr inbounds [5 x [3 x float]]* %65, i32 0, i32 %64, !dbg !130 ; [#uses=1 type=[3 x float]*] [debug line = 47:4]
+  %67 = getelementptr inbounds [3 x float]* %66, i32 0, i32 0, !dbg !130 ; [#uses=1 type=float*] [debug line = 47:4]
+  %68 = load float* %67, align 4, !dbg !130       ; [#uses=1 type=float] [debug line = 47:4]
+  %69 = fmul float %63, %68, !dbg !130            ; [#uses=1 type=float] [debug line = 47:4]
+  %70 = load float* %a0, align 4, !dbg !130       ; [#uses=1 type=float] [debug line = 47:4]
+  %71 = fdiv float %69, %70, !dbg !130            ; [#uses=1 type=float] [debug line = 47:4]
+  %72 = load float* %b1, align 4, !dbg !130       ; [#uses=1 type=float] [debug line = 47:4]
+  %73 = load i32* %i, align 4, !dbg !130          ; [#uses=1 type=i32] [debug line = 47:4]
+  %74 = getelementptr inbounds %class.IIRFilter* %3, i32 0, i32 0, !dbg !130 ; [#uses=1 type=[5 x [3 x float]]*] [debug line = 47:4]
+  %75 = getelementptr inbounds [5 x [3 x float]]* %74, i32 0, i32 %73, !dbg !130 ; [#uses=1 type=[3 x float]*] [debug line = 47:4]
+  %76 = getelementptr inbounds [3 x float]* %75, i32 0, i32 1, !dbg !130 ; [#uses=1 type=float*] [debug line = 47:4]
+  %77 = load float* %76, align 4, !dbg !130       ; [#uses=1 type=float] [debug line = 47:4]
+  %78 = fmul float %72, %77, !dbg !130            ; [#uses=1 type=float] [debug line = 47:4]
+  %79 = load float* %a0, align 4, !dbg !130       ; [#uses=1 type=float] [debug line = 47:4]
+  %80 = fdiv float %78, %79, !dbg !130            ; [#uses=1 type=float] [debug line = 47:4]
+  %81 = fadd float %71, %80, !dbg !130            ; [#uses=1 type=float] [debug line = 47:4]
+  %82 = load float* %b2, align 4, !dbg !130       ; [#uses=1 type=float] [debug line = 47:4]
+  %83 = load i32* %i, align 4, !dbg !130          ; [#uses=1 type=i32] [debug line = 47:4]
+  %84 = getelementptr inbounds %class.IIRFilter* %3, i32 0, i32 0, !dbg !130 ; [#uses=1 type=[5 x [3 x float]]*] [debug line = 47:4]
+  %85 = getelementptr inbounds [5 x [3 x float]]* %84, i32 0, i32 %83, !dbg !130 ; [#uses=1 type=[3 x float]*] [debug line = 47:4]
+  %86 = getelementptr inbounds [3 x float]* %85, i32 0, i32 2, !dbg !130 ; [#uses=1 type=float*] [debug line = 47:4]
+  %87 = load float* %86, align 4, !dbg !130       ; [#uses=1 type=float] [debug line = 47:4]
+  %88 = fmul float %82, %87, !dbg !130            ; [#uses=1 type=float] [debug line = 47:4]
+  %89 = load float* %a0, align 4, !dbg !130       ; [#uses=1 type=float] [debug line = 47:4]
+  %90 = fdiv float %88, %89, !dbg !130            ; [#uses=1 type=float] [debug line = 47:4]
+  %91 = fadd float %81, %90, !dbg !130            ; [#uses=1 type=float] [debug line = 47:4]
+  %92 = load float* %a1, align 4, !dbg !130       ; [#uses=1 type=float] [debug line = 47:4]
+  %93 = load i32* %i, align 4, !dbg !130          ; [#uses=1 type=i32] [debug line = 47:4]
+  %94 = getelementptr inbounds %class.IIRFilter* %3, i32 0, i32 1, !dbg !130 ; [#uses=1 type=[5 x [3 x float]]*] [debug line = 47:4]
+  %95 = getelementptr inbounds [5 x [3 x float]]* %94, i32 0, i32 %93, !dbg !130 ; [#uses=1 type=[3 x float]*] [debug line = 47:4]
+  %96 = getelementptr inbounds [3 x float]* %95, i32 0, i32 1, !dbg !130 ; [#uses=1 type=float*] [debug line = 47:4]
+  %97 = load float* %96, align 4, !dbg !130       ; [#uses=1 type=float] [debug line = 47:4]
+  %98 = fmul float %92, %97, !dbg !130            ; [#uses=1 type=float] [debug line = 47:4]
+  %99 = load float* %a0, align 4, !dbg !130       ; [#uses=1 type=float] [debug line = 47:4]
+  %100 = fdiv float %98, %99, !dbg !130           ; [#uses=1 type=float] [debug line = 47:4]
+  %101 = fsub float %91, %100, !dbg !130          ; [#uses=1 type=float] [debug line = 47:4]
+  %102 = load float* %a2, align 4, !dbg !130      ; [#uses=1 type=float] [debug line = 47:4]
+  %103 = load i32* %i, align 4, !dbg !130         ; [#uses=1 type=i32] [debug line = 47:4]
+  %104 = getelementptr inbounds %class.IIRFilter* %3, i32 0, i32 1, !dbg !130 ; [#uses=1 type=[5 x [3 x float]]*] [debug line = 47:4]
+  %105 = getelementptr inbounds [5 x [3 x float]]* %104, i32 0, i32 %103, !dbg !130 ; [#uses=1 type=[3 x float]*] [debug line = 47:4]
+  %106 = getelementptr inbounds [3 x float]* %105, i32 0, i32 2, !dbg !130 ; [#uses=1 type=float*] [debug line = 47:4]
+  %107 = load float* %106, align 4, !dbg !130     ; [#uses=1 type=float] [debug line = 47:4]
+  %108 = fmul float %102, %107, !dbg !130         ; [#uses=1 type=float] [debug line = 47:4]
+  %109 = load float* %a0, align 4, !dbg !130      ; [#uses=1 type=float] [debug line = 47:4]
+  %110 = fdiv float %108, %109, !dbg !130         ; [#uses=1 type=float] [debug line = 47:4]
+  %111 = fsub float %101, %110, !dbg !130         ; [#uses=1 type=float] [debug line = 47:4]
+  store float %111, float* %acc, align 4, !dbg !130 ; [debug line = 47:4]
+  %112 = load float* %acc, align 4, !dbg !131     ; [#uses=1 type=float] [debug line = 48:4]
+  %113 = load i32* %i, align 4, !dbg !131         ; [#uses=1 type=i32] [debug line = 48:4]
+  %114 = getelementptr inbounds %class.IIRFilter* %3, i32 0, i32 1, !dbg !131 ; [#uses=1 type=[5 x [3 x float]]*] [debug line = 48:4]
+  %115 = getelementptr inbounds [5 x [3 x float]]* %114, i32 0, i32 %113, !dbg !131 ; [#uses=1 type=[3 x float]*] [debug line = 48:4]
+  %116 = getelementptr inbounds [3 x float]* %115, i32 0, i32 0, !dbg !131 ; [#uses=1 type=float*] [debug line = 48:4]
+  store float %112, float* %116, align 4, !dbg !131 ; [debug line = 48:4]
+  %117 = load i32* %i, align 4, !dbg !132         ; [#uses=1 type=i32] [debug line = 51:4]
+  %118 = getelementptr inbounds %class.IIRFilter* %3, i32 0, i32 1, !dbg !132 ; [#uses=1 type=[5 x [3 x float]]*] [debug line = 51:4]
+  %119 = getelementptr inbounds [5 x [3 x float]]* %118, i32 0, i32 %117, !dbg !132 ; [#uses=1 type=[3 x float]*] [debug line = 51:4]
+  %120 = getelementptr inbounds [3 x float]* %119, i32 0, i32 1, !dbg !132 ; [#uses=1 type=float*] [debug line = 51:4]
+  %121 = load float* %120, align 4, !dbg !132     ; [#uses=1 type=float] [debug line = 51:4]
+  %122 = load i32* %i, align 4, !dbg !132         ; [#uses=1 type=i32] [debug line = 51:4]
+  %123 = getelementptr inbounds %class.IIRFilter* %3, i32 0, i32 1, !dbg !132 ; [#uses=1 type=[5 x [3 x float]]*] [debug line = 51:4]
+  %124 = getelementptr inbounds [5 x [3 x float]]* %123, i32 0, i32 %122, !dbg !132 ; [#uses=1 type=[3 x float]*] [debug line = 51:4]
+  %125 = getelementptr inbounds [3 x float]* %124, i32 0, i32 2, !dbg !132 ; [#uses=1 type=float*] [debug line = 51:4]
+  store float %121, float* %125, align 4, !dbg !132 ; [debug line = 51:4]
+  %126 = load i32* %i, align 4, !dbg !133         ; [#uses=1 type=i32] [debug line = 52:4]
+  %127 = getelementptr inbounds %class.IIRFilter* %3, i32 0, i32 1, !dbg !133 ; [#uses=1 type=[5 x [3 x float]]*] [debug line = 52:4]
+  %128 = getelementptr inbounds [5 x [3 x float]]* %127, i32 0, i32 %126, !dbg !133 ; [#uses=1 type=[3 x float]*] [debug line = 52:4]
+  %129 = getelementptr inbounds [3 x float]* %128, i32 0, i32 0, !dbg !133 ; [#uses=1 type=float*] [debug line = 52:4]
+  %130 = load float* %129, align 4, !dbg !133     ; [#uses=1 type=float] [debug line = 52:4]
+  %131 = load i32* %i, align 4, !dbg !133         ; [#uses=1 type=i32] [debug line = 52:4]
+  %132 = getelementptr inbounds %class.IIRFilter* %3, i32 0, i32 1, !dbg !133 ; [#uses=1 type=[5 x [3 x float]]*] [debug line = 52:4]
+  %133 = getelementptr inbounds [5 x [3 x float]]* %132, i32 0, i32 %131, !dbg !133 ; [#uses=1 type=[3 x float]*] [debug line = 52:4]
+  %134 = getelementptr inbounds [3 x float]* %133, i32 0, i32 1, !dbg !133 ; [#uses=1 type=float*] [debug line = 52:4]
+  store float %130, float* %134, align 4, !dbg !133 ; [debug line = 52:4]
+  %135 = load i32* %i, align 4, !dbg !134         ; [#uses=1 type=i32] [debug line = 53:4]
+  %136 = getelementptr inbounds %class.IIRFilter* %3, i32 0, i32 1, !dbg !134 ; [#uses=1 type=[5 x [3 x float]]*] [debug line = 53:4]
+  %137 = getelementptr inbounds [5 x [3 x float]]* %136, i32 0, i32 %135, !dbg !134 ; [#uses=1 type=[3 x float]*] [debug line = 53:4]
+  %138 = getelementptr inbounds [3 x float]* %137, i32 0, i32 0, !dbg !134 ; [#uses=1 type=float*] [debug line = 53:4]
+  %139 = load float* %138, align 4, !dbg !134     ; [#uses=1 type=float] [debug line = 53:4]
+  store float %139, float* %temp, align 4, !dbg !134 ; [debug line = 53:4]
+  call void (...)* @_ssdm_RegionEnd(i8* getelementptr inbounds ([12 x i8]* @.str4, i32 0, i32 0)) nounwind, !dbg !135 ; [debug line = 54:3]
+  br label %140, !dbg !135                        ; [debug line = 54:3]
 
-; <label>:125                                     ; preds = %9
-  %126 = load i32* %i, align 4, !dbg !133         ; [#uses=1 type=i32] [debug line = 34:40]
-  %127 = add nsw i32 %126, 1, !dbg !133           ; [#uses=1 type=i32] [debug line = 34:40]
-  store i32 %127, i32* %i, align 4, !dbg !133     ; [debug line = 34:40]
-  br label %6, !dbg !133                          ; [debug line = 34:40]
+; <label>:140                                     ; preds = %9
+  %141 = load i32* %i, align 4, !dbg !136         ; [#uses=1 type=i32] [debug line = 34:40]
+  %142 = add nsw i32 %141, 1, !dbg !136           ; [#uses=1 type=i32] [debug line = 34:40]
+  store i32 %142, i32* %i, align 4, !dbg !136     ; [debug line = 34:40]
+  br label %6, !dbg !136                          ; [debug line = 34:40]
 
-; <label>:128                                     ; preds = %6
-  %129 = load float* %temp, align 4, !dbg !134    ; [#uses=1 type=float] [debug line = 54:3]
-  ret float %129, !dbg !134                       ; [debug line = 54:3]
+; <label>:143                                     ; preds = %6
+  %144 = load float* %temp, align 4, !dbg !137    ; [#uses=1 type=float] [debug line = 55:3]
+  ret float %144, !dbg !137                       ; [debug line = 55:3]
 }
 
 ; [#uses=1]
@@ -277,69 +295,69 @@ define linkonce_odr void @_ZN9IIRFilter9setCoeffsEPA6_f(%class.IIRFilter* %this,
   %i = alloca i32, align 4                        ; [#uses=6 type=i32*]
   %j = alloca i32, align 4                        ; [#uses=6 type=i32*]
   store %class.IIRFilter* %this, %class.IIRFilter** %1, align 4
-  call void @llvm.dbg.declare(metadata !{%class.IIRFilter** %1}, metadata !135), !dbg !136 ; [debug line = 24:7] [debug variable = this]
+  call void @llvm.dbg.declare(metadata !{%class.IIRFilter** %1}, metadata !138), !dbg !139 ; [debug line = 24:7] [debug variable = this]
   store [6 x float]* %coefs, [6 x float]** %2, align 4
-  call void @llvm.dbg.declare(metadata !{[6 x float]** %2}, metadata !137), !dbg !138 ; [debug line = 24:24] [debug variable = coefs]
+  call void @llvm.dbg.declare(metadata !{[6 x float]** %2}, metadata !140), !dbg !141 ; [debug line = 24:24] [debug variable = coefs]
   %3 = load %class.IIRFilter** %1                 ; [#uses=1 type=%class.IIRFilter*]
-  %4 = load [6 x float]** %2, align 4, !dbg !139  ; [#uses=1 type=[6 x float]*] [debug line = 24:44]
-  call void (...)* @_ssdm_SpecArrayDimSize([6 x float]* %4, i32 5) nounwind, !dbg !139 ; [debug line = 24:44]
-  call void @llvm.dbg.declare(metadata !{i32* %i}, metadata !141), !dbg !143 ; [debug line = 25:11] [debug variable = i]
-  store i32 0, i32* %i, align 4, !dbg !144        ; [debug line = 25:14]
-  br label %5, !dbg !144                          ; [debug line = 25:14]
+  %4 = load [6 x float]** %2, align 4, !dbg !142  ; [#uses=1 type=[6 x float]*] [debug line = 24:44]
+  call void (...)* @_ssdm_SpecArrayDimSize([6 x float]* %4, i32 5) nounwind, !dbg !142 ; [debug line = 24:44]
+  call void @llvm.dbg.declare(metadata !{i32* %i}, metadata !144), !dbg !146 ; [debug line = 25:11] [debug variable = i]
+  store i32 0, i32* %i, align 4, !dbg !147        ; [debug line = 25:14]
+  br label %5, !dbg !147                          ; [debug line = 25:14]
 
 ; <label>:5                                       ; preds = %29, %0
-  %6 = load i32* %i, align 4, !dbg !144           ; [#uses=1 type=i32] [debug line = 25:14]
-  %7 = icmp slt i32 %6, 5, !dbg !144              ; [#uses=1 type=i1] [debug line = 25:14]
-  br i1 %7, label %8, label %32, !dbg !144        ; [debug line = 25:14]
+  %6 = load i32* %i, align 4, !dbg !147           ; [#uses=1 type=i32] [debug line = 25:14]
+  %7 = icmp slt i32 %6, 5, !dbg !147              ; [#uses=1 type=i1] [debug line = 25:14]
+  br i1 %7, label %8, label %32, !dbg !147        ; [debug line = 25:14]
 
 ; <label>:8                                       ; preds = %5
-  br label %9, !dbg !145                          ; [debug line = 25:33]
+  br label %9, !dbg !148                          ; [debug line = 25:33]
 
 ; <label>:9                                       ; preds = %8
-  call void @llvm.dbg.declare(metadata !{i32* %j}, metadata !147), !dbg !149 ; [debug line = 26:28] [debug variable = j]
-  store i32 0, i32* %j, align 4, !dbg !150        ; [debug line = 26:31]
-  br label %10, !dbg !150                         ; [debug line = 26:31]
+  call void @llvm.dbg.declare(metadata !{i32* %j}, metadata !150), !dbg !152 ; [debug line = 26:28] [debug variable = j]
+  store i32 0, i32* %j, align 4, !dbg !153        ; [debug line = 26:31]
+  br label %10, !dbg !153                         ; [debug line = 26:31]
 
 ; <label>:10                                      ; preds = %25, %9
-  %11 = load i32* %j, align 4, !dbg !150          ; [#uses=1 type=i32] [debug line = 26:31]
-  %12 = icmp slt i32 %11, 6, !dbg !150            ; [#uses=1 type=i1] [debug line = 26:31]
-  br i1 %12, label %13, label %28, !dbg !150      ; [debug line = 26:31]
+  %11 = load i32* %j, align 4, !dbg !153          ; [#uses=1 type=i32] [debug line = 26:31]
+  %12 = icmp slt i32 %11, 6, !dbg !153            ; [#uses=1 type=i1] [debug line = 26:31]
+  br i1 %12, label %13, label %28, !dbg !153      ; [debug line = 26:31]
 
 ; <label>:13                                      ; preds = %10
-  call void (...)* @_ssdm_op_SpecLoopName(i8* getelementptr inbounds ([15 x i8]* @.str3, i32 0, i32 0)) nounwind, !dbg !151 ; [debug line = 26:46]
-  call void (...)* @_ssdm_RegionBegin(i8* getelementptr inbounds ([15 x i8]* @.str3, i32 0, i32 0)) nounwind, !dbg !151 ; [debug line = 26:46]
-  %14 = load i32* %j, align 4, !dbg !153          ; [#uses=1 type=i32] [debug line = 27:5]
-  %15 = load i32* %i, align 4, !dbg !153          ; [#uses=1 type=i32] [debug line = 27:5]
-  %16 = load [6 x float]** %2, align 4, !dbg !153 ; [#uses=1 type=[6 x float]*] [debug line = 27:5]
-  %17 = getelementptr inbounds [6 x float]* %16, i32 %15, !dbg !153 ; [#uses=1 type=[6 x float]*] [debug line = 27:5]
-  %18 = getelementptr inbounds [6 x float]* %17, i32 0, i32 %14, !dbg !153 ; [#uses=1 type=float*] [debug line = 27:5]
-  %19 = load float* %18, align 4, !dbg !153       ; [#uses=1 type=float] [debug line = 27:5]
-  %20 = load i32* %j, align 4, !dbg !153          ; [#uses=1 type=i32] [debug line = 27:5]
-  %21 = load i32* %i, align 4, !dbg !153          ; [#uses=1 type=i32] [debug line = 27:5]
-  %22 = getelementptr inbounds %class.IIRFilter* %3, i32 0, i32 2, !dbg !153 ; [#uses=1 type=[5 x [6 x float]]*] [debug line = 27:5]
-  %23 = getelementptr inbounds [5 x [6 x float]]* %22, i32 0, i32 %21, !dbg !153 ; [#uses=1 type=[6 x float]*] [debug line = 27:5]
-  %24 = getelementptr inbounds [6 x float]* %23, i32 0, i32 %20, !dbg !153 ; [#uses=1 type=float*] [debug line = 27:5]
-  store float %19, float* %24, align 4, !dbg !153 ; [debug line = 27:5]
-  call void (...)* @_ssdm_RegionEnd(i8* getelementptr inbounds ([15 x i8]* @.str3, i32 0, i32 0)) nounwind, !dbg !154 ; [debug line = 28:4]
-  br label %25, !dbg !154                         ; [debug line = 28:4]
+  call void (...)* @_ssdm_op_SpecLoopName(i8* getelementptr inbounds ([15 x i8]* @.str3, i32 0, i32 0)) nounwind, !dbg !154 ; [debug line = 26:46]
+  call void (...)* @_ssdm_RegionBegin(i8* getelementptr inbounds ([15 x i8]* @.str3, i32 0, i32 0)) nounwind, !dbg !154 ; [debug line = 26:46]
+  %14 = load i32* %j, align 4, !dbg !156          ; [#uses=1 type=i32] [debug line = 27:5]
+  %15 = load i32* %i, align 4, !dbg !156          ; [#uses=1 type=i32] [debug line = 27:5]
+  %16 = load [6 x float]** %2, align 4, !dbg !156 ; [#uses=1 type=[6 x float]*] [debug line = 27:5]
+  %17 = getelementptr inbounds [6 x float]* %16, i32 %15, !dbg !156 ; [#uses=1 type=[6 x float]*] [debug line = 27:5]
+  %18 = getelementptr inbounds [6 x float]* %17, i32 0, i32 %14, !dbg !156 ; [#uses=1 type=float*] [debug line = 27:5]
+  %19 = load float* %18, align 4, !dbg !156       ; [#uses=1 type=float] [debug line = 27:5]
+  %20 = load i32* %j, align 4, !dbg !156          ; [#uses=1 type=i32] [debug line = 27:5]
+  %21 = load i32* %i, align 4, !dbg !156          ; [#uses=1 type=i32] [debug line = 27:5]
+  %22 = getelementptr inbounds %class.IIRFilter* %3, i32 0, i32 2, !dbg !156 ; [#uses=1 type=[5 x [6 x float]]*] [debug line = 27:5]
+  %23 = getelementptr inbounds [5 x [6 x float]]* %22, i32 0, i32 %21, !dbg !156 ; [#uses=1 type=[6 x float]*] [debug line = 27:5]
+  %24 = getelementptr inbounds [6 x float]* %23, i32 0, i32 %20, !dbg !156 ; [#uses=1 type=float*] [debug line = 27:5]
+  store float %19, float* %24, align 4, !dbg !156 ; [debug line = 27:5]
+  call void (...)* @_ssdm_RegionEnd(i8* getelementptr inbounds ([15 x i8]* @.str3, i32 0, i32 0)) nounwind, !dbg !157 ; [debug line = 28:4]
+  br label %25, !dbg !157                         ; [debug line = 28:4]
 
 ; <label>:25                                      ; preds = %13
-  %26 = load i32* %j, align 4, !dbg !155          ; [#uses=1 type=i32] [debug line = 26:40]
-  %27 = add nsw i32 %26, 1, !dbg !155             ; [#uses=1 type=i32] [debug line = 26:40]
-  store i32 %27, i32* %j, align 4, !dbg !155      ; [debug line = 26:40]
-  br label %10, !dbg !155                         ; [debug line = 26:40]
+  %26 = load i32* %j, align 4, !dbg !158          ; [#uses=1 type=i32] [debug line = 26:40]
+  %27 = add nsw i32 %26, 1, !dbg !158             ; [#uses=1 type=i32] [debug line = 26:40]
+  store i32 %27, i32* %j, align 4, !dbg !158      ; [debug line = 26:40]
+  br label %10, !dbg !158                         ; [debug line = 26:40]
 
 ; <label>:28                                      ; preds = %10
-  br label %29, !dbg !156                         ; [debug line = 29:3]
+  br label %29, !dbg !159                         ; [debug line = 29:3]
 
 ; <label>:29                                      ; preds = %28
-  %30 = load i32* %i, align 4, !dbg !157          ; [#uses=1 type=i32] [debug line = 25:28]
-  %31 = add nsw i32 %30, 1, !dbg !157             ; [#uses=1 type=i32] [debug line = 25:28]
-  store i32 %31, i32* %i, align 4, !dbg !157      ; [debug line = 25:28]
-  br label %5, !dbg !157                          ; [debug line = 25:28]
+  %30 = load i32* %i, align 4, !dbg !160          ; [#uses=1 type=i32] [debug line = 25:28]
+  %31 = add nsw i32 %30, 1, !dbg !160             ; [#uses=1 type=i32] [debug line = 25:28]
+  store i32 %31, i32* %i, align 4, !dbg !160      ; [debug line = 25:28]
+  br label %5, !dbg !160                          ; [debug line = 25:28]
 
 ; <label>:32                                      ; preds = %5
-  ret void, !dbg !158                             ; [debug line = 30:2]
+  ret void, !dbg !161                             ; [debug line = 30:2]
 }
 
 ; [#uses=2]
@@ -359,116 +377,116 @@ define linkonce_odr void @_ZN9IIRFilterC2Ev(%class.IIRFilter* %this) unnamed_add
   %i1 = alloca i32, align 4                       ; [#uses=5 type=i32*]
   %j2 = alloca i32, align 4                       ; [#uses=5 type=i32*]
   store %class.IIRFilter* %this, %class.IIRFilter** %1, align 4
-  call void @llvm.dbg.declare(metadata !{%class.IIRFilter** %1}, metadata !159), !dbg !160 ; [debug line = 13:2] [debug variable = this]
+  call void @llvm.dbg.declare(metadata !{%class.IIRFilter** %1}, metadata !162), !dbg !163 ; [debug line = 13:2] [debug variable = this]
   %2 = load %class.IIRFilter** %1                 ; [#uses=3 type=%class.IIRFilter*]
-  call void @llvm.dbg.declare(metadata !{i32* %i}, metadata !161), !dbg !164 ; [debug line = 14:12] [debug variable = i]
-  store i32 0, i32* %i, align 4, !dbg !165        ; [debug line = 14:17]
-  br label %3, !dbg !165                          ; [debug line = 14:17]
+  call void @llvm.dbg.declare(metadata !{i32* %i}, metadata !164), !dbg !167 ; [debug line = 14:12] [debug variable = i]
+  store i32 0, i32* %i, align 4, !dbg !168        ; [debug line = 14:17]
+  br label %3, !dbg !168                          ; [debug line = 14:17]
 
 ; <label>:3                                       ; preds = %25, %0
-  %4 = load i32* %i, align 4, !dbg !165           ; [#uses=1 type=i32] [debug line = 14:17]
-  %5 = icmp slt i32 %4, 5, !dbg !165              ; [#uses=1 type=i1] [debug line = 14:17]
-  br i1 %5, label %6, label %28, !dbg !165        ; [debug line = 14:17]
+  %4 = load i32* %i, align 4, !dbg !168           ; [#uses=1 type=i32] [debug line = 14:17]
+  %5 = icmp slt i32 %4, 5, !dbg !168              ; [#uses=1 type=i1] [debug line = 14:17]
+  br i1 %5, label %6, label %28, !dbg !168        ; [debug line = 14:17]
 
 ; <label>:6                                       ; preds = %3
-  call void @llvm.dbg.declare(metadata !{i32* %j}, metadata !166), !dbg !169 ; [debug line = 15:13] [debug variable = j]
-  store i32 0, i32* %j, align 4, !dbg !170        ; [debug line = 15:18]
-  br label %7, !dbg !170                          ; [debug line = 15:18]
+  call void @llvm.dbg.declare(metadata !{i32* %j}, metadata !169), !dbg !172 ; [debug line = 15:13] [debug variable = j]
+  store i32 0, i32* %j, align 4, !dbg !173        ; [debug line = 15:18]
+  br label %7, !dbg !173                          ; [debug line = 15:18]
 
 ; <label>:7                                       ; preds = %21, %6
-  %8 = load i32* %j, align 4, !dbg !170           ; [#uses=1 type=i32] [debug line = 15:18]
-  %9 = icmp slt i32 %8, 5, !dbg !170              ; [#uses=1 type=i1] [debug line = 15:18]
-  br i1 %9, label %10, label %24, !dbg !170       ; [debug line = 15:18]
+  %8 = load i32* %j, align 4, !dbg !173           ; [#uses=1 type=i32] [debug line = 15:18]
+  %9 = icmp slt i32 %8, 5, !dbg !173              ; [#uses=1 type=i1] [debug line = 15:18]
+  br i1 %9, label %10, label %24, !dbg !173       ; [debug line = 15:18]
 
 ; <label>:10                                      ; preds = %7
-  %11 = load i32* %j, align 4, !dbg !171          ; [#uses=1 type=i32] [debug line = 16:5]
-  %12 = load i32* %i, align 4, !dbg !171          ; [#uses=1 type=i32] [debug line = 16:5]
-  %13 = getelementptr inbounds %class.IIRFilter* %2, i32 0, i32 0, !dbg !171 ; [#uses=1 type=[5 x [3 x float]]*] [debug line = 16:5]
-  %14 = getelementptr inbounds [5 x [3 x float]]* %13, i32 0, i32 %12, !dbg !171 ; [#uses=1 type=[3 x float]*] [debug line = 16:5]
-  %15 = getelementptr inbounds [3 x float]* %14, i32 0, i32 %11, !dbg !171 ; [#uses=1 type=float*] [debug line = 16:5]
-  store float 0.000000e+00, float* %15, align 4, !dbg !171 ; [debug line = 16:5]
-  %16 = load i32* %j, align 4, !dbg !173          ; [#uses=1 type=i32] [debug line = 17:5]
-  %17 = load i32* %i, align 4, !dbg !173          ; [#uses=1 type=i32] [debug line = 17:5]
-  %18 = getelementptr inbounds %class.IIRFilter* %2, i32 0, i32 1, !dbg !173 ; [#uses=1 type=[5 x [3 x float]]*] [debug line = 17:5]
-  %19 = getelementptr inbounds [5 x [3 x float]]* %18, i32 0, i32 %17, !dbg !173 ; [#uses=1 type=[3 x float]*] [debug line = 17:5]
-  %20 = getelementptr inbounds [3 x float]* %19, i32 0, i32 %16, !dbg !173 ; [#uses=1 type=float*] [debug line = 17:5]
-  store float 0.000000e+00, float* %20, align 4, !dbg !173 ; [debug line = 17:5]
-  br label %21, !dbg !174                         ; [debug line = 18:4]
+  %11 = load i32* %j, align 4, !dbg !174          ; [#uses=1 type=i32] [debug line = 16:5]
+  %12 = load i32* %i, align 4, !dbg !174          ; [#uses=1 type=i32] [debug line = 16:5]
+  %13 = getelementptr inbounds %class.IIRFilter* %2, i32 0, i32 0, !dbg !174 ; [#uses=1 type=[5 x [3 x float]]*] [debug line = 16:5]
+  %14 = getelementptr inbounds [5 x [3 x float]]* %13, i32 0, i32 %12, !dbg !174 ; [#uses=1 type=[3 x float]*] [debug line = 16:5]
+  %15 = getelementptr inbounds [3 x float]* %14, i32 0, i32 %11, !dbg !174 ; [#uses=1 type=float*] [debug line = 16:5]
+  store float 0.000000e+00, float* %15, align 4, !dbg !174 ; [debug line = 16:5]
+  %16 = load i32* %j, align 4, !dbg !176          ; [#uses=1 type=i32] [debug line = 17:5]
+  %17 = load i32* %i, align 4, !dbg !176          ; [#uses=1 type=i32] [debug line = 17:5]
+  %18 = getelementptr inbounds %class.IIRFilter* %2, i32 0, i32 1, !dbg !176 ; [#uses=1 type=[5 x [3 x float]]*] [debug line = 17:5]
+  %19 = getelementptr inbounds [5 x [3 x float]]* %18, i32 0, i32 %17, !dbg !176 ; [#uses=1 type=[3 x float]*] [debug line = 17:5]
+  %20 = getelementptr inbounds [3 x float]* %19, i32 0, i32 %16, !dbg !176 ; [#uses=1 type=float*] [debug line = 17:5]
+  store float 0.000000e+00, float* %20, align 4, !dbg !176 ; [debug line = 17:5]
+  br label %21, !dbg !177                         ; [debug line = 18:4]
 
 ; <label>:21                                      ; preds = %10
-  %22 = load i32* %j, align 4, !dbg !175          ; [#uses=1 type=i32] [debug line = 15:33]
-  %23 = add nsw i32 %22, 1, !dbg !175             ; [#uses=1 type=i32] [debug line = 15:33]
-  store i32 %23, i32* %j, align 4, !dbg !175      ; [debug line = 15:33]
-  br label %7, !dbg !175                          ; [debug line = 15:33]
+  %22 = load i32* %j, align 4, !dbg !178          ; [#uses=1 type=i32] [debug line = 15:33]
+  %23 = add nsw i32 %22, 1, !dbg !178             ; [#uses=1 type=i32] [debug line = 15:33]
+  store i32 %23, i32* %j, align 4, !dbg !178      ; [debug line = 15:33]
+  br label %7, !dbg !178                          ; [debug line = 15:33]
 
 ; <label>:24                                      ; preds = %7
-  br label %25, !dbg !176                         ; [debug line = 19:3]
+  br label %25, !dbg !179                         ; [debug line = 19:3]
 
 ; <label>:25                                      ; preds = %24
-  %26 = load i32* %i, align 4, !dbg !177          ; [#uses=1 type=i32] [debug line = 14:32]
-  %27 = add nsw i32 %26, 1, !dbg !177             ; [#uses=1 type=i32] [debug line = 14:32]
-  store i32 %27, i32* %i, align 4, !dbg !177      ; [debug line = 14:32]
-  br label %3, !dbg !177                          ; [debug line = 14:32]
+  %26 = load i32* %i, align 4, !dbg !180          ; [#uses=1 type=i32] [debug line = 14:32]
+  %27 = add nsw i32 %26, 1, !dbg !180             ; [#uses=1 type=i32] [debug line = 14:32]
+  store i32 %27, i32* %i, align 4, !dbg !180      ; [debug line = 14:32]
+  br label %3, !dbg !180                          ; [debug line = 14:32]
 
 ; <label>:28                                      ; preds = %3
-  call void @llvm.dbg.declare(metadata !{i32* %i1}, metadata !178), !dbg !180 ; [debug line = 20:11] [debug variable = i]
-  store i32 0, i32* %i1, align 4, !dbg !181       ; [debug line = 20:14]
-  br label %29, !dbg !181                         ; [debug line = 20:14]
+  call void @llvm.dbg.declare(metadata !{i32* %i1}, metadata !181), !dbg !183 ; [debug line = 20:11] [debug variable = i]
+  store i32 0, i32* %i1, align 4, !dbg !184       ; [debug line = 20:14]
+  br label %29, !dbg !184                         ; [debug line = 20:14]
 
 ; <label>:29                                      ; preds = %46, %28
-  %30 = load i32* %i1, align 4, !dbg !181         ; [#uses=1 type=i32] [debug line = 20:14]
-  %31 = icmp slt i32 %30, 5, !dbg !181            ; [#uses=1 type=i1] [debug line = 20:14]
-  br i1 %31, label %32, label %49, !dbg !181      ; [debug line = 20:14]
+  %30 = load i32* %i1, align 4, !dbg !184         ; [#uses=1 type=i32] [debug line = 20:14]
+  %31 = icmp slt i32 %30, 5, !dbg !184            ; [#uses=1 type=i1] [debug line = 20:14]
+  br i1 %31, label %32, label %49, !dbg !184      ; [debug line = 20:14]
 
 ; <label>:32                                      ; preds = %29
-  call void @llvm.dbg.declare(metadata !{i32* %j2}, metadata !182), !dbg !184 ; [debug line = 21:13] [debug variable = j]
-  store i32 0, i32* %j2, align 4, !dbg !185       ; [debug line = 21:16]
-  br label %33, !dbg !185                         ; [debug line = 21:16]
+  call void @llvm.dbg.declare(metadata !{i32* %j2}, metadata !185), !dbg !187 ; [debug line = 21:13] [debug variable = j]
+  store i32 0, i32* %j2, align 4, !dbg !188       ; [debug line = 21:16]
+  br label %33, !dbg !188                         ; [debug line = 21:16]
 
 ; <label>:33                                      ; preds = %42, %32
-  %34 = load i32* %j2, align 4, !dbg !185         ; [#uses=1 type=i32] [debug line = 21:16]
-  %35 = icmp slt i32 %34, 6, !dbg !185            ; [#uses=1 type=i1] [debug line = 21:16]
-  br i1 %35, label %36, label %45, !dbg !185      ; [debug line = 21:16]
+  %34 = load i32* %j2, align 4, !dbg !188         ; [#uses=1 type=i32] [debug line = 21:16]
+  %35 = icmp slt i32 %34, 6, !dbg !188            ; [#uses=1 type=i1] [debug line = 21:16]
+  br i1 %35, label %36, label %45, !dbg !188      ; [debug line = 21:16]
 
 ; <label>:36                                      ; preds = %33
-  %37 = load i32* %j2, align 4, !dbg !186         ; [#uses=1 type=i32] [debug line = 22:5]
-  %38 = load i32* %i1, align 4, !dbg !186         ; [#uses=1 type=i32] [debug line = 22:5]
-  %39 = getelementptr inbounds %class.IIRFilter* %2, i32 0, i32 2, !dbg !186 ; [#uses=1 type=[5 x [6 x float]]*] [debug line = 22:5]
-  %40 = getelementptr inbounds [5 x [6 x float]]* %39, i32 0, i32 %38, !dbg !186 ; [#uses=1 type=[6 x float]*] [debug line = 22:5]
-  %41 = getelementptr inbounds [6 x float]* %40, i32 0, i32 %37, !dbg !186 ; [#uses=1 type=float*] [debug line = 22:5]
-  store float 0.000000e+00, float* %41, align 4, !dbg !186 ; [debug line = 22:5]
-  br label %42, !dbg !186                         ; [debug line = 22:5]
+  %37 = load i32* %j2, align 4, !dbg !189         ; [#uses=1 type=i32] [debug line = 22:5]
+  %38 = load i32* %i1, align 4, !dbg !189         ; [#uses=1 type=i32] [debug line = 22:5]
+  %39 = getelementptr inbounds %class.IIRFilter* %2, i32 0, i32 2, !dbg !189 ; [#uses=1 type=[5 x [6 x float]]*] [debug line = 22:5]
+  %40 = getelementptr inbounds [5 x [6 x float]]* %39, i32 0, i32 %38, !dbg !189 ; [#uses=1 type=[6 x float]*] [debug line = 22:5]
+  %41 = getelementptr inbounds [6 x float]* %40, i32 0, i32 %37, !dbg !189 ; [#uses=1 type=float*] [debug line = 22:5]
+  store float 0.000000e+00, float* %41, align 4, !dbg !189 ; [debug line = 22:5]
+  br label %42, !dbg !189                         ; [debug line = 22:5]
 
 ; <label>:42                                      ; preds = %36
-  %43 = load i32* %j2, align 4, !dbg !187         ; [#uses=1 type=i32] [debug line = 21:25]
-  %44 = add nsw i32 %43, 1, !dbg !187             ; [#uses=1 type=i32] [debug line = 21:25]
-  store i32 %44, i32* %j2, align 4, !dbg !187     ; [debug line = 21:25]
-  br label %33, !dbg !187                         ; [debug line = 21:25]
+  %43 = load i32* %j2, align 4, !dbg !190         ; [#uses=1 type=i32] [debug line = 21:25]
+  %44 = add nsw i32 %43, 1, !dbg !190             ; [#uses=1 type=i32] [debug line = 21:25]
+  store i32 %44, i32* %j2, align 4, !dbg !190     ; [debug line = 21:25]
+  br label %33, !dbg !190                         ; [debug line = 21:25]
 
 ; <label>:45                                      ; preds = %33
-  br label %46, !dbg !188                         ; [debug line = 22:24]
+  br label %46, !dbg !191                         ; [debug line = 22:24]
 
 ; <label>:46                                      ; preds = %45
-  %47 = load i32* %i1, align 4, !dbg !189         ; [#uses=1 type=i32] [debug line = 20:28]
-  %48 = add nsw i32 %47, 1, !dbg !189             ; [#uses=1 type=i32] [debug line = 20:28]
-  store i32 %48, i32* %i1, align 4, !dbg !189     ; [debug line = 20:28]
-  br label %29, !dbg !189                         ; [debug line = 20:28]
+  %47 = load i32* %i1, align 4, !dbg !192         ; [#uses=1 type=i32] [debug line = 20:28]
+  %48 = add nsw i32 %47, 1, !dbg !192             ; [#uses=1 type=i32] [debug line = 20:28]
+  store i32 %48, i32* %i1, align 4, !dbg !192     ; [debug line = 20:28]
+  br label %29, !dbg !192                         ; [debug line = 20:28]
 
 ; <label>:49                                      ; preds = %29
-  ret void, !dbg !190                             ; [debug line = 23:2]
+  ret void, !dbg !193                             ; [debug line = 23:2]
 }
 
 !llvm.dbg.cu = !{!0}
 !opencl.kernels = !{!48, !55, !61, !65, !71}
 !hls.encrypted.func = !{}
 
-!0 = metadata !{i32 786449, i32 0, i32 4, metadata !"C:/Users/marti/Documents/EmbeddedSystems/project/equalizer/equalizer/.autopilot/db/iir.pragma.2.cpp", metadata !"C:\5CUsers\5Cmarti\5CDocuments\5CEmbeddedSystems\5Cproject", metadata !"clang version 3.1 ", i1 true, i1 false, metadata !"", i32 0, metadata !1, metadata !1, metadata !3, metadata !45} ; [ DW_TAG_compile_unit ]
+!0 = metadata !{i32 786449, i32 0, i32 4, metadata !"C:/Users/marti/Documents/GitHub/Embedded-Systems-Course/project/equalizer/equalizer/.autopilot/db/iir.pragma.2.cpp", metadata !"C:\5CUsers\5Cmarti\5CDocuments\5CGitHub\5CEmbedded-Systems-Course\5Cproject", metadata !"clang version 3.1 ", i1 true, i1 false, metadata !"", i32 0, metadata !1, metadata !1, metadata !3, metadata !45} ; [ DW_TAG_compile_unit ]
 !1 = metadata !{metadata !2}
 !2 = metadata !{i32 0}
 !3 = metadata !{metadata !4}
 !4 = metadata !{metadata !5, metadata !19, metadata !42, metadata !43, metadata !44}
 !5 = metadata !{i32 786478, i32 0, metadata !6, metadata !"equalizer", metadata !"equalizer", metadata !"_Z9equalizerPffiPA6_f", metadata !6, i32 3, metadata !7, i1 false, i1 true, i32 0, i32 0, null, i32 256, i1 false, void (float*, float, i32, [6 x float]*)* @_Z9equalizerPffiPA6_f, null, null, metadata !17, i32 3} ; [ DW_TAG_subprogram ]
-!6 = metadata !{i32 786473, metadata !"equalizer/iir.cpp", metadata !"C:\5CUsers\5Cmarti\5CDocuments\5CEmbeddedSystems\5Cproject", null} ; [ DW_TAG_file_type ]
+!6 = metadata !{i32 786473, metadata !"equalizer/iir.cpp", metadata !"C:\5CUsers\5Cmarti\5CDocuments\5CGitHub\5CEmbedded-Systems-Course\5Cproject", null} ; [ DW_TAG_file_type ]
 !7 = metadata !{i32 786453, i32 0, metadata !"", i32 0, i32 0, i64 0, i64 0, i64 0, i32 0, null, metadata !8, i32 0, i32 0} ; [ DW_TAG_subroutine_type ]
 !8 = metadata !{null, metadata !9, metadata !10, metadata !12, metadata !13}
 !9 = metadata !{i32 786447, null, metadata !"", null, i32 0, i64 32, i64 32, i64 0, i32 0, metadata !10} ; [ DW_TAG_pointer_type ]
@@ -482,7 +500,7 @@ define linkonce_odr void @_ZN9IIRFilterC2Ev(%class.IIRFilter* %this) unnamed_add
 !17 = metadata !{metadata !18}
 !18 = metadata !{i32 786468}                      ; [ DW_TAG_base_type ]
 !19 = metadata !{i32 786478, i32 0, null, metadata !"setCoeffs", metadata !"setCoeffs", metadata !"_ZN9IIRFilter9setCoeffsEPA6_f", metadata !20, i32 24, metadata !21, i1 false, i1 true, i32 0, i32 0, null, i32 256, i1 false, void (%class.IIRFilter*, [6 x float]*)* @_ZN9IIRFilter9setCoeffsEPA6_f, null, metadata !38, metadata !17, i32 24} ; [ DW_TAG_subprogram ]
-!20 = metadata !{i32 786473, metadata !"equalizer/iir.h", metadata !"C:\5CUsers\5Cmarti\5CDocuments\5CEmbeddedSystems\5Cproject", null} ; [ DW_TAG_file_type ]
+!20 = metadata !{i32 786473, metadata !"equalizer/iir.h", metadata !"C:\5CUsers\5Cmarti\5CDocuments\5CGitHub\5CEmbedded-Systems-Course\5Cproject", null} ; [ DW_TAG_file_type ]
 !21 = metadata !{i32 786453, i32 0, metadata !"", i32 0, i32 0, i64 0, i64 0, i64 0, i32 0, null, metadata !22, i32 0, i32 0} ; [ DW_TAG_subroutine_type ]
 !22 = metadata !{null, metadata !23, metadata !13}
 !23 = metadata !{i32 786447, i32 0, metadata !"", i32 0, i32 0, i64 32, i64 32, i64 0, i32 64, metadata !24} ; [ DW_TAG_pointer_type ]
@@ -570,86 +588,89 @@ define linkonce_odr void @_ZN9IIRFilterC2Ev(%class.IIRFilter* %this) unnamed_add
 !105 = metadata !{i32 32, i32 22, metadata !98, null}
 !106 = metadata !{i32 786688, metadata !98, metadata !"a2", metadata !20, i32 32, metadata !10, i32 0, i32 0} ; [ DW_TAG_auto_variable ]
 !107 = metadata !{i32 32, i32 26, metadata !98, null}
-!108 = metadata !{i32 786688, metadata !98, metadata !"temp", metadata !20, i32 32, metadata !10, i32 0, i32 0} ; [ DW_TAG_auto_variable ]
+!108 = metadata !{i32 786688, metadata !98, metadata !"a0", metadata !20, i32 32, metadata !10, i32 0, i32 0} ; [ DW_TAG_auto_variable ]
 !109 = metadata !{i32 32, i32 30, metadata !98, null}
-!110 = metadata !{i32 32, i32 47, metadata !98, null}
-!111 = metadata !{i32 786688, metadata !98, metadata !"acc", metadata !20, i32 32, metadata !10, i32 0, i32 0} ; [ DW_TAG_auto_variable ]
-!112 = metadata !{i32 32, i32 44, metadata !98, null}
-!113 = metadata !{i32 786688, metadata !114, metadata !"i", metadata !20, i32 34, metadata !12, i32 0, i32 0} ; [ DW_TAG_auto_variable ]
-!114 = metadata !{i32 786443, metadata !98, i32 34, i32 15, metadata !20, i32 8} ; [ DW_TAG_lexical_block ]
-!115 = metadata !{i32 34, i32 23, metadata !114, null}
-!116 = metadata !{i32 34, i32 26, metadata !114, null}
-!117 = metadata !{i32 34, i32 45, metadata !118, null}
-!118 = metadata !{i32 786443, metadata !114, i32 34, i32 44, metadata !20, i32 9} ; [ DW_TAG_lexical_block ]
-!119 = metadata !{i32 36, i32 4, metadata !118, null}
-!120 = metadata !{i32 37, i32 4, metadata !118, null}
-!121 = metadata !{i32 38, i32 4, metadata !118, null}
-!122 = metadata !{i32 39, i32 4, metadata !118, null}
-!123 = metadata !{i32 40, i32 4, metadata !118, null}
-!124 = metadata !{i32 42, i32 4, metadata !118, null}
-!125 = metadata !{i32 43, i32 4, metadata !118, null}
-!126 = metadata !{i32 44, i32 4, metadata !118, null}
-!127 = metadata !{i32 46, i32 4, metadata !118, null}
-!128 = metadata !{i32 47, i32 4, metadata !118, null}
-!129 = metadata !{i32 50, i32 4, metadata !118, null}
-!130 = metadata !{i32 51, i32 4, metadata !118, null}
-!131 = metadata !{i32 52, i32 4, metadata !118, null}
-!132 = metadata !{i32 53, i32 3, metadata !118, null}
-!133 = metadata !{i32 34, i32 40, metadata !114, null}
-!134 = metadata !{i32 54, i32 3, metadata !98, null}
-!135 = metadata !{i32 786689, metadata !19, metadata !"this", metadata !20, i32 16777240, metadata !90, i32 64, i32 0} ; [ DW_TAG_arg_variable ]
-!136 = metadata !{i32 24, i32 7, metadata !19, null}
-!137 = metadata !{i32 786689, metadata !19, metadata !"coefs", metadata !20, i32 33554456, metadata !13, i32 0, i32 0} ; [ DW_TAG_arg_variable ]
-!138 = metadata !{i32 24, i32 24, metadata !19, null}
-!139 = metadata !{i32 24, i32 44, metadata !140, null}
-!140 = metadata !{i32 786443, metadata !19, i32 24, i32 43, metadata !20, i32 2} ; [ DW_TAG_lexical_block ]
-!141 = metadata !{i32 786688, metadata !142, metadata !"i", metadata !20, i32 25, metadata !12, i32 0, i32 0} ; [ DW_TAG_auto_variable ]
-!142 = metadata !{i32 786443, metadata !140, i32 25, i32 3, metadata !20, i32 3} ; [ DW_TAG_lexical_block ]
-!143 = metadata !{i32 25, i32 11, metadata !142, null}
-!144 = metadata !{i32 25, i32 14, metadata !142, null}
-!145 = metadata !{i32 25, i32 33, metadata !146, null}
-!146 = metadata !{i32 786443, metadata !142, i32 25, i32 33, metadata !20, i32 4} ; [ DW_TAG_lexical_block ]
-!147 = metadata !{i32 786688, metadata !148, metadata !"j", metadata !20, i32 26, metadata !12, i32 0, i32 0} ; [ DW_TAG_auto_variable ]
-!148 = metadata !{i32 786443, metadata !146, i32 26, i32 19, metadata !20, i32 5} ; [ DW_TAG_lexical_block ]
-!149 = metadata !{i32 26, i32 28, metadata !148, null}
-!150 = metadata !{i32 26, i32 31, metadata !148, null}
-!151 = metadata !{i32 26, i32 46, metadata !152, null}
-!152 = metadata !{i32 786443, metadata !148, i32 26, i32 45, metadata !20, i32 6} ; [ DW_TAG_lexical_block ]
-!153 = metadata !{i32 27, i32 5, metadata !152, null}
-!154 = metadata !{i32 28, i32 4, metadata !152, null}
-!155 = metadata !{i32 26, i32 40, metadata !148, null}
-!156 = metadata !{i32 29, i32 3, metadata !146, null}
-!157 = metadata !{i32 25, i32 28, metadata !142, null}
-!158 = metadata !{i32 30, i32 2, metadata !140, null}
-!159 = metadata !{i32 786689, metadata !44, metadata !"this", metadata !20, i32 16777229, metadata !90, i32 64, i32 0} ; [ DW_TAG_arg_variable ]
-!160 = metadata !{i32 13, i32 2, metadata !44, null}
-!161 = metadata !{i32 786688, metadata !162, metadata !"i", metadata !20, i32 14, metadata !12, i32 0, i32 0} ; [ DW_TAG_auto_variable ]
-!162 = metadata !{i32 786443, metadata !163, i32 14, i32 3, metadata !20, i32 11} ; [ DW_TAG_lexical_block ]
-!163 = metadata !{i32 786443, metadata !44, i32 13, i32 14, metadata !20, i32 10} ; [ DW_TAG_lexical_block ]
-!164 = metadata !{i32 14, i32 12, metadata !162, null}
-!165 = metadata !{i32 14, i32 17, metadata !162, null}
-!166 = metadata !{i32 786688, metadata !167, metadata !"j", metadata !20, i32 15, metadata !12, i32 0, i32 0} ; [ DW_TAG_auto_variable ]
-!167 = metadata !{i32 786443, metadata !168, i32 15, i32 4, metadata !20, i32 13} ; [ DW_TAG_lexical_block ]
-!168 = metadata !{i32 786443, metadata !162, i32 14, i32 37, metadata !20, i32 12} ; [ DW_TAG_lexical_block ]
-!169 = metadata !{i32 15, i32 13, metadata !167, null}
-!170 = metadata !{i32 15, i32 18, metadata !167, null}
-!171 = metadata !{i32 16, i32 5, metadata !172, null}
-!172 = metadata !{i32 786443, metadata !167, i32 15, i32 38, metadata !20, i32 14} ; [ DW_TAG_lexical_block ]
-!173 = metadata !{i32 17, i32 5, metadata !172, null}
-!174 = metadata !{i32 18, i32 4, metadata !172, null}
-!175 = metadata !{i32 15, i32 33, metadata !167, null}
-!176 = metadata !{i32 19, i32 3, metadata !168, null}
-!177 = metadata !{i32 14, i32 32, metadata !162, null}
-!178 = metadata !{i32 786688, metadata !179, metadata !"i", metadata !20, i32 20, metadata !12, i32 0, i32 0} ; [ DW_TAG_auto_variable ]
-!179 = metadata !{i32 786443, metadata !163, i32 20, i32 3, metadata !20, i32 15} ; [ DW_TAG_lexical_block ]
-!180 = metadata !{i32 20, i32 11, metadata !179, null}
-!181 = metadata !{i32 20, i32 14, metadata !179, null}
-!182 = metadata !{i32 786688, metadata !183, metadata !"j", metadata !20, i32 21, metadata !12, i32 0, i32 0} ; [ DW_TAG_auto_variable ]
-!183 = metadata !{i32 786443, metadata !179, i32 21, i32 4, metadata !20, i32 16} ; [ DW_TAG_lexical_block ]
-!184 = metadata !{i32 21, i32 13, metadata !183, null}
-!185 = metadata !{i32 21, i32 16, metadata !183, null}
-!186 = metadata !{i32 22, i32 5, metadata !183, null}
-!187 = metadata !{i32 21, i32 25, metadata !183, null}
-!188 = metadata !{i32 22, i32 24, metadata !183, null}
-!189 = metadata !{i32 20, i32 28, metadata !179, null}
-!190 = metadata !{i32 23, i32 2, metadata !163, null}
+!110 = metadata !{i32 786688, metadata !98, metadata !"temp", metadata !20, i32 32, metadata !10, i32 0, i32 0} ; [ DW_TAG_auto_variable ]
+!111 = metadata !{i32 32, i32 34, metadata !98, null}
+!112 = metadata !{i32 32, i32 51, metadata !98, null}
+!113 = metadata !{i32 786688, metadata !98, metadata !"acc", metadata !20, i32 32, metadata !10, i32 0, i32 0} ; [ DW_TAG_auto_variable ]
+!114 = metadata !{i32 32, i32 48, metadata !98, null}
+!115 = metadata !{i32 786688, metadata !116, metadata !"i", metadata !20, i32 34, metadata !12, i32 0, i32 0} ; [ DW_TAG_auto_variable ]
+!116 = metadata !{i32 786443, metadata !98, i32 34, i32 15, metadata !20, i32 8} ; [ DW_TAG_lexical_block ]
+!117 = metadata !{i32 34, i32 23, metadata !116, null}
+!118 = metadata !{i32 34, i32 26, metadata !116, null}
+!119 = metadata !{i32 34, i32 45, metadata !120, null}
+!120 = metadata !{i32 786443, metadata !116, i32 34, i32 44, metadata !20, i32 9} ; [ DW_TAG_lexical_block ]
+!121 = metadata !{i32 36, i32 4, metadata !120, null}
+!122 = metadata !{i32 37, i32 4, metadata !120, null}
+!123 = metadata !{i32 38, i32 4, metadata !120, null}
+!124 = metadata !{i32 39, i32 4, metadata !120, null}
+!125 = metadata !{i32 40, i32 4, metadata !120, null}
+!126 = metadata !{i32 41, i32 4, metadata !120, null}
+!127 = metadata !{i32 43, i32 4, metadata !120, null}
+!128 = metadata !{i32 44, i32 4, metadata !120, null}
+!129 = metadata !{i32 45, i32 4, metadata !120, null}
+!130 = metadata !{i32 47, i32 4, metadata !120, null}
+!131 = metadata !{i32 48, i32 4, metadata !120, null}
+!132 = metadata !{i32 51, i32 4, metadata !120, null}
+!133 = metadata !{i32 52, i32 4, metadata !120, null}
+!134 = metadata !{i32 53, i32 4, metadata !120, null}
+!135 = metadata !{i32 54, i32 3, metadata !120, null}
+!136 = metadata !{i32 34, i32 40, metadata !116, null}
+!137 = metadata !{i32 55, i32 3, metadata !98, null}
+!138 = metadata !{i32 786689, metadata !19, metadata !"this", metadata !20, i32 16777240, metadata !90, i32 64, i32 0} ; [ DW_TAG_arg_variable ]
+!139 = metadata !{i32 24, i32 7, metadata !19, null}
+!140 = metadata !{i32 786689, metadata !19, metadata !"coefs", metadata !20, i32 33554456, metadata !13, i32 0, i32 0} ; [ DW_TAG_arg_variable ]
+!141 = metadata !{i32 24, i32 24, metadata !19, null}
+!142 = metadata !{i32 24, i32 44, metadata !143, null}
+!143 = metadata !{i32 786443, metadata !19, i32 24, i32 43, metadata !20, i32 2} ; [ DW_TAG_lexical_block ]
+!144 = metadata !{i32 786688, metadata !145, metadata !"i", metadata !20, i32 25, metadata !12, i32 0, i32 0} ; [ DW_TAG_auto_variable ]
+!145 = metadata !{i32 786443, metadata !143, i32 25, i32 3, metadata !20, i32 3} ; [ DW_TAG_lexical_block ]
+!146 = metadata !{i32 25, i32 11, metadata !145, null}
+!147 = metadata !{i32 25, i32 14, metadata !145, null}
+!148 = metadata !{i32 25, i32 33, metadata !149, null}
+!149 = metadata !{i32 786443, metadata !145, i32 25, i32 33, metadata !20, i32 4} ; [ DW_TAG_lexical_block ]
+!150 = metadata !{i32 786688, metadata !151, metadata !"j", metadata !20, i32 26, metadata !12, i32 0, i32 0} ; [ DW_TAG_auto_variable ]
+!151 = metadata !{i32 786443, metadata !149, i32 26, i32 19, metadata !20, i32 5} ; [ DW_TAG_lexical_block ]
+!152 = metadata !{i32 26, i32 28, metadata !151, null}
+!153 = metadata !{i32 26, i32 31, metadata !151, null}
+!154 = metadata !{i32 26, i32 46, metadata !155, null}
+!155 = metadata !{i32 786443, metadata !151, i32 26, i32 45, metadata !20, i32 6} ; [ DW_TAG_lexical_block ]
+!156 = metadata !{i32 27, i32 5, metadata !155, null}
+!157 = metadata !{i32 28, i32 4, metadata !155, null}
+!158 = metadata !{i32 26, i32 40, metadata !151, null}
+!159 = metadata !{i32 29, i32 3, metadata !149, null}
+!160 = metadata !{i32 25, i32 28, metadata !145, null}
+!161 = metadata !{i32 30, i32 2, metadata !143, null}
+!162 = metadata !{i32 786689, metadata !44, metadata !"this", metadata !20, i32 16777229, metadata !90, i32 64, i32 0} ; [ DW_TAG_arg_variable ]
+!163 = metadata !{i32 13, i32 2, metadata !44, null}
+!164 = metadata !{i32 786688, metadata !165, metadata !"i", metadata !20, i32 14, metadata !12, i32 0, i32 0} ; [ DW_TAG_auto_variable ]
+!165 = metadata !{i32 786443, metadata !166, i32 14, i32 3, metadata !20, i32 11} ; [ DW_TAG_lexical_block ]
+!166 = metadata !{i32 786443, metadata !44, i32 13, i32 14, metadata !20, i32 10} ; [ DW_TAG_lexical_block ]
+!167 = metadata !{i32 14, i32 12, metadata !165, null}
+!168 = metadata !{i32 14, i32 17, metadata !165, null}
+!169 = metadata !{i32 786688, metadata !170, metadata !"j", metadata !20, i32 15, metadata !12, i32 0, i32 0} ; [ DW_TAG_auto_variable ]
+!170 = metadata !{i32 786443, metadata !171, i32 15, i32 4, metadata !20, i32 13} ; [ DW_TAG_lexical_block ]
+!171 = metadata !{i32 786443, metadata !165, i32 14, i32 37, metadata !20, i32 12} ; [ DW_TAG_lexical_block ]
+!172 = metadata !{i32 15, i32 13, metadata !170, null}
+!173 = metadata !{i32 15, i32 18, metadata !170, null}
+!174 = metadata !{i32 16, i32 5, metadata !175, null}
+!175 = metadata !{i32 786443, metadata !170, i32 15, i32 38, metadata !20, i32 14} ; [ DW_TAG_lexical_block ]
+!176 = metadata !{i32 17, i32 5, metadata !175, null}
+!177 = metadata !{i32 18, i32 4, metadata !175, null}
+!178 = metadata !{i32 15, i32 33, metadata !170, null}
+!179 = metadata !{i32 19, i32 3, metadata !171, null}
+!180 = metadata !{i32 14, i32 32, metadata !165, null}
+!181 = metadata !{i32 786688, metadata !182, metadata !"i", metadata !20, i32 20, metadata !12, i32 0, i32 0} ; [ DW_TAG_auto_variable ]
+!182 = metadata !{i32 786443, metadata !166, i32 20, i32 3, metadata !20, i32 15} ; [ DW_TAG_lexical_block ]
+!183 = metadata !{i32 20, i32 11, metadata !182, null}
+!184 = metadata !{i32 20, i32 14, metadata !182, null}
+!185 = metadata !{i32 786688, metadata !186, metadata !"j", metadata !20, i32 21, metadata !12, i32 0, i32 0} ; [ DW_TAG_auto_variable ]
+!186 = metadata !{i32 786443, metadata !182, i32 21, i32 4, metadata !20, i32 16} ; [ DW_TAG_lexical_block ]
+!187 = metadata !{i32 21, i32 13, metadata !186, null}
+!188 = metadata !{i32 21, i32 16, metadata !186, null}
+!189 = metadata !{i32 22, i32 5, metadata !186, null}
+!190 = metadata !{i32 21, i32 25, metadata !186, null}
+!191 = metadata !{i32 22, i32 24, metadata !186, null}
+!192 = metadata !{i32 20, i32 28, metadata !182, null}
+!193 = metadata !{i32 23, i32 2, metadata !166, null}

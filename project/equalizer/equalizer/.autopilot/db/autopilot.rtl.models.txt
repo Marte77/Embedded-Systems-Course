@@ -1,5 +1,6 @@
 equalizer_faddfsucud
 equalizer_fmul_32dEe
+equalizer_fdiv_32eOg
 equalizer_iir_coebkb
 equalizer_iir_x_1
 equalizer_eq_io_s_axi

@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<GenRun Id="impl_1" LaunchPart="xc7z010clg400-1" LaunchTime="1766006947">
+<GenRun Id="impl_1" LaunchPart="xc7z010clg400-1" LaunchTime="1766089113">
   <File Type="PWROPT-DRC" Name="system_wrapper_drc_pwropted.rpt"/>
   <File Type="OPT-METHODOLOGY-DRC" Name="system_wrapper_methodology_drc_opted.rpt"/>
   <File Type="INIT-TIMING" Name="system_wrapper_timing_summary_init.rpt"/>
@@ -121,7 +121,6 @@
   </Strategy>
   <BlockFileSet Type="BlockSrcs" Name="system_processing_system7_0_0"/>
   <BlockFileSet Type="BlockSrcs" Name="system_xlconcat_0_0"/>
-  <BlockFileSet Type="BlockSrcs" Name="system_auto_pc_0"/>
   <BlockFileSet Type="BlockSrcs" Name="system_equalizer_0_0"/>
   <BlockFileSet Type="BlockSrcs" Name="system_xbar_0"/>
   <BlockFileSet Type="BlockSrcs" Name="system_equalizer_0_1"/>
