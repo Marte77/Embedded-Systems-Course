@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <projectDescription>
-	<name>martinho_equalizer</name>
+	<name>equalizer_our</name>
 	<comment></comment>
 	<projects>
 		<project>freertos901_xilinx_bsp_2</project>

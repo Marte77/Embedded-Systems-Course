@@ -1,0 +1,29 @@
+@startuml
+'https://plantuml.com/activity-diagram-beta
+
+start
+:Instantiate User and Audio Threads;
+fork
+    :User Thread;
+    while (while device is on)
+        :Read user input from console;
+        :Write updates to EQSettings;
+    endwhile
+    stop
+fork again
+    :Audio Thread;
+    while (while device is on)
+        if (if EQSettings coeffs were updated)
+            :Send new coeffs to the hardware (XEqualizer);
+        endif
+        :Get a Sample from Audio Input;
+        if (if EQSettings equalizer is enabled)
+            :Send sample to XEqualizer for filtering;
+            :Send filtered sample to Audio Output;
+        else
+        :Send read sample to Audio Ouput;
+        endif
+    endwhile
+    stop
+
+@enduml

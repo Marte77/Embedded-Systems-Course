@@ -41,7 +41,7 @@ int main_no_rtos() {
 
 	xil_printf("Initializing audio thread\r\n");
 	AudioThreadOurs a(&eqSettings, &eqLeft, &eqRight);
-	eqSettings.disableEQ();
+	//eqSettings.disableEQ();
 	while (1)
 		a.run();
 }
@@ -49,7 +49,7 @@ int main_no_rtos() {
 int main_antigo(bool usertos)
 {
 
-	if (usertos) {
+	if (!usertos) {
 		main_no_rtos();
 		return 0;
 	}

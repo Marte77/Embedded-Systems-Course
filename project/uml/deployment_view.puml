@@ -1,0 +1,40 @@
+@startuml
+'https://plantuml.com/deployment-diagram
+
+frame "Zybo Z7 board" as Z7 {
+    component FPGA {
+        component "<<core>>\nARM Processor" as ARM {
+            component "FreeRTOS (OS)" as OS {
+                component UserThread
+                component AudioThread
+                component EQSettings
+            }
+            port AXI_ARM
+        }
+        component "<<core>>\nEqualizer HLS (Left)" as HLS {
+            port AXI_HLS
+            component "Filtering Function" as FF
+        }
+        component "<<core>>\nEqualizer HLS (Right)" as HLS_R {
+            port AXI_HLS_R
+            component "Filtering Function" as FF_R
+        }
+    }
+    portin AudioInput
+    portout AudioOutput
+}
+component AudioSignalSource
+AudioThread --> AudioInput : Reads new sample
+AudioSignalSource --> AudioInput
+EQSettings <-- UserThread : Writes user updates
+EQSettings <-- AudioThread : Reads user updates
+AudioThread --> AXI_ARM: Writes\n Sample
+AXI_ARM --> AXI_HLS: Writes \nSample
+AXI_HLS --> AXI_ARM: Outputs \nFiltered Sample
+AXI_ARM --> AudioThread: Outputs \nFiltered Sample
+
+AudioThread --> AudioOutput: Writes\naltered sample
+component Speakers
+AudioOutput --> Speakers
+
+@enduml

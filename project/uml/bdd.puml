@@ -1,4 +1,4 @@
-@startuml
+'@startuml
 'https://plantuml.com/object-diagram
 left to right direction
 frame "ibd System Context" as SC {
@@ -24,7 +24,7 @@ frame "ibd Equalizer" as EQ {
     portin audioIn as AIEQ
     portout audioOut as AOEQ
     portin UI as UIEQ
-    class 
+    '-lass
 }
 
 

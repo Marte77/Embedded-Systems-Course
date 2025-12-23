@@ -1,0 +1,22 @@
+@startuml
+'https://plantuml.com/use-case-diagram
+left to right direction
+:User: as User
+:Audio Input: as signal
+
+package Equalizer {
+    (Connect audio input and output) as (input)
+    (Turn on the Equalizer) as (on)
+    (Disable the Equalizer) as (off)
+    (Set gain for specific frequency) as (freq)
+}
+:Audio Output: as signal_out
+(input) --> signal
+User --> (on)
+User --> (off)
+User --> (freq)
+User --> (input)
+(on) --> signal : 1 - Applies filter
+(off) --> signal : 2 - Ouput signal is \nthe same as input
+signal --> signal_out
+@enduml

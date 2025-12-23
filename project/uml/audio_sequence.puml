@@ -1,0 +1,19 @@
+@startuml
+'https://plantuml.com/sequence-diagram
+title Equalizer is active
+autonumber
+actor User
+participant AudioInput
+participant Equalizer
+participant AudioOutput
+
+User -> AudioInput: Plugs audio signal
+activate AudioInput #FF9999
+AudioInput -> Equalizer: audio signal to equalizer
+User -> Equalizer: Turns equalizer on
+activate Equalizer #99FF99
+User -> Equalizer: Sets gain values
+AudioInput -> Equalizer: New Sample
+Equalizer -> Equalizer: Sample is filtered accordingly
+Equalizer -> AudioOutput: Sample is played by speaker
+@enduml

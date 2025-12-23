@@ -94,7 +94,7 @@ public:
         setGainUpdated(true);
     }
     void setGain(int gain, int freq) {
-        //MutexGuard guard(&mMutex);
+        MutexGuard guard(&mMutex);
         if (gain > 6) gain = 6;
         if (gain < -6) gain = -6;
         freqMapToGainUserSetting[freq] = gain;
@@ -105,7 +105,7 @@ public:
         }
     }
     void enableEQ() {
-        //MutexGuard guard(&mMutex);
+        MutexGuard guard(&mMutex);
         eqEnabled = true;
         for (std::map<int,int>::const_iterator it = freqMapToGainUserSetting.begin(); it != freqMapToGainUserSetting.end(); ++it)
         {
@@ -116,30 +116,30 @@ public:
     }
 
     void disableEQ() {
-        //MutexGuard guard(&mMutex);
+        MutexGuard guard(&mMutex);
         eqEnabled = false;
     }
 
     bool eqState() {
-        //MutexGuard guard(&mMutex);
+        MutexGuard guard(&mMutex);
         return eqEnabled;
     }
     
     int getGain(int freq) {
-        //MutexGuard guard(&mMutex);
+        MutexGuard guard(&mMutex);
         return freqMapToGain[freq];
     }
     bool wasGainUpdated() {
-        //MutexGuard guard(&mMutex);
+        MutexGuard guard(&mMutex);
         return wasGainUpdatedV;
     }
     void setGainUpdated(bool val) {
-        //MutexGuard guard(&mMutex);
+        MutexGuard guard(&mMutex);
         wasGainUpdatedV = val;
     }
 
     std::array<std::array<float,6>,5>* getCoeffs() {
-        //MutexGuard guard(&mMutex);
+        MutexGuard guard(&mMutex);
         return &coeffs;
     }
 };

@@ -100,7 +100,7 @@ int main2()
 }
 
 int main() {
-	bool ourcode = false;
+	bool ourcode = true;
 	bool useFreerots = false;
 	if (ourcode) // our code instead of altered professor's code
 		main_antigo(useFreerots);

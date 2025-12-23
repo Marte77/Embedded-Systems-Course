@@ -1,0 +1,69 @@
+@startuml
+'https://plantuml.com/class-diagram
+'left to right direction
+
+abstract class Thread {
+    virtual void run()
+}
+abstract class AudioThreadState {
+- AudioThreadState instance;
+- AudioThread *context;
++ setContext(AudioThread* instance);
+virtual void setGain();
+virtual void sendAudio();
+}
+class SendAudioState {
+    -SendAudioState();
+    +SendAudioState* getInstance();
+}
+class SetGainState {
+    -SetGainState();
+    +SetGainState* getInstance();
+}
+AudioThreadState <|-- SendAudioState
+AudioThreadState <|-- SetGainState
+struct SemaphoreHandle_t
+class EQSettings {
+    -float[5][6] coeffs;
+    -int sampleRate;
+    -SemaphoreHandle_t semaphore;
+    -float Q;
+    -void calculateCoefficientsForNewGain(int gain, int freq);
+    -EQSettings *instance;
+    +void getInstance();
+    +void setGain(int gain, int freq);
+    +void enableEQ();
+    +void disableEQ();
+    +bool getEQState();
+    +int getGain(int freq);
+    +float[5][6] getCoeffs();
+}
+EQSettings --> SemaphoreHandle_t
+class Equalizer {
+    -XEqualizer eq; // auto generated HLS struct
+    +void updateGain();
+    +float getAudioAltered(float inSample);
+}
+class AudioThread {
+    -AudioThreadState state;
+    -EQSettings* settings;
+    -Equalizer left, right;
+    +AudioThread(EQSettings *eqs, Equalizer *left, Equalizer *right);
+    +void transitionState(AudioThreadState *new);
+    +void updateGain();
+    +void readAudio();
+}
+Thread <|-- AudioThread
+AudioThread --> Equalizer
+AudioThread --> EQSettings
+AudioThread *-- AudioThreadState: 1:1
+
+class UserThread {
+    -EQSettings *settings;
+    +UserThread(EQSettings *eqs);
+    +void readUserInput();
+}
+Thread <|-- UserThread
+UserThread --> EQSettings
+
+@enduml

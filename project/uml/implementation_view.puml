@@ -1,0 +1,39 @@
+@startuml
+'https://plantuml.com/sequence-diagram
+title Simulatenous access to EQSettings
+autonumber
+participant AudioThread as AT
+participant AudioInput as AI
+participant UserThread as UT
+participant EQSettings as EQS
+participant "Equalizer HLS" as HLS
+participant AudioOutput as AO
+AT -> AI: Read new Sample
+AI -> AT: Sample returned
+
+UT -> UT: User inputted \nnew gains
+UT -> EQS: Writing to EQSettings
+activate EQS #FF9999
+
+AT -> EQS: Check for updates
+activate AT #9999FF
+note over EQS
+    Both threads are now accessing EQSettings.
+    UserThread got there first, so AudioThread
+    has to wait until writing finishes.
+endnote
+EQS -> EQS: Writing completes
+deactivate EQS
+AT -> EQS: Check for updates completes
+EQS -> AT: Returns requested values
+deactivate AT
+AT -> HLS: Sends new coefficients
+activate HLS #99FF99
+HLS -> HLS: Update \ninternal\n coefficients
+HLS -> AT: Signals it is done updating
+deactivate HLS
+AT -> HLS: Sends sample to be filtered
+HLS -> AT: Returns filtered sample
+AT -> AO: Outputs new sample
+
+@enduml
